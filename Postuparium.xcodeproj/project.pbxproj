@@ -1,0 +1,1015 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8528F5242534AAE2004FDE50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8528F5232534AAE2004FDE50 /* AppDelegate.swift */; };
+		8528F5262534AAE2004FDE50 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8528F5252534AAE2004FDE50 /* SceneDelegate.swift */; };
+		8528F5282534AAE2004FDE50 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8528F5272534AAE2004FDE50 /* ViewController.swift */; };
+		8528F52B2534AAE2004FDE50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8528F5292534AAE2004FDE50 /* Main.storyboard */; };
+		8528F52E2534AAE2004FDE50 /* Postuparium.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8528F52C2534AAE2004FDE50 /* Postuparium.xcdatamodeld */; };
+		8528F5302534AAE3004FDE50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8528F52F2534AAE3004FDE50 /* Assets.xcassets */; };
+		8528F5332534AAE3004FDE50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8528F5312534AAE3004FDE50 /* LaunchScreen.storyboard */; };
+		8528F53E2534AAE4004FDE50 /* PostupariumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8528F53D2534AAE4004FDE50 /* PostupariumTests.swift */; };
+		8528F5492534AAE4004FDE50 /* PostupariumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8528F5482534AAE4004FDE50 /* PostupariumUITests.swift */; };
+		8528F55B2534AC72004FDE50 /* terminalScript.sh in Resources */ = {isa = PBXBuildFile; fileRef = 8528F55A2534AC72004FDE50 /* terminalScript.sh */; };
+		8528F5842534B6F2004FDE50 /* Enrollee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8528F5832534B6F2004FDE50 /* Enrollee.swift */; };
+		8528F5892534B70C004FDE50 /* EdProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8528F5882534B70C004FDE50 /* EdProgram.swift */; };
+		8528F58E2534B71B004FDE50 /* University.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8528F58D2534B71B004FDE50 /* University.swift */; };
+		8528F5932534B733004FDE50 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8528F5922534B733004FDE50 /* Photo.swift */; };
+		8528F5982534B741004FDE50 /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8528F5972534B741004FDE50 /* Feedback.swift */; };
+		8528F59E2534B7AC004FDE50 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8528F59D2534B7AC004FDE50 /* ApiService.swift */; };
+		8528F5A62534B7B8004FDE50 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8528F5A52534B7B8004FDE50 /* StorageService.swift */; };
+		8528F5BD2534BB63004FDE50 /* StartScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8528F5BC2534BB63004FDE50 /* StartScreenView.swift */; };
+		8528F5C32534BB88004FDE50 /* StartScreenViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8528F5C22534BB88004FDE50 /* StartScreenViewContoller.swift */; };
+		8528F5C82534BBA7004FDE50 /* StartScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8528F5C72534BBA7004FDE50 /* StartScreenRouter.swift */; };
+		8528F5CD2534BBBE004FDE50 /* StartScreenProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8528F5CC2534BBBE004FDE50 /* StartScreenProtocols.swift */; };
+		8528F5D22534BBCF004FDE50 /* StartScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8528F5D12534BBCF004FDE50 /* StartScreenPresenter.swift */; };
+		8528F5D72534BBEB004FDE50 /* StartScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8528F5D62534BBEB004FDE50 /* StartScreenInteractor.swift */; };
+		8528F5DC2534BC04004FDE50 /* StartScreenConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8528F5DB2534BC04004FDE50 /* StartScreenConfigurator.swift */; };
+		8528F5E12534C0C2004FDE50 /* ScoreInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8528F5E02534C0C2004FDE50 /* ScoreInput.swift */; };
+		8528F5E92534C0F4004FDE50 /* ScoreInput.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8528F5E82534C0F4004FDE50 /* ScoreInput.xib */; };
+		8528F5EE2534C132004FDE50 /* EdProgramTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8528F5ED2534C132004FDE50 /* EdProgramTile.swift */; };
+		8528F5F32534C151004FDE50 /* StudyTileSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8528F5F22534C151004FDE50 /* StudyTileSmall.swift */; };
+		8528F5F82534C164004FDE50 /* StudyTileSmall.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8528F5F72534C164004FDE50 /* StudyTileSmall.xib */; };
+		8528F5FD2534C170004FDE50 /* StudyTileMedium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8528F5FC2534C170004FDE50 /* StudyTileMedium.swift */; };
+		8528F6022534C182004FDE50 /* StudyTileMedium.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8528F6012534C182004FDE50 /* StudyTileMedium.xib */; };
+		8528F6072534C194004FDE50 /* StudyTileBig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8528F6062534C194004FDE50 /* StudyTileBig.swift */; };
+		8528F60C2534C1B1004FDE50 /* StudyTileBig.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8528F60B2534C1B1004FDE50 /* StudyTileBig.xib */; };
+		8528F6112534C1CC004FDE50 /* UniversityTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8528F6102534C1CC004FDE50 /* UniversityTile.swift */; };
+		8528F6162534C1E4004FDE50 /* UniversityTile.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8528F6152534C1E4004FDE50 /* UniversityTile.xib */; };
+		8528F62E2534CC70004FDE50 /* ApiServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8528F62D2534CC70004FDE50 /* ApiServiceProtocol.swift */; };
+		8528F6332534D395004FDE50 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 8528F6322534D395004FDE50 /* .gitignore */; };
+		8528F63B2534D566004FDE50 /* ApplicantsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8528F63A2534D566004FDE50 /* ApplicantsTableView.swift */; };
+		8528F6432534D575004FDE50 /* InfoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8528F6422534D575004FDE50 /* InfoListView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8528F53A2534AAE4004FDE50 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8528F5182534AAE2004FDE50 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8528F51F2534AAE2004FDE50;
+			remoteInfo = Postuparium;
+		};
+		8528F5452534AAE4004FDE50 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8528F5182534AAE2004FDE50 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8528F51F2534AAE2004FDE50;
+			remoteInfo = Postuparium;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8528F5202534AAE2004FDE50 /* Postuparium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Postuparium.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8528F5232534AAE2004FDE50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8528F5252534AAE2004FDE50 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8528F5272534AAE2004FDE50 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8528F52A2534AAE2004FDE50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8528F52D2534AAE2004FDE50 /* Postuparium.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Postuparium.xcdatamodel; sourceTree = "<group>"; };
+		8528F52F2534AAE3004FDE50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8528F5322534AAE3004FDE50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8528F5342534AAE3004FDE50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8528F5392534AAE4004FDE50 /* PostupariumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PostupariumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8528F53D2534AAE4004FDE50 /* PostupariumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostupariumTests.swift; sourceTree = "<group>"; };
+		8528F53F2534AAE4004FDE50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8528F5442534AAE4004FDE50 /* PostupariumUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PostupariumUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8528F5482534AAE4004FDE50 /* PostupariumUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostupariumUITests.swift; sourceTree = "<group>"; };
+		8528F54A2534AAE4004FDE50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8528F55A2534AC72004FDE50 /* terminalScript.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = terminalScript.sh; sourceTree = "<group>"; };
+		8528F5732534B2DB004FDE50 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8528F5832534B6F2004FDE50 /* Enrollee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enrollee.swift; sourceTree = "<group>"; };
+		8528F5882534B70C004FDE50 /* EdProgram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdProgram.swift; sourceTree = "<group>"; };
+		8528F58D2534B71B004FDE50 /* University.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = University.swift; sourceTree = "<group>"; };
+		8528F5922534B733004FDE50 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		8528F5972534B741004FDE50 /* Feedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
+		8528F59D2534B7AC004FDE50 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		8528F5A52534B7B8004FDE50 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		8528F5BC2534BB63004FDE50 /* StartScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenView.swift; sourceTree = "<group>"; };
+		8528F5C22534BB88004FDE50 /* StartScreenViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenViewContoller.swift; sourceTree = "<group>"; };
+		8528F5C72534BBA7004FDE50 /* StartScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenRouter.swift; sourceTree = "<group>"; };
+		8528F5CC2534BBBE004FDE50 /* StartScreenProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenProtocols.swift; sourceTree = "<group>"; };
+		8528F5D12534BBCF004FDE50 /* StartScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenPresenter.swift; sourceTree = "<group>"; };
+		8528F5D62534BBEB004FDE50 /* StartScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenInteractor.swift; sourceTree = "<group>"; };
+		8528F5DB2534BC04004FDE50 /* StartScreenConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenConfigurator.swift; sourceTree = "<group>"; };
+		8528F5E02534C0C2004FDE50 /* ScoreInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreInput.swift; sourceTree = "<group>"; };
+		8528F5E82534C0F4004FDE50 /* ScoreInput.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScoreInput.xib; sourceTree = "<group>"; };
+		8528F5ED2534C132004FDE50 /* EdProgramTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdProgramTile.swift; sourceTree = "<group>"; };
+		8528F5F22534C151004FDE50 /* StudyTileSmall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyTileSmall.swift; sourceTree = "<group>"; };
+		8528F5F72534C164004FDE50 /* StudyTileSmall.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StudyTileSmall.xib; sourceTree = "<group>"; };
+		8528F5FC2534C170004FDE50 /* StudyTileMedium.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyTileMedium.swift; sourceTree = "<group>"; };
+		8528F6012534C182004FDE50 /* StudyTileMedium.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StudyTileMedium.xib; sourceTree = "<group>"; };
+		8528F6062534C194004FDE50 /* StudyTileBig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyTileBig.swift; sourceTree = "<group>"; };
+		8528F60B2534C1B1004FDE50 /* StudyTileBig.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StudyTileBig.xib; sourceTree = "<group>"; };
+		8528F6102534C1CC004FDE50 /* UniversityTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityTile.swift; sourceTree = "<group>"; };
+		8528F6152534C1E4004FDE50 /* UniversityTile.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UniversityTile.xib; sourceTree = "<group>"; };
+		8528F62A2534CB1A004FDE50 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8528F62C2534CBF3004FDE50 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8528F62D2534CC70004FDE50 /* ApiServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceProtocol.swift; sourceTree = "<group>"; };
+		8528F6322534D395004FDE50 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		8528F6382534D4F7004FDE50 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8528F6392534D524004FDE50 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8528F63A2534D566004FDE50 /* ApplicantsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicantsTableView.swift; sourceTree = "<group>"; };
+		8528F6422534D575004FDE50 /* InfoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoListView.swift; sourceTree = "<group>"; };
+		8528F6472534D58B004FDE50 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8528F6482534D5C4004FDE50 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8528F6492534D609004FDE50 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8528F64A2534D676004FDE50 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8528F64B2534D6A8004FDE50 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8528F64C2534D6E5004FDE50 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8528F64D2534D766004FDE50 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8528F51D2534AAE2004FDE50 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8528F5362534AAE4004FDE50 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8528F5412534AAE4004FDE50 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8528F5172534AAE2004FDE50 = {
+			isa = PBXGroup;
+			children = (
+				8528F6322534D395004FDE50 /* .gitignore */,
+				8528F5592534AC56004FDE50 /* Common */,
+				8528F5222534AAE2004FDE50 /* Postuparium */,
+				8528F53C2534AAE4004FDE50 /* PostupariumTests */,
+				8528F5472534AAE4004FDE50 /* PostupariumUITests */,
+				8528F5212534AAE2004FDE50 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8528F5212534AAE2004FDE50 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8528F5202534AAE2004FDE50 /* Postuparium.app */,
+				8528F5392534AAE4004FDE50 /* PostupariumTests.xctest */,
+				8528F5442534AAE4004FDE50 /* PostupariumUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8528F5222534AAE2004FDE50 /* Postuparium */ = {
+			isa = PBXGroup;
+			children = (
+				8528F62B2534CBE0004FDE50 /* Protocols */,
+				8528F59C2534B791004FDE50 /* Services */,
+				8528F5672534AE1A004FDE50 /* Resources */,
+				8528F5662534AE0D004FDE50 /* Modules */,
+				8528F5632534ADCB004FDE50 /* Api */,
+				8528F5622534ADC0004FDE50 /* Extensions */,
+				8528F5232534AAE2004FDE50 /* AppDelegate.swift */,
+				8528F5252534AAE2004FDE50 /* SceneDelegate.swift */,
+				8528F5272534AAE2004FDE50 /* ViewController.swift */,
+				8528F5292534AAE2004FDE50 /* Main.storyboard */,
+				8528F52F2534AAE3004FDE50 /* Assets.xcassets */,
+				8528F5312534AAE3004FDE50 /* LaunchScreen.storyboard */,
+				8528F5342534AAE3004FDE50 /* Info.plist */,
+				8528F52C2534AAE2004FDE50 /* Postuparium.xcdatamodeld */,
+			);
+			path = Postuparium;
+			sourceTree = "<group>";
+		};
+		8528F53C2534AAE4004FDE50 /* PostupariumTests */ = {
+			isa = PBXGroup;
+			children = (
+				8528F53D2534AAE4004FDE50 /* PostupariumTests.swift */,
+				8528F53F2534AAE4004FDE50 /* Info.plist */,
+			);
+			path = PostupariumTests;
+			sourceTree = "<group>";
+		};
+		8528F5472534AAE4004FDE50 /* PostupariumUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8528F5482534AAE4004FDE50 /* PostupariumUITests.swift */,
+				8528F54A2534AAE4004FDE50 /* Info.plist */,
+			);
+			path = PostupariumUITests;
+			sourceTree = "<group>";
+		};
+		8528F5592534AC56004FDE50 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				8528F55A2534AC72004FDE50 /* terminalScript.sh */,
+				8528F64D2534D766004FDE50 /* README.md */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		8528F5622534ADC0004FDE50 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8528F62A2534CB1A004FDE50 /* README.md */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8528F5632534ADCB004FDE50 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				8528F5642534ADE5004FDE50 /* Entities */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		8528F5642534ADE5004FDE50 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				8528F5832534B6F2004FDE50 /* Enrollee.swift */,
+				8528F5882534B70C004FDE50 /* EdProgram.swift */,
+				8528F58D2534B71B004FDE50 /* University.swift */,
+				8528F5922534B733004FDE50 /* Photo.swift */,
+				8528F5972534B741004FDE50 /* Feedback.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		8528F5662534AE0D004FDE50 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				8528F5772534B4C0004FDE50 /* PhotoGalleryModule */,
+				8528F5762534B47C004FDE50 /* EdProgramModule */,
+				8528F5712534B240004FDE50 /* UniversityModule */,
+				8528F56B2534B08E004FDE50 /* UniversityMap */,
+				8528F56D2534B134004FDE50 /* Slidebar */,
+				8528F56A2534B021004FDE50 /* FeedbackModule */,
+				8528F5692534AFBE004FDE50 /* Common */,
+				8528F5682534AF9B004FDE50 /* StartScreen */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		8528F5672534AE1A004FDE50 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8528F6382534D4F7004FDE50 /* README.md */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8528F5682534AF9B004FDE50 /* StartScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8528F56C2534B0C4004FDE50 /* EdProgramTable */,
+				8528F5BC2534BB63004FDE50 /* StartScreenView.swift */,
+				8528F5C22534BB88004FDE50 /* StartScreenViewContoller.swift */,
+				8528F5C72534BBA7004FDE50 /* StartScreenRouter.swift */,
+				8528F5CC2534BBBE004FDE50 /* StartScreenProtocols.swift */,
+				8528F5D12534BBCF004FDE50 /* StartScreenPresenter.swift */,
+				8528F5D62534BBEB004FDE50 /* StartScreenInteractor.swift */,
+				8528F5DB2534BC04004FDE50 /* StartScreenConfigurator.swift */,
+			);
+			path = StartScreen;
+			sourceTree = "<group>";
+		};
+		8528F5692534AFBE004FDE50 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				8528F5822534B66D004FDE50 /* ScoreInput */,
+				8528F57E2534B5F3004FDE50 /* EdProgramTile */,
+				8528F57C2534B5A1004FDE50 /* UniversityTile */,
+				8528F5722534B281004FDE50 /* UserEdProgramsList */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		8528F56A2534B021004FDE50 /* FeedbackModule */ = {
+			isa = PBXGroup;
+			children = (
+				8528F64B2534D6A8004FDE50 /* README.md */,
+			);
+			path = FeedbackModule;
+			sourceTree = "<group>";
+		};
+		8528F56B2534B08E004FDE50 /* UniversityMap */ = {
+			isa = PBXGroup;
+			children = (
+				8528F56E2534B17B004FDE50 /* Slidebar */,
+			);
+			path = UniversityMap;
+			sourceTree = "<group>";
+		};
+		8528F56C2534B0C4004FDE50 /* EdProgramTable */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = EdProgramTable;
+			sourceTree = "<group>";
+		};
+		8528F56D2534B134004FDE50 /* Slidebar */ = {
+			isa = PBXGroup;
+			children = (
+				8528F64A2534D676004FDE50 /* README.md */,
+			);
+			path = Slidebar;
+			sourceTree = "<group>";
+		};
+		8528F56E2534B17B004FDE50 /* Slidebar */ = {
+			isa = PBXGroup;
+			children = (
+				8528F5702534B1D2004FDE50 /* UniversitiesList */,
+				8528F6492534D609004FDE50 /* README.md */,
+			);
+			path = Slidebar;
+			sourceTree = "<group>";
+		};
+		8528F5702534B1D2004FDE50 /* UniversitiesList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UniversitiesList;
+			sourceTree = "<group>";
+		};
+		8528F5712534B240004FDE50 /* UniversityModule */ = {
+			isa = PBXGroup;
+			children = (
+				8528F5752534B3F3004FDE50 /* EdProgramsGrid */,
+				8528F5742534B3DF004FDE50 /* PhotoGallery */,
+			);
+			path = UniversityModule;
+			sourceTree = "<group>";
+		};
+		8528F5722534B281004FDE50 /* UserEdProgramsList */ = {
+			isa = PBXGroup;
+			children = (
+				8528F5732534B2DB004FDE50 /* README.md */,
+			);
+			path = UserEdProgramsList;
+			sourceTree = "<group>";
+		};
+		8528F5742534B3DF004FDE50 /* PhotoGallery */ = {
+			isa = PBXGroup;
+			children = (
+				8528F6482534D5C4004FDE50 /* README.md */,
+			);
+			path = PhotoGallery;
+			sourceTree = "<group>";
+		};
+		8528F5752534B3F3004FDE50 /* EdProgramsGrid */ = {
+			isa = PBXGroup;
+			children = (
+				8528F6472534D58B004FDE50 /* README.md */,
+			);
+			path = EdProgramsGrid;
+			sourceTree = "<group>";
+		};
+		8528F5762534B47C004FDE50 /* EdProgramModule */ = {
+			isa = PBXGroup;
+			children = (
+				8528F5792534B545004FDE50 /* ApplicantsTable */,
+				8528F5782534B4E8004FDE50 /* InfoList */,
+			);
+			path = EdProgramModule;
+			sourceTree = "<group>";
+		};
+		8528F5772534B4C0004FDE50 /* PhotoGalleryModule */ = {
+			isa = PBXGroup;
+			children = (
+				8528F57B2534B579004FDE50 /* PhotoViewer */,
+				8528F57A2534B566004FDE50 /* PhotoGalleryGrid */,
+			);
+			path = PhotoGalleryModule;
+			sourceTree = "<group>";
+		};
+		8528F5782534B4E8004FDE50 /* InfoList */ = {
+			isa = PBXGroup;
+			children = (
+				8528F6422534D575004FDE50 /* InfoListView.swift */,
+			);
+			path = InfoList;
+			sourceTree = "<group>";
+		};
+		8528F5792534B545004FDE50 /* ApplicantsTable */ = {
+			isa = PBXGroup;
+			children = (
+				8528F63A2534D566004FDE50 /* ApplicantsTableView.swift */,
+			);
+			path = ApplicantsTable;
+			sourceTree = "<group>";
+		};
+		8528F57A2534B566004FDE50 /* PhotoGalleryGrid */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PhotoGalleryGrid;
+			sourceTree = "<group>";
+		};
+		8528F57B2534B579004FDE50 /* PhotoViewer */ = {
+			isa = PBXGroup;
+			children = (
+				8528F64C2534D6E5004FDE50 /* README.md */,
+			);
+			path = PhotoViewer;
+			sourceTree = "<group>";
+		};
+		8528F57C2534B5A1004FDE50 /* UniversityTile */ = {
+			isa = PBXGroup;
+			children = (
+				8528F6102534C1CC004FDE50 /* UniversityTile.swift */,
+				8528F6152534C1E4004FDE50 /* UniversityTile.xib */,
+			);
+			path = UniversityTile;
+			sourceTree = "<group>";
+		};
+		8528F57E2534B5F3004FDE50 /* EdProgramTile */ = {
+			isa = PBXGroup;
+			children = (
+				8528F5812534B632004FDE50 /* StudyTileBig */,
+				8528F5802534B623004FDE50 /* StudyTileMedium */,
+				8528F57F2534B601004FDE50 /* StudyTileSmall */,
+				8528F5ED2534C132004FDE50 /* EdProgramTile.swift */,
+			);
+			path = EdProgramTile;
+			sourceTree = "<group>";
+		};
+		8528F57F2534B601004FDE50 /* StudyTileSmall */ = {
+			isa = PBXGroup;
+			children = (
+				8528F5F22534C151004FDE50 /* StudyTileSmall.swift */,
+				8528F5F72534C164004FDE50 /* StudyTileSmall.xib */,
+			);
+			path = StudyTileSmall;
+			sourceTree = "<group>";
+		};
+		8528F5802534B623004FDE50 /* StudyTileMedium */ = {
+			isa = PBXGroup;
+			children = (
+				8528F5FC2534C170004FDE50 /* StudyTileMedium.swift */,
+				8528F6012534C182004FDE50 /* StudyTileMedium.xib */,
+			);
+			path = StudyTileMedium;
+			sourceTree = "<group>";
+		};
+		8528F5812534B632004FDE50 /* StudyTileBig */ = {
+			isa = PBXGroup;
+			children = (
+				8528F6062534C194004FDE50 /* StudyTileBig.swift */,
+				8528F60B2534C1B1004FDE50 /* StudyTileBig.xib */,
+			);
+			path = StudyTileBig;
+			sourceTree = "<group>";
+		};
+		8528F5822534B66D004FDE50 /* ScoreInput */ = {
+			isa = PBXGroup;
+			children = (
+				8528F5E02534C0C2004FDE50 /* ScoreInput.swift */,
+				8528F5E82534C0F4004FDE50 /* ScoreInput.xib */,
+			);
+			path = ScoreInput;
+			sourceTree = "<group>";
+		};
+		8528F59C2534B791004FDE50 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8528F59D2534B7AC004FDE50 /* ApiService.swift */,
+				8528F5A52534B7B8004FDE50 /* StorageService.swift */,
+				8528F6392534D524004FDE50 /* README.md */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		8528F62B2534CBE0004FDE50 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8528F62C2534CBF3004FDE50 /* README.md */,
+				8528F62D2534CC70004FDE50 /* ApiServiceProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8528F51F2534AAE2004FDE50 /* Postuparium */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8528F54D2534AAE4004FDE50 /* Build configuration list for PBXNativeTarget "Postuparium" */;
+			buildPhases = (
+				8528F51C2534AAE2004FDE50 /* Sources */,
+				8528F51D2534AAE2004FDE50 /* Frameworks */,
+				8528F51E2534AAE2004FDE50 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Postuparium;
+			productName = Postuparium;
+			productReference = 8528F5202534AAE2004FDE50 /* Postuparium.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8528F5382534AAE4004FDE50 /* PostupariumTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8528F5502534AAE4004FDE50 /* Build configuration list for PBXNativeTarget "PostupariumTests" */;
+			buildPhases = (
+				8528F5352534AAE4004FDE50 /* Sources */,
+				8528F5362534AAE4004FDE50 /* Frameworks */,
+				8528F5372534AAE4004FDE50 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8528F53B2534AAE4004FDE50 /* PBXTargetDependency */,
+			);
+			name = PostupariumTests;
+			productName = PostupariumTests;
+			productReference = 8528F5392534AAE4004FDE50 /* PostupariumTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8528F5432534AAE4004FDE50 /* PostupariumUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8528F5532534AAE4004FDE50 /* Build configuration list for PBXNativeTarget "PostupariumUITests" */;
+			buildPhases = (
+				8528F5402534AAE4004FDE50 /* Sources */,
+				8528F5412534AAE4004FDE50 /* Frameworks */,
+				8528F5422534AAE4004FDE50 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8528F5462534AAE4004FDE50 /* PBXTargetDependency */,
+			);
+			name = PostupariumUITests;
+			productName = PostupariumUITests;
+			productReference = 8528F5442534AAE4004FDE50 /* PostupariumUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8528F5182534AAE2004FDE50 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					8528F51F2534AAE2004FDE50 = {
+						CreatedOnToolsVersion = 12.0.1;
+					};
+					8528F5382534AAE4004FDE50 = {
+						CreatedOnToolsVersion = 12.0.1;
+						TestTargetID = 8528F51F2534AAE2004FDE50;
+					};
+					8528F5432534AAE4004FDE50 = {
+						CreatedOnToolsVersion = 12.0.1;
+						TestTargetID = 8528F51F2534AAE2004FDE50;
+					};
+				};
+			};
+			buildConfigurationList = 8528F51B2534AAE2004FDE50 /* Build configuration list for PBXProject "Postuparium" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8528F5172534AAE2004FDE50;
+			productRefGroup = 8528F5212534AAE2004FDE50 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8528F51F2534AAE2004FDE50 /* Postuparium */,
+				8528F5382534AAE4004FDE50 /* PostupariumTests */,
+				8528F5432534AAE4004FDE50 /* PostupariumUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8528F51E2534AAE2004FDE50 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8528F6332534D395004FDE50 /* .gitignore in Resources */,
+				8528F5E92534C0F4004FDE50 /* ScoreInput.xib in Resources */,
+				8528F5F82534C164004FDE50 /* StudyTileSmall.xib in Resources */,
+				8528F60C2534C1B1004FDE50 /* StudyTileBig.xib in Resources */,
+				8528F6022534C182004FDE50 /* StudyTileMedium.xib in Resources */,
+				8528F5332534AAE3004FDE50 /* LaunchScreen.storyboard in Resources */,
+				8528F5302534AAE3004FDE50 /* Assets.xcassets in Resources */,
+				8528F6162534C1E4004FDE50 /* UniversityTile.xib in Resources */,
+				8528F52B2534AAE2004FDE50 /* Main.storyboard in Resources */,
+				8528F55B2534AC72004FDE50 /* terminalScript.sh in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8528F5372534AAE4004FDE50 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8528F5422534AAE4004FDE50 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8528F51C2534AAE2004FDE50 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8528F5932534B733004FDE50 /* Photo.swift in Sources */,
+				8528F6432534D575004FDE50 /* InfoListView.swift in Sources */,
+				8528F5F32534C151004FDE50 /* StudyTileSmall.swift in Sources */,
+				8528F5FD2534C170004FDE50 /* StudyTileMedium.swift in Sources */,
+				8528F5C82534BBA7004FDE50 /* StartScreenRouter.swift in Sources */,
+				8528F5C32534BB88004FDE50 /* StartScreenViewContoller.swift in Sources */,
+				8528F5282534AAE2004FDE50 /* ViewController.swift in Sources */,
+				8528F6072534C194004FDE50 /* StudyTileBig.swift in Sources */,
+				8528F6112534C1CC004FDE50 /* UniversityTile.swift in Sources */,
+				8528F5982534B741004FDE50 /* Feedback.swift in Sources */,
+				8528F52E2534AAE2004FDE50 /* Postuparium.xcdatamodeld in Sources */,
+				8528F5D72534BBEB004FDE50 /* StartScreenInteractor.swift in Sources */,
+				8528F5842534B6F2004FDE50 /* Enrollee.swift in Sources */,
+				8528F62E2534CC70004FDE50 /* ApiServiceProtocol.swift in Sources */,
+				8528F5892534B70C004FDE50 /* EdProgram.swift in Sources */,
+				8528F5DC2534BC04004FDE50 /* StartScreenConfigurator.swift in Sources */,
+				8528F59E2534B7AC004FDE50 /* ApiService.swift in Sources */,
+				8528F5242534AAE2004FDE50 /* AppDelegate.swift in Sources */,
+				8528F5262534AAE2004FDE50 /* SceneDelegate.swift in Sources */,
+				8528F63B2534D566004FDE50 /* ApplicantsTableView.swift in Sources */,
+				8528F5D22534BBCF004FDE50 /* StartScreenPresenter.swift in Sources */,
+				8528F5CD2534BBBE004FDE50 /* StartScreenProtocols.swift in Sources */,
+				8528F5BD2534BB63004FDE50 /* StartScreenView.swift in Sources */,
+				8528F5A62534B7B8004FDE50 /* StorageService.swift in Sources */,
+				8528F5E12534C0C2004FDE50 /* ScoreInput.swift in Sources */,
+				8528F58E2534B71B004FDE50 /* University.swift in Sources */,
+				8528F5EE2534C132004FDE50 /* EdProgramTile.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8528F5352534AAE4004FDE50 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8528F53E2534AAE4004FDE50 /* PostupariumTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8528F5402534AAE4004FDE50 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8528F5492534AAE4004FDE50 /* PostupariumUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8528F53B2534AAE4004FDE50 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8528F51F2534AAE2004FDE50 /* Postuparium */;
+			targetProxy = 8528F53A2534AAE4004FDE50 /* PBXContainerItemProxy */;
+		};
+		8528F5462534AAE4004FDE50 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8528F51F2534AAE2004FDE50 /* Postuparium */;
+			targetProxy = 8528F5452534AAE4004FDE50 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8528F5292534AAE2004FDE50 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8528F52A2534AAE2004FDE50 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8528F5312534AAE3004FDE50 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8528F5322534AAE3004FDE50 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8528F54B2534AAE4004FDE50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8528F54C2534AAE4004FDE50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8528F54E2534AAE4004FDE50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5ABALJWYVX;
+				INFOPLIST_FILE = Postuparium/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = spetrenko.Postuparium;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8528F54F2534AAE4004FDE50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5ABALJWYVX;
+				INFOPLIST_FILE = Postuparium/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = spetrenko.Postuparium;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8528F5512534AAE4004FDE50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5ABALJWYVX;
+				INFOPLIST_FILE = PostupariumTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = spetrenko.PostupariumTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Postuparium.app/Postuparium";
+			};
+			name = Debug;
+		};
+		8528F5522534AAE4004FDE50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5ABALJWYVX;
+				INFOPLIST_FILE = PostupariumTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = spetrenko.PostupariumTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Postuparium.app/Postuparium";
+			};
+			name = Release;
+		};
+		8528F5542534AAE4004FDE50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5ABALJWYVX;
+				INFOPLIST_FILE = PostupariumUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = spetrenko.PostupariumUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Postuparium;
+			};
+			name = Debug;
+		};
+		8528F5552534AAE4004FDE50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5ABALJWYVX;
+				INFOPLIST_FILE = PostupariumUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = spetrenko.PostupariumUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Postuparium;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8528F51B2534AAE2004FDE50 /* Build configuration list for PBXProject "Postuparium" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8528F54B2534AAE4004FDE50 /* Debug */,
+				8528F54C2534AAE4004FDE50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8528F54D2534AAE4004FDE50 /* Build configuration list for PBXNativeTarget "Postuparium" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8528F54E2534AAE4004FDE50 /* Debug */,
+				8528F54F2534AAE4004FDE50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8528F5502534AAE4004FDE50 /* Build configuration list for PBXNativeTarget "PostupariumTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8528F5512534AAE4004FDE50 /* Debug */,
+				8528F5522534AAE4004FDE50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8528F5532534AAE4004FDE50 /* Build configuration list for PBXNativeTarget "PostupariumUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8528F5542534AAE4004FDE50 /* Debug */,
+				8528F5552534AAE4004FDE50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8528F52C2534AAE2004FDE50 /* Postuparium.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8528F52D2534AAE2004FDE50 /* Postuparium.xcdatamodel */,
+			);
+			currentVersion = 8528F52D2534AAE2004FDE50 /* Postuparium.xcdatamodel */;
+			path = Postuparium.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 8528F5182534AAE2004FDE50 /* Project object */;
+}

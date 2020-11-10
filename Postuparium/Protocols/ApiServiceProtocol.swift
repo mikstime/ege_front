@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol ApiServiceProtocol: class {
+protocol ApiServiceProtocol: AnyObject {
     func openUrl(with urlString: String)
 }

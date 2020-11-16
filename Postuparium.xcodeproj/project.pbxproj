@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E00060F25620302000693B5 /* Logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E00060C25620302000693B5 /* Logo@3x.png */; };
+		2E00061025620302000693B5 /* Logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E00060D25620302000693B5 /* Logo@2x.png */; };
+		2E00061125620302000693B5 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E00060E25620302000693B5 /* Logo.png */; };
 		8528F5242534AAE2004FDE50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8528F5232534AAE2004FDE50 /* AppDelegate.swift */; };
 		8528F5262534AAE2004FDE50 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8528F5252534AAE2004FDE50 /* SceneDelegate.swift */; };
 		8528F5282534AAE2004FDE50 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8528F5272534AAE2004FDE50 /* ViewController.swift */; };
@@ -66,6 +69,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E00060C25620302000693B5 /* Logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo@3x.png"; sourceTree = "<group>"; };
+		2E00060D25620302000693B5 /* Logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo@2x.png"; sourceTree = "<group>"; };
+		2E00060E25620302000693B5 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
 		8528F5202534AAE2004FDE50 /* Postuparium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Postuparium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8528F5232534AAE2004FDE50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8528F5252534AAE2004FDE50 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -266,6 +272,9 @@
 		8528F5672534AE1A004FDE50 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2E00060E25620302000693B5 /* Logo.png */,
+				2E00060D25620302000693B5 /* Logo@2x.png */,
+				2E00060C25620302000693B5 /* Logo@3x.png */,
 				8528F6382534D4F7004FDE50 /* README.md */,
 			);
 			path = Resources;
@@ -274,7 +283,6 @@
 		8528F5682534AF9B004FDE50 /* StartScreen */ = {
 			isa = PBXGroup;
 			children = (
-				8528F56C2534B0C4004FDE50 /* EdProgramTable */,
 				8528F5BC2534BB63004FDE50 /* StartScreenView.swift */,
 				8528F5C22534BB88004FDE50 /* StartScreenViewContoller.swift */,
 				8528F5C72534BBA7004FDE50 /* StartScreenRouter.swift */,
@@ -311,13 +319,6 @@
 				8528F56E2534B17B004FDE50 /* Slidebar */,
 			);
 			path = UniversityMap;
-			sourceTree = "<group>";
-		};
-		8528F56C2534B0C4004FDE50 /* EdProgramTable */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = EdProgramTable;
 			sourceTree = "<group>";
 		};
 		8528F56D2534B134004FDE50 /* Slidebar */ = {
@@ -605,10 +606,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8528F6332534D395004FDE50 /* .gitignore in Resources */,
+				2E00061025620302000693B5 /* Logo@2x.png in Resources */,
 				8528F5E92534C0F4004FDE50 /* ScoreInput.xib in Resources */,
 				8528F5F82534C164004FDE50 /* StudyTileSmall.xib in Resources */,
 				8528F60C2534C1B1004FDE50 /* StudyTileBig.xib in Resources */,
+				2E00060F25620302000693B5 /* Logo@3x.png in Resources */,
 				8528F6022534C182004FDE50 /* StudyTileMedium.xib in Resources */,
+				2E00061125620302000693B5 /* Logo.png in Resources */,
 				8528F5332534AAE3004FDE50 /* LaunchScreen.storyboard in Resources */,
 				8528F5302534AAE3004FDE50 /* Assets.xcassets in Resources */,
 				8528F6162534C1E4004FDE50 /* UniversityTile.xib in Resources */,

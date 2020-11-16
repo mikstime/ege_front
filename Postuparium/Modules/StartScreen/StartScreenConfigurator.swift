@@ -10,6 +10,11 @@ import UIKit
 
 class StartScreenConfigurator: StartScreenConfiguratorProtocol {
     
+    func configure(with viewController: ViewController) {
+        
+    }
+    
+    
     func configure(with viewController: StartScreenViewController) {
         let presenter = StartScreenPresenter(view: viewController)
         let interactor = StartScreenInteractor(presenter: presenter)

@@ -28,5 +28,5 @@ protocol StartScreenRouterProtocol: class {
 }
 
 protocol StartScreenConfiguratorProtocol: class {
-    func configure(with viewController: MainViewController)
+    func configure(with viewController: StartScreenViewController)
 }

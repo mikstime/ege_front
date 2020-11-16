@@ -7,11 +7,11 @@
 
 import Foundation
 
-class StartScreenInteractor: MainInteractorProtocol {
+class StartScreenInteractor: StartScreenInteractorProtocol {
     
-    weak var presenter: MainPresenterProtocol!
+    weak var presenter: StartScreenPresenterProtocol!
     
-    required init(presenter: MainPresenterProtocol) {
+    required init(presenter: StartScreenPresenterProtocol) {
         self.presenter = presenter
     }
     

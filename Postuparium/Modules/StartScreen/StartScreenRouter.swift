@@ -10,14 +10,19 @@ import UIKit
 
 class StartScreenRouter: StartScreenRouterProtocol {
     
-    weak var viewController: StartScreenViewController!
+    weak var viewController: StartScreenViewControllerProtocol!
     
-    init(viewController: StartScreenViewController) {
+    init(viewController: StartScreenViewControllerProtocol) {
         self.viewController = viewController
     }
     
-    func showAboutScene() {
-        viewController.performSegue(withIdentifier: viewController.selfToAboutSegueName, sender: nil)
+    func showRegistrationScreen() {
+        let vc = EgeResultsSelectionConfigurator.configureModule()
+        viewController?.navigationController!.show(vc as UIViewController, sender: nil)
+//        let storyboard = UIStoryboard(name: "EgeResultsSelection", bundle: nil)
+//        guard let vc = storyboard.instantiateInitialViewController() else { return }
+//        print("did load")
+//        viewController.navigationController!.show(vc as UIViewController, sender: viewController)
     }
     
     func prepare(for segue: UIStoryboardSegue, sender: Any?) {

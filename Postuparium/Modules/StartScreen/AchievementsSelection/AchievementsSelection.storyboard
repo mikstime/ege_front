@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wtt-DG-dsr">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Achievements Selection View Controller-->
+        <scene sceneID="9bb-Fs-mfH">
+            <objects>
+                <viewController storyboardIdentifier="AchievementsSelection" id="wtt-DG-dsr" customClass="AchievementsSelectionViewController" customModule="Postuparium" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e2z-vx-yms">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="i2J-cx-qHL">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l5r-nu-Kcl">
+                                        <rect key="frame" x="47" y="0.0" width="320" height="136"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="136" id="3ZD-RG-asl"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="k7L-VO-yoH">
+                                        <rect key="frame" x="32" y="136" width="350" height="377"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dgn-E0-uKx">
+                                                <rect key="frame" x="0.0" y="0.0" width="350" height="123"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ваши" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RfM-9C-Zfh">
+                                                        <rect key="frame" x="0.0" y="0.0" width="350" height="41"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Индивидуальные" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EyD-T1-tXG">
+                                                        <rect key="frame" x="0.0" y="41" width="350" height="41"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Достижения" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kjb-I7-vyd">
+                                                        <rect key="frame" x="0.0" y="82" width="350" height="41"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Ku2-hg-J0u">
+                                                <rect key="frame" x="0.0" y="163" width="350" height="214"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aag-pI-VIi" customClass="AchievementsItem" customModule="Postuparium">
+                                                        <rect key="frame" x="0.0" y="0.0" width="350" height="58"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="58" id="HJ8-eY-FXf"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="Золотая медаль"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WnK-HN-789" customClass="AchievementsItem" customModule="Postuparium">
+                                                        <rect key="frame" x="0.0" y="78" width="350" height="58"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="ГТО"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E9n-l4-Duk" customClass="AchievementsItem" customModule="Postuparium">
+                                                        <rect key="frame" x="0.0" y="156" width="350" height="58"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="Волонтерство"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="aag-pI-VIi" firstAttribute="width" secondItem="Ku2-hg-J0u" secondAttribute="width" id="3G9-f9-ovu"/>
+                                                    <constraint firstItem="WnK-HN-789" firstAttribute="height" secondItem="aag-pI-VIi" secondAttribute="height" id="9E0-gs-IcS"/>
+                                                    <constraint firstItem="WnK-HN-789" firstAttribute="width" secondItem="aag-pI-VIi" secondAttribute="width" id="Gx8-oF-jF8"/>
+                                                    <constraint firstItem="E9n-l4-Duk" firstAttribute="width" secondItem="aag-pI-VIi" secondAttribute="width" id="Obr-7s-M1V"/>
+                                                    <constraint firstItem="E9n-l4-Duk" firstAttribute="height" secondItem="aag-pI-VIi" secondAttribute="height" id="qUn-Qg-sQZ"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Ku2-hg-J0u" firstAttribute="width" secondItem="k7L-VO-yoH" secondAttribute="width" id="9OJ-CR-duY"/>
+                                            <constraint firstAttribute="trailing" secondItem="dgn-E0-uKx" secondAttribute="trailing" id="Isg-lw-B11"/>
+                                            <constraint firstItem="dgn-E0-uKx" firstAttribute="leading" secondItem="k7L-VO-yoH" secondAttribute="leading" id="j6o-Er-6zz"/>
+                                            <constraint firstItem="Ku2-hg-J0u" firstAttribute="leading" secondItem="k7L-VO-yoH" secondAttribute="leading" id="kw3-c3-pNG"/>
+                                        </constraints>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iXC-vZ-Cwm">
+                                        <rect key="frame" x="47" y="513" width="320" height="272"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jmC-T7-iDj">
+                                        <rect key="frame" x="16" y="785" width="382" height="33"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cde-gO-HTV">
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="33"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                <state key="normal" title="Далее"/>
+                                                <connections>
+                                                    <action selector="nextScreen" destination="wtt-DG-dsr" eventType="touchUpInside" id="jCy-Ia-Kiy"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="jmC-T7-iDj" firstAttribute="leading" secondItem="i2J-cx-qHL" secondAttribute="leading" constant="16" id="LS0-u1-yho"/>
+                                    <constraint firstAttribute="trailing" secondItem="jmC-T7-iDj" secondAttribute="trailing" constant="16" id="YHP-Zv-k55"/>
+                                    <constraint firstItem="k7L-VO-yoH" firstAttribute="leading" secondItem="i2J-cx-qHL" secondAttribute="leading" constant="32" id="YT7-iN-45g"/>
+                                    <constraint firstAttribute="trailing" secondItem="k7L-VO-yoH" secondAttribute="trailing" constant="32" id="mHb-a3-Ebr"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xRb-6z-vfq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xRb-6z-vfq" firstAttribute="trailing" secondItem="i2J-cx-qHL" secondAttribute="trailing" id="1l8-ox-Hrc"/>
+                            <constraint firstItem="xRb-6z-vfq" firstAttribute="bottom" secondItem="i2J-cx-qHL" secondAttribute="bottom" id="53m-yi-MdG"/>
+                            <constraint firstItem="i2J-cx-qHL" firstAttribute="trailing" secondItem="xRb-6z-vfq" secondAttribute="trailing" id="Gqs-W6-s6T"/>
+                            <constraint firstItem="i2J-cx-qHL" firstAttribute="bottom" secondItem="xRb-6z-vfq" secondAttribute="bottom" id="af5-dx-xr6"/>
+                            <constraint firstItem="i2J-cx-qHL" firstAttribute="leading" secondItem="xRb-6z-vfq" secondAttribute="leading" id="oIa-qf-gD0"/>
+                            <constraint firstItem="xRb-6z-vfq" firstAttribute="top" secondItem="i2J-cx-qHL" secondAttribute="top" id="sY2-9c-6aZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" id="ImW-17-Hqm">
+                        <barButtonItem key="backBarButtonItem" title="ИД" id="kOL-9v-Zks"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="goldenMedalItem" destination="aag-pI-VIi" id="Zqr-9s-vOl"/>
+                        <outlet property="gtoItem" destination="WnK-HN-789" id="ZYv-Sg-8AR"/>
+                        <outlet property="volunteeringItem" destination="E9n-l4-Duk" id="VaI-A1-4vn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XC5-nR-ZaY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="950.72463768115949" y="79.6875"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -9,22 +9,24 @@
 import Foundation
 import UIKit
 
-protocol StartScreenViewProtocol: class {
-
+protocol StartScreenViewControllerProtocol: UIViewController {
+    
 }
 
 protocol StartScreenPresenterProtocol: class {
     var router: StartScreenRouterProtocol! { set get }
-    func configureView()
+    func viewDidLoad()
 }
 
 protocol StartScreenInteractorProtocol: class {
-
+    
+    var presenter: StartScreenPresenterProtocol! { get set }
+    
 }
 
 protocol StartScreenRouterProtocol: class {
-    func showAboutScene()
     func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    func showRegistrationScreen()
 }
 
 protocol StartScreenConfiguratorProtocol: class {

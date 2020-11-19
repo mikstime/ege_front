@@ -8,17 +8,19 @@
 import Foundation
 import UIKit
 
+
+// 1. 
 class StartScreenPresenter: StartScreenPresenterProtocol {
 
-    weak var view: StartScreenViewProtocol!
+    weak var view: StartScreenViewControllerProtocol!
     var interactor: StartScreenInteractorProtocol!
     var router: StartScreenRouterProtocol!
     
-    required init(view: StartScreenViewProtocol) {
+    required init(view: StartScreenViewControllerProtocol) {
         self.view = view
     }
     
-    func configureView() {
- 
+    func viewDidLoad() {
+        router?.showRegistrationScreen()
     }
 }

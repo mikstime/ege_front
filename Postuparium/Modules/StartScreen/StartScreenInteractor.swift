@@ -7,13 +7,12 @@
 
 import Foundation
 
+// 1. интерактор
 class StartScreenInteractor: StartScreenInteractorProtocol {
-    
-    weak var presenter: StartScreenPresenterProtocol!
-    
+    var presenter: StartScreenPresenterProtocol!
+
     required init(presenter: StartScreenPresenterProtocol) {
         self.presenter = presenter
     }
-    
     
 }

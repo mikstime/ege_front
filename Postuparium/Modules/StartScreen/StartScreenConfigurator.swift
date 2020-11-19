@@ -16,6 +16,7 @@ class StartScreenConfigurator: StartScreenConfiguratorProtocol {
     
     
     func configure(with viewController: StartScreenViewController) {
+        
         let presenter = StartScreenPresenter(view: viewController)
         let interactor = StartScreenInteractor(presenter: presenter)
         let router = StartScreenRouter(viewController: viewController)

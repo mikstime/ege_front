@@ -69,7 +69,7 @@ class SwipeableViewController: UIViewController {
             break
         }
     }
-    
+    var maxFraction: CGFloat = 0
     @objc private func handleCardPan (recognizer:UIPanGestureRecognizer) {
         cardViewController.view.endEditing(true)
         let translation = recognizer.translation(in: self.cardViewController.handleArea)
@@ -85,11 +85,16 @@ class SwipeableViewController: UIViewController {
         case .changed:
             updateInteractiveTransition(fractionCompleted: fractionComplete)
         case .ended:
+            if (fractionComplete < maxFraction * 0.95 ){
+                cancelTransition()
+                animateTransitionIfNeeded(state: nextState == .collapsed ? .expanded : .collapsed, duration: duration / 3)
+            } else {
                 continueInteractiveTransition()
+            }
         default:
             break
         }
-        
+        maxFraction = max(maxFraction, fractionComplete)
     }
     
     private func animateTransitionIfNeeded (state:CardState, duration:TimeInterval) {
@@ -122,6 +127,13 @@ class SwipeableViewController: UIViewController {
             animator.pauseAnimation()
             animationProgressWhenInterrupted = animator.fractionComplete
         }
+    }
+    
+    private func cancelTransition() {
+        for animator in runningAnimations {
+            animator.stopAnimation(true)
+        }
+        self.runningAnimations.removeAll()
     }
     
     private func updateInteractiveTransition(fractionCompleted:CGFloat) {

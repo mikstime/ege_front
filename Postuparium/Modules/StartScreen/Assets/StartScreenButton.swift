@@ -20,13 +20,14 @@ class StartScreenButton: UIButton {
         _init()
     }
     
+    var gradient: CAGradientLayer!
     func _init() {
         
-        let gradient = CAGradientLayer()
+        gradient = CAGradientLayer()
 
         gradient.frame.size = frame.size
-        gradient.startPoint = .init(x: 1, y: 0)
-        gradient.endPoint   = .init(x: 0, y: 1)
+        gradient.startPoint = .init(x: 0.5, y: 0)
+        gradient.endPoint   = .init(x: 0.5, y: 1)
         gradient.locations = [0.0, 1.0]
         gradient.colors = [UIColor(named: "BlueGradientTop")?.cgColor ?? #colorLiteral(red: 0.03921568627, green: 0.5176470588, blue: 1, alpha: 0.87).cgColor, UIColor(named: "BlueGradientBottom")?.cgColor ?? #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1).cgColor]
 
@@ -36,6 +37,14 @@ class StartScreenButton: UIButton {
         setTitleColor(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
         setTitle("Добавить", for: .normal)
         titleLabel?.font = titleLabel?.font.withSize(28)
+    }
+    
+    final override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        guard UIApplication.shared.applicationState == .inactive else {
+            return
+        }
+        gradient.colors = [UIColor(named: "BlueGradientTop")?.cgColor ?? #colorLiteral(red: 0.03921568627, green: 0.5176470588, blue: 1, alpha: 0.87).cgColor, UIColor(named: "BlueGradientBottom")?.cgColor ?? #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1).cgColor]
     }
     
 }

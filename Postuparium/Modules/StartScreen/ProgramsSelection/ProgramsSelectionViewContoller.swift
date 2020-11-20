@@ -7,10 +7,9 @@
 
 import UIKit
 
-class ProgramsSelectionViewController: UIViewController, ProgramsSelectionViewControllerProtocol, UITextFieldDelegate {
+class ProgramsSelectionViewController: SwipeableViewController, ProgramsSelectionViewControllerProtocol, UITextFieldDelegate {
     
     var presenter: ProgramsSelectionPresenterProtocol!
-    
 //    @IBOutlet weak var titleView: UIStackView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var selectedProgramsView: UIStackView!
@@ -21,6 +20,7 @@ class ProgramsSelectionViewController: UIViewController, ProgramsSelectionViewCo
     }
     
     override func viewDidLoad() {
+        cardViewController = ProgramsSelectionMenuConfigurator.configureModule()
         super.viewDidLoad()
         presenter?.viewDidLoad()
         hideKeyboardWhenTappedAround()
@@ -33,6 +33,10 @@ class ProgramsSelectionViewController: UIViewController, ProgramsSelectionViewCo
     }
     
     @IBAction func OpenProgramsSelectionMenu() {
+        showCard()
+    }
+    
+    func initProgramView() {
         var program = EdProgram()
         program.code = "1.1.1"
         program.id = 4
@@ -97,7 +101,6 @@ extension ProgramsSelectionViewController: ProgramsSelectionItemDispatcherProtoc
         programView.removeFromSuperview()
         print(program)
 //        presenter?.removeProgram(program)
-        self.view.layoutIfNeeded()
         updateSelectedProgramsView()
         UIView.animate(withDuration: 0.3) {
             self.view.layoutIfNeeded()

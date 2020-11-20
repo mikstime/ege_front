@@ -43,16 +43,21 @@
 		2EAD8B942562259500C4EEA3 /* ProgramsSelectionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAD8B7A2562242E00C4EEA3 /* ProgramsSelectionPresenter.swift */; };
 		2EAD8B962562259500C4EEA3 /* ProgramsSelectionViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAD8B7D2562242E00C4EEA3 /* ProgramsSelectionViewContoller.swift */; };
 		2EAD8B972562259500C4EEA3 /* ProgramsSelectionProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAD8B792562242E00C4EEA3 /* ProgramsSelectionProtocols.swift */; };
-		2EAD8B992562259500C4EEA3 /* ProgramsSelectionMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EAD8B892562256200C4EEA3 /* ProgramsSelectionMenu.xib */; };
 		2EAD8BA2256225DE00C4EEA3 /* ProgramsSelectionItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EAD8B9E2562259E00C4EEA3 /* ProgramsSelectionItem.xib */; };
 		2EAD8BA6256225E200C4EEA3 /* ProgramsSelectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAD8B9D2562259E00C4EEA3 /* ProgramsSelectionItem.swift */; };
 		2EB468352562270000988BAA /* HomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EB468342562270000988BAA /* HomeScreen.storyboard */; };
-		2EB4683C256229A500988BAA /* ProgramsSelectionMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAD8B882562256200C4EEA3 /* ProgramsSelectionMenu.swift */; };
 		2EB468402562E59D00988BAA /* AchievementsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAD8B652562144F00C4EEA3 /* AchievementsItem.swift */; };
 		2EB468442562E5A300988BAA /* AchievementsItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EAD8B642562144F00C4EEA3 /* AchievementsItem.xib */; };
 		2EB468492562E6E300988BAA /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2EB468482562E6E300988BAA /* README.md */; };
-		2ECEEA2A256389FE00ACA3B6 /* ShowProgramsSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECEEA29256389FE00ACA3B6 /* ShowProgramsSegue.swift */; };
 		2EDE682C2567119B0064D28B /* ProgramsSelection in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE682B2567119B0064D28B /* ProgramsSelection */; };
+		2EDE684D2567601B0064D28B /* ProgramsSelectionMenuRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDE684025675EA70064D28B /* ProgramsSelectionMenuRouter.swift */; };
+		2EDE684E2567601B0064D28B /* ProgramsSelectionMenuInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDE683F25675EA70064D28B /* ProgramsSelectionMenuInteractor.swift */; };
+		2EDE684F2567601B0064D28B /* ProgramsSelectionMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EDE683E25675EA70064D28B /* ProgramsSelectionMenu.storyboard */; };
+		2EDE68502567601B0064D28B /* ProgramsSelectionMenuConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDE683B25675EA60064D28B /* ProgramsSelectionMenuConfigurator.swift */; };
+		2EDE68512567601B0064D28B /* ProgramsSelectionMenuProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDE683C25675EA60064D28B /* ProgramsSelectionMenuProtocols.swift */; };
+		2EDE68522567601B0064D28B /* ProgramsSelectionMenuViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDE683D25675EA70064D28B /* ProgramsSelectionMenuViewContoller.swift */; };
+		2EDE68532567601B0064D28B /* ProgramsSelectionMenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDE683A25675EA60064D28B /* ProgramsSelectionMenuPresenter.swift */; };
+		2EDE6858256770A80064D28B /* SwipeableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDE6857256770A80064D28B /* SwipeableViewController.swift */; };
 		2EE044BE25630F950014FD34 /* HomeScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE044B825630F940014FD34 /* HomeScreenInteractor.swift */; };
 		2EE044BF25630F950014FD34 /* HomeScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE044BC25630F950014FD34 /* HomeScreenPresenter.swift */; };
 		2EE044C125630F950014FD34 /* HomeScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE044B725630F940014FD34 /* HomeScreenRouter.swift */; };
@@ -155,14 +160,19 @@
 		2EAD8B7D2562242E00C4EEA3 /* ProgramsSelectionViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramsSelectionViewContoller.swift; sourceTree = "<group>"; };
 		2EAD8B7E2562242E00C4EEA3 /* ProgramsSelectionConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramsSelectionConfigurator.swift; sourceTree = "<group>"; };
 		2EAD8B7F256224C100C4EEA3 /* ProgramsSelection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProgramsSelection.storyboard; sourceTree = "<group>"; };
-		2EAD8B882562256200C4EEA3 /* ProgramsSelectionMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramsSelectionMenu.swift; sourceTree = "<group>"; };
-		2EAD8B892562256200C4EEA3 /* ProgramsSelectionMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgramsSelectionMenu.xib; sourceTree = "<group>"; };
 		2EAD8B9D2562259E00C4EEA3 /* ProgramsSelectionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramsSelectionItem.swift; sourceTree = "<group>"; };
 		2EAD8B9E2562259E00C4EEA3 /* ProgramsSelectionItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgramsSelectionItem.xib; sourceTree = "<group>"; };
 		2EB468342562270000988BAA /* HomeScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeScreen.storyboard; sourceTree = "<group>"; };
 		2EB468482562E6E300988BAA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		2ECEEA29256389FE00ACA3B6 /* ShowProgramsSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowProgramsSegue.swift; sourceTree = "<group>"; };
 		2EDE682B2567119B0064D28B /* ProgramsSelection */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ProgramsSelection; path = Postuparium/Modules/StartScreen/ProgramsSelection; sourceTree = SOURCE_ROOT; };
+		2EDE683A25675EA60064D28B /* ProgramsSelectionMenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramsSelectionMenuPresenter.swift; sourceTree = "<group>"; };
+		2EDE683B25675EA60064D28B /* ProgramsSelectionMenuConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramsSelectionMenuConfigurator.swift; sourceTree = "<group>"; };
+		2EDE683C25675EA60064D28B /* ProgramsSelectionMenuProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramsSelectionMenuProtocols.swift; sourceTree = "<group>"; };
+		2EDE683D25675EA70064D28B /* ProgramsSelectionMenuViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramsSelectionMenuViewContoller.swift; sourceTree = "<group>"; };
+		2EDE683E25675EA70064D28B /* ProgramsSelectionMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProgramsSelectionMenu.storyboard; sourceTree = "<group>"; };
+		2EDE683F25675EA70064D28B /* ProgramsSelectionMenuInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramsSelectionMenuInteractor.swift; sourceTree = "<group>"; };
+		2EDE684025675EA70064D28B /* ProgramsSelectionMenuRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramsSelectionMenuRouter.swift; sourceTree = "<group>"; };
+		2EDE6857256770A80064D28B /* SwipeableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableViewController.swift; sourceTree = "<group>"; };
 		2EE044B725630F940014FD34 /* HomeScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenRouter.swift; sourceTree = "<group>"; };
 		2EE044B825630F940014FD34 /* HomeScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenInteractor.swift; sourceTree = "<group>"; };
 		2EE044B925630F940014FD34 /* HomeScreenConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenConfigurator.swift; sourceTree = "<group>"; };
@@ -281,6 +291,7 @@
 			children = (
 				2E42DCC825661E4400D82018 /* LoadingViewController */,
 				2E000618256204A2000693B5 /* StartScreenButton.swift */,
+				2EDE6857256770A80064D28B /* SwipeableViewController.swift */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -322,7 +333,6 @@
 			isa = PBXGroup;
 			children = (
 				2EAD8B872562255400C4EEA3 /* ProgramsSelectionItem */,
-				2EAD8B862562254A00C4EEA3 /* ProgramsSelectionMenu */,
 				2EAD8B7D2562242E00C4EEA3 /* ProgramsSelectionViewContoller.swift */,
 				2EAD8B782562242E00C4EEA3 /* ProgramsSelectionRouter.swift */,
 				2EAD8B792562242E00C4EEA3 /* ProgramsSelectionProtocols.swift */,
@@ -332,16 +342,6 @@
 				2EAD8B7F256224C100C4EEA3 /* ProgramsSelection.storyboard */,
 			);
 			path = ProgramsSelection;
-			sourceTree = "<group>";
-		};
-		2EAD8B862562254A00C4EEA3 /* ProgramsSelectionMenu */ = {
-			isa = PBXGroup;
-			children = (
-				2EAD8B882562256200C4EEA3 /* ProgramsSelectionMenu.swift */,
-				2EAD8B892562256200C4EEA3 /* ProgramsSelectionMenu.xib */,
-				2ECEEA29256389FE00ACA3B6 /* ShowProgramsSegue.swift */,
-			);
-			path = ProgramsSelectionMenu;
 			sourceTree = "<group>";
 		};
 		2EAD8B872562255400C4EEA3 /* ProgramsSelectionItem */ = {
@@ -366,6 +366,20 @@
 				2EB468342562270000988BAA /* HomeScreen.storyboard */,
 			);
 			path = HomeScreen;
+			sourceTree = "<group>";
+		};
+		2EDE683325675E710064D28B /* ProgramsSelectionMenu */ = {
+			isa = PBXGroup;
+			children = (
+				2EDE683D25675EA70064D28B /* ProgramsSelectionMenuViewContoller.swift */,
+				2EDE684025675EA70064D28B /* ProgramsSelectionMenuRouter.swift */,
+				2EDE683C25675EA60064D28B /* ProgramsSelectionMenuProtocols.swift */,
+				2EDE683A25675EA60064D28B /* ProgramsSelectionMenuPresenter.swift */,
+				2EDE683F25675EA70064D28B /* ProgramsSelectionMenuInteractor.swift */,
+				2EDE683B25675EA60064D28B /* ProgramsSelectionMenuConfigurator.swift */,
+				2EDE683E25675EA70064D28B /* ProgramsSelectionMenu.storyboard */,
+			);
+			path = ProgramsSelectionMenu;
 			sourceTree = "<group>";
 		};
 		8528F5172534AAE2004FDE50 = {
@@ -502,6 +516,7 @@
 		8528F5682534AF9B004FDE50 /* StartScreen */ = {
 			isa = PBXGroup;
 			children = (
+				2EDE683325675E710064D28B /* ProgramsSelectionMenu */,
 				2E0006172562047A000693B5 /* Assets */,
 				2E00061525620453000693B5 /* EgeResultsSelection */,
 				2EAD8B5A2562137500C4EEA3 /* AchievementsSelection */,
@@ -829,7 +844,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2EAD8B992562259500C4EEA3 /* ProgramsSelectionMenu.xib in Resources */,
 				2E8CE4932566EC80007C923C /* EgeResultsSelection.storyboard in Resources */,
 				8528F6332534D395004FDE50 /* .gitignore in Resources */,
 				2E00061025620302000693B5 /* Logo@2x.png in Resources */,
@@ -856,6 +870,7 @@
 				2E000666256209B1000693B5 /* EgeResultsSelector.xib in Resources */,
 				2E42DCCD25661E7500D82018 /* LoadingView.xib in Resources */,
 				2EB468492562E6E300988BAA /* README.md in Resources */,
+				2EDE684F2567601B0064D28B /* ProgramsSelectionMenu.storyboard in Resources */,
 				2EB468442562E5A300988BAA /* AchievementsItem.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -887,19 +902,21 @@
 				2EAD8B932562259500C4EEA3 /* ProgramsSelectionInteractor.swift in Sources */,
 				2EE044C425630F950014FD34 /* HomeScreenProtocols.swift in Sources */,
 				8528F6432534D575004FDE50 /* InfoListView.swift in Sources */,
-				2ECEEA2A256389FE00ACA3B6 /* ShowProgramsSegue.swift in Sources */,
 				2EE044BF25630F950014FD34 /* HomeScreenPresenter.swift in Sources */,
 				8528F5F32534C151004FDE50 /* StudyTileSmall.swift in Sources */,
+				2EDE6858256770A80064D28B /* SwipeableViewController.swift in Sources */,
 				8528F5FD2534C170004FDE50 /* StudyTileMedium.swift in Sources */,
 				2E000619256204A2000693B5 /* StartScreenButton.swift in Sources */,
 				2EAD8B6D256215A100C4EEA3 /* AchievementsSelectionInteractor.swift in Sources */,
 				2EE044BE25630F950014FD34 /* HomeScreenInteractor.swift in Sources */,
+				2EDE68522567601B0064D28B /* ProgramsSelectionMenuViewContoller.swift in Sources */,
+				2EDE68532567601B0064D28B /* ProgramsSelectionMenuPresenter.swift in Sources */,
 				8528F5C82534BBA7004FDE50 /* EgeResultsSelectionRouter.swift in Sources */,
 				8528F5C32534BB88004FDE50 /* EgeResultsSelectionViewContoller.swift in Sources */,
 				2E00063F25620748000693B5 /* StartScreenPresenter.swift in Sources */,
-				2EB4683C256229A500988BAA /* ProgramsSelectionMenu.swift in Sources */,
 				8528F5282534AAE2004FDE50 /* ViewController.swift in Sources */,
 				8528F6072534C194004FDE50 /* StudyTileBig.swift in Sources */,
+				2EDE684E2567601B0064D28B /* ProgramsSelectionMenuInteractor.swift in Sources */,
 				2EAD8B6F256215A100C4EEA3 /* AchievementsSelectionConfigurator.swift in Sources */,
 				8528F6112534C1CC004FDE50 /* UniversityTile.swift in Sources */,
 				2EE044C225630F950014FD34 /* HomeScreenConfigurator.swift in Sources */,
@@ -912,6 +929,7 @@
 				2EAD8B922562259500C4EEA3 /* ProgramsSelectionConfigurator.swift in Sources */,
 				8528F62E2534CC70004FDE50 /* ApiServiceProtocol.swift in Sources */,
 				8528F5892534B70C004FDE50 /* EdProgram.swift in Sources */,
+				2EDE68512567601B0064D28B /* ProgramsSelectionMenuProtocols.swift in Sources */,
 				8528F5DC2534BC04004FDE50 /* EgeResultsSelectionConfigurator.swift in Sources */,
 				8528F59E2534B7AC004FDE50 /* ApiService.swift in Sources */,
 				8528F5242534AAE2004FDE50 /* AppDelegate.swift in Sources */,
@@ -933,6 +951,7 @@
 				2E00064225620748000693B5 /* StartScreenConfigurator.swift in Sources */,
 				2EE044C125630F950014FD34 /* HomeScreenRouter.swift in Sources */,
 				2E00064A25620815000693B5 /* EgeResultsSelector.swift in Sources */,
+				2EDE684D2567601B0064D28B /* ProgramsSelectionMenuRouter.swift in Sources */,
 				2EAD8B912562259500C4EEA3 /* ProgramsSelectionRouter.swift in Sources */,
 				8528F5A62534B7B8004FDE50 /* StorageService.swift in Sources */,
 				8528F5E12534C0C2004FDE50 /* ScoreInput.swift in Sources */,
@@ -940,6 +959,7 @@
 				8528F5EE2534C132004FDE50 /* EdProgramTile.swift in Sources */,
 				2EAD8B942562259500C4EEA3 /* ProgramsSelectionPresenter.swift in Sources */,
 				2E42DCBB2566161600D82018 /* LoadingView.swift in Sources */,
+				2EDE68502567601B0064D28B /* ProgramsSelectionMenuConfigurator.swift in Sources */,
 				2E00064125620748000693B5 /* StartScreenInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

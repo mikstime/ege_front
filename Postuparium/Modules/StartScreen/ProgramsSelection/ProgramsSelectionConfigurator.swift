@@ -10,7 +10,7 @@ import UIKit
 
 class ProgramsSelectionConfigurator: ProgramsSelectionConfiguratorProtocol {
     
-    static func configureModule() -> ProgramsSelectionViewControllerProtocol {
+    static func configureModule(enrollee: Enrollee = Enrollee()) -> ProgramsSelectionViewControllerProtocol {
         
         let storyboard = UIStoryboard(name: "ProgramsSelection", bundle: nil)
         guard let vc: UIViewController = storyboard.instantiateInitialViewController()
@@ -21,9 +21,11 @@ class ProgramsSelectionConfigurator: ProgramsSelectionConfiguratorProtocol {
         let presenter = ProgramsSelectionPresenter()
         let interactor = ProgramsSelectionInteractor()
         let router = ProgramsSelectionRouter()
+        
+        interactor.enrollee = enrollee
+        
         viewController.presenter = presenter
         router.view = viewController
-        presenter.view = viewController
         
         presenter.interactor = interactor
         presenter.view = viewController

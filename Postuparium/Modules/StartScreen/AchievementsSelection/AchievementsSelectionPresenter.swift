@@ -11,26 +11,26 @@ import UIKit
 class AchievementsSelectionPresenter: AchievementsSelectionPresenterProtocol {
 
     weak var view: AchievementsSelectionViewControllerProtocol!
-    weak var interactor: AchievementsSelectionInteractorProtocol!
+    var interactor: AchievementsSelectionInteractorProtocol!
     var router: AchievementsSelectionRouterProtocol!
 
     func viewDidLoad() {
- 
+        
     }
     
     func presentNextScreen() {
-        router?.showProgramsSelectionScreen()
+        router?.showProgramsSelectionScreen(enrollee: interactor?.getEnrollee() ?? Enrollee() )
     }
     
     func didToggleGoldenMedal(state: Bool) {
-        //
+        interactor?.updateGoldenMedal(state: state)
     }
     
     func didToggleGto(state: Bool) {
-        //
+        interactor?.updateGto(state: state)
     }
     
-    func didToggleVolunteere(state: Bool) {
-        //
+    func didToggleVolunteering(state: Bool) {
+        interactor?.updateVolunteering(state: state)
     }
 }

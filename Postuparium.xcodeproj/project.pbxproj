@@ -502,10 +502,10 @@
 		8528F5682534AF9B004FDE50 /* StartScreen */ = {
 			isa = PBXGroup;
 			children = (
-				2EAD8B77256223FE00C4EEA3 /* ProgramsSelection */,
 				2E0006172562047A000693B5 /* Assets */,
 				2E00061525620453000693B5 /* EgeResultsSelection */,
 				2EAD8B5A2562137500C4EEA3 /* AchievementsSelection */,
+				2EAD8B77256223FE00C4EEA3 /* ProgramsSelection */,
 				2E00062A25620704000693B5 /* StartScreenViewContoller.swift */,
 				2E00062525620703000693B5 /* StartScreenRouter.swift */,
 				2E00062625620703000693B5 /* StartScreenProtocols.swift */,

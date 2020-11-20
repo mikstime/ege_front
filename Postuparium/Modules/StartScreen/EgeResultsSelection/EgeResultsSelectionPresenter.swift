@@ -12,6 +12,8 @@ import UIKit
 // 1.
 class EgeResultsSelectionPresenter: EgeResultsSelectionPresenterProtocol {
 
+    var enrolleeModel: Enrollee!
+        
     var view: EgeResultsSelectionViewControllerProtocol!
     var interactor: EgeResultsSelectionInteractorProtocol!
     var router: EgeResultsSelectionRouterProtocol!
@@ -20,8 +22,9 @@ class EgeResultsSelectionPresenter: EgeResultsSelectionPresenterProtocol {
         view.subjects = interactor.getSubjectsList()
     }
     
-    func presentNextScreen() {
-        router?.showAchievementsSelectionScreen()
+    func presentNextScreen(subjects: [SubjectDetails]) {
+        interactor?.updateEnrolleeSubjects(subjects:subjects)
+        router?.showAchievementsSelectionScreen(enrollee: interactor?.getEnrollee() ?? Enrollee())
     }
     
     func presentSkipScreen() {

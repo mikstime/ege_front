@@ -30,16 +30,16 @@ class AchievementsSelectionViewController: UIViewController, AchievementsSelecti
         return .lightContent
     }
     
-    @objc func toggleGoldenMedal(sender:UISwitch!) {
-        print("toggled gm")
+    @objc func toggleGoldenMedal(sender: UISwitch!) {
+        presenter?.didToggleGoldenMedal(state: sender.isOn)
     }
     
     @objc func toggleGto(sender:UISwitch!) {
-        print("toggled gto")
+        presenter?.didToggleGto(state: sender.isOn)
     }
     
     @objc func toggleVolunteering(sender:UISwitch!) {
-        print("toggled vo")
+        presenter?.didToggleVolunteering(state: sender.isOn)
     }
     
     private func linkActions() {

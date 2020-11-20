@@ -11,7 +11,7 @@ class ProgramsSelectionInteractor: ProgramsSelectionInteractorProtocol {
     
     weak var presenter: ProgramsSelectionPresenterProtocol!
     
-    required init() {}
+    var enrollee: Enrollee = Enrollee()
     
     
 }

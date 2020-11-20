@@ -15,9 +15,8 @@ class AchievementsSelectionRouter: AchievementsSelectionRouterProtocol {
         // prepare here some data for destination viewController
     }
     
-    func showProgramsSelectionScreen() {
-        print("show 3 scr ceep")
-        let vc = ProgramsSelectionConfigurator.configureModule()
+    func showProgramsSelectionScreen(enrollee: Enrollee) {
+        let vc = ProgramsSelectionConfigurator.configureModule(enrollee: enrollee)
         view?.navigationController!.show(vc as UIViewController, sender: view)
     }
     

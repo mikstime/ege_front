@@ -16,6 +16,10 @@ class ProgramsSelectionPresenter: ProgramsSelectionPresenterProtocol {
     
     required init() {}
     
+    func showNextScreen() {
+        router?.showHomeScreen()
+    }
+    
     func viewDidLoad() {
         //
     }

@@ -9,58 +9,47 @@ import UIKit
 
 class ProgramsSelectionViewController: UIViewController, ProgramsSelectionViewControllerProtocol, UITextFieldDelegate {
     
-    weak var presenter: ProgramsSelectionPresenterProtocol!
+    var presenter: ProgramsSelectionPresenterProtocol!
     
-    @IBOutlet weak var titleView: UIStackView!
-    // MARK: - Lifecycle methods
+//    @IBOutlet weak var titleView: UIStackView!
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var selectedProgramsView: UIStackView!
+    @IBOutlet weak var selectedProgramsHeightConstraint: NSLayoutConstraint!
+    
+    @IBAction func showNextScreen() {
+        presenter?.showNextScreen()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.viewDidLoad()
         hideKeyboardWhenTappedAround()
-//        let swipeGestureRecognizer: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(showSecondViewController))
-//        swipeGestureRecognizer.direction = UISwipeGestureRecognizer.Direction.up
-//        self.view.addGestureRecognizer(swipeGestureRecognizer)
+        updateSelectedProgramsView()
+        setupScrollView()
+        view.layoutIfNeeded()
     }
-    let sub = ProgramsSelectionMenu()
-    
-    @objc func hideProgramsSelectionMenu() {
-//        NSLayoutConstraint.deactivate(sub.constraints)
-//        let leadingConstraint = NSLayoutConstraint(item: sub, attribute: NSLayoutConstraint.Attribute.leading, relatedBy: NSLayoutConstraint.Relation.equal, toItem: self.view, attribute: NSLayoutConstraint.Attribute.leading, multiplier: 1, constant: 0)
-//        let trailingConstraint = NSLayoutConstraint(item: sub, attribute: NSLayoutConstraint.Attribute.trailing, relatedBy: NSLayoutConstraint.Relation.equal, toItem: self.view, attribute: NSLayoutConstraint.Attribute.trailing, multiplier: 1, constant: 0)
-//        let bottomConstraint = NSLayoutConstraint(item: sub, attribute: NSLayoutConstraint.Attribute.bottom, relatedBy: NSLayoutConstraint.Relation.equal, toItem: self.view.superview, attribute: NSLayoutConstraint.Attribute.bottom, multiplier: 1, constant: 0)
-//        let heightConstraint = NSLayoutConstraint(item: sub, attribute: .height, relatedBy: .equal, toItem: self.view, attribute: .height, multiplier: 0.0, constant: 0.0)
-//        NSLayoutConstraint.activate([leadingConstraint, trailingConstraint, heightConstraint, bottomConstraint])
-        UIView.animate(withDuration: 0.3) {
-            self.view.layoutIfNeeded()
-        }
-        sub.removeFromSuperview()
+    func setupScrollView() {
+        view.addGestureRecognizer(scrollView.panGestureRecognizer)
     }
     
     @IBAction func OpenProgramsSelectionMenu() {
-        self.view.addSubview(sub)
-        let swipeGestureRecognizer: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(hideProgramsSelectionMenu))
-        swipeGestureRecognizer.direction = UISwipeGestureRecognizer.Direction.down
-        sub.addGestureRecognizer(swipeGestureRecognizer)
-        let leadingConstraint = NSLayoutConstraint(item: sub, attribute: NSLayoutConstraint.Attribute.leading, relatedBy: NSLayoutConstraint.Relation.equal, toItem: self.view, attribute: NSLayoutConstraint.Attribute.leading, multiplier: 1, constant: 0)
-        let trailingConstraint = NSLayoutConstraint(item: sub, attribute: NSLayoutConstraint.Attribute.trailing, relatedBy: NSLayoutConstraint.Relation.equal, toItem: self.view, attribute: NSLayoutConstraint.Attribute.trailing, multiplier: 1, constant: 0)
-        let bottomConstraint = NSLayoutConstraint(item: sub, attribute: NSLayoutConstraint.Attribute.bottom, relatedBy: NSLayoutConstraint.Relation.equal, toItem: self.view.superview, attribute: NSLayoutConstraint.Attribute.bottom, multiplier: 1, constant: 0)
-        let heightConstraint = NSLayoutConstraint(item: sub, attribute: .height, relatedBy: .equal, toItem: self.view, attribute: .height, multiplier: 0.0, constant: 0.0)
-        sub.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([leadingConstraint, trailingConstraint, heightConstraint, bottomConstraint])
+        var program = EdProgram()
+        program.code = "1.1.1"
+        program.id = 4
+        program.name = "Информационные технологии"
+        addProgram(program: program)
         self.view.layoutIfNeeded()
+        updateSelectedProgramsView()
         
-        let topConstraint = NSLayoutConstraint(item: sub, attribute: NSLayoutConstraint.Attribute.top, relatedBy: .equal, toItem: titleView, attribute: NSLayoutConstraint.Attribute.bottom, multiplier: 1.0, constant: 24.0)
-
-        heightConstraint.isActive = false
-        topConstraint.isActive = true
         UIView.animate(withDuration: 0.3) {
             self.view.layoutIfNeeded()
         }
-        
-        self.view.bringSubviewToFront(sub)
-        
+        if selectedProgramsView.subviews.count > 3 {
+            let bottomOffset = CGPoint(x: 0, y: scrollView.contentSize.height - scrollView.bounds.size.height)
+            scrollView.setContentOffset(bottomOffset, animated: true)
+        }
     }
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
@@ -70,5 +59,48 @@ class ProgramsSelectionViewController: UIViewController, ProgramsSelectionViewCo
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         presenter.router.prepare(for: segue, sender: sender)
+    }
+}
+
+extension ProgramsSelectionViewController: ProgramsSelectionItemDispatcherProtocol {
+    
+    func updateSelectedProgramsView() {
+        if selectedProgramsView.subviews.count == 0 {
+            selectedProgramsHeightConstraint.constant = 0
+        } else if selectedProgramsView.subviews.count == 1 {
+            selectedProgramsHeightConstraint.constant = 58
+        } else if selectedProgramsView.subviews.count == 2 {
+            selectedProgramsHeightConstraint.constant = 58 * 2 + 20
+        } else if selectedProgramsView.subviews.count == 3 {
+            selectedProgramsHeightConstraint.constant = 58 * 3 + 20 * 2
+        } else {
+            selectedProgramsHeightConstraint.constant = 58 * 3 + 20 * 3 + 6
+        }
+    }
+    
+    func addProgram(program: EdProgram) {
+        let programView = ProgramsSelectionItem()
+        programView.source = program
+        programView.translatesAutoresizingMaskIntoConstraints = false
+        selectedProgramsView.addArrangedSubview(programView)
+        
+        programView.actionDispatcher = self
+        
+        NSLayoutConstraint(item: programView, attribute: .leading, relatedBy: .equal, toItem: selectedProgramsView, attribute: .leading, multiplier: 1, constant: 0).isActive = true
+        NSLayoutConstraint(item: programView, attribute: .trailing, relatedBy: .equal, toItem: selectedProgramsView, attribute: .trailing, multiplier: 1, constant: 0).isActive = true
+        NSLayoutConstraint(item: programView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 58).isActive = true
+        
+    }
+    
+    func tappedRemoveProgram(programView: ProgramsSelectionItem!) {
+        let program = programView.source
+        programView.removeFromSuperview()
+        print(program)
+//        presenter?.removeProgram(program)
+        self.view.layoutIfNeeded()
+        updateSelectedProgramsView()
+        UIView.animate(withDuration: 0.3) {
+            self.view.layoutIfNeeded()
+        }
     }
 }

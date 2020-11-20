@@ -12,8 +12,8 @@ class EgeResultsSelectionRouter: EgeResultsSelectionRouterProtocol {
     
     weak var view: EgeResultsSelectionViewControllerProtocol!
     
-    func showAchievementsSelectionScreen() {
-        let vc = AchievementsSelectionConfigurator.configureModule()
+    func showAchievementsSelectionScreen(enrollee:Enrollee) {
+        let vc = AchievementsSelectionConfigurator.configureModule(enrollee: enrollee)
         view?.navigationController!.show(vc as UIViewController, sender: view)
     }
     

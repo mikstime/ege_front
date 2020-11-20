@@ -30,7 +30,6 @@ class EgeResultsSelectionViewController: UIViewController, EgeResultsSelectionVi
         }
         
         spinner = spinnerView
-        print("loading")
     }
     
     func finishLoading() {
@@ -38,13 +37,10 @@ class EgeResultsSelectionViewController: UIViewController, EgeResultsSelectionVi
             self.spinner?.removeFromSuperview()
             self.spinner = nil
         }
-        print("end loading")
     }
     
-//    var configurator: EgeResultsSelectionConfiguratorProtocol = EgeResultsSelectionConfigurator()
-    
     var currentSubject: Int = 0
-    var subjects: [String] = [""]
+    var subjects: [String] = []
     var hasDuplets = false
     
     var subjectViews: [EgeResultsSelector] = []
@@ -99,7 +95,10 @@ class EgeResultsSelectionViewController: UIViewController, EgeResultsSelectionVi
                 subject.shouldFill = true
             }
         } else {
-            self.presenter?.presentNextScreen()
+            let subjects = subjectViews.map {element in
+                return SubjectDetails(id: element.subjectPicker.selectedRow(inComponent: 0), score: Int(element.score.text ?? "-1") ?? -1)
+            }
+            self.presenter?.presentNextScreen(subjects: subjects)
         }
     }
     

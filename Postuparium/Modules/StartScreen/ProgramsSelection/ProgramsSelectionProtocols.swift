@@ -17,17 +17,20 @@ protocol ProgramsSelectionPresenterProtocol: class {
     var router: ProgramsSelectionRouterProtocol! { set get }
     var view: ProgramsSelectionViewControllerProtocol! {get set}
     func viewDidLoad()
+    func showNextScreen()
 }
 
 protocol ProgramsSelectionInteractorProtocol: class {
     var presenter: ProgramsSelectionPresenterProtocol! {get set}
+    var enrollee: Enrollee {get set}
 }
 
 protocol ProgramsSelectionRouterProtocol: class {
     var view: ProgramsSelectionViewControllerProtocol! {set get}
     func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    func showHomeScreen()
 }
 
 protocol ProgramsSelectionConfiguratorProtocol: class {
-    static func configureModule() -> ProgramsSelectionViewControllerProtocol
+    static func configureModule(enrollee: Enrollee) -> ProgramsSelectionViewControllerProtocol
 }

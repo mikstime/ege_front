@@ -20,7 +20,7 @@ protocol AchievementsSelectionPresenterProtocol: class {
     
     func didToggleGoldenMedal(state: Bool)
     func didToggleGto(state: Bool)
-    func didToggleVolunteere(state: Bool)
+    func didToggleVolunteering(state: Bool)
     
     func presentNextScreen()
 }
@@ -29,16 +29,17 @@ protocol AchievementsSelectionInteractorProtocol: class {
     var presenter: AchievementsSelectionPresenterProtocol! {get set}
     func updateGoldenMedal(state:Bool)
     func updateGto(state:Bool)
-    func updateVolunteere(state:Bool)
+    func updateVolunteering(state:Bool)
+    func getEnrollee() -> Enrollee
 }
 
 protocol AchievementsSelectionRouterProtocol: class {
     var view: AchievementsSelectionViewControllerProtocol! {set get}
     func prepare(for segue: UIStoryboardSegue, sender: Any?)
     
-    func showProgramsSelectionScreen()
+    func showProgramsSelectionScreen(enrollee:Enrollee)
 }
 
 protocol AchievementsSelectionConfiguratorProtocol: class {
-    static func configureModule() -> AchievementsSelectionViewControllerProtocol
+    static func configureModule(enrollee: Enrollee) -> AchievementsSelectionViewControllerProtocol
 }

@@ -17,4 +17,10 @@ class ProgramsSelectionRouter: ProgramsSelectionRouterProtocol {
     func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // prepare here some data for destination viewController
     }
+    
+    func showHomeScreen() {
+        print("show home")
+        let vc = HomeScreenConfigurator.configureModule()
+        view?.navigationController!.show(vc as UIViewController, sender: view)
+    }
 }

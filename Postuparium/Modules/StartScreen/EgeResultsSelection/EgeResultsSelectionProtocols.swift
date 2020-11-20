@@ -21,29 +21,31 @@ protocol EgeResultsSelectionPresenterProtocol: class {
     var view: EgeResultsSelectionViewControllerProtocol! {set get}
     var router: EgeResultsSelectionRouterProtocol! { set get }
     func viewDidLoad()
-    func presentNextScreen()
+    func presentNextScreen(subjects: [SubjectDetails])
     func presentSkipScreen()
     // Вызывается интерактором после создания пользователя
     func didCreateUser()
 }
 
 protocol EgeResultsSelectionInteractorProtocol: class {
+    var enrollee: Enrollee {get set}
     
     var presenter: EgeResultsSelectionPresenterProtocol! { get set }
     // Возвращает список предметов
     func getSubjectsList() -> [String]
     // Создать пользователя
     func tryToCreateUser()
-    
+    // Вернуть данные пользователя
+    func getEnrollee() -> Enrollee
     // Сохраняет список предметов
-    func updateEnrolleeSubjects()
+    func updateEnrolleeSubjects(subjects: [SubjectDetails])
     
     func onError()
 }
 
 protocol EgeResultsSelectionRouterProtocol: class {
     var view: EgeResultsSelectionViewControllerProtocol! {set get}
-    func showAchievementsSelectionScreen()
+    func showAchievementsSelectionScreen(enrollee: Enrollee)
     func showHomeScreen()
     func prepare(for segue: UIStoryboardSegue, sender: Any?)
 }

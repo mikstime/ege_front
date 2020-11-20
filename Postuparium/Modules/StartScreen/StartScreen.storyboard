@@ -19,7 +19,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="gp9-Wo-xkL">
-                        <barButtonItem key="backBarButtonItem" title="Баллы ЕГЭ" id="kqE-cc-eZg"/>
+                        <barButtonItem key="backBarButtonItem" title="Стартовый экран" id="kqE-cc-eZg"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="30t-mP-hVW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -17,6 +17,10 @@ class StartScreenRouter: StartScreenRouterProtocol {
     }
     
     func showRegistrationScreen() {
+
+//        let vc = PhotoTableViewConfigurator.configureModule()
+//        viewController?.navigationController!.show(vc as UITableViewController, sender: nil)
+
         let vc = EgeResultsSelectionConfigurator.configureModule()
 //        let vc = ProgramsSelectionConfigurator.configureModule()
         viewController?.navigationController!.show(vc as UIViewController, sender: nil)

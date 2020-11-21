@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lnR-K7-jhh">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17506"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Photo Table View Controller-->
+        <scene sceneID="pUh-Sj-hzc">
+            <objects>
+                <tableViewController id="lnR-K7-jhh" customClass="PhotoTableViewController" customModule="Postuparium" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="lRU-0c-c5V">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageCell" rowHeight="250" id="Lzt-A1-Jyy" customClass="PhotoTableViewCell" customModule="Postuparium" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="250"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lzt-A1-Jyy" id="umG-1L-opp">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PxF-Zw-60Z">
+                                            <rect key="frame" x="16" y="5" width="382" height="240"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="PxF-Zw-60Z" secondAttribute="bottom" constant="5" id="M46-Vf-z9Y"/>
+                                        <constraint firstItem="PxF-Zw-60Z" firstAttribute="top" secondItem="umG-1L-opp" secondAttribute="top" constant="5" id="N1B-vj-Wm7"/>
+                                        <constraint firstAttribute="trailing" secondItem="PxF-Zw-60Z" secondAttribute="trailing" constant="16" id="rjv-Dw-HmX"/>
+                                        <constraint firstItem="PxF-Zw-60Z" firstAttribute="leading" secondItem="umG-1L-opp" secondAttribute="leading" constant="16" id="uWF-Zv-qgr"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="cellPhoto" destination="PxF-Zw-60Z" id="nR8-Al-fIW"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LoadCell" id="064-J8-4nk" customClass="LoadTableViewCell" customModule="Postuparium" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="278" width="414" height="43"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="064-J8-4nk" id="mX8-sv-ZRE">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="  Загрузка" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aEF-4b-dyC">
+                                            <rect key="frame" x="167" y="9" width="80" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="fGd-PA-7o2">
+                                            <rect key="frame" x="139" y="9" width="20" height="20"/>
+                                        </activityIndicatorView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="fGd-PA-7o2" firstAttribute="top" secondItem="mX8-sv-ZRE" secondAttribute="topMargin" constant="-2" id="6Uv-xp-QMe"/>
+                                        <constraint firstItem="aEF-4b-dyC" firstAttribute="centerX" secondItem="mX8-sv-ZRE" secondAttribute="centerX" id="bi6-z5-ayS"/>
+                                        <constraint firstItem="fGd-PA-7o2" firstAttribute="top" secondItem="aEF-4b-dyC" secondAttribute="top" id="mRj-RN-Uxv"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="aEF-4b-dyC" secondAttribute="bottom" constant="3" id="sfM-Z1-noA"/>
+                                        <constraint firstItem="aEF-4b-dyC" firstAttribute="leading" secondItem="fGd-PA-7o2" secondAttribute="trailing" constant="8" symbolic="YES" id="uVh-cE-6hf"/>
+                                        <constraint firstItem="fGd-PA-7o2" firstAttribute="centerY" secondItem="aEF-4b-dyC" secondAttribute="centerY" id="zid-6G-Adz"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="spinner" destination="fGd-PA-7o2" id="YdV-mb-S6C"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="lnR-K7-jhh" id="TEG-4l-fD3"/>
+                            <outlet property="delegate" destination="lnR-K7-jhh" id="TXa-gM-v96"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2vH-1R-Bpy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1078.2608695652175" y="12.723214285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

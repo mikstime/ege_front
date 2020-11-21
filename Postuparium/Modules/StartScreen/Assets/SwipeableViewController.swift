@@ -18,21 +18,17 @@ class SwipeableViewController: UIViewController {
     }
     
     @IBInspectable var cardHeight:CGFloat = 450
+    @IBInspectable var cardHeightMaxMargin:CGFloat = 200
     @IBInspectable var cardHandleAreaHeight:CGFloat = 0
     @IBInspectable var duration = 0.3
     
     func showCard() {
-        animateTransitionIfNeeded(state: nextState, duration: duration)
+        animateTransitionIfNeeded(state: .expanded, duration: duration)
     }
     
     private enum CardState {
         case expanded
         case collapsed
-    }
-    
-    private var cardVisible = false
-    private var nextState: CardState {
-        return cardVisible ? .collapsed : .expanded
     }
     
     private var runningAnimations = [UIViewPropertyAnimator]()
@@ -42,52 +38,39 @@ class SwipeableViewController: UIViewController {
         super.viewDidLoad()
         setupCard()
     }
-    
     private func setupCard() {
         self.addChild(cardViewController)
         self.view.addSubview(cardViewController.view)
         
-        cardViewController.view.frame = CGRect(x: 0, y: self.view.frame.height - cardHandleAreaHeight, width: self.view.bounds.width, height: cardHeight)
-        
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.handleCardTap(recognzier:)))
+        cardViewController.view.frame = CGRect(x: 0, y: self.view.frame.height - cardHandleAreaHeight, width: self.view.bounds.width, height: cardHeight + cardHeightMaxMargin)
+
         let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(self.handleCardPan(recognizer:)))
-        panGestureRecognizer.cancelsTouchesInView = false
-        tapGestureRecognizer.cancelsTouchesInView = false
-        cardViewController.handleArea.addGestureRecognizer(tapGestureRecognizer)
+//        panGestureRecognizer.cancelsTouchesInView = false
         cardViewController.handleArea.addGestureRecognizer(panGestureRecognizer)
         
         
     }
 
-    @objc private func handleCardTap(recognzier:UITapGestureRecognizer) {
-        switch recognzier.state {
-        case .ended:
-            if !cardVisible {
-                animateTransitionIfNeeded(state: nextState, duration: duration)
-            }
-        default:
-            break
-        }
-    }
     var maxFraction: CGFloat = 0
     @objc private func handleCardPan (recognizer:UIPanGestureRecognizer) {
         cardViewController.view.endEditing(true)
         let translation = recognizer.translation(in: self.cardViewController.handleArea)
-        var fractionComplete = translation.y / cardHeight
-        fractionComplete = cardVisible ? fractionComplete : -fractionComplete
-        
+        let fractionComplete = abs(translation.y) / cardHeight
+    
         switch recognizer.state {
         case .began:
-            if (translation.y < 0 && cardVisible) || (translation.y > 0 && !cardVisible) {
-                break
-            }
-            startInteractiveTransition(state: nextState, duration: duration)
+            startInteractiveTransition(state: .collapsed, duration: duration)
         case .changed:
-            updateInteractiveTransition(fractionCompleted: fractionComplete)
+            if translation.y > 0{
+                updateInteractiveTransition(fractionCompleted: fractionComplete)
+            }
         case .ended:
-            if (fractionComplete < maxFraction * 0.95 ){
+            if translation.y < 0{
                 cancelTransition()
-                animateTransitionIfNeeded(state: nextState == .collapsed ? .expanded : .collapsed, duration: duration / 3)
+            }
+            if (fractionComplete < maxFraction * 0.95 || maxFraction < 0.1 ){
+                cancelTransition()
+                animateTransitionIfNeeded(state: .expanded, duration: duration / 3)
             } else {
                 continueInteractiveTransition()
             }
@@ -98,6 +81,7 @@ class SwipeableViewController: UIViewController {
     }
     
     private func animateTransitionIfNeeded (state:CardState, duration:TimeInterval) {
+
         if runningAnimations.isEmpty {
             let frameAnimator = UIViewPropertyAnimator(duration: duration, curve: .easeOut) {
                 switch state {
@@ -109,7 +93,7 @@ class SwipeableViewController: UIViewController {
             }
             
             frameAnimator.addCompletion { _ in
-                self.cardVisible = !self.cardVisible
+                self.maxFraction = 0
                 self.runningAnimations.removeAll()
             }
             
@@ -131,7 +115,11 @@ class SwipeableViewController: UIViewController {
     
     private func cancelTransition() {
         for animator in runningAnimations {
+            self.maxFraction = 0
+            animationProgressWhenInterrupted = animator.fractionComplete
             animator.stopAnimation(true)
+//            animator.isInterruptible = true
+//            animator.isReversed = true
         }
         self.runningAnimations.removeAll()
     }

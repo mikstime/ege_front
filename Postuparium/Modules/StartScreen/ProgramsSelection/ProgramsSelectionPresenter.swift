@@ -14,13 +14,17 @@ class ProgramsSelectionPresenter: ProgramsSelectionPresenterProtocol {
     var interactor: ProgramsSelectionInteractorProtocol!
     var router: ProgramsSelectionRouterProtocol!
     
-    required init() {}
-    
     func showNextScreen() {
         router?.showHomeScreen()
     }
     
     func viewDidLoad() {
-        //
+        interactor?.loadPrograms()
+    }
+    func requestMoreData() {
+        interactor?.loadPrograms()
+    }
+    func programsDidLoad(programs: [EdProgram]) {
+        view?.programsDidLoad(programs: programs)
     }
 }

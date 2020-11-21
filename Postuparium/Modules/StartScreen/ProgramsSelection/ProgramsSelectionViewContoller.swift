@@ -8,7 +8,6 @@
 import UIKit
 
 class ProgramsSelectionViewController: SwipeableViewController, ProgramsSelectionViewControllerProtocol, UITextFieldDelegate {
-    
     var presenter: ProgramsSelectionPresenterProtocol!
 //    @IBOutlet weak var titleView: UIStackView!
     @IBOutlet weak var scrollView: UIScrollView!
@@ -18,9 +17,11 @@ class ProgramsSelectionViewController: SwipeableViewController, ProgramsSelectio
     @IBAction func showNextScreen() {
         presenter?.showNextScreen()
     }
-    
+    var menu: ProgramsSelectionMenuViewControllerProtocol!
     override func viewDidLoad() {
-        cardViewController = ProgramsSelectionMenuConfigurator.configureModule()
+        menu = ProgramsSelectionMenuConfigurator.configureModule()
+        menu.actionsDispatcher = self
+        cardViewController = menu
         super.viewDidLoad()
         presenter?.viewDidLoad()
         hideKeyboardWhenTappedAround()
@@ -33,6 +34,7 @@ class ProgramsSelectionViewController: SwipeableViewController, ProgramsSelectio
     }
     
     @IBAction func OpenProgramsSelectionMenu() {
+        menu.totalOffset = 0
         showCard()
     }
     
@@ -97,13 +99,51 @@ extension ProgramsSelectionViewController: ProgramsSelectionItemDispatcherProtoc
     }
     
     func tappedRemoveProgram(programView: ProgramsSelectionItem!) {
-        let program = programView.source
         programView.removeFromSuperview()
-        print(program)
-//        presenter?.removeProgram(program)
+        menu.deselectProgram(program: programView.source)
         updateSelectedProgramsView()
         UIView.animate(withDuration: 0.3) {
             self.view.layoutIfNeeded()
         }
     }
+}
+
+extension ProgramsSelectionViewController: ProgramsSelectionMenuActionDispatcherProtocol {
+
+    func didTapOnCell(row: Int, program: EdProgram) {
+        let thatView = selectedProgramsView.subviews.first { programView in
+            let pw = programView as? ProgramsSelectionItem ?? ProgramsSelectionItem()
+            if pw.source.id == program.id {
+                return true
+            } else {
+                return false
+            }
+        }
+        if thatView != nil {
+            thatView?.removeFromSuperview()
+            updateSelectedProgramsView()
+            self.view.layoutIfNeeded()
+        } else {
+            addProgram(program: program)
+            self.view.layoutIfNeeded()
+            updateSelectedProgramsView()
+            
+            UIView.animate(withDuration: 0.3) {
+                self.view.layoutIfNeeded()
+            }
+            if selectedProgramsView.subviews.count > 3 {
+                let bottomOffset = CGPoint(x: 0, y: scrollView.contentSize.height - scrollView.bounds.size.height)
+                scrollView.setContentOffset(bottomOffset, animated: true)
+            }
+        }
+    }
+    
+    func requestForMoreData() {
+        presenter?.requestMoreData()
+    }
+    
+    func programsDidLoad(programs: [EdProgram]) {
+        menu?.didLoadMoreData(newPrograms: programs)
+    }
+    
 }

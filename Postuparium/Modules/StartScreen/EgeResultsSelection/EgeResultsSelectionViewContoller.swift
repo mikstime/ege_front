@@ -197,10 +197,6 @@ class EgeResultsSelectionViewController: UIViewController, EgeResultsSelectionVi
         }
     }
     
-    final override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
-    
     final override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         presenter.router.prepare(for: segue, sender: sender)
     }

@@ -10,7 +10,11 @@ import Foundation
 import UIKit
 
 protocol ProgramsSelectionMenuViewControllerProtocol: CardViewControllerProtocol {
+    var totalOffset: CGFloat {get set}
     var presenter: ProgramsSelectionMenuPresenterProtocol! {get set}
+    var actionsDispatcher: ProgramsSelectionMenuActionDispatcherProtocol! {get set}
+    func didLoadMoreData(newPrograms: [EdProgram])
+    func deselectProgram(program: EdProgram)
 }
 
 protocol ProgramsSelectionMenuPresenterProtocol: class {

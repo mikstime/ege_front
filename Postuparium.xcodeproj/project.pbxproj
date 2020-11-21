@@ -102,6 +102,23 @@
 		8528F6332534D395004FDE50 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 8528F6322534D395004FDE50 /* .gitignore */; };
 		8528F63B2534D566004FDE50 /* ApplicantsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8528F63A2534D566004FDE50 /* ApplicantsTableView.swift */; };
 		8528F6432534D575004FDE50 /* InfoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8528F6422534D575004FDE50 /* InfoListView.swift */; };
+		CEEE7BA82567D3A50094B1DA /* PhotoTableView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEEE7BA72567D3A50094B1DA /* PhotoTableView.storyboard */; };
+		CEEE7BB22567D94C0094B1DA /* PhotoTableViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE7BB12567D94C0094B1DA /* PhotoTableViewRouter.swift */; };
+		CEEE7BB72567D96B0094B1DA /* PhotoTableViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE7BB62567D96B0094B1DA /* PhotoTableViewProtocols.swift */; };
+		CEEE7BBC2567D98B0094B1DA /* PhotoTableViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE7BBB2567D98B0094B1DA /* PhotoTableViewPresenter.swift */; };
+		CEEE7BC12567D9A20094B1DA /* PhotoTableViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE7BC02567D9A20094B1DA /* PhotoTableViewInteractor.swift */; };
+		CEEE7BC62567D9C70094B1DA /* PhotoTableViewConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE7BC52567D9C70094B1DA /* PhotoTableViewConfigurator.swift */; };
+		CEEE7BCB256805330094B1DA /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE7BCA256805330094B1DA /* UIImageExtension.swift */; };
+		CEEE7BD3256829390094B1DA /* PhotoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE7BD2256829390094B1DA /* PhotoTableViewController.swift */; };
+		CEEE7BD825682FF80094B1DA /* PhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE7BD725682FF80094B1DA /* PhotoTableViewCell.swift */; };
+		CEEE7BE3256849D70094B1DA /* LoadTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE7BE2256849D70094B1DA /* LoadTableViewCell.swift */; };
+		CEEE7BE8256911070094B1DA /* PhotoViewerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE7BE7256911070094B1DA /* PhotoViewerRouter.swift */; };
+		CEEE7BED256911220094B1DA /* PhotoViewerProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE7BEC256911220094B1DA /* PhotoViewerProtocols.swift */; };
+		CEEE7BF2256911370094B1DA /* PhotoViewerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE7BF1256911370094B1DA /* PhotoViewerPresenter.swift */; };
+		CEEE7BF72569114E0094B1DA /* PhotoViewerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE7BF62569114E0094B1DA /* PhotoViewerInteractor.swift */; };
+		CEEE7BFC2569115F0094B1DA /* PhotoViewerConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE7BFB2569115F0094B1DA /* PhotoViewerConfigurator.swift */; };
+		CEEE7C01256911700094B1DA /* PhotoViewerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE7C00256911700094B1DA /* PhotoViewerController.swift */; };
+		CEEE7C0C25691C380094B1DA /* PhotoViewer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEEE7C0B25691C380094B1DA /* PhotoViewer.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -233,8 +250,24 @@
 		8528F6492534D609004FDE50 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8528F64A2534D676004FDE50 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8528F64B2534D6A8004FDE50 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		8528F64C2534D6E5004FDE50 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8528F64D2534D766004FDE50 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		CEEE7BA72567D3A50094B1DA /* PhotoTableView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PhotoTableView.storyboard; sourceTree = "<group>"; };
+		CEEE7BB12567D94C0094B1DA /* PhotoTableViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewRouter.swift; sourceTree = "<group>"; };
+		CEEE7BB62567D96B0094B1DA /* PhotoTableViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewProtocols.swift; sourceTree = "<group>"; };
+		CEEE7BBB2567D98B0094B1DA /* PhotoTableViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewPresenter.swift; sourceTree = "<group>"; };
+		CEEE7BC02567D9A20094B1DA /* PhotoTableViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewInteractor.swift; sourceTree = "<group>"; };
+		CEEE7BC52567D9C70094B1DA /* PhotoTableViewConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewConfigurator.swift; sourceTree = "<group>"; };
+		CEEE7BCA256805330094B1DA /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		CEEE7BD2256829390094B1DA /* PhotoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewController.swift; sourceTree = "<group>"; };
+		CEEE7BD725682FF80094B1DA /* PhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewCell.swift; sourceTree = "<group>"; };
+		CEEE7BE2256849D70094B1DA /* LoadTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadTableViewCell.swift; sourceTree = "<group>"; };
+		CEEE7BE7256911070094B1DA /* PhotoViewerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewerRouter.swift; sourceTree = "<group>"; };
+		CEEE7BEC256911220094B1DA /* PhotoViewerProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewerProtocols.swift; sourceTree = "<group>"; };
+		CEEE7BF1256911370094B1DA /* PhotoViewerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewerPresenter.swift; sourceTree = "<group>"; };
+		CEEE7BF62569114E0094B1DA /* PhotoViewerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewerInteractor.swift; sourceTree = "<group>"; };
+		CEEE7BFB2569115F0094B1DA /* PhotoViewerConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewerConfigurator.swift; sourceTree = "<group>"; };
+		CEEE7C00256911700094B1DA /* PhotoViewerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewerController.swift; sourceTree = "<group>"; };
+		CEEE7C0B25691C380094B1DA /* PhotoViewer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PhotoViewer.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -459,6 +492,7 @@
 				2E00065425620856000693B5 /* HideKeyboardExtension.swift */,
 				2E00065525620856000693B5 /* NibExtension.swift */,
 				8528F62A2534CB1A004FDE50 /* README.md */,
+				CEEE7BCA256805330094B1DA /* UIImageExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -629,8 +663,9 @@
 		8528F5772534B4C0004FDE50 /* PhotoGalleryModule */ = {
 			isa = PBXGroup;
 			children = (
+				CEEE7C1325692A590094B1DA /* PhotoStackScroll */,
+				CEEE7B9E2567D3700094B1DA /* PhotoGrid */,
 				8528F57B2534B579004FDE50 /* PhotoViewer */,
-				8528F57A2534B566004FDE50 /* PhotoGalleryGrid */,
 			);
 			path = PhotoGalleryModule;
 			sourceTree = "<group>";
@@ -651,17 +686,16 @@
 			path = ApplicantsTable;
 			sourceTree = "<group>";
 		};
-		8528F57A2534B566004FDE50 /* PhotoGalleryGrid */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = PhotoGalleryGrid;
-			sourceTree = "<group>";
-		};
 		8528F57B2534B579004FDE50 /* PhotoViewer */ = {
 			isa = PBXGroup;
 			children = (
-				8528F64C2534D6E5004FDE50 /* README.md */,
+				CEEE7BE7256911070094B1DA /* PhotoViewerRouter.swift */,
+				CEEE7BEC256911220094B1DA /* PhotoViewerProtocols.swift */,
+				CEEE7BF1256911370094B1DA /* PhotoViewerPresenter.swift */,
+				CEEE7BF62569114E0094B1DA /* PhotoViewerInteractor.swift */,
+				CEEE7BFB2569115F0094B1DA /* PhotoViewerConfigurator.swift */,
+				CEEE7C00256911700094B1DA /* PhotoViewerController.swift */,
+				CEEE7C0B25691C380094B1DA /* PhotoViewer.storyboard */,
 			);
 			path = PhotoViewer;
 			sourceTree = "<group>";
@@ -739,6 +773,29 @@
 				8528F62D2534CC70004FDE50 /* ApiServiceProtocol.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		CEEE7B9E2567D3700094B1DA /* PhotoGrid */ = {
+			isa = PBXGroup;
+			children = (
+				CEEE7BA72567D3A50094B1DA /* PhotoTableView.storyboard */,
+				CEEE7BB12567D94C0094B1DA /* PhotoTableViewRouter.swift */,
+				CEEE7BB62567D96B0094B1DA /* PhotoTableViewProtocols.swift */,
+				CEEE7BBB2567D98B0094B1DA /* PhotoTableViewPresenter.swift */,
+				CEEE7BD725682FF80094B1DA /* PhotoTableViewCell.swift */,
+				CEEE7BC02567D9A20094B1DA /* PhotoTableViewInteractor.swift */,
+				CEEE7BC52567D9C70094B1DA /* PhotoTableViewConfigurator.swift */,
+				CEEE7BD2256829390094B1DA /* PhotoTableViewController.swift */,
+				CEEE7BE2256849D70094B1DA /* LoadTableViewCell.swift */,
+			);
+			path = PhotoGrid;
+			sourceTree = "<group>";
+		};
+		CEEE7C1325692A590094B1DA /* PhotoStackScroll */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PhotoStackScroll;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -847,6 +904,7 @@
 				2E8CE4932566EC80007C923C /* EgeResultsSelection.storyboard in Resources */,
 				8528F6332534D395004FDE50 /* .gitignore in Resources */,
 				2E00061025620302000693B5 /* Logo@2x.png in Resources */,
+				CEEE7C0C25691C380094B1DA /* PhotoViewer.storyboard in Resources */,
 				2EAD8B692562159800C4EEA3 /* AchievementsSelection.storyboard in Resources */,
 				8528F5E92534C0F4004FDE50 /* ScoreInput.xib in Resources */,
 				2EDE682C2567119B0064D28B /* ProgramsSelection in Resources */,
@@ -866,6 +924,7 @@
 				2E000621256204CF000693B5 /* StartScreen.storyboard in Resources */,
 				8528F52B2534AAE2004FDE50 /* Main.storyboard in Resources */,
 				8528F55B2534AC72004FDE50 /* terminalScript.sh in Resources */,
+				CEEE7BA82567D3A50094B1DA /* PhotoTableView.storyboard in Resources */,
 				2E42DCC425661BDE00D82018 /* icon.png in Resources */,
 				2E000666256209B1000693B5 /* EgeResultsSelector.xib in Resources */,
 				2E42DCCD25661E7500D82018 /* LoadingView.xib in Resources */,
@@ -899,6 +958,7 @@
 				2EAD8B972562259500C4EEA3 /* ProgramsSelectionProtocols.swift in Sources */,
 				8528F5932534B733004FDE50 /* Photo.swift in Sources */,
 				2EE044C325630F950014FD34 /* HomeScreenViewContoller.swift in Sources */,
+				CEEE7BE3256849D70094B1DA /* LoadTableViewCell.swift in Sources */,
 				2EAD8B932562259500C4EEA3 /* ProgramsSelectionInteractor.swift in Sources */,
 				2EE044C425630F950014FD34 /* HomeScreenProtocols.swift in Sources */,
 				8528F6432534D575004FDE50 /* InfoListView.swift in Sources */,
@@ -906,15 +966,21 @@
 				8528F5F32534C151004FDE50 /* StudyTileSmall.swift in Sources */,
 				2EDE6858256770A80064D28B /* SwipeableViewController.swift in Sources */,
 				8528F5FD2534C170004FDE50 /* StudyTileMedium.swift in Sources */,
+				CEEE7BB72567D96B0094B1DA /* PhotoTableViewProtocols.swift in Sources */,
 				2E000619256204A2000693B5 /* StartScreenButton.swift in Sources */,
 				2EAD8B6D256215A100C4EEA3 /* AchievementsSelectionInteractor.swift in Sources */,
 				2EE044BE25630F950014FD34 /* HomeScreenInteractor.swift in Sources */,
 				2EDE68522567601B0064D28B /* ProgramsSelectionMenuViewContoller.swift in Sources */,
+				CEEE7BC62567D9C70094B1DA /* PhotoTableViewConfigurator.swift in Sources */,
+				CEEE7BC12567D9A20094B1DA /* PhotoTableViewInteractor.swift in Sources */,
 				2EDE68532567601B0064D28B /* ProgramsSelectionMenuPresenter.swift in Sources */,
 				8528F5C82534BBA7004FDE50 /* EgeResultsSelectionRouter.swift in Sources */,
 				8528F5C32534BB88004FDE50 /* EgeResultsSelectionViewContoller.swift in Sources */,
 				2E00063F25620748000693B5 /* StartScreenPresenter.swift in Sources */,
+				CEEE7BBC2567D98B0094B1DA /* PhotoTableViewPresenter.swift in Sources */,
 				8528F5282534AAE2004FDE50 /* ViewController.swift in Sources */,
+				CEEE7BD825682FF80094B1DA /* PhotoTableViewCell.swift in Sources */,
+				CEEE7BCB256805330094B1DA /* UIImageExtension.swift in Sources */,
 				8528F6072534C194004FDE50 /* StudyTileBig.swift in Sources */,
 				2EDE684E2567601B0064D28B /* ProgramsSelectionMenuInteractor.swift in Sources */,
 				2EAD8B6F256215A100C4EEA3 /* AchievementsSelectionConfigurator.swift in Sources */,
@@ -922,10 +988,13 @@
 				2EE044C225630F950014FD34 /* HomeScreenConfigurator.swift in Sources */,
 				2EAD8B71256215A100C4EEA3 /* AchievementsSelectionPresenter.swift in Sources */,
 				8528F5982534B741004FDE50 /* Feedback.swift in Sources */,
+				CEEE7BB22567D94C0094B1DA /* PhotoTableViewRouter.swift in Sources */,
 				2EAD8BA6256225E200C4EEA3 /* ProgramsSelectionItem.swift in Sources */,
 				8528F52E2534AAE2004FDE50 /* Postuparium.xcdatamodeld in Sources */,
+				CEEE7BD3256829390094B1DA /* PhotoTableViewController.swift in Sources */,
 				8528F5D72534BBEB004FDE50 /* EgeResultsSelectionInteractor.swift in Sources */,
 				8528F5842534B6F2004FDE50 /* Enrollee.swift in Sources */,
+				CEEE7BF72569114E0094B1DA /* PhotoViewerInteractor.swift in Sources */,
 				2EAD8B922562259500C4EEA3 /* ProgramsSelectionConfigurator.swift in Sources */,
 				8528F62E2534CC70004FDE50 /* ApiServiceProtocol.swift in Sources */,
 				8528F5892534B70C004FDE50 /* EdProgram.swift in Sources */,
@@ -934,6 +1003,7 @@
 				8528F59E2534B7AC004FDE50 /* ApiService.swift in Sources */,
 				8528F5242534AAE2004FDE50 /* AppDelegate.swift in Sources */,
 				2E00065A256209A3000693B5 /* BorderExtension.swift in Sources */,
+				CEEE7BFC2569115F0094B1DA /* PhotoViewerConfigurator.swift in Sources */,
 				2EAD8B73256215A100C4EEA3 /* AchievementsSelectionProtocols.swift in Sources */,
 				2EAD8B72256215A100C4EEA3 /* AchievementsSelectionViewContoller.swift in Sources */,
 				2E00063E25620748000693B5 /* StartScreenViewContoller.swift in Sources */,
@@ -953,10 +1023,14 @@
 				2E00064A25620815000693B5 /* EgeResultsSelector.swift in Sources */,
 				2EDE684D2567601B0064D28B /* ProgramsSelectionMenuRouter.swift in Sources */,
 				2EAD8B912562259500C4EEA3 /* ProgramsSelectionRouter.swift in Sources */,
+				CEEE7BE8256911070094B1DA /* PhotoViewerRouter.swift in Sources */,
 				8528F5A62534B7B8004FDE50 /* StorageService.swift in Sources */,
+				CEEE7C01256911700094B1DA /* PhotoViewerController.swift in Sources */,
 				8528F5E12534C0C2004FDE50 /* ScoreInput.swift in Sources */,
 				8528F58E2534B71B004FDE50 /* University.swift in Sources */,
+				CEEE7BED256911220094B1DA /* PhotoViewerProtocols.swift in Sources */,
 				8528F5EE2534C132004FDE50 /* EdProgramTile.swift in Sources */,
+				CEEE7BF2256911370094B1DA /* PhotoViewerPresenter.swift in Sources */,
 				2EAD8B942562259500C4EEA3 /* ProgramsSelectionPresenter.swift in Sources */,
 				2E42DCBB2566161600D82018 /* LoadingView.swift in Sources */,
 				2EDE68502567601B0064D28B /* ProgramsSelectionMenuConfigurator.swift in Sources */,

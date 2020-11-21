@@ -18,8 +18,16 @@ class StartScreenRouter: StartScreenRouterProtocol {
     
     func showRegistrationScreen() {
 //        let vc = EgeResultsSelectionConfigurator.configureModule()
-        let vc = ProgramsSelectionConfigurator.configureModule()
-        viewController?.navigationController!.show(vc as UIViewController, sender: nil)
+        
+        
+//        let vc = ProgramsSelectionConfigurator.configureModule()
+//        viewController?.navigationController!.show(vc as UIViewController, sender: nil)
+        
+        
+        let vc = PhotoTableViewConfigurator.configureModule()
+        viewController?.navigationController!.show(vc as UITableViewController, sender: nil)
+        
+        
 //        let storyboard = UIStoryboard(name: "EgeResultsSelection", bundle: nil)
 //        guard let vc = storyboard.instantiateInitialViewController() else { return }
 //        print("did load")

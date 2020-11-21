@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lnR-K7-jhh">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17506"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -45,23 +45,22 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="  Загрузка" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aEF-4b-dyC">
-                                            <rect key="frame" x="167" y="9" width="80" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="fGd-PA-7o2">
                                             <rect key="frame" x="139" y="9" width="20" height="20"/>
                                         </activityIndicatorView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Загрузка" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aEF-4b-dyC">
+                                            <rect key="frame" x="167" y="11" width="80" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" systemColor="secondaryLabelColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="fGd-PA-7o2" firstAttribute="top" secondItem="mX8-sv-ZRE" secondAttribute="topMargin" constant="-2" id="6Uv-xp-QMe"/>
-                                        <constraint firstItem="aEF-4b-dyC" firstAttribute="centerX" secondItem="mX8-sv-ZRE" secondAttribute="centerX" id="bi6-z5-ayS"/>
-                                        <constraint firstItem="fGd-PA-7o2" firstAttribute="top" secondItem="aEF-4b-dyC" secondAttribute="top" id="mRj-RN-Uxv"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="aEF-4b-dyC" secondAttribute="bottom" constant="3" id="sfM-Z1-noA"/>
-                                        <constraint firstItem="aEF-4b-dyC" firstAttribute="leading" secondItem="fGd-PA-7o2" secondAttribute="trailing" constant="8" symbolic="YES" id="uVh-cE-6hf"/>
-                                        <constraint firstItem="fGd-PA-7o2" firstAttribute="centerY" secondItem="aEF-4b-dyC" secondAttribute="centerY" id="zid-6G-Adz"/>
+                                        <constraint firstItem="aEF-4b-dyC" firstAttribute="leading" secondItem="fGd-PA-7o2" secondAttribute="trailing" constant="8" symbolic="YES" id="C6g-QM-GKn"/>
+                                        <constraint firstItem="aEF-4b-dyC" firstAttribute="centerX" secondItem="mX8-sv-ZRE" secondAttribute="centerX" id="Qev-YI-Y36"/>
+                                        <constraint firstItem="fGd-PA-7o2" firstAttribute="top" secondItem="mX8-sv-ZRE" secondAttribute="topMargin" constant="-2" id="Upb-Wy-Ulm"/>
+                                        <constraint firstItem="aEF-4b-dyC" firstAttribute="centerY" secondItem="mX8-sv-ZRE" secondAttribute="centerY" id="aue-OS-eg2"/>
+                                        <constraint firstItem="aEF-4b-dyC" firstAttribute="top" secondItem="mX8-sv-ZRE" secondAttribute="topMargin" id="uJx-Z3-QVk"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -74,6 +73,7 @@
                             <outlet property="delegate" destination="lnR-K7-jhh" id="TXa-gM-v96"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="wo6-aW-XBW"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2vH-1R-Bpy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -81,6 +81,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

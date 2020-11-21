@@ -689,8 +689,8 @@
 		8528F57B2534B579004FDE50 /* PhotoViewer */ = {
 			isa = PBXGroup;
 			children = (
-				CEEE7BE7256911070094B1DA /* PhotoViewerRouter.swift */,
 				CEEE7BEC256911220094B1DA /* PhotoViewerProtocols.swift */,
+				CEEE7BE7256911070094B1DA /* PhotoViewerRouter.swift */,
 				CEEE7BF1256911370094B1DA /* PhotoViewerPresenter.swift */,
 				CEEE7BF62569114E0094B1DA /* PhotoViewerInteractor.swift */,
 				CEEE7BFB2569115F0094B1DA /* PhotoViewerConfigurator.swift */,

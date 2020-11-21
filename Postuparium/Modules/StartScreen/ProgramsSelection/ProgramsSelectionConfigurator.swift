@@ -23,7 +23,7 @@ class ProgramsSelectionConfigurator: ProgramsSelectionConfiguratorProtocol {
         let router = ProgramsSelectionRouter()
         
         interactor.enrollee = enrollee
-        
+        interactor.presenter = presenter
         viewController.presenter = presenter
         router.view = viewController
         

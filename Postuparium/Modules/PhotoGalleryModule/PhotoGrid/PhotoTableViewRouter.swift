@@ -10,7 +10,7 @@ class PhotoTableViewRouter: PhotoTableViewRouterProtocol {
     
     func openPhotoViewer(photo: UIImage) {
         let vc = PhotoViewerConfigurator.configureModule(photo: photo)
-        view?.navigationController!.show(vc as UIViewController, sender: view)
+        view?.navigationController!.show(vc, sender: view)
     }
     
 }

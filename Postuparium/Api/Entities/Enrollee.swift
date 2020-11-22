@@ -32,10 +32,13 @@ struct PersonalAchievements {
     var gto: Bool = false
     var volunteering: Bool = false
 }
+
 struct Enrollee {
     var firstName: String = "Безымянный"
     var lastName: String = "Абитуриент"
     
     var egeResults: EgeResults = EgeResults()
     var achievements: PersonalAchievements = PersonalAchievements()
+    
+    var chosenPrograms: [EdProgram] = []
 }

@@ -15,16 +15,20 @@ protocol EgeResultsSelectionViewControllerProtocol: UIViewController {
 
     func startLoading()
     func finishLoading()
+    func showSignUpWarning()
 }
 
 protocol EgeResultsSelectionPresenterProtocol: class {
     var view: EgeResultsSelectionViewControllerProtocol! {set get}
     var router: EgeResultsSelectionRouterProtocol! { set get }
+    var interactor: EgeResultsSelectionInteractorProtocol! { set get }
+    
     func viewDidLoad()
     func presentNextScreen(subjects: [SubjectDetails])
     func presentSkipScreen()
-    // Вызывается интерактором после создания пользователя
+    // Вызываются интерактором после создания пользователя
     func didCreateUser()
+    func didNotCreateUser()
 }
 
 protocol EgeResultsSelectionInteractorProtocol: class {

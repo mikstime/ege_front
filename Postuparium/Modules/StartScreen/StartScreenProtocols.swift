@@ -16,17 +16,22 @@ protocol StartScreenViewControllerProtocol: UIViewController {
 protocol StartScreenPresenterProtocol: class {
     var router: StartScreenRouterProtocol! { set get }
     func viewDidLoad()
+    
+    func didSignin(enrollee:Enrollee)
+    func didNotSignin()
 }
 
 protocol StartScreenInteractorProtocol: class {
     
     var presenter: StartScreenPresenterProtocol! { get set }
     
+    func trySignin()
 }
 
 protocol StartScreenRouterProtocol: class {
     func prepare(for segue: UIStoryboardSegue, sender: Any?)
     func showRegistrationScreen()
+    func showHomeScreen()
 }
 
 protocol StartScreenConfiguratorProtocol: class {

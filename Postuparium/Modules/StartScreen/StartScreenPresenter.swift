@@ -21,6 +21,14 @@ class StartScreenPresenter: StartScreenPresenterProtocol {
     }
     
     func viewDidLoad() {
+        interactor?.trySignin()
+    }
+    
+    func didSignin(enrollee: Enrollee) {
         router?.showRegistrationScreen()
+    }
+    
+    func didNotSignin() {
+        router?.showHomeScreen()
     }
 }

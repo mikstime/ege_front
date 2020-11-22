@@ -47,8 +47,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="qbT-xq-NOy" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="U0z-5e-8lF"/>
-                            <constraint firstItem="qbT-xq-NOy" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ngz-Iw-f7C"/>
+                            <constraint firstItem="qbT-xq-NOy" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerXWithinMargins" id="C9a-Tu-3X0"/>
+                            <constraint firstItem="qbT-xq-NOy" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="TjN-uL-QQM"/>
                         </constraints>
                     </view>
                 </viewController>

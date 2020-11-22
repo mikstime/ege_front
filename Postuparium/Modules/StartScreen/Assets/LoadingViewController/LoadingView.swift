@@ -25,17 +25,6 @@ class LoadingView: UIView {
     func _init() {
         fromNib()
     }
-//    final override func loadView() {
-//        view = UIView()
-//        view.backgroundColor = UIColor(white: 0, alpha: 0.7)
-//
-//        spinner.translatesAutoresizingMaskIntoConstraints = false
-//        spinner.startAnimating()
-//        view.addSubview(spinner)
-//
-//        spinner.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-//        spinner.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-//    }
     
     func showLoading() {
         firstMessage.alpha = 0
@@ -58,5 +47,51 @@ class LoadingView: UIView {
     }
     func stopLoading() {
         
+    }
+}
+protocol LoadableScreen: UIViewController {
+    var loader: UIView? {get set}
+}
+
+extension LoadableScreen {
+    
+    func startLoading() {
+        navigationController?.navigationBar.isHidden = true
+        // Prevent creating several views
+        if loader != nil {
+            return
+        }
+        
+        let loaderView = UIView.init(frame: view.bounds)
+        loaderView.backgroundColor = UIColor.systemBackground
+        let ai = LoadingView()
+        
+        DispatchQueue.main.async {
+            self.view.addSubview(loaderView)
+            loaderView.addSubview(ai)
+            
+            ai.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint(item: ai, attribute: NSLayoutConstraint.Attribute.leading, relatedBy: NSLayoutConstraint.Relation.equal, toItem: loaderView, attribute: NSLayoutConstraint.Attribute.leading, multiplier: 1, constant: 0).isActive = true
+            NSLayoutConstraint(item: ai, attribute: NSLayoutConstraint.Attribute.trailing, relatedBy: NSLayoutConstraint.Relation.equal, toItem: loaderView, attribute: NSLayoutConstraint.Attribute.trailing, multiplier: 1, constant: 0).isActive = true
+            NSLayoutConstraint(item: ai, attribute: NSLayoutConstraint.Attribute.top, relatedBy: NSLayoutConstraint.Relation.equal, toItem: loaderView, attribute: NSLayoutConstraint.Attribute.top, multiplier: 1, constant: 0).isActive = true
+            NSLayoutConstraint(item: ai, attribute: NSLayoutConstraint.Attribute.bottom, relatedBy: NSLayoutConstraint.Relation.equal, toItem: loaderView, attribute: NSLayoutConstraint.Attribute.bottom, multiplier: 1, constant: 0).isActive = true
+            ai.showLoading()
+        }
+        
+        loader = loaderView
+    }
+    
+    func finishLoading() {
+        navigationController?.navigationBar.isHidden = false
+        DispatchQueue.main.async {
+            self.loader?.removeFromSuperview()
+            self.loader = nil
+        }
+    }
+    
+    func showSignUpWarning() {
+        let alert = UIAlertController(title: "Сетевая ошибка", message: "Не удалось соединиться с сервером. Повторите попытку позднее.", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Понятно", style: .default, handler: nil))
+        self.present(alert, animated: true)
     }
 }

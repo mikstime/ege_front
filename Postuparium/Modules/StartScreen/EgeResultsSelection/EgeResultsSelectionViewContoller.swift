@@ -6,46 +6,17 @@
 //
 
 import UIKit
-
-class EgeResultsSelectionViewController: UIViewController, EgeResultsSelectionViewControllerProtocol {
+class EgeResultsSelectionViewController: UIViewController, LoadableScreen, EgeResultsSelectionViewControllerProtocol {
+    var loader: UIView?
+    
     
     var presenter: EgeResultsSelectionPresenterProtocol!
-    var spinner: UIView!
-    
-    func startLoading() {
-        let spinnerView = UIView.init(frame: view.bounds)
-        spinnerView.backgroundColor = UIColor.systemBackground
-        let ai = LoadingView()
-        
-        DispatchQueue.main.async {
-            self.view.addSubview(spinnerView)
-            spinnerView.addSubview(ai)
-            
-            ai.translatesAutoresizingMaskIntoConstraints = false
-            NSLayoutConstraint(item: ai, attribute: NSLayoutConstraint.Attribute.leading, relatedBy: NSLayoutConstraint.Relation.equal, toItem: spinnerView, attribute: NSLayoutConstraint.Attribute.leading, multiplier: 1, constant: 0).isActive = true
-            NSLayoutConstraint(item: ai, attribute: NSLayoutConstraint.Attribute.trailing, relatedBy: NSLayoutConstraint.Relation.equal, toItem: spinnerView, attribute: NSLayoutConstraint.Attribute.trailing, multiplier: 1, constant: 0).isActive = true
-            NSLayoutConstraint(item: ai, attribute: NSLayoutConstraint.Attribute.top, relatedBy: NSLayoutConstraint.Relation.equal, toItem: spinnerView, attribute: NSLayoutConstraint.Attribute.top, multiplier: 1, constant: 0).isActive = true
-            NSLayoutConstraint(item: ai, attribute: NSLayoutConstraint.Attribute.bottom, relatedBy: NSLayoutConstraint.Relation.equal, toItem: spinnerView, attribute: NSLayoutConstraint.Attribute.bottom, multiplier: 1, constant: 0).isActive = true
-            ai.showLoading()
-        }
-        
-        spinner = spinnerView
-    }
-    
-    func finishLoading() {
-        DispatchQueue.main.async {
-            self.spinner?.removeFromSuperview()
-            self.spinner = nil
-        }
-    }
-    
-    var currentSubject: Int = 0
+
+    private var currentSubject: Int = 0
     var subjects: [String] = []
-    var hasDuplets = false
+    private var hasDuplets = false
     
-    var subjectViews: [EgeResultsSelector] = []
-    
-    var stackView = UIStackView()
+    private var subjectViews: [EgeResultsSelector] = []
     
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
     @IBOutlet weak var TopViewHeightConstraint: NSLayoutConstraint!
@@ -66,6 +37,9 @@ class EgeResultsSelectionViewController: UIViewController, EgeResultsSelectionVi
         self.view.layoutIfNeeded()
 
         updateScrollViewHeight()
+        UIView.animate(withDuration: 0.2) {
+            self.view.layoutIfNeeded()
+        }
         if subjectsView.subviews.count > 3 {
             let bottomOffset = CGPoint(x: 0, y: scrollView.contentSize.height - scrollView.bounds.size.height - 20)
             scrollView.setContentOffset(bottomOffset, animated: true)
@@ -102,7 +76,7 @@ class EgeResultsSelectionViewController: UIViewController, EgeResultsSelectionVi
         }
     }
     
-    func checkIfSubjectsFilled() -> Bool {
+    private func checkIfSubjectsFilled() -> Bool {
         
         for subject in subjectViews {
             if subject.score.text!.isEmpty {
@@ -129,7 +103,7 @@ class EgeResultsSelectionViewController: UIViewController, EgeResultsSelectionVi
         NSLayoutConstraint.activate([leadingConstraint, trailingConstraint, heightConstraint])
     }
     
-    func updateScrollViewHeight() {
+    private func updateScrollViewHeight() {
         let subjectCount = subjectsView.subviews.count
         
         switch subjectCount {
@@ -144,17 +118,14 @@ class EgeResultsSelectionViewController: UIViewController, EgeResultsSelectionVi
         default:
             subjectsViewHeightConstraint.constant = 58 * 3 + 20 * 3 + 6
         }
-        UIView.animate(withDuration: 0.2) {
-            self.view.layoutIfNeeded()
-        }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    final override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
     }
 
-    override func viewWillDisappear(_ animated: Bool) {
+    final override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
@@ -171,8 +142,12 @@ class EgeResultsSelectionViewController: UIViewController, EgeResultsSelectionVi
         addSubjectView(startPos: currentSubject % subjects.count)
         currentSubject += 1
         
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        
         setupScrollView()
         updateScrollViewHeight()
+        self.view.layoutIfNeeded()
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {
@@ -201,7 +176,7 @@ class EgeResultsSelectionViewController: UIViewController, EgeResultsSelectionVi
         presenter.router.prepare(for: segue, sender: sender)
     }
     
-    func setupScrollView() {
+    private func setupScrollView() {
         scrollView.canCancelContentTouches = false
         view.addGestureRecognizer(scrollView.panGestureRecognizer)
     }
@@ -213,7 +188,7 @@ extension EgeResultsSelectionViewController: EgeResulsActionDispatcher {
         showWarningIfNeeded()
     }
 
-    func highlightSubjects() {
+    private func highlightSubjects() {
         var rows: [Int] = []
         var hasDupletsNow: Bool = false
         
@@ -235,7 +210,7 @@ extension EgeResultsSelectionViewController: EgeResulsActionDispatcher {
         }
     }
     
-    func showWarningIfNeeded(needScoreWarning: Bool = false) {
+    private func showWarningIfNeeded(needScoreWarning: Bool = false) {
         
         let isFilled = checkIfSubjectsFilled()
         highlightSubjects()
@@ -255,6 +230,9 @@ extension EgeResultsSelectionViewController: EgeResulsActionDispatcher {
         view.removeFromSuperview()
         
         updateScrollViewHeight()
+        UIView.animate(withDuration: 0.2) {
+            self.view.layoutIfNeeded()
+        }
         showWarningIfNeeded()
         
         if currentSubject > 0 {

@@ -11,10 +11,8 @@ import UIKit
 
 // 1.
 class EgeResultsSelectionPresenter: EgeResultsSelectionPresenterProtocol {
-
-    var enrolleeModel: Enrollee!
         
-    var view: EgeResultsSelectionViewControllerProtocol!
+    weak var view: EgeResultsSelectionViewControllerProtocol!
     var interactor: EgeResultsSelectionInteractorProtocol!
     var router: EgeResultsSelectionRouterProtocol!
     
@@ -35,5 +33,10 @@ class EgeResultsSelectionPresenter: EgeResultsSelectionPresenterProtocol {
     func didCreateUser() {
         view?.finishLoading()
         router?.showHomeScreen()
+    }
+    
+    func didNotCreateUser() {
+        view?.finishLoading()
+        view?.showSignUpWarning()
     }
 }

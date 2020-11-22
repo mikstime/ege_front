@@ -6,26 +6,35 @@
 //
 
 import Foundation
-var counter = 0
-let names = ["Материаловедение", "Математика", "Физика"]
-let codes = ["11.0.1", "13.0.2", "14.2.12"]
+
 class ProgramsSelectionInteractor: ProgramsSelectionInteractorProtocol {
     
     weak var presenter: ProgramsSelectionPresenterProtocol!
     
     var enrollee: Enrollee = Enrollee()
+    var lastProgram: EdProgram!
     
-    func loadPrograms() {
-        var programs: [EdProgram] = []
-        for _ in 1...10 {
-            var program = EdProgram()
-            program.name = names[counter % names.count]
-            program.code = codes[counter % names.count]
-            counter += 1
-            program.id = counter
-            programs.append(program)
-        }
-
-        presenter.programsDidLoad(programs: programs)
+    func searchForPrograms(searchString: String) {
+        EdProgramService.shared.searchPrograms(searchString: searchString, since: lastProgram, didFind: {programs in
+            if programs != nil {
+                self.lastProgram = programs!.last
+                self.presenter?.programsDidLoad(programs: programs!)
+            } else {
+                self.presenter?.programsDidLoad(programs: [])
+            }
+        })
+    }
+    func setPrograms(programs: [EdProgram]) {
+        enrollee.chosenPrograms = programs
+        EnrolleeService.shared.setChosenPrograms(programs: programs)
+    }
+    func tryToCreateUser() {
+        EnrolleeService.shared.signup(didSignUp: {enrolleeDetails in
+            if enrolleeDetails != nil {
+                self.presenter?.didCreateUser()
+            } else {
+                self.presenter?.didNotCreateUser()
+            }
+        })
     }
 }

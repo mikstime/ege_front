@@ -1,7 +1,10 @@
 import UIKit
 
 class PhotoTableViewCell: UITableViewCell {
-    @IBOutlet weak var cellPhoto: UIImageView!
+    
+    @IBOutlet weak var shadowView: UIView!
+    @IBOutlet weak var photoView: UIImageView!
+    
     
     var photo: UIImage? {
         didSet {
@@ -16,12 +19,18 @@ class PhotoTableViewCell: UITableViewCell {
                 return
             }
 
-            self.layer.shadowColor = UIColor(named: "Shadow")?.cgColor ?? UIColor.label.cgColor
+        shadowView.layer.shadowColor = UIColor(named: "Shadow")?.cgColor ?? UIColor.label.cgColor
         }
     
     func updateUI() {
-        cellPhoto.image = photo
-        cellPhoto.layer.cornerRadius = 15.0
-        cellPhoto.layer.masksToBounds = true
+        photoView.image = photo
+        photoView.layer.cornerRadius = 15.0
+        photoView.layer.masksToBounds = true
+        
+        shadowView.layer.cornerRadius = 15.0
+        shadowView.layer.shadowColor = UIColor(named: "Shadow")?.cgColor ?? UIColor.label.cgColor
+        shadowView.layer.shadowOpacity = 0.16
+        shadowView.layer.shadowOffset = .zero
+        shadowView.layer.shadowRadius = 6
     }
 }

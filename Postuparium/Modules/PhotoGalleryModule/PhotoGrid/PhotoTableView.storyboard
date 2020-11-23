@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lnR-K7-jhh">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17506"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,46 +23,53 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PxF-Zw-60Z">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2kx-GW-eCm">
                                             <rect key="frame" x="16" y="5" width="382" height="240"/>
-                                        </imageView>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Br-tT-x5Y">
+                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="240"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="4Br-tT-x5Y" secondAttribute="bottom" id="EjX-JS-P1J"/>
+                                                <constraint firstAttribute="trailing" secondItem="4Br-tT-x5Y" secondAttribute="trailing" id="KE0-cQ-cGd"/>
+                                                <constraint firstItem="4Br-tT-x5Y" firstAttribute="leading" secondItem="2kx-GW-eCm" secondAttribute="leading" id="Nas-LQ-STI"/>
+                                                <constraint firstItem="4Br-tT-x5Y" firstAttribute="top" secondItem="2kx-GW-eCm" secondAttribute="top" id="SHC-ON-Loq"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="PxF-Zw-60Z" secondAttribute="bottom" constant="5" id="M46-Vf-z9Y"/>
-                                        <constraint firstItem="PxF-Zw-60Z" firstAttribute="top" secondItem="umG-1L-opp" secondAttribute="top" constant="5" id="N1B-vj-Wm7"/>
-                                        <constraint firstAttribute="trailing" secondItem="PxF-Zw-60Z" secondAttribute="trailing" constant="16" id="rjv-Dw-HmX"/>
-                                        <constraint firstItem="PxF-Zw-60Z" firstAttribute="leading" secondItem="umG-1L-opp" secondAttribute="leading" constant="16" id="uWF-Zv-qgr"/>
+                                        <constraint firstAttribute="bottom" secondItem="2kx-GW-eCm" secondAttribute="bottom" constant="5" id="56E-qd-Oif"/>
+                                        <constraint firstItem="2kx-GW-eCm" firstAttribute="leading" secondItem="umG-1L-opp" secondAttribute="leading" constant="16" id="Fpw-wq-cfR"/>
+                                        <constraint firstAttribute="trailing" secondItem="2kx-GW-eCm" secondAttribute="trailing" constant="16" id="HhE-6l-SBI"/>
+                                        <constraint firstItem="2kx-GW-eCm" firstAttribute="top" secondItem="umG-1L-opp" secondAttribute="top" constant="5" id="x15-cK-HbS"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="cellPhoto" destination="PxF-Zw-60Z" id="nR8-Al-fIW"/>
+                                    <outlet property="photoView" destination="4Br-tT-x5Y" id="Lb7-Eu-600"/>
+                                    <outlet property="shadowView" destination="2kx-GW-eCm" id="HvH-HD-P2F"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LoadCell" id="064-J8-4nk" customClass="LoadTableViewCell" customModule="Postuparium" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="278" width="414" height="43"/>
+                                <rect key="frame" x="0.0" y="278" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="064-J8-4nk" id="mX8-sv-ZRE">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="  Загрузка" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aEF-4b-dyC">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="  Загрузка" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aEF-4b-dyC">
                                             <rect key="frame" x="167" y="9" width="80" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" systemColor="secondaryLabelColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="fGd-PA-7o2">
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="fGd-PA-7o2">
                                             <rect key="frame" x="139" y="9" width="20" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         </activityIndicatorView>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstItem="fGd-PA-7o2" firstAttribute="top" secondItem="mX8-sv-ZRE" secondAttribute="topMargin" constant="-2" id="6Uv-xp-QMe"/>
-                                        <constraint firstItem="aEF-4b-dyC" firstAttribute="centerX" secondItem="mX8-sv-ZRE" secondAttribute="centerX" id="bi6-z5-ayS"/>
-                                        <constraint firstItem="fGd-PA-7o2" firstAttribute="top" secondItem="aEF-4b-dyC" secondAttribute="top" id="mRj-RN-Uxv"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="aEF-4b-dyC" secondAttribute="bottom" constant="3" id="sfM-Z1-noA"/>
-                                        <constraint firstItem="aEF-4b-dyC" firstAttribute="leading" secondItem="fGd-PA-7o2" secondAttribute="trailing" constant="8" symbolic="YES" id="uVh-cE-6hf"/>
-                                        <constraint firstItem="fGd-PA-7o2" firstAttribute="centerY" secondItem="aEF-4b-dyC" secondAttribute="centerY" id="zid-6G-Adz"/>
-                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="spinner" destination="fGd-PA-7o2" id="YdV-mb-S6C"/>
@@ -74,6 +81,7 @@
                             <outlet property="delegate" destination="lnR-K7-jhh" id="TXa-gM-v96"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="wo6-aW-XBW"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2vH-1R-Bpy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -81,6 +89,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

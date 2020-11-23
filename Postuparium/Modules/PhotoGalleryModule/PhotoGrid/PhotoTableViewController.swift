@@ -8,6 +8,8 @@ class PhotoTableViewController: UITableViewController, PhotoTableViewControllerP
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.viewDidLoad()
+        navigationController?.navigationBar.setBackgroundImage(nil, for: UIBarMetrics.default)
+        navigationController?.navigationBar.shadowImage = nil
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {

@@ -7,9 +7,10 @@
 
 import UIKit
 
-class ProgramsSelectionViewController: SwipeableViewController, ProgramsSelectionViewControllerProtocol, UITextFieldDelegate {
+class ProgramsSelectionViewController: SwipeableViewController, LoadableScreen, ProgramsSelectionViewControllerProtocol, UITextFieldDelegate {
+    var loader: UIView?
+    
     var presenter: ProgramsSelectionPresenterProtocol!
-//    @IBOutlet weak var titleView: UIStackView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var selectedProgramsView: UIStackView!
     @IBOutlet weak var selectedProgramsHeightConstraint: NSLayoutConstraint!
@@ -36,24 +37,6 @@ class ProgramsSelectionViewController: SwipeableViewController, ProgramsSelectio
     @IBAction func OpenProgramsSelectionMenu() {
         menu.totalOffset = 0
         showCard()
-    }
-    
-    func initProgramView() {
-        var program = EdProgram()
-        program.code = "1.1.1"
-        program.id = 4
-        program.name = "Информационные технологии"
-        addProgram(program: program)
-        self.view.layoutIfNeeded()
-        updateSelectedProgramsView()
-        
-        UIView.animate(withDuration: 0.3) {
-            self.view.layoutIfNeeded()
-        }
-        if selectedProgramsView.subviews.count > 3 {
-            let bottomOffset = CGPoint(x: 0, y: scrollView.contentSize.height - scrollView.bounds.size.height)
-            scrollView.setContentOffset(bottomOffset, animated: true)
-        }
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -84,6 +67,10 @@ extension ProgramsSelectionViewController: ProgramsSelectionItemDispatcherProtoc
         }
     }
     
+    func searchFor(searchString: String) {
+        presenter?.searchPrograms(searchString: searchString)
+    }
+    
     func addProgram(program: EdProgram) {
         let programView = ProgramsSelectionItem()
         programView.source = program
@@ -105,6 +92,7 @@ extension ProgramsSelectionViewController: ProgramsSelectionItemDispatcherProtoc
         UIView.animate(withDuration: 0.3) {
             self.view.layoutIfNeeded()
         }
+        updatePresenterData()
     }
 }
 
@@ -136,8 +124,16 @@ extension ProgramsSelectionViewController: ProgramsSelectionMenuActionDispatcher
                 scrollView.setContentOffset(bottomOffset, animated: true)
             }
         }
+        updatePresenterData()
     }
     
+    func updatePresenterData() {
+        let programs = selectedProgramsView.subviews.map{ programView -> EdProgram in
+            let pw = programView as? ProgramsSelectionItem ?? ProgramsSelectionItem()
+            return pw.source
+        }
+        presenter?.setPrograms(programs: programs)
+    }
     func requestForMoreData() {
         presenter?.requestMoreData()
     }

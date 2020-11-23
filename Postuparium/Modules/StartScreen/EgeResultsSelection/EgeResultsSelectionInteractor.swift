@@ -14,7 +14,7 @@ struct SubjectDetails {
     var name: String = ""
 }
 class EgeResultsSelectionInteractor: EgeResultsSelectionInteractorProtocol {
-    var presenter: EgeResultsSelectionPresenterProtocol!
+    weak var presenter: EgeResultsSelectionPresenterProtocol!
     
     var enrollee: Enrollee = Enrollee()
     
@@ -33,10 +33,13 @@ class EgeResultsSelectionInteractor: EgeResultsSelectionInteractorProtocol {
     }
     
     func tryToCreateUser() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-            self.presenter?.didCreateUser()
-        }
-
+        EnrolleeService.shared.signup(didSignUp: {enrolleeDetails in
+            if enrolleeDetails != nil {
+                self.presenter?.didCreateUser()
+            } else {
+                self.presenter?.didNotCreateUser()
+            }
+        })
     }
     
 }
@@ -47,6 +50,7 @@ extension EgeResultsSelectionInteractor {
         for subject in subjects {
             _updateSubjectById(id: subject.id, score: subject.score)
         }
+        EnrolleeService.shared.setEgeResults(egeResults: enrollee.egeResults)
     }
     
     private func _updateSubjectById(id: Int, score: Int) {

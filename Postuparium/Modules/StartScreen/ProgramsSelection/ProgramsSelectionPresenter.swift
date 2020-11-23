@@ -15,16 +15,33 @@ class ProgramsSelectionPresenter: ProgramsSelectionPresenterProtocol {
     var router: ProgramsSelectionRouterProtocol!
     
     func showNextScreen() {
-        router?.showHomeScreen()
+        view?.startLoading()
+        interactor?.tryToCreateUser()
     }
     
     func viewDidLoad() {
-        interactor?.loadPrograms()
+        interactor?.searchForPrograms(searchString: "")
     }
     func requestMoreData() {
-        interactor?.loadPrograms()
+        interactor?.searchForPrograms(searchString: "")
     }
     func programsDidLoad(programs: [EdProgram]) {
         view?.programsDidLoad(programs: programs)
+    }
+    func didCreateUser() {
+        view?.finishLoading()
+        router?.showHomeScreen()
+    }
+    
+    func didNotCreateUser() {
+        view?.finishLoading()
+        view?.showSignUpWarning()
+    }
+    func setPrograms(programs: [EdProgram]) {
+        interactor?.setPrograms(programs: programs)
+    }
+    
+    func searchPrograms(searchString: String) {
+        interactor?.searchForPrograms(searchString: searchString)
     }
 }

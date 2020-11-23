@@ -12,6 +12,10 @@ import UIKit
 protocol ProgramsSelectionViewControllerProtocol: UIViewController {
     var presenter: ProgramsSelectionPresenterProtocol! {get set}
     func programsDidLoad(programs: [EdProgram])
+    
+    func startLoading()
+    func finishLoading()
+    func showSignUpWarning()
 }
 
 protocol ProgramsSelectionPresenterProtocol: class {
@@ -22,12 +26,21 @@ protocol ProgramsSelectionPresenterProtocol: class {
     func showNextScreen()
     func requestMoreData()
     func programsDidLoad(programs: [EdProgram])
+    // Вызываются интерактором после создания пользователя
+    func didCreateUser()
+    func didNotCreateUser()
+    
+    func setPrograms(programs: [EdProgram])
+    func searchPrograms(searchString: String)
 }
 
 protocol ProgramsSelectionInteractorProtocol: class {
     var presenter: ProgramsSelectionPresenterProtocol! {get set}
     var enrollee: Enrollee {get set}
-    func loadPrograms()
+    // Создать пользователя
+    func tryToCreateUser()
+    func setPrograms(programs: [EdProgram])
+    func searchForPrograms(searchString: String)
 }
 
 protocol ProgramsSelectionRouterProtocol: class {

@@ -19,10 +19,11 @@ class EgeResultsSelectionRouter: EgeResultsSelectionRouterProtocol {
     
     func showHomeScreen() {
         let vc = HomeScreenConfigurator.configureModule()
+        
+        view?.navigationController?.navigationBar.setBackgroundImage(nil, for: UIBarMetrics.default)
+        view?.navigationController?.navigationBar.shadowImage = nil
+        
         view?.navigationController!.show(vc as UIViewController, sender: view)
-//        let storyboard = UIStoryboard(name: "HomeScreen", bundle: nil)
-//        guard let vc = storyboard.instantiateInitialViewController() else { return }
-//        view?.navigationController!.show(vc, sender: view)
     }
     
     func prepare(for segue: UIStoryboardSegue, sender: Any?) {

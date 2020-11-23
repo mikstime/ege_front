@@ -10,15 +10,15 @@ import UIKit
 protocol ProgramsSelectionMenuActionDispatcherProtocol {
     func didTapOnCell(row: Int, program:EdProgram)
     func requestForMoreData()
+    func searchFor(searchString: String)
 }
 
-class ProgramsSelectionMenuViewController: UIViewController, ProgramsSelectionMenuViewControllerProtocol, CardViewControllerProtocol {
+class ProgramsSelectionMenuViewController: UIViewController, ProgramsSelectionMenuViewControllerProtocol, UISearchBarDelegate, CardViewControllerProtocol {
     var totalOffset: CGFloat = 0.0
-    
     var actionsDispatcher: ProgramsSelectionMenuActionDispatcherProtocol!
     var presenter: ProgramsSelectionMenuPresenterProtocol!
     var programs: [EdProgram] = []
-    var selectedPrograms: [Bool] = []
+    var selectedPrograms: [EdProgram] = []
     var isFetching = false
     
     var handleArea: UIView!
@@ -30,12 +30,18 @@ class ProgramsSelectionMenuViewController: UIViewController, ProgramsSelectionMe
     override func viewDidLoad() {
         handleArea = self.view
         super.viewDidLoad()
+        searchBar.delegate = self
         presenter?.viewDidLoad()
         roundCornersAndAddShadow()
         designSearchBar()
         setupTableView()
     }
-
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        actionsDispatcher?.searchFor(searchString: searchBar.text!)
+        self.programs = []
+        self.tableView.reloadData()
+    }
+    
     // MARK: - Navigation methods
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -100,14 +106,24 @@ extension ProgramsSelectionMenuViewController: UITableViewDelegate, UITableViewD
             // set the text from the data model
             cell.nameLabel.text = programs[indexPath.row].name
             cell.codeLabel.text = programs[indexPath.row].code
-            cell.mark.isHidden = !selectedPrograms[indexPath.row]
+
+            cell.mark.isHidden = !selectedPrograms.contains { program in
+                return program.id == programs[indexPath.row].id
+            }
             
             return cell
         }
         
         // method to run when table view cell is tapped
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedPrograms[indexPath.row] = !selectedPrograms[indexPath.row]
+        let contains = selectedPrograms.contains { program in
+            return program.id == programs[indexPath.row].id
+        }
+        if contains {
+            selectedPrograms = selectedPrograms.filter { $0.id != programs[indexPath.row].id }
+        } else {
+            selectedPrograms.append(programs[indexPath.row])
+        }
         actionsDispatcher?.didTapOnCell(row: indexPath.row, program: programs[indexPath.row])
         tableView.reloadData()
     }
@@ -125,9 +141,6 @@ extension ProgramsSelectionMenuViewController: UITableViewDelegate, UITableViewD
     
     public func didLoadMoreData(newPrograms: [EdProgram]) {
         programs = programs + newPrograms
-        for _ in newPrograms {
-            self.selectedPrograms.append(false)
-        }
         self.tableView.reloadData()
     }
     
@@ -135,7 +148,7 @@ extension ProgramsSelectionMenuViewController: UITableViewDelegate, UITableViewD
         let ind = self.programs.firstIndex { $0.id == program.id }
         
         if let ind = ind {
-            selectedPrograms[ind] = false
+            selectedPrograms = selectedPrograms.filter { $0.id != programs[ind].id }
             self.tableView.reloadData()
         }
     }

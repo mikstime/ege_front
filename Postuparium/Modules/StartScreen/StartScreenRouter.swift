@@ -17,23 +17,17 @@ class StartScreenRouter: StartScreenRouterProtocol {
     }
     
     func showRegistrationScreen() {
-
-//        let vc = PhotoTableViewConfigurator.configureModule()
-//        viewController?.navigationController!.show(vc as UITableViewController, sender: nil)
-
-        let vc = PhotoTableViewConfigurator.configureModule()
-        viewController?.navigationController!.show(vc as UITableViewController, sender: nil)
-        
-        
-        //let vc = EgeResultsSelectionConfigurator.configureModule()
-//        let vc = ProgramsSelectionConfigurator.configureModule()
-//        viewController?.navigationController!.show(vc as UIViewController, sender: nil)
-//        viewController?.navigationController!.show(vc as UIViewController, sender: nil)
-
-//        let storyboard = UIStoryboard(name: "EgeResultsSelection", bundle: nil)
-//        guard let vc = storyboard.instantiateInitialViewController() else { return }
-//        print("did load")
-//        viewController.navigationController!.show(vc as UIViewController, sender: viewController)
+        let vc = EgeResultsSelectionConfigurator.configureModule()
+        viewController?.navigationController?.navigationBar.setBackgroundImage(nil, for: UIBarMetrics.default)
+        viewController?.navigationController?.navigationBar.shadowImage = nil
+        viewController?.navigationController!.show(vc, sender: viewController)
+    }
+    
+    func showHomeScreen() {
+        let vc = HomeScreenConfigurator.configureModule()
+        viewController?.navigationController?.navigationBar.setBackgroundImage(nil, for: UIBarMetrics.default)
+        viewController?.navigationController?.navigationBar.shadowImage = nil
+        viewController?.navigationController!.show(vc, sender: viewController)
     }
     
     func prepare(for segue: UIStoryboardSegue, sender: Any?) {

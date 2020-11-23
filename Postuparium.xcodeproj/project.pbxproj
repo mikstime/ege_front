@@ -104,13 +104,13 @@
 		8528F6432534D575004FDE50 /* InfoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8528F6422534D575004FDE50 /* InfoListView.swift */; };
 		85331588256BE2F2003A89EA /* NibLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85331587256BE2F2003A89EA /* NibLoader.swift */; };
 		85331590256BE311003A89EA /* NibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533158F256BE311003A89EA /* NibView.swift */; };
+		853315B7256BF8C4003A89EA /* UniversityModulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853315B6256BF8C4003A89EA /* UniversityModulePresenter.swift */; };
 		85ABD590256958CD0094BC7E /* StudyTileMediumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ABD58E256958CD0094BC7E /* StudyTileMediumCell.swift */; };
 		85ABD591256958CD0094BC7E /* StudyTileMediumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85ABD58F256958CD0094BC7E /* StudyTileMediumCell.xib */; };
 		85ABD596256963920094BC7E /* EdProgramsGridController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ABD595256963920094BC7E /* EdProgramsGridController.swift */; };
 		85ABD59B256965040094BC7E /* UniversityModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ABD59A256965040094BC7E /* UniversityModuleViewController.swift */; };
 		85ABD5A0256965180094BC7E /* UniversityModuleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ABD59F256965180094BC7E /* UniversityModuleRouter.swift */; };
 		85ABD5A5256965260094BC7E /* UniversityModuleProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ABD5A4256965260094BC7E /* UniversityModuleProtocols.swift */; };
-		85ABD5AA256965370094BC7E /* UniversityModulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ABD5A9256965370094BC7E /* UniversityModulePresenter.swift */; };
 		85ABD5AF256965410094BC7E /* UniversityModuleIteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ABD5AE256965410094BC7E /* UniversityModuleIteractor.swift */; };
 		85ABD5B4256965560094BC7E /* UniversityModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ABD5B3256965560094BC7E /* UniversityModuleConfigurator.swift */; };
 		85ABD5B92569656C0094BC7E /* UniversityModule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85ABD5B82569656C0094BC7E /* UniversityModule.storyboard */; };
@@ -282,13 +282,13 @@
 		8528F64D2534D766004FDE50 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		85331587256BE2F2003A89EA /* NibLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoader.swift; sourceTree = "<group>"; };
 		8533158F256BE311003A89EA /* NibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibView.swift; sourceTree = "<group>"; };
+		853315B6256BF8C4003A89EA /* UniversityModulePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityModulePresenter.swift; sourceTree = "<group>"; };
 		85ABD58E256958CD0094BC7E /* StudyTileMediumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyTileMediumCell.swift; sourceTree = "<group>"; };
 		85ABD58F256958CD0094BC7E /* StudyTileMediumCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StudyTileMediumCell.xib; sourceTree = "<group>"; };
 		85ABD595256963920094BC7E /* EdProgramsGridController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdProgramsGridController.swift; sourceTree = "<group>"; };
 		85ABD59A256965040094BC7E /* UniversityModuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityModuleViewController.swift; sourceTree = "<group>"; };
 		85ABD59F256965180094BC7E /* UniversityModuleRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityModuleRouter.swift; sourceTree = "<group>"; };
 		85ABD5A4256965260094BC7E /* UniversityModuleProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityModuleProtocols.swift; sourceTree = "<group>"; };
-		85ABD5A9256965370094BC7E /* UniversityModulePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityModulePresenter.swift; sourceTree = "<group>"; };
 		85ABD5AE256965410094BC7E /* UniversityModuleIteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityModuleIteractor.swift; sourceTree = "<group>"; };
 		85ABD5B3256965560094BC7E /* UniversityModuleConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityModuleConfigurator.swift; sourceTree = "<group>"; };
 		85ABD5B82569656C0094BC7E /* UniversityModule.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UniversityModule.storyboard; sourceTree = "<group>"; };
@@ -707,8 +707,8 @@
 				8528F5742534B3DF004FDE50 /* PhotoGallery */,
 				85ABD59A256965040094BC7E /* UniversityModuleViewController.swift */,
 				85ABD59F256965180094BC7E /* UniversityModuleRouter.swift */,
+				853315B6256BF8C4003A89EA /* UniversityModulePresenter.swift */,
 				85ABD5A4256965260094BC7E /* UniversityModuleProtocols.swift */,
-				85ABD5A9256965370094BC7E /* UniversityModulePresenter.swift */,
 				85ABD5AE256965410094BC7E /* UniversityModuleIteractor.swift */,
 				85ABD5B3256965560094BC7E /* UniversityModuleConfigurator.swift */,
 				85ABD5B82569656C0094BC7E /* UniversityModule.storyboard */,
@@ -1123,6 +1123,7 @@
 				2EDE684E2567601B0064D28B /* ProgramsSelectionMenuInteractor.swift in Sources */,
 				85ABD5E82569BB970094BC7E /* EdProgramModuleViewController.swift in Sources */,
 				2EAD8B6F256215A100C4EEA3 /* AchievementsSelectionConfigurator.swift in Sources */,
+				853315B7256BF8C4003A89EA /* UniversityModulePresenter.swift in Sources */,
 				85ABD5B4256965560094BC7E /* UniversityModuleConfigurator.swift in Sources */,
 				8528F6112534C1CC004FDE50 /* UniversityTile.swift in Sources */,
 				85ABD5D12569AA290094BC7E /* EdProgramMock.swift in Sources */,
@@ -1159,7 +1160,6 @@
 				2E00063E25620748000693B5 /* StartScreenViewContoller.swift in Sources */,
 				2E00064425620748000693B5 /* StartScreenRouter.swift in Sources */,
 				8528F5262534AAE2004FDE50 /* SceneDelegate.swift in Sources */,
-				85ABD5AA256965370094BC7E /* UniversityModulePresenter.swift in Sources */,
 				2EAD8B962562259500C4EEA3 /* ProgramsSelectionViewContoller.swift in Sources */,
 				8528F63B2534D566004FDE50 /* ApplicantsTableView.swift in Sources */,
 				2E000662256209A8000693B5 /* NibExtension.swift in Sources */,

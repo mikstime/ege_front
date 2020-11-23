@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 class UniversityModuleRouter: UniversityModuleRouterProtocol {
+
  
     
     weak var view: UniversityModuleViewControllerProtocol!
@@ -24,4 +25,10 @@ class UniversityModuleRouter: UniversityModuleRouterProtocol {
         vc.edProgramId = id
         view?.navigationController!.show(vc as UIViewController, sender: view)
     }
+    func showFeedBackModuleScreen() {
+        print("show feedbackModule ")
+        let vc = FeedbackModuleConfigurator.configureModule()
+        view?.navigationController!.show(vc as UIViewController, sender: view)
+    }
+    
 }

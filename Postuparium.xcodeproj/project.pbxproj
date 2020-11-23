@@ -105,6 +105,13 @@
 		85331588256BE2F2003A89EA /* NibLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85331587256BE2F2003A89EA /* NibLoader.swift */; };
 		85331590256BE311003A89EA /* NibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533158F256BE311003A89EA /* NibView.swift */; };
 		853315B7256BF8C4003A89EA /* UniversityModulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853315B6256BF8C4003A89EA /* UniversityModulePresenter.swift */; };
+		853315BD256BFA4C003A89EA /* FeedbackModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853315BC256BFA4C003A89EA /* FeedbackModuleViewController.swift */; };
+		853315C5256BFA58003A89EA /* FeedbackModuleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853315C4256BFA58003A89EA /* FeedbackModuleRouter.swift */; };
+		853315CA256BFA68003A89EA /* FeedbackModulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853315C9256BFA68003A89EA /* FeedbackModulePresenter.swift */; };
+		853315CF256BFA72003A89EA /* FeedbackModuleProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853315CE256BFA72003A89EA /* FeedbackModuleProtocols.swift */; };
+		853315D4256BFA7F003A89EA /* FeedbackModuleIteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853315D3256BFA7F003A89EA /* FeedbackModuleIteractor.swift */; };
+		853315D9256BFA92003A89EA /* FeedbackModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853315D8256BFA92003A89EA /* FeedbackModuleConfigurator.swift */; };
+		853315DE256BFA9E003A89EA /* FeedbackModule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 853315DD256BFA9E003A89EA /* FeedbackModule.storyboard */; };
 		85ABD590256958CD0094BC7E /* StudyTileMediumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ABD58E256958CD0094BC7E /* StudyTileMediumCell.swift */; };
 		85ABD591256958CD0094BC7E /* StudyTileMediumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85ABD58F256958CD0094BC7E /* StudyTileMediumCell.xib */; };
 		85ABD596256963920094BC7E /* EdProgramsGridController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ABD595256963920094BC7E /* EdProgramsGridController.swift */; };
@@ -283,6 +290,13 @@
 		85331587256BE2F2003A89EA /* NibLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoader.swift; sourceTree = "<group>"; };
 		8533158F256BE311003A89EA /* NibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibView.swift; sourceTree = "<group>"; };
 		853315B6256BF8C4003A89EA /* UniversityModulePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityModulePresenter.swift; sourceTree = "<group>"; };
+		853315BC256BFA4C003A89EA /* FeedbackModuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackModuleViewController.swift; sourceTree = "<group>"; };
+		853315C4256BFA58003A89EA /* FeedbackModuleRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackModuleRouter.swift; sourceTree = "<group>"; };
+		853315C9256BFA68003A89EA /* FeedbackModulePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackModulePresenter.swift; sourceTree = "<group>"; };
+		853315CE256BFA72003A89EA /* FeedbackModuleProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackModuleProtocols.swift; sourceTree = "<group>"; };
+		853315D3256BFA7F003A89EA /* FeedbackModuleIteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackModuleIteractor.swift; sourceTree = "<group>"; };
+		853315D8256BFA92003A89EA /* FeedbackModuleConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackModuleConfigurator.swift; sourceTree = "<group>"; };
+		853315DD256BFA9E003A89EA /* FeedbackModule.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FeedbackModule.storyboard; sourceTree = "<group>"; };
 		85ABD58E256958CD0094BC7E /* StudyTileMediumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyTileMediumCell.swift; sourceTree = "<group>"; };
 		85ABD58F256958CD0094BC7E /* StudyTileMediumCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StudyTileMediumCell.xib; sourceTree = "<group>"; };
 		85ABD595256963920094BC7E /* EdProgramsGridController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdProgramsGridController.swift; sourceTree = "<group>"; };
@@ -663,6 +677,13 @@
 			isa = PBXGroup;
 			children = (
 				8528F64B2534D6A8004FDE50 /* README.md */,
+				853315BC256BFA4C003A89EA /* FeedbackModuleViewController.swift */,
+				853315C4256BFA58003A89EA /* FeedbackModuleRouter.swift */,
+				853315C9256BFA68003A89EA /* FeedbackModulePresenter.swift */,
+				853315CE256BFA72003A89EA /* FeedbackModuleProtocols.swift */,
+				853315D3256BFA7F003A89EA /* FeedbackModuleIteractor.swift */,
+				853315D8256BFA92003A89EA /* FeedbackModuleConfigurator.swift */,
+				853315DD256BFA9E003A89EA /* FeedbackModule.storyboard */,
 			);
 			path = FeedbackModule;
 			sourceTree = "<group>";
@@ -1029,6 +1050,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E8CE4932566EC80007C923C /* EgeResultsSelection.storyboard in Resources */,
+				853315DE256BFA9E003A89EA /* FeedbackModule.storyboard in Resources */,
 				8528F6332534D395004FDE50 /* .gitignore in Resources */,
 				2E00061025620302000693B5 /* Logo@2x.png in Resources */,
 				85ABD5CC2569A3890094BC7E /* edPrograms.json in Resources */,
@@ -1088,6 +1110,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				853315D4256BFA7F003A89EA /* FeedbackModuleIteractor.swift in Sources */,
 				2EAD8B972562259500C4EEA3 /* ProgramsSelectionProtocols.swift in Sources */,
 				8528F5932534B733004FDE50 /* Photo.swift in Sources */,
 				2EE044C325630F950014FD34 /* HomeScreenViewContoller.swift in Sources */,
@@ -1107,6 +1130,7 @@
 				2EE044BE25630F950014FD34 /* HomeScreenInteractor.swift in Sources */,
 				2EDE68522567601B0064D28B /* ProgramsSelectionMenuViewContoller.swift in Sources */,
 				85ABD596256963920094BC7E /* EdProgramsGridController.swift in Sources */,
+				853315CA256BFA68003A89EA /* FeedbackModulePresenter.swift in Sources */,
 				CEEE7BC62567D9C70094B1DA /* PhotoTableViewConfigurator.swift in Sources */,
 				CEEE7BC12567D9A20094B1DA /* PhotoTableViewInteractor.swift in Sources */,
 				2EDE68532567601B0064D28B /* ProgramsSelectionMenuPresenter.swift in Sources */,
@@ -1115,6 +1139,7 @@
 				2E00063F25620748000693B5 /* StartScreenPresenter.swift in Sources */,
 				CEEE7BBC2567D98B0094B1DA /* PhotoTableViewPresenter.swift in Sources */,
 				8528F5282534AAE2004FDE50 /* ViewController.swift in Sources */,
+				853315BD256BFA4C003A89EA /* FeedbackModuleViewController.swift in Sources */,
 				CEEE7BD825682FF80094B1DA /* PhotoTableViewCell.swift in Sources */,
 				85ABD5FA2569BC500094BC7E /* EdProgramModulePresenter.swift in Sources */,
 				CEEE7BCB256805330094B1DA /* UIImageExtension.swift in Sources */,
@@ -1131,6 +1156,7 @@
 				2EAD8B71256215A100C4EEA3 /* AchievementsSelectionPresenter.swift in Sources */,
 				85331590256BE311003A89EA /* NibView.swift in Sources */,
 				85ABD5FF2569BC680094BC7E /* EdProgramModuleInteractor.swift in Sources */,
+				853315D9256BFA92003A89EA /* FeedbackModuleConfigurator.swift in Sources */,
 				8528F5982534B741004FDE50 /* Feedback.swift in Sources */,
 				CEEE7BB22567D94C0094B1DA /* PhotoTableViewRouter.swift in Sources */,
 				2EAD8BA6256225E200C4EEA3 /* ProgramsSelectionItem.swift in Sources */,
@@ -1144,6 +1170,7 @@
 				2EAD8B922562259500C4EEA3 /* ProgramsSelectionConfigurator.swift in Sources */,
 				8528F62E2534CC70004FDE50 /* ApiServiceProtocol.swift in Sources */,
 				8528F5892534B70C004FDE50 /* EdProgram.swift in Sources */,
+				853315CF256BFA72003A89EA /* FeedbackModuleProtocols.swift in Sources */,
 				2EDE68512567601B0064D28B /* ProgramsSelectionMenuProtocols.swift in Sources */,
 				8528F5DC2534BC04004FDE50 /* EgeResultsSelectionConfigurator.swift in Sources */,
 				85331588256BE2F2003A89EA /* NibLoader.swift in Sources */,
@@ -1179,6 +1206,7 @@
 				2EDE684D2567601B0064D28B /* ProgramsSelectionMenuRouter.swift in Sources */,
 				2EAD8B912562259500C4EEA3 /* ProgramsSelectionRouter.swift in Sources */,
 				CEEE7BE8256911070094B1DA /* PhotoViewerRouter.swift in Sources */,
+				853315C5256BFA58003A89EA /* FeedbackModuleRouter.swift in Sources */,
 				8528F5A62534B7B8004FDE50 /* StorageService.swift in Sources */,
 				CEEE7C01256911700094B1DA /* PhotoViewerController.swift in Sources */,
 				8528F5E12534C0C2004FDE50 /* ScoreInput.swift in Sources */,

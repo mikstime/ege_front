@@ -11,6 +11,10 @@ class HomeScreenViewController: UIViewController, HomeScreenViewControllerProtoc
     
     var presenter: HomeScreenPresenterProtocol!
     
+    @IBAction func showNextScreen() {
+        presenter?.showNextScreen()
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)

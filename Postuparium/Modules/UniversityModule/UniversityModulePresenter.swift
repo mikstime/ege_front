@@ -22,5 +22,9 @@ class UniversityModulePresenter: UniversityModulePresenterProtocol {
     func showNextScreen(id: String) {
         router?.showEdProgramModuleScreen(id: id)
     }
+    
+    func showFeedbackScreen() {
+        router?.showFeedBackModuleScreen()
+    }
 }
 

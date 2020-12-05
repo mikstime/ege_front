@@ -28,6 +28,7 @@
 		2E42DCC325661BDE00D82018 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E42DCC025661BDD00D82018 /* icon@2x.png */; };
 		2E42DCC425661BDE00D82018 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E42DCC125661BDD00D82018 /* icon.png */; };
 		2E42DCCD25661E7500D82018 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E42DCCC25661E7500D82018 /* LoadingView.xib */; };
+		2E42F1B3256C097E00736DF1 /* EdProgramModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E42F1B2256C097E00736DF1 /* EdProgramModuleViewController.swift */; };
 		2E8CE4932566EC80007C923C /* EgeResultsSelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E00066A25620ACD000693B5 /* EgeResultsSelection.storyboard */; };
 		2EAD8B692562159800C4EEA3 /* AchievementsSelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EAD8B622562142A00C4EEA3 /* AchievementsSelection.storyboard */; };
 		2EAD8B6D256215A100C4EEA3 /* AchievementsSelectionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAD8B5B2562138E00C4EEA3 /* AchievementsSelectionInteractor.swift */; };
@@ -130,7 +131,6 @@
 		85ABD5D62569AC8A0094BC7E /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ABD5D52569AC8A0094BC7E /* Fonts.swift */; };
 		85ABD5DF2569AFB60094BC7E /* StudyTileBigCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ABD5DD2569AFB60094BC7E /* StudyTileBigCell.swift */; };
 		85ABD5E02569AFB60094BC7E /* StudyTileBigCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85ABD5DE2569AFB60094BC7E /* StudyTileBigCell.xib */; };
-		85ABD5E82569BB970094BC7E /* EdProgramModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ABD5E72569BB970094BC7E /* EdProgramModuleViewController.swift */; };
 		85ABD5ED2569BBFC0094BC7E /* EdProgramModuleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ABD5EC2569BBFC0094BC7E /* EdProgramModuleRouter.swift */; };
 		85ABD5F52569BC320094BC7E /* EdProgramModuleProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ABD5F42569BC320094BC7E /* EdProgramModuleProtocols.swift */; };
 		85ABD5FA2569BC500094BC7E /* EdProgramModulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ABD5F92569BC500094BC7E /* EdProgramModulePresenter.swift */; };
@@ -199,6 +199,7 @@
 		2E42DCC025661BDD00D82018 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		2E42DCC125661BDD00D82018 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		2E42DCCC25661E7500D82018 /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
+		2E42F1B2256C097E00736DF1 /* EdProgramModuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdProgramModuleViewController.swift; sourceTree = "<group>"; };
 		2EAD8B5B2562138E00C4EEA3 /* AchievementsSelectionInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsSelectionInteractor.swift; sourceTree = "<group>"; };
 		2EAD8B5C2562138F00C4EEA3 /* AchievementsSelectionConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsSelectionConfigurator.swift; sourceTree = "<group>"; };
 		2EAD8B5D2562138F00C4EEA3 /* AchievementsSelectionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsSelectionRouter.swift; sourceTree = "<group>"; };
@@ -317,7 +318,6 @@
 		85ABD5D52569AC8A0094BC7E /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		85ABD5DD2569AFB60094BC7E /* StudyTileBigCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyTileBigCell.swift; sourceTree = "<group>"; };
 		85ABD5DE2569AFB60094BC7E /* StudyTileBigCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StudyTileBigCell.xib; sourceTree = "<group>"; };
-		85ABD5E72569BB970094BC7E /* EdProgramModuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EdProgramModuleViewController.swift; path = ../../../../../EdProgramModuleViewController.swift; sourceTree = "<group>"; };
 		85ABD5EC2569BBFC0094BC7E /* EdProgramModuleRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdProgramModuleRouter.swift; sourceTree = "<group>"; };
 		85ABD5F42569BC320094BC7E /* EdProgramModuleProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdProgramModuleProtocols.swift; sourceTree = "<group>"; };
 		85ABD5F92569BC500094BC7E /* EdProgramModulePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdProgramModulePresenter.swift; sourceTree = "<group>"; };
@@ -775,7 +775,7 @@
 				85ABD6182569E0A90094BC7E /* mocks */,
 				8528F5792534B545004FDE50 /* ApplicantsTable */,
 				8528F5782534B4E8004FDE50 /* InfoList */,
-				85ABD5E72569BB970094BC7E /* EdProgramModuleViewController.swift */,
+				2E42F1B2256C097E00736DF1 /* EdProgramModuleViewController.swift */,
 				85ABD5EC2569BBFC0094BC7E /* EdProgramModuleRouter.swift */,
 				85ABD5F42569BC320094BC7E /* EdProgramModuleProtocols.swift */,
 				85ABD5F92569BC500094BC7E /* EdProgramModulePresenter.swift */,
@@ -1152,8 +1152,8 @@
 				CEEE7BCB256805330094B1DA /* UIImageExtension.swift in Sources */,
 				85ABD5DF2569AFB60094BC7E /* StudyTileBigCell.swift in Sources */,
 				85ABD62B2569E62A0094BC7E /* SimilarModuleViewController.swift in Sources */,
+				2E42F1B3256C097E00736DF1 /* EdProgramModuleViewController.swift in Sources */,
 				2EDE684E2567601B0064D28B /* ProgramsSelectionMenuInteractor.swift in Sources */,
-				85ABD5E82569BB970094BC7E /* EdProgramModuleViewController.swift in Sources */,
 				2EAD8B6F256215A100C4EEA3 /* AchievementsSelectionConfigurator.swift in Sources */,
 				853315B7256BF8C4003A89EA /* UniversityModulePresenter.swift in Sources */,
 				85ABD5B4256965560094BC7E /* UniversityModuleConfigurator.swift in Sources */,

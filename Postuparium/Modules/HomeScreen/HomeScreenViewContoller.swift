@@ -15,6 +15,10 @@ class HomeScreenViewController: UIViewController, HomeScreenViewControllerProtoc
         presenter?.showNextScreen()
     }
     
+    @IBAction func showPhotosScreen() {
+        presenter?.showPhotosScreen()
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)

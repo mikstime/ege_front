@@ -16,6 +16,10 @@ class HomeScreenRouter: HomeScreenRouterProtocol {
         // prepare here some data for destination viewController
     }
     
+    func showPhotosScreen() {
+        let vc = PhotoTableViewConfigurator.configureModule()
+        view?.navigationController!.show(vc as UIViewController, sender: view)
+    }
     func showUniversityModuleScreen() {
         print("show university/edProgram module")
         let vc = UniversityModuleConfigurator.configureModule()

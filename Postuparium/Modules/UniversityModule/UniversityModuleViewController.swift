@@ -14,12 +14,12 @@ class UniversityModuleViewController: UICollectionViewController, UniversityModu
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: animated)
+//        navigationController?.setNavigationBarHidden(true, animated: animated)
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: animated)
+//        navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
 
@@ -91,7 +91,7 @@ class UniversityModuleViewController: UICollectionViewController, UniversityModu
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     
-        return CGSize(width: (view.frame.width / 2) - 10 , height: 220)
+        return CGSize(width: (view.frame.width / 2) - 16 , height: 220)
     }
     
     

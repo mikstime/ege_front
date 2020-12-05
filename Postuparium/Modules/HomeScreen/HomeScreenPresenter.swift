@@ -14,6 +14,10 @@ class HomeScreenPresenter: HomeScreenPresenterProtocol {
     var interactor: HomeScreenInteractorProtocol!
     var router: HomeScreenRouterProtocol!
     
+    func showNextScreen() {
+        router?.showUniversityModuleScreen()
+    }
+    
     func viewDidLoad() {
  
     }

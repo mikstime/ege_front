@@ -1,0 +1,58 @@
+[
+  { "code": "00.00.00",
+      "photo": "https://changellenge.com/upload/resize_cache/iblock/8ce/1240_600_2/8cebe4fdb0ce2ce1565312fa4e281596.jpg",
+    "name": "Ракеты",
+    "codeName": "ИУ0",
+    "edProgram": "Компьютеры и Ракеты",
+    "id": 0
+  },
+  { "code": "11.11.11",
+      "photo": "https://changellenge.com/upload/resize_cache/iblock/8ce/1240_600_2/8cebe4fdb0ce2ce1565312fa4e281596.jpg",
+    "name": "Конфеты",
+    "codeName": "ИУ1",
+    "edProgram": "Компьютеры и Конфеты",
+    "id": 1
+  },
+  { "code": "22.22.22",
+      "photo": "https://changellenge.com/upload/resize_cache/iblock/8ce/1240_600_2/8cebe4fdb0ce2ce1565312fa4e281596.jpg",
+    "name": "Пиво",
+    "codeName": "ИУ2",
+    "edProgram": "Компьютеры и Пиво",
+    "id": 2
+  },
+  { "code": "33.33.33",
+      "photo": "https://changellenge.com/upload/resize_cache/iblock/8ce/1240_600_2/8cebe4fdb0ce2ce1565312fa4e281596.jpg",
+    "name": "Нагрузки",
+    "codeName": "ИУ3",
+    "edProgram": "Компьютеры и Нагрузки",
+    "id": 3
+  },
+  { "code": "00.00.00",
+      "photo": "https://changellenge.com/upload/resize_cache/iblock/8ce/1240_600_2/8cebe4fdb0ce2ce1565312fa4e281596.jpg",
+    "name": "Ракеты",
+    "codeName": "ИУ0",
+    "edProgram": "Компьютеры и Ракетные двигатели",
+    "id": 4
+  },
+  { "code": "11.11.11",
+      "photo": "https://changellenge.com/upload/resize_cache/iblock/8ce/1240_600_2/8cebe4fdb0ce2ce1565312fa4e281596.jpg",
+    "name": "Конфеты в просто огромных объемах",
+    "codeName": "ИУ1",
+    "edProgram": "Компьютеры и Конфеты",
+    "id": 5
+  },
+  { "code": "22.22.22",
+      "photo": "https://changellenge.com/upload/resize_cache/iblock/8ce/1240_600_2/8cebe4fdb0ce2ce1565312fa4e281596.jpg",
+    "name": "Пиво в больших объемах",
+    "codeName": "ИУ2",
+    "edProgram": "Компьютеры и Пиво",
+    "id": 6
+  },
+  { "code": "33.33.33/11.11.11 11.22.33",
+    "photo": "https://changellenge.com/upload/resize_cache/iblock/8ce/1240_600_2/8cebe4fdb0ce2ce1565312fa4e281596.jpg",
+    "name": "Нагрузки",
+    "codeName": "ИУ3",
+    "edProgram": "Компьютеры и Нагрузки",
+    "id": 7
+  },
+]

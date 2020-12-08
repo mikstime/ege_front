@@ -16,6 +16,8 @@ protocol HomeScreenViewControllerProtocol: UIViewController {
 protocol HomeScreenPresenterProtocol: class {
     var view: HomeScreenViewControllerProtocol! {set get}
     var router: HomeScreenRouterProtocol! { set get }
+    
+    func showPhotosScreen()
     func showNextScreen()
     
     func viewDidLoad()
@@ -31,6 +33,7 @@ protocol HomeScreenRouterProtocol: class {
     func prepare(for segue: UIStoryboardSegue, sender: Any?)
     
     func showUniversityModuleScreen()
+    func showPhotosScreen()
 }
 
 protocol HomeScreenConfiguratorProtocol: class {

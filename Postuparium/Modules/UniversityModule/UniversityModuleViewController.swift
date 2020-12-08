@@ -14,12 +14,12 @@ class UniversityModuleViewController: UICollectionViewController, UniversityModu
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: animated)
+//        navigationController?.setNavigationBarHidden(true, animated: animated)
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: animated)
+//        navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
 
@@ -58,28 +58,40 @@ class UniversityModuleViewController: UICollectionViewController, UniversityModu
     
     //MARK : CollectionView Delegate Methods
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return edPrograms.count
+        return edPrograms.count + 1
     }
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier:"StudyTileMediumCell", for: indexPath) as! StudyTileMediumCell
+        
+        if(indexPath.row < edPrograms.count ){
         let edProgram = edPrograms[indexPath.row]
         cell.codeLabel.text = edProgram.code
         cell.nameLabel.text = edProgram.name
         cell.codeNameLabel.text = edProgram.codeName
         cell.typeLabel.text = edProgram.edProgram
-        
+        } else{
+            cell.codeLabel.text = ""
+            cell.nameLabel.text = "Отсутствует направление?"
+            cell.codeNameLabel.text = ""
+            cell.typeLabel.text = "Напишите нам"
+        }
         return cell
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("select ", edPrograms[indexPath.row].id)
-        presenter?.showNextScreen(id: String(edPrograms[indexPath.row].id))
+        if(indexPath.row == edPrograms.count){
+            presenter?.showFeedbackScreen()
+        } else{
+            presenter?.showNextScreen(id: String(edPrograms[indexPath.row].id))
+        }
+        
+    
     }
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     
-        return CGSize(width: (view.frame.width / 2) - 10 , height: 220)
+        return CGSize(width: (view.frame.width / 2) - 16 , height: 220)
     }
     
     

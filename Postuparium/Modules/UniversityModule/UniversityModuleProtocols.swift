@@ -17,6 +17,7 @@ protocol UniversityModulePresenterProtocol: class {
     var router: UniversityModuleRouterProtocol! { set get }
     
     func showNextScreen(id: String)
+    func showFeedbackScreen()
     
     func viewDidLoad()
 }
@@ -30,6 +31,7 @@ protocol UniversityModuleRouterProtocol: class {
     
     func prepare(for segue: UIStoryboardSegue, sender: Any?)
     func showEdProgramModuleScreen(id: String)
+    func showFeedBackModuleScreen()
 
 }
 

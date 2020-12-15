@@ -38,6 +38,14 @@
                                     <action selector="showPhotosScreen" destination="AnT-Ft-OYG" eventType="touchUpInside" id="Asw-kc-mnR"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ix9-ey-flf">
+                                <rect key="frame" x="148" y="381" width="106" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title=" Университеты"/>
+                                <connections>
+                                    <action selector="showUniversitiesListScreen:" destination="AnT-Ft-OYG" eventType="touchUpInside" id="8pq-De-KGR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MV1-Pr-jUs"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

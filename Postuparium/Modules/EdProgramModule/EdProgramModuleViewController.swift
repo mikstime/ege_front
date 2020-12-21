@@ -173,8 +173,12 @@ class EdProgramModuleViewController: UIViewController, EdProgramModuleViewContro
     func setupView() {
     setupSegmentedControl()
     updateView()
-        let cellView = StudyTileBigCell.instanceFromNib()
-        self.cellView.addSubview(cellView)
+        let cellView1 = StudyTileBigCell.instanceFromNib()
+
+        self.cellView.addSubview(cellView1)
+    
+        cellView1.center = CGPoint(x: self.cellView.frame.size.width  / 2,
+                                        y: self.cellView.frame.size.height / 2)
     
     }
     

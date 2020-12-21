@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZVw-sY-d8d">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZVw-sY-d8d">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -14,11 +14,10 @@
                 <viewController storyboardIdentifier="EdProgramModule" id="ZVw-sY-d8d" customClass="EdProgramModuleViewController" customModule="Postuparium" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" insetsLayoutMarginsFromSafeArea="NO" id="emh-Ag-dqn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a1Q-ML-6h9">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a1Q-ML-6h9">
                                 <rect key="frame" x="0.0" y="251" width="414" height="611"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <containerView opaque="NO" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" id="G2R-2z-XWp">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="757"/>
@@ -27,9 +26,12 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="wGQ-di-exI">
-                                <rect key="frame" x="93" y="44" width="228" height="31"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Yv-9N-DdE">
+                                <rect key="frame" x="0.0" y="112" width="414" height="118"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="wGQ-di-exI">
+                                <rect key="frame" x="142" y="54" width="131" height="32"/>
                                 <segments>
                                     <segment title="First"/>
                                     <segment title="Second"/>
@@ -38,13 +40,26 @@
                                     <action selector="indexChanged:" destination="ZVw-sY-d8d" eventType="valueChanged" id="FVy-05-fbK"/>
                                 </connections>
                             </segmentedControl>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Yv-9N-DdE">
-                                <rect key="frame" x="20" y="102" width="374" height="128"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="1Ck-Gg-gDb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2Yv-9N-DdE" firstAttribute="leading" secondItem="1Ck-Gg-gDb" secondAttribute="leading" id="1jf-lG-o4B"/>
+                            <constraint firstItem="2Yv-9N-DdE" firstAttribute="trailing" secondItem="a1Q-ML-6h9" secondAttribute="trailing" id="2u6-6e-GLO"/>
+                            <constraint firstItem="2Yv-9N-DdE" firstAttribute="trailing" secondItem="1Ck-Gg-gDb" secondAttribute="trailing" id="CLV-ei-H2z"/>
+                            <constraint firstItem="1Ck-Gg-gDb" firstAttribute="trailing" secondItem="wGQ-di-exI" secondAttribute="trailing" constant="141" id="GoG-cK-HyY"/>
+                            <constraint firstItem="2Yv-9N-DdE" firstAttribute="leading" secondItem="a1Q-ML-6h9" secondAttribute="leading" id="Wbt-e7-Myp"/>
+                            <constraint firstItem="a1Q-ML-6h9" firstAttribute="top" secondItem="2Yv-9N-DdE" secondAttribute="bottom" constant="21" id="YSZ-xD-5GM"/>
+                            <constraint firstAttribute="bottom" secondItem="2Yv-9N-DdE" secondAttribute="bottom" constant="666" id="czk-CU-QZJ"/>
+                            <constraint firstItem="wGQ-di-exI" firstAttribute="leading" secondItem="1Ck-Gg-gDb" secondAttribute="leading" constant="142" id="h0b-b0-PBB"/>
+                            <constraint firstItem="2Yv-9N-DdE" firstAttribute="top" secondItem="wGQ-di-exI" secondAttribute="bottom" constant="27" id="h8H-gU-V3w"/>
+                            <constraint firstItem="wGQ-di-exI" firstAttribute="top" secondItem="1Ck-Gg-gDb" secondAttribute="top" constant="10" id="ykv-It-XUM"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
                         <outlet property="cellView" destination="2Yv-9N-DdE" id="Hvi-vK-u8b"/>

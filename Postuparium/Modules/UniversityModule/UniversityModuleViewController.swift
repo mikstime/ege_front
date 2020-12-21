@@ -9,8 +9,12 @@ import UIKit
 
 class UniversityModuleViewController: UICollectionViewController, UniversityModuleViewControllerProtocol, UITextFieldDelegate, UICollectionViewDelegateFlowLayout{
     
+    @IBOutlet var cellView: UICollectionView?
+    
     var presenter: UniversityModulePresenterProtocol!
     var edPrograms: [EdProgramMock] = []
+    
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -29,8 +33,10 @@ class UniversityModuleViewController: UICollectionViewController, UniversityModu
         
         let nib = UINib(nibName: "StudyTileMediumCell",bundle: nil)
         self.collectionView.register(nib, forCellWithReuseIdentifier: "collectionCell")
-        
         setupCollectionView()
+        
+       
+        
         setupNavigationBarController()
     }
     
@@ -40,7 +46,7 @@ class UniversityModuleViewController: UICollectionViewController, UniversityModu
     //MARK : Setup Methods
     fileprivate func setupNavigationBarController() {
         self.navigationController?.navigationBar.shadowImage = UIImage()
-        navigationItem.title = "Lists"
+        navigationItem.title = "Направления"
 
         if #available(iOS 11.0, *) {
             self.navigationController?.navigationBar.prefersLargeTitles = true
@@ -53,7 +59,7 @@ class UniversityModuleViewController: UICollectionViewController, UniversityModu
         collectionView?.backgroundColor = .white
         let customCellNib = UINib(nibName: "StudyTileMediumCell", bundle: .main)
         collectionView.register(customCellNib, forCellWithReuseIdentifier: "StudyTileMediumCell")
-        collectionView.alwaysBounceVertical = true
+//        collectionView.alwaysBounceVertical = true
     }
     
     //MARK : CollectionView Delegate Methods
@@ -75,6 +81,12 @@ class UniversityModuleViewController: UICollectionViewController, UniversityModu
             cell.codeNameLabel.text = ""
             cell.typeLabel.text = "Напишите нам"
         }
+        if(indexPath.row % 2 == 0){
+            cell.center.x = view.frame.width / 2 - (cell.frame.width / 2)
+        } else{
+            cell.center.x = view.frame.width - (cell.frame.width / 2)
+        }
+       
         return cell
     }
     
@@ -89,14 +101,21 @@ class UniversityModuleViewController: UICollectionViewController, UniversityModu
     }
     
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     
-        return CGSize(width: (view.frame.width / 2) - 16 , height: 220)
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        (view.frame.width / 2) - 16
+        return CGSize(width: (view.frame.width / 2) - 16   , height: 220)
     }
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 4, left: 4, bottom: 4, right: 4)
+        if( section % 2 == 0){
+    
+            return UIEdgeInsets(top: 4, left: 8, bottom: 4, right: 0)
+        } else{
+            return UIEdgeInsets(top: 4, left: 0, bottom: 4, right: 8)
+        }
+       
     }
 
 

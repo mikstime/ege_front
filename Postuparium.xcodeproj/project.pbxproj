@@ -71,6 +71,8 @@
 		2EE044C325630F950014FD34 /* HomeScreenViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE044BB25630F940014FD34 /* HomeScreenViewContoller.swift */; };
 		2EE044C425630F950014FD34 /* HomeScreenProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE044BD25630F950014FD34 /* HomeScreenProtocols.swift */; };
 		2EF252FB256A36C300D7FE1C /* EdProgramService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF252FA256A36C300D7FE1C /* EdProgramService.swift */; };
+		85173DDA259157E70090D1C6 /* universities.json in Resources */ = {isa = PBXBuildFile; fileRef = 85173DD9259157E70090D1C6 /* universities.json */; };
+		85173DE2259157F60090D1C6 /* Universities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85173DE1259157F60090D1C6 /* Universities.swift */; };
 		8528F5242534AAE2004FDE50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8528F5232534AAE2004FDE50 /* AppDelegate.swift */; };
 		8528F5262534AAE2004FDE50 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8528F5252534AAE2004FDE50 /* SceneDelegate.swift */; };
 		8528F5282534AAE2004FDE50 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8528F5272534AAE2004FDE50 /* ViewController.swift */; };
@@ -264,6 +266,8 @@
 		2EE044BC25630F950014FD34 /* HomeScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenPresenter.swift; sourceTree = "<group>"; };
 		2EE044BD25630F950014FD34 /* HomeScreenProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenProtocols.swift; sourceTree = "<group>"; };
 		2EF252FA256A36C300D7FE1C /* EdProgramService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdProgramService.swift; sourceTree = "<group>"; };
+		85173DD9259157E70090D1C6 /* universities.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = universities.json; sourceTree = "<group>"; };
+		85173DE1259157F60090D1C6 /* Universities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Universities.swift; sourceTree = "<group>"; };
 		8528F5202534AAE2004FDE50 /* Postuparium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Postuparium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8528F5232534AAE2004FDE50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8528F5252534AAE2004FDE50 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -557,6 +561,15 @@
 			path = ProgramsSelectionMenu;
 			sourceTree = "<group>";
 		};
+		85173DD8259157A90090D1C6 /* mocks */ = {
+			isa = PBXGroup;
+			children = (
+				85173DD9259157E70090D1C6 /* universities.json */,
+				85173DE1259157F60090D1C6 /* Universities.swift */,
+			);
+			path = mocks;
+			sourceTree = "<group>";
+		};
 		8528F5172534AAE2004FDE50 = {
 			isa = PBXGroup;
 			children = (
@@ -742,6 +755,7 @@
 		8528F56B2534B08E004FDE50 /* UniversityMap */ = {
 			isa = PBXGroup;
 			children = (
+				85173DD8259157A90090D1C6 /* mocks */,
 				85C12DE6258E7C5B00C3CD71 /* AppNavController.swift */,
 				85C12E3E258FB66700C3CD71 /* ModalView */,
 				85C12E20258EA98200C3CD71 /* testData.geojson */,
@@ -1179,6 +1193,7 @@
 				8528F5332534AAE3004FDE50 /* LaunchScreen.storyboard in Resources */,
 				8528F5302534AAE3004FDE50 /* Assets.xcassets in Resources */,
 				85ABD61D2569E0CF0094BC7E /* applicants.json in Resources */,
+				85173DDA259157E70090D1C6 /* universities.json in Resources */,
 				85ABD591256958CD0094BC7E /* StudyTileMediumCell.xib in Resources */,
 				2EAD8B902562259500C4EEA3 /* ProgramsSelection.storyboard in Resources */,
 				8528F6162534C1E4004FDE50 /* UniversityTile.xib in Resources */,
@@ -1283,6 +1298,7 @@
 				85C12E58258FB80400C3CD71 /* ModalRouter.swift in Sources */,
 				2EAD8BA6256225E200C4EEA3 /* ProgramsSelectionItem.swift in Sources */,
 				85C12DEE258E7CB200C3CD71 /* HalfModalPresentationController.swift in Sources */,
+				85173DE2259157F60090D1C6 /* Universities.swift in Sources */,
 				85ABD5C1256971BB0094BC7E /* MainCollectionViewCell.swift in Sources */,
 				85ABD6222569E0F80094BC7E /* ApplicantMock.swift in Sources */,
 				8528F52E2534AAE2004FDE50 /* Postuparium.xcdatamodeld in Sources */,

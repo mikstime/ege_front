@@ -17,11 +17,15 @@ class ProgramsSelectionRouter: ProgramsSelectionRouterProtocol {
     }
     
     func showHomeScreen() {
-        let vc = HomeScreenConfigurator.configureModule()
+        print("show home")
+        let vc = UniversityMapConfigurator.configureModule()
+        view?.navigationController!.show(vc as UIViewController, sender: view)
         
-        view?.navigationController?.navigationBar.setBackgroundImage(nil, for: UIBarMetrics.default)
-        view?.navigationController?.navigationBar.shadowImage = nil
+//        let vc = HomeScreenConfigurator.configureModule()
         
-        view?.navigationController?.show(vc as UIViewController, sender: nil)
+//        view?.navigationController?.navigationBar.setBackgroundImage(nil, for: UIBarMetrics.default)
+//        view?.navigationController?.navigationBar.shadowImage = nil
+//
+//        view?.navigationController?.show(vc as UIViewController, sender: nil)
     }
 }

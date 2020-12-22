@@ -20,8 +20,9 @@ class UniversityMarkerView: MKMarkerAnnotationView {
       rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
 
       // 2
-      markerTintColor = university.markerTintColor
-        glyphImage = university.image
+      backgroundColor = UIColor.blue
+      markerTintColor = .blue
+      glyphImage = UIImage.init(systemName: "studentdesk" )!
     }
   }
 
@@ -36,18 +37,17 @@ class UniversityView: MKAnnotationView {
 
       canShowCallout = true
       calloutOffset = CGPoint(x: -5, y: 5)
-      let mapsButton = UIButton(frame: CGRect(origin: CGPoint.zero, size: CGSize(width: 24, height: 24)))
-        mapsButton.setBackgroundImage(#imageLiteral(resourceName: "Logo@2x.png"), for: .normal)
-      rightCalloutAccessoryView = mapsButton
     
       image = university.image
-    
       
       let detailLabel = UILabel()
       detailLabel.numberOfLines = 0
       detailLabel.font = detailLabel.font.withSize(12)
       detailLabel.text = university.subtitle
       detailCalloutAccessoryView = detailLabel
+     
+
+        
     }
   }
 }

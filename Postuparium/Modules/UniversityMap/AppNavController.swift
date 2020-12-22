@@ -22,10 +22,18 @@ class AppNavController: UINavigationController, HalfModalPresentable {
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print("did appear", id)
+        print("did appear appvav", id)
     }
     
+    override func performSegue(withIdentifier identifier: String, sender: Any?) {
+        print("perform in appnav")
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("segue prepare appnav", id)
+        if segue.identifier == "navToModal" {
+            if let destinationVC = segue.destination as? ModalViewController {
+                destinationVC.id = id
+            
+            }
+        }
     }
 }

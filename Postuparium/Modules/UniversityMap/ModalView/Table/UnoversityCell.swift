@@ -11,11 +11,7 @@ class UnoversityCell: UITableViewCell {
 
     @IBOutlet weak var label: UILabel?
     
-    
-    
     @IBOutlet weak var bgImage: UIImageView?
-    
- 
     
     @IBAction func openUniversityScreen(_ sender: Any) {
         returnValue?(id)
@@ -28,6 +24,10 @@ class UnoversityCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+//        let overlay: UIView = UIView(frame: self.contentView.frame)
+//        overlay.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 0.7)
+//        self.bgImage?.addSubview(overlay)
         // Initialization code
         
     }
@@ -35,7 +35,7 @@ class UnoversityCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
 //        super.setSelected(selected, animated: animated)
-        print("selected")
+
         
         // Configure the view for the selected state
     }

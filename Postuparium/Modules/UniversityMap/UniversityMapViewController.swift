@@ -16,7 +16,7 @@ class UniversityMapViewController: UIViewController,
     
     var halfModalTransitioningDelegate: HalfModalTransitioningDelegate!
     
-    private var universitites: [UniversityObj] = []
+    private var universitites = UniversitiesMock.UniversitiesList()
     
     @IBOutlet private var mapView: MKMapView!
     
@@ -32,20 +32,45 @@ class UniversityMapViewController: UIViewController,
         
         mapView.delegate = self
         
-        mapView.register(
-          UniversityView.self,
-          forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
+        // Закомменчено на время рефакторинга меток на карте
+//        mapView.register(
+//          UniversityView.self,
+//          forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
+//        
+//        loadInitialData()
+       
+        var annotations: [MKPointAnnotation] = []
         
-        loadInitialData()
-        print(universitites)
-        mapView.addAnnotations(universitites)
+        for univer in universitites {
+            print("univer " ,univer)
+            let annotation = MKPointAnnotation()
+            annotation.coordinate.latitude = (univer.lat as NSString).doubleValue
+            annotation.coordinate.longitude = (univer.lon as NSString).doubleValue
+            annotation.title = univer.name
+            annotation.subtitle = "\(univer.id)"
+    
+            annotations.append(annotation)
+        }
+        print(annotations)
+        mapView.addAnnotations(annotations)
+    
+       
         
     
     }
     
+
+    func setMapFocus(centerCoordinate: CLLocationCoordinate2D, radiusInKm radius: CLLocationDistance)
+    {
+    let diameter = radius * 2000
+        let region: MKCoordinateRegion = MKCoordinateRegion(center: centerCoordinate, latitudinalMeters: diameter, longitudinalMeters: diameter)
+    self.mapView.setRegion(region, animated: false)
+    }
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         let id = view.annotation!.subtitle!
+        mapView.setCenter(view.annotation!.coordinate, animated: true)
+        setMapFocus(centerCoordinate: view.annotation!.coordinate, radiusInKm: 0.5)
         print("Ебать нажалось", id! , Int(id!) ?? 0 )
         self.presenter.showModal(id: Int(id!) ?? 0 )
     }
@@ -55,37 +80,6 @@ class UniversityMapViewController: UIViewController,
         presenter.router.prepare(for: segue, sender: sender)
     }
     
-    
-    private func loadInitialData() {
-        
-      // 1
-      guard
-        let fileName = Bundle.main.url(forResource: "testData", withExtension: "geojson"),
-        let artworkData = try? Data(contentsOf: fileName)
-        else {
-        print("empty")
-          return
-      }
-      
-      do {
-        // 2
-        let features = try MKGeoJSONDecoder()
-          .decode(artworkData)
-          .compactMap { $0 as? MKGeoJSONFeature }
-        print("decode features")
-        // 3
-        let validWorks = features.compactMap(UniversityObj.init)
-        // 4
-        print("return empty2")
-        universitites.append(contentsOf: validWorks)
-      } catch {
-        // 5
-        print("Unexpected error: \(error).")
-      }
-    }
-    
-    
-   
 }
 
 
@@ -106,13 +100,13 @@ extension ViewController: MKMapViewDelegate {
     annotationView view: MKAnnotationView,
     calloutAccessoryControlTapped control: UIControl
   ) {
-    guard let artwork = view.annotation as? UniversityObj else {
+    guard let univer = view.annotation as? UniversityObj else {
       return
     }
-    
+
     let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
-    artwork.mapItem?.openInMaps(launchOptions: launchOptions)
-    print("ogo ebat")
+    univer.mapItem?.openInMaps(launchOptions: launchOptions)
+
   }
 }
 

@@ -20,12 +20,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="uk6-qz-2aw">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="uk6-qz-2aw">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uk6-qz-2aw" firstAttribute="leading" secondItem="69P-uo-et4" secondAttribute="leading" id="7M5-77-N7t"/>
+                            <constraint firstAttribute="trailing" secondItem="uk6-qz-2aw" secondAttribute="trailing" id="Q16-an-T55"/>
+                            <constraint firstAttribute="bottom" secondItem="uk6-qz-2aw" secondAttribute="bottom" id="Xf7-Dc-718"/>
+                            <constraint firstItem="uk6-qz-2aw" firstAttribute="top" secondItem="69P-uo-et4" secondAttribute="top" id="fUe-iN-urO"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="mapView" destination="uk6-qz-2aw" id="EdG-zi-Zz4"/>
@@ -47,6 +52,7 @@
                     </navigationBar>
                     <connections>
                         <segue destination="bhd-Id-ufV" kind="relationship" relationship="rootViewController" destinationCreationSelector="navToModal" id="lRm-1b-uVA"/>
+                        <segue destination="bhd-Id-ufV" kind="show" identifier="navToModal" id="YtT-69-kZ3"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qLa-5L-vCb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -160,6 +166,9 @@
             <point key="canvasLocation" x="285.50724637681162" y="756.69642857142856"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="YtT-69-kZ3"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

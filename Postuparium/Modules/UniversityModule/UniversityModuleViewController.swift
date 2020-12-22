@@ -12,6 +12,9 @@ class UniversityModuleViewController: UICollectionViewController, UniversityModu
     @IBOutlet var cellView: UICollectionView?
     
     var presenter: UniversityModulePresenterProtocol!
+    
+    var id:Int = 0
+    
     var edPrograms: [EdProgramMock] = []
     
     
@@ -34,10 +37,13 @@ class UniversityModuleViewController: UICollectionViewController, UniversityModu
         let nib = UINib(nibName: "StudyTileMediumCell",bundle: nil)
         self.collectionView.register(nib, forCellWithReuseIdentifier: "collectionCell")
         setupCollectionView()
-        
-       
-        
+    
         setupNavigationBarController()
+        
+        print("univer module did load id", id)
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        print("univer module did appear id", id)
     }
     
     //MARK : Properites

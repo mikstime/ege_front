@@ -73,34 +73,10 @@ class UniversityObj: NSObject, MKAnnotation {
   }
   
   var markerTintColor: UIColor  {
-    switch discipline {
-    case "Monument":
-      return .red
-    case "Mural":
-      return .cyan
-    case "Plaque":
-      return .blue
-    case "Sculpture":
-      return .purple
-    default:
-      return .green
-    }
+    return .red
   }
   
   var image: UIImage {
-    guard let name = discipline else { return #imageLiteral(resourceName: "icon@2x.png") }
-    return UIImage.init(systemName: "circle" )!
-    switch name {
-    case "Monument":
-      return #imageLiteral(resourceName: "icon@2x.png")
-    case "Sculpture":
-      return #imageLiteral(resourceName: "Logo@2x.png")
-    case "Plaque":
-      return #imageLiteral(resourceName: "Logo@2x.png")
-    case "Mural":
-      return #imageLiteral(resourceName: "icon@2x.png")
-    default:
-      return #imageLiteral(resourceName: "icon@2x.png")
-    }
+    return UIImage.init(systemName: "mappin" )!
   }
 }

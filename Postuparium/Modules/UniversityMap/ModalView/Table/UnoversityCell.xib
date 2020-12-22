@@ -3,7 +3,6 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,19 +16,36 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" translatesAutoresizingMaskIntoConstraints="NO" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="325" height="199"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="8cebe4fdb0ce2ce1565312fa4e281596" translatesAutoresizingMaskIntoConstraints="NO" id="Sfd-6P-0QJ">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hFq-AK-bo5" userLabel="ViewView">
+                        <rect key="frame" x="4" y="4" width="317" height="191"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Sfd-6P-0QJ">
                         <rect key="frame" x="4" y="4" width="317" height="191"/>
                         <color key="backgroundColor" name="Shadow"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                <real key="value" value="30"/>
+                                <real key="value" value="20"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </imageView>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6h2-YJ-CKz">
-                        <rect key="frame" x="135" y="37" width="50" height="77"/>
-                        <state key="normal">
-                            <imageReference key="image" image="shift.fill" catalog="system" symbolScale="large"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5Q-Um-ZlD">
+                        <rect key="frame" x="20" y="161" width="285" height="27"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                        <color key="textColor" name="StartScreenSecondaryColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6h2-YJ-CKz">
+                        <rect key="frame" x="135" y="76" width="55" height="46"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <color key="tintColor" name="StartScreenSecondaryColor"/>
+                        <state key="normal" backgroundImage="book" catalog="system">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="medium"/>
                         </state>
                         <userDefinedRuntimeAttributes>
@@ -41,25 +57,24 @@
                             <action selector="openUniversityScreen:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="aKy-ZY-CGo"/>
                         </connections>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5Q-Um-ZlD">
-                        <rect key="frame" x="20" y="167" width="42" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" name="StartScreenSecondaryColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="hFq-AK-bo5" firstAttribute="width" secondItem="Sfd-6P-0QJ" secondAttribute="width" id="0hW-vX-vTx"/>
                     <constraint firstItem="6h2-YJ-CKz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="119" id="3lq-MH-l71"/>
                     <constraint firstAttribute="trailingMargin" secondItem="6h2-YJ-CKz" secondAttribute="trailing" constant="120" id="5qJ-f9-8QT"/>
                     <constraint firstItem="Sfd-6P-0QJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="4" id="8aO-9p-Rga"/>
                     <constraint firstAttribute="bottomMargin" secondItem="6h2-YJ-CKz" secondAttribute="bottom" constant="74" id="Ows-IB-MdH"/>
                     <constraint firstAttribute="trailing" secondItem="Sfd-6P-0QJ" secondAttribute="trailing" constant="4" id="T5Z-HS-QDG"/>
+                    <constraint firstItem="hFq-AK-bo5" firstAttribute="height" secondItem="Sfd-6P-0QJ" secondAttribute="height" id="Ut1-xc-Xy4"/>
+                    <constraint firstItem="hFq-AK-bo5" firstAttribute="centerX" secondItem="L5Q-Um-ZlD" secondAttribute="centerX" id="a77-AB-YyO"/>
                     <constraint firstItem="6h2-YJ-CKz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="29" id="dX6-uQ-p1G"/>
+                    <constraint firstItem="hFq-AK-bo5" firstAttribute="top" secondItem="Sfd-6P-0QJ" secondAttribute="top" id="hS3-Ki-WUL"/>
                     <constraint firstItem="L5Q-Um-ZlD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="icz-zl-y4N"/>
                     <constraint firstAttribute="height" constant="200" id="jFS-8I-Www"/>
                     <constraint firstItem="L5Q-Um-ZlD" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="lWG-F5-EcC"/>
                     <constraint firstItem="Sfd-6P-0QJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="rbm-Ks-MCP"/>
                     <constraint firstAttribute="bottom" secondItem="Sfd-6P-0QJ" secondAttribute="bottom" constant="4" id="w1f-Jk-GR6"/>
+                    <constraint firstItem="hFq-AK-bo5" firstAttribute="leading" secondItem="Sfd-6P-0QJ" secondAttribute="leading" id="z1M-sl-cQY"/>
                 </constraints>
                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                 <userDefinedRuntimeAttributes>
@@ -77,7 +92,7 @@
             </constraints>
             <userDefinedRuntimeAttributes>
                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                    <real key="value" value="50"/>
+                    <real key="value" value="20"/>
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
             <connections>
@@ -88,8 +103,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="8cebe4fdb0ce2ce1565312fa4e281596" width="1240" height="600"/>
-        <image name="shift.fill" catalog="system" width="128" height="106"/>
+        <image name="book" catalog="system" width="128" height="102"/>
         <namedColor name="Shadow">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

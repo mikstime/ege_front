@@ -32,6 +32,7 @@ class HalfModalPresentationController : UIPresentationController {
     }
     
     override init(presentedViewController: UIViewController, presenting presentingViewController: UIViewController?) {
+        print("init halfmodal")
         self.panGestureRecognizer = UIPanGestureRecognizer()
         super.init(presentedViewController: presentedViewController, presenting: presentingViewController)
         panGestureRecognizer.addTarget(self, action: #selector(onPan(pan:)))

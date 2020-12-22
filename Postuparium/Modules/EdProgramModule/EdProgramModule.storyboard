@@ -16,8 +16,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a1Q-ML-6h9">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a1Q-ML-6h9">
                                 <rect key="frame" x="0.0" y="251" width="414" height="611"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <containerView opaque="NO" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" id="G2R-2z-XWp">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="757"/>
@@ -26,12 +27,15 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Yv-9N-DdE">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Yv-9N-DdE">
                                 <rect key="frame" x="0.0" y="112" width="414" height="118"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="wGQ-di-exI">
-                                <rect key="frame" x="142" y="54" width="131" height="32"/>
+                                <rect key="frame" x="95" y="54" width="225" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="225" id="2sf-eF-sWe"/>
+                                </constraints>
                                 <segments>
                                     <segment title="First"/>
                                     <segment title="Second"/>
@@ -44,16 +48,12 @@
                         <viewLayoutGuide key="safeArea" id="1Ck-Gg-gDb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="2Yv-9N-DdE" firstAttribute="leading" secondItem="1Ck-Gg-gDb" secondAttribute="leading" id="1jf-lG-o4B"/>
-                            <constraint firstItem="2Yv-9N-DdE" firstAttribute="trailing" secondItem="a1Q-ML-6h9" secondAttribute="trailing" id="2u6-6e-GLO"/>
-                            <constraint firstItem="2Yv-9N-DdE" firstAttribute="trailing" secondItem="1Ck-Gg-gDb" secondAttribute="trailing" id="CLV-ei-H2z"/>
-                            <constraint firstItem="1Ck-Gg-gDb" firstAttribute="trailing" secondItem="wGQ-di-exI" secondAttribute="trailing" constant="141" id="GoG-cK-HyY"/>
-                            <constraint firstItem="2Yv-9N-DdE" firstAttribute="leading" secondItem="a1Q-ML-6h9" secondAttribute="leading" id="Wbt-e7-Myp"/>
-                            <constraint firstItem="a1Q-ML-6h9" firstAttribute="top" secondItem="2Yv-9N-DdE" secondAttribute="bottom" constant="21" id="YSZ-xD-5GM"/>
-                            <constraint firstAttribute="bottom" secondItem="2Yv-9N-DdE" secondAttribute="bottom" constant="666" id="czk-CU-QZJ"/>
-                            <constraint firstItem="wGQ-di-exI" firstAttribute="leading" secondItem="1Ck-Gg-gDb" secondAttribute="leading" constant="142" id="h0b-b0-PBB"/>
-                            <constraint firstItem="2Yv-9N-DdE" firstAttribute="top" secondItem="wGQ-di-exI" secondAttribute="bottom" constant="27" id="h8H-gU-V3w"/>
-                            <constraint firstItem="wGQ-di-exI" firstAttribute="top" secondItem="1Ck-Gg-gDb" secondAttribute="top" constant="10" id="ykv-It-XUM"/>
+                            <constraint firstItem="2Yv-9N-DdE" firstAttribute="leading" secondItem="1Ck-Gg-gDb" secondAttribute="leading" id="Js3-wY-r1i"/>
+                            <constraint firstItem="wGQ-di-exI" firstAttribute="top" secondItem="1Ck-Gg-gDb" secondAttribute="top" constant="10" id="O7R-bs-DtX"/>
+                            <constraint firstItem="2Yv-9N-DdE" firstAttribute="top" secondItem="wGQ-di-exI" secondAttribute="bottom" constant="27" id="UGI-on-rIL"/>
+                            <constraint firstItem="1Ck-Gg-gDb" firstAttribute="trailing" secondItem="wGQ-di-exI" secondAttribute="trailing" constant="94" id="fh2-y2-2Qa"/>
+                            <constraint firstItem="2Yv-9N-DdE" firstAttribute="trailing" secondItem="1Ck-Gg-gDb" secondAttribute="trailing" id="hYw-3d-h9F"/>
+                            <constraint firstItem="wGQ-di-exI" firstAttribute="leading" secondItem="1Ck-Gg-gDb" secondAttribute="leading" constant="95" id="txE-PV-na9"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -110,9 +110,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5Ym-75-QTj">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5Ym-75-QTj">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
-                                <autoresizingMask key="autoresizingMask"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="hB1-hC-dlg" detailTextLabel="8gf-bA-e7c" style="IBUITableViewCellStyleSubtitle" id="bcS-it-PRd">
@@ -147,6 +146,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="R3E-mU-cBL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5Ym-75-QTj" firstAttribute="bottom" secondItem="R3E-mU-cBL" secondAttribute="bottom" id="Bs4-6c-she"/>
+                            <constraint firstItem="5Ym-75-QTj" firstAttribute="top" secondItem="R3E-mU-cBL" secondAttribute="top" id="Gko-GP-qNb"/>
+                            <constraint firstItem="5Ym-75-QTj" firstAttribute="trailing" secondItem="R3E-mU-cBL" secondAttribute="trailing" id="czs-re-p86"/>
+                            <constraint firstItem="5Ym-75-QTj" firstAttribute="leading" secondItem="R3E-mU-cBL" secondAttribute="leading" id="ibx-3a-htv"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="VX0-mx-ce5"/>
                     <connections>

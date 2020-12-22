@@ -762,7 +762,6 @@
 				85C12E15258EA8F900C3CD71 /* Model */,
 				85C12DEC258E7C8500C3CD71 /* Transitioning */,
 				85C12DEB258E7C7E00C3CD71 /* Presentation */,
-				854EDE5B258675480059ABB5 /* Assets */,
 				854EDE2C258670A50059ABB5 /* UniversityMapViewController.swift */,
 				854EDE34258670B80059ABB5 /* UniversityMapRouter.swift */,
 				854EDE39258670C60059ABB5 /* UniversityMapProtocols.swift */,
@@ -959,13 +958,6 @@
 				8528F62D2534CC70004FDE50 /* ApiServiceProtocol.swift */,
 			);
 			path = Protocols;
-			sourceTree = "<group>";
-		};
-		854EDE5B258675480059ABB5 /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Assets;
 			sourceTree = "<group>";
 		};
 		85ABD5CA2569A33B0094BC7E /* mocks */ = {

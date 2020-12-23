@@ -251,6 +251,13 @@
 		2E6145F02593B7AD006E43E6 /* UniversityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniversityTableViewCell.swift; sourceTree = "<group>"; };
 		2E6145F12593B7AD006E43E6 /* EndTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EndTableViewCell.xib; sourceTree = "<group>"; };
 		2E6145FB2593B9F2006E43E6 /* UniversitiesTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UniversitiesTableViewController.xib; path = "Postuparium/Modules/UniversityMap/Slidebar/ UniversitiesList/UniversitiesTableViewController.xib"; sourceTree = SOURCE_ROOT; };
+		2E6146042593BD63006E43E6 /* SettingsScreenViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenViewContoller.swift; sourceTree = "<group>"; };
+		2E6146052593BD63006E43E6 /* SettingsScreenConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenConfigurator.swift; sourceTree = "<group>"; };
+		2E6146062593BD63006E43E6 /* SettingsScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsScreen.storyboard; sourceTree = "<group>"; };
+		2E6146072593BD63006E43E6 /* SettingsScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenRouter.swift; sourceTree = "<group>"; };
+		2E6146082593BD63006E43E6 /* SettingsScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenInteractor.swift; sourceTree = "<group>"; };
+		2E6146092593BD64006E43E6 /* SettingsScreenProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenProtocols.swift; sourceTree = "<group>"; };
+		2E61460A2593BD64006E43E6 /* SettingsScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenPresenter.swift; sourceTree = "<group>"; };
 		2EAD8B5B2562138E00C4EEA3 /* AchievementsSelectionInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsSelectionInteractor.swift; sourceTree = "<group>"; };
 		2EAD8B5C2562138F00C4EEA3 /* AchievementsSelectionConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsSelectionConfigurator.swift; sourceTree = "<group>"; };
 		2EAD8B5D2562138F00C4EEA3 /* AchievementsSelectionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsSelectionRouter.swift; sourceTree = "<group>"; };
@@ -518,6 +525,20 @@
 			path = TableCell;
 			sourceTree = "<group>";
 		};
+		2E6146032593BCD7006E43E6 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				2E6146042593BD63006E43E6 /* SettingsScreenViewContoller.swift */,
+				2E6146072593BD63006E43E6 /* SettingsScreenRouter.swift */,
+				2E6146092593BD64006E43E6 /* SettingsScreenProtocols.swift */,
+				2E61460A2593BD64006E43E6 /* SettingsScreenPresenter.swift */,
+				2E6146082593BD63006E43E6 /* SettingsScreenInteractor.swift */,
+				2E6146052593BD63006E43E6 /* SettingsScreenConfigurator.swift */,
+				2E6146062593BD63006E43E6 /* SettingsScreen.storyboard */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		2EAD8B5A2562137500C4EEA3 /* AchievementsSelection */ = {
 			isa = PBXGroup;
 			children = (
@@ -569,7 +590,6 @@
 		2EB46833256226EB00988BAA /* HomeScreen */ = {
 			isa = PBXGroup;
 			children = (
-				2EDE682B2567119B0064D28B /* ProgramsSelection */,
 				2EE044BB25630F940014FD34 /* HomeScreenViewContoller.swift */,
 				2EE044B725630F940014FD34 /* HomeScreenRouter.swift */,
 				2EE044BD25630F950014FD34 /* HomeScreenProtocols.swift */,
@@ -577,6 +597,7 @@
 				2EE044B825630F940014FD34 /* HomeScreenInteractor.swift */,
 				2EE044B925630F940014FD34 /* HomeScreenConfigurator.swift */,
 				2EB468342562270000988BAA /* HomeScreen.storyboard */,
+				2EDE682B2567119B0064D28B /* ProgramsSelection */,
 			);
 			path = HomeScreen;
 			sourceTree = "<group>";
@@ -750,6 +771,7 @@
 		8528F5662534AE0D004FDE50 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				2E6146032593BCD7006E43E6 /* Settings */,
 				2EB46833256226EB00988BAA /* HomeScreen */,
 				8528F5772534B4C0004FDE50 /* PhotoGalleryModule */,
 				8528F5762534B47C004FDE50 /* EdProgramModule */,

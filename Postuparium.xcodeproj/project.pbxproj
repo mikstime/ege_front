@@ -37,6 +37,7 @@
 		2E6145F52593B7AD006E43E6 /* EndTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6145EF2593B7AD006E43E6 /* EndTableViewCell.swift */; };
 		2E6145F62593B7AD006E43E6 /* UniversityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6145F02593B7AD006E43E6 /* UniversityTableViewCell.swift */; };
 		2E6145F72593B7AD006E43E6 /* EndTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E6145F12593B7AD006E43E6 /* EndTableViewCell.xib */; };
+		2E6145FC2593B9F2006E43E6 /* UniversitiesTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E6145FB2593B9F2006E43E6 /* UniversitiesTableViewController.xib */; };
 		2E8CE4932566EC80007C923C /* EgeResultsSelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E00066A25620ACD000693B5 /* EgeResultsSelection.storyboard */; };
 		2EAD8B692562159800C4EEA3 /* AchievementsSelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EAD8B622562142A00C4EEA3 /* AchievementsSelection.storyboard */; };
 		2EAD8B6D256215A100C4EEA3 /* AchievementsSelectionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAD8B5B2562138E00C4EEA3 /* AchievementsSelectionInteractor.swift */; };
@@ -249,6 +250,7 @@
 		2E6145EF2593B7AD006E43E6 /* EndTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndTableViewCell.swift; sourceTree = "<group>"; };
 		2E6145F02593B7AD006E43E6 /* UniversityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniversityTableViewCell.swift; sourceTree = "<group>"; };
 		2E6145F12593B7AD006E43E6 /* EndTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EndTableViewCell.xib; sourceTree = "<group>"; };
+		2E6145FB2593B9F2006E43E6 /* UniversitiesTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UniversitiesTableViewController.xib; path = "Postuparium/Modules/UniversityMap/Slidebar/ UniversitiesList/UniversitiesTableViewController.xib"; sourceTree = SOURCE_ROOT; };
 		2EAD8B5B2562138E00C4EEA3 /* AchievementsSelectionInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsSelectionInteractor.swift; sourceTree = "<group>"; };
 		2EAD8B5C2562138F00C4EEA3 /* AchievementsSelectionConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsSelectionConfigurator.swift; sourceTree = "<group>"; };
 		2EAD8B5D2562138F00C4EEA3 /* AchievementsSelectionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsSelectionRouter.swift; sourceTree = "<group>"; };
@@ -616,6 +618,7 @@
 		2EF1230D25937FCA00C60876 /*  UniversitiesList */ = {
 			isa = PBXGroup;
 			children = (
+				2E6145FB2593B9F2006E43E6 /* UniversitiesTableViewController.xib */,
 				2E6145ED2593B7AD006E43E6 /* TableCell */,
 				2E6145EA2593B7AD006E43E6 /* UniversitiesCard */,
 				2EF1230E25937FCA00C60876 /* UniversitiesTableViewProtocols.swift */,
@@ -1254,6 +1257,7 @@
 				85ABD5E02569AFB60094BC7E /* StudyTileBigCell.xib in Resources */,
 				85ABD6142569D3AE0094BC7E /* EdProgramModule.storyboard in Resources */,
 				854EDE562586711E0059ABB5 /* UniversityMap.storyboard in Resources */,
+				2E6145FC2593B9F2006E43E6 /* UniversitiesTableViewController.xib in Resources */,
 				CEEE7C0C25691C380094B1DA /* PhotoViewer.storyboard in Resources */,
 				2EAD8B692562159800C4EEA3 /* AchievementsSelection.storyboard in Resources */,
 				8528F5E92534C0F4004FDE50 /* ScoreInput.xib in Resources */,

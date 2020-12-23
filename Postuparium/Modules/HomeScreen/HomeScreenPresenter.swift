@@ -9,6 +9,10 @@ import Foundation
 import UIKit
 
 class HomeScreenPresenter: HomeScreenPresenterProtocol {
+    func showUniversitiesListScreen() {
+        router?.showUniversitiesListScreen()
+    }
+    
 
     weak var view: HomeScreenViewControllerProtocol!
     var interactor: HomeScreenInteractorProtocol!

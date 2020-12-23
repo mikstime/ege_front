@@ -25,12 +25,9 @@ class StartScreenRouter: StartScreenRouterProtocol {
     
     func showHomeScreen() {
         print("go to home")
-        let vc = UniversityMapConfigurator.configureModule()
+        let vc = HomeScreenConfigurator.configureModule()
+//        let vc = UniversityMapConfigurator.configureModule()
         viewController?.navigationController!.show(vc as UIViewController, sender: viewController)
-//        let vc = HomeScreenConfigurator.configureModule()
-//        viewController?.navigationController?.navigationBar.setBackgroundImage(nil, for: UIBarMetrics.default)
-//        viewController?.navigationController?.navigationBar.shadowImage = nil
-//        viewController?.navigationController!.show(vc, sender: viewController)
     }
     
     func prepare(for segue: UIStoryboardSegue, sender: Any?) {

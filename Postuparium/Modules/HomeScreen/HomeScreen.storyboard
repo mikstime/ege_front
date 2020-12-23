@@ -47,6 +47,15 @@
                                     <action selector="showMapScreen" destination="AnT-Ft-OYG" eventType="touchUpInside" id="xqM-Ec-lYx"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ynj-EZ-tpp">
+                                <rect key="frame" x="159" y="624" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Карта"/>
+                                <state key="normal" title="Список вузов"/>
+                                <connections>
+                                    <action selector="showUniversitiesListScreen" destination="AnT-Ft-OYG" eventType="touchUpInside" id="dl7-2F-I9e"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MV1-Pr-jUs"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -59,7 +68,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WkW-qs-0k1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="83" y="106"/>
+            <point key="canvasLocation" x="82.608695652173921" y="105.80357142857143"/>
         </scene>
     </scenes>
     <resources>

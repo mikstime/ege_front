@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -71,8 +71,6 @@
 		2EE044C325630F950014FD34 /* HomeScreenViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE044BB25630F940014FD34 /* HomeScreenViewContoller.swift */; };
 		2EE044C425630F950014FD34 /* HomeScreenProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE044BD25630F950014FD34 /* HomeScreenProtocols.swift */; };
 		2EF252FB256A36C300D7FE1C /* EdProgramService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF252FA256A36C300D7FE1C /* EdProgramService.swift */; };
-		57B5CF7F6C2DC98415308927 /* Pods_Postuparium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36E7588A40F7C3AE27C54690 /* Pods_Postuparium.framework */; };
-		64186E093F7B569D7ADA7136 /* Pods_PostupariumTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 050A9DFE9779FD0C64A89C7B /* Pods_PostupariumTests.framework */; };
 		85173DDA259157E70090D1C6 /* universities.json in Resources */ = {isa = PBXBuildFile; fileRef = 85173DD9259157E70090D1C6 /* universities.json */; };
 		85173DE2259157F60090D1C6 /* Universities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85173DE1259157F60090D1C6 /* Universities.swift */; };
 		8528F5242534AAE2004FDE50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8528F5232534AAE2004FDE50 /* AppDelegate.swift */; };
@@ -151,7 +149,6 @@
 		85ABD61D2569E0CF0094BC7E /* applicants.json in Resources */ = {isa = PBXBuildFile; fileRef = 85ABD61C2569E0CF0094BC7E /* applicants.json */; };
 		85ABD6222569E0F80094BC7E /* ApplicantMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ABD6212569E0F80094BC7E /* ApplicantMock.swift */; };
 		85ABD62B2569E62A0094BC7E /* SimilarModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ABD62A2569E62A0094BC7E /* SimilarModuleViewController.swift */; };
-		88A8B3F88A03BAD950337A72 /* Pods_Postuparium_PostupariumUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C5CEEC7ADFC7DEAC744D73A /* Pods_Postuparium_PostupariumUITests.framework */; };
 		85C12DE7258E7C5B00C3CD71 /* AppNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C12DE6258E7C5B00C3CD71 /* AppNavController.swift */; };
 		85C12DEE258E7CB200C3CD71 /* HalfModalPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C12DED258E7CB200C3CD71 /* HalfModalPresentationController.swift */; };
 		85C12DF6258E7CE200C3CD71 /* HalfModalTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C12DF5258E7CE200C3CD71 /* HalfModalTransitioningDelegate.swift */; };
@@ -205,10 +202,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01FA2959E6CC22A424C9F0A8 /* Pods-Postuparium-PostupariumUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Postuparium-PostupariumUITests.debug.xcconfig"; path = "Target Support Files/Pods-Postuparium-PostupariumUITests/Pods-Postuparium-PostupariumUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		050A9DFE9779FD0C64A89C7B /* Pods_PostupariumTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PostupariumTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1C5CEEC7ADFC7DEAC744D73A /* Pods_Postuparium_PostupariumUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Postuparium_PostupariumUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2CE5999F78B003D9ED27D9F2 /* Pods-Postuparium-PostupariumUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Postuparium-PostupariumUITests.release.xcconfig"; path = "Target Support Files/Pods-Postuparium-PostupariumUITests/Pods-Postuparium-PostupariumUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2E00060C25620302000693B5 /* Logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo@3x.png"; sourceTree = "<group>"; };
 		2E00060D25620302000693B5 /* Logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo@2x.png"; sourceTree = "<group>"; };
 		2E00060E25620302000693B5 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
@@ -273,8 +266,6 @@
 		2EE044BC25630F950014FD34 /* HomeScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenPresenter.swift; sourceTree = "<group>"; };
 		2EE044BD25630F950014FD34 /* HomeScreenProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenProtocols.swift; sourceTree = "<group>"; };
 		2EF252FA256A36C300D7FE1C /* EdProgramService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdProgramService.swift; sourceTree = "<group>"; };
-		33EF81A9DB9EC160314F3786 /* Pods-PostupariumTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostupariumTests.debug.xcconfig"; path = "Target Support Files/Pods-PostupariumTests/Pods-PostupariumTests.debug.xcconfig"; sourceTree = "<group>"; };
-		36E7588A40F7C3AE27C54690 /* Pods_Postuparium.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Postuparium.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85173DD9259157E70090D1C6 /* universities.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = universities.json; sourceTree = "<group>"; };
 		85173DE1259157F60090D1C6 /* Universities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Universities.swift; sourceTree = "<group>"; };
 		8528F5202534AAE2004FDE50 /* Postuparium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Postuparium.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -369,8 +360,6 @@
 		85ABD61C2569E0CF0094BC7E /* applicants.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = applicants.json; sourceTree = "<group>"; };
 		85ABD6212569E0F80094BC7E /* ApplicantMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicantMock.swift; sourceTree = "<group>"; };
 		85ABD62A2569E62A0094BC7E /* SimilarModuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimilarModuleViewController.swift; sourceTree = "<group>"; };
-		94F0D7EC24D821B7B471970B /* Pods-Postuparium.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Postuparium.debug.xcconfig"; path = "Target Support Files/Pods-Postuparium/Pods-Postuparium.debug.xcconfig"; sourceTree = "<group>"; };
-		A0C6D31B0BD69E9D8569C2D9 /* Pods-PostupariumTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostupariumTests.release.xcconfig"; path = "Target Support Files/Pods-PostupariumTests/Pods-PostupariumTests.release.xcconfig"; sourceTree = "<group>"; };
 		85C12DE6258E7C5B00C3CD71 /* AppNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavController.swift; sourceTree = "<group>"; };
 		85C12DED258E7CB200C3CD71 /* HalfModalPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfModalPresentationController.swift; sourceTree = "<group>"; };
 		85C12DF5258E7CE200C3CD71 /* HalfModalTransitioningDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfModalTransitioningDelegate.swift; sourceTree = "<group>"; };
@@ -405,7 +394,6 @@
 		CEEE7BFB2569115F0094B1DA /* PhotoViewerConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewerConfigurator.swift; sourceTree = "<group>"; };
 		CEEE7C00256911700094B1DA /* PhotoViewerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewerController.swift; sourceTree = "<group>"; };
 		CEEE7C0B25691C380094B1DA /* PhotoViewer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PhotoViewer.storyboard; sourceTree = "<group>"; };
-		EF55E965F26CFA9C6047CA9E /* Pods-Postuparium.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Postuparium.release.xcconfig"; path = "Target Support Files/Pods-Postuparium/Pods-Postuparium.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -413,7 +401,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57B5CF7F6C2DC98415308927 /* Pods_Postuparium.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,7 +408,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64186E093F7B569D7ADA7136 /* Pods_PostupariumTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,26 +415,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88A8B3F88A03BAD950337A72 /* Pods_Postuparium_PostupariumUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2A450ED7CDD4B7EBD52879EF /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				94F0D7EC24D821B7B471970B /* Pods-Postuparium.debug.xcconfig */,
-				EF55E965F26CFA9C6047CA9E /* Pods-Postuparium.release.xcconfig */,
-				01FA2959E6CC22A424C9F0A8 /* Pods-Postuparium-PostupariumUITests.debug.xcconfig */,
-				2CE5999F78B003D9ED27D9F2 /* Pods-Postuparium-PostupariumUITests.release.xcconfig */,
-				33EF81A9DB9EC160314F3786 /* Pods-PostupariumTests.debug.xcconfig */,
-				A0C6D31B0BD69E9D8569C2D9 /* Pods-PostupariumTests.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		2E00061525620453000693B5 /* EgeResultsSelection */ = {
 			isa = PBXGroup;
 			children = (
@@ -607,8 +579,6 @@
 				8528F53C2534AAE4004FDE50 /* PostupariumTests */,
 				8528F5472534AAE4004FDE50 /* PostupariumUITests */,
 				8528F5212534AAE2004FDE50 /* Products */,
-				2A450ED7CDD4B7EBD52879EF /* Pods */,
-				DF382CEDCC4E7AF00BA7B62D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1089,16 +1059,6 @@
 			path = PhotoStackScroll;
 			sourceTree = "<group>";
 		};
-		DF382CEDCC4E7AF00BA7B62D /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				36E7588A40F7C3AE27C54690 /* Pods_Postuparium.framework */,
-				1C5CEEC7ADFC7DEAC744D73A /* Pods_Postuparium_PostupariumUITests.framework */,
-				050A9DFE9779FD0C64A89C7B /* Pods_PostupariumTests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1106,11 +1066,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8528F54D2534AAE4004FDE50 /* Build configuration list for PBXNativeTarget "Postuparium" */;
 			buildPhases = (
-				E364C54F44838C0D99014A30 /* [CP] Check Pods Manifest.lock */,
 				8528F51C2534AAE2004FDE50 /* Sources */,
 				8528F51D2534AAE2004FDE50 /* Frameworks */,
 				8528F51E2534AAE2004FDE50 /* Resources */,
-				2036CD6C4B52AF40152B7023 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1125,7 +1083,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8528F5502534AAE4004FDE50 /* Build configuration list for PBXNativeTarget "PostupariumTests" */;
 			buildPhases = (
-				7CE4B353065AE394CCA7E642 /* [CP] Check Pods Manifest.lock */,
 				8528F5352534AAE4004FDE50 /* Sources */,
 				8528F5362534AAE4004FDE50 /* Frameworks */,
 				8528F5372534AAE4004FDE50 /* Resources */,
@@ -1144,11 +1101,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8528F5532534AAE4004FDE50 /* Build configuration list for PBXNativeTarget "PostupariumUITests" */;
 			buildPhases = (
-				F6C508A653EA79D57A69C59F /* [CP] Check Pods Manifest.lock */,
 				8528F5402534AAE4004FDE50 /* Sources */,
 				8528F5412534AAE4004FDE50 /* Frameworks */,
 				8528F5422534AAE4004FDE50 /* Resources */,
-				1C5B38CEEA6DC4DE9D6006FD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1266,109 +1221,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		1C5B38CEEA6DC4DE9D6006FD /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Postuparium-PostupariumUITests/Pods-Postuparium-PostupariumUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Postuparium-PostupariumUITests/Pods-Postuparium-PostupariumUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Postuparium-PostupariumUITests/Pods-Postuparium-PostupariumUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2036CD6C4B52AF40152B7023 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Postuparium/Pods-Postuparium-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Postuparium/Pods-Postuparium-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Postuparium/Pods-Postuparium-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7CE4B353065AE394CCA7E642 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PostupariumTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E364C54F44838C0D99014A30 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Postuparium-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F6C508A653EA79D57A69C59F /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Postuparium-PostupariumUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8528F51C2534AAE2004FDE50 /* Sources */ = {
@@ -1679,7 +1531,6 @@
 		};
 		8528F54E2534AAE4004FDE50 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 94F0D7EC24D821B7B471970B /* Pods-Postuparium.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1699,7 +1550,6 @@
 		};
 		8528F54F2534AAE4004FDE50 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EF55E965F26CFA9C6047CA9E /* Pods-Postuparium.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1719,7 +1569,6 @@
 		};
 		8528F5512534AAE4004FDE50 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 33EF81A9DB9EC160314F3786 /* Pods-PostupariumTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1742,7 +1591,6 @@
 		};
 		8528F5522534AAE4004FDE50 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A0C6D31B0BD69E9D8569C2D9 /* Pods-PostupariumTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1765,7 +1613,6 @@
 		};
 		8528F5542534AAE4004FDE50 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 01FA2959E6CC22A424C9F0A8 /* Pods-Postuparium-PostupariumUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1786,7 +1633,6 @@
 		};
 		8528F5552534AAE4004FDE50 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2CE5999F78B003D9ED27D9F2 /* Pods-Postuparium-PostupariumUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

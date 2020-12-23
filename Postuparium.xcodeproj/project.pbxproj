@@ -618,7 +618,6 @@
 		2EF1230D25937FCA00C60876 /*  UniversitiesList */ = {
 			isa = PBXGroup;
 			children = (
-				2E6145FB2593B9F2006E43E6 /* UniversitiesTableViewController.xib */,
 				2E6145ED2593B7AD006E43E6 /* TableCell */,
 				2E6145EA2593B7AD006E43E6 /* UniversitiesCard */,
 				2EF1230E25937FCA00C60876 /* UniversitiesTableViewProtocols.swift */,
@@ -627,6 +626,7 @@
 				2EF1231125937FCA00C60876 /* UniversitiesTableViewConfigurator.swift */,
 				2EF1231225937FCA00C60876 /* UniversitiesTableViewController.swift */,
 				2EF1231325937FCA00C60876 /* UniversitiesTableViewInteractor.swift */,
+				2E6145FB2593B9F2006E43E6 /* UniversitiesTableViewController.xib */,
 			);
 			name = " UniversitiesList";
 			path = "Postuparium/Modules/UniversityMap/Slidebar/ UniversitiesList";

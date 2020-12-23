@@ -6,8 +6,6 @@
 //
 
 import Foundation
-import Alamofire
-import SwiftyJSON
 
 protocol EnrolleeServiceProtocol {
     static var shared: EnrolleeServiceProtocol {get}
@@ -27,8 +25,6 @@ protocol EnrolleeServiceProtocol {
 }
 
 class EnrolleeService: EnrolleeServiceProtocol {
-    static var LoginApiURL: String = "http://77.223.97.172:8080/api/v1/login/"
-    static var UsersApiURL: String = "http://77.223.97.172:8080/api/v1/users/"
     
     static var shared: EnrolleeServiceProtocol = EnrolleeService()
     
@@ -63,51 +59,15 @@ class EnrolleeService: EnrolleeServiceProtocol {
     }
 
     func signup(didSignUp:@escaping (Enrollee?) -> Void) {
-        if enrollee.token == "" {
-            enrollee.token = UUID().uuidString
-        }
-        
-        let request = AF.request(EnrolleeService.UsersApiURL, method: .post, parameters: enrollee.dictionary, encoding: JSONEncoding.default)
-        
-        request.responseJSON { (response) in
-            switch response.result {
-                case .success:
-
-                    if let json = response.data {
-                            let jsonDecoder = JSONDecoder()
-                            print("json::: ", response)
-                            let person = try! jsonDecoder.decode(Enrollee.self, from: json)
-                            person.save()
-                            didSignUp(person)
-                    }
-                case .failure(_):
-                    didSignUp(nil)
-                }
+        print(enrollee)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            didSignUp(self.enrollee)
         }
     }
     
     func signin(didSignIn: @escaping (Enrollee?) -> Void) {
-        let request = AF.request(EnrolleeService.LoginApiURL, method: .post, parameters: enrollee.dictionaryLogin)
-        
-        request.responseJSON { (response) in
-            switch response.result {
-                case .success:
-                    print("Validation Successful)")
-
-                    if let json = response.data {
-                            let jsonDecoder = JSONDecoder()
-                            var person = try? jsonDecoder.decode(Enrollee.self, from: json)
-                        if person == nil {
-                            self.signup(didSignUp: {enrolleeDetails in
-                                person = enrolleeDetails
-                            })
-                        }
-                        person?.save()
-                        didSignIn(person)
-                    }
-                case .failure(_):
-                    didSignIn(nil)
-                }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            didSignIn(self.enrollee)
         }
     }
 }

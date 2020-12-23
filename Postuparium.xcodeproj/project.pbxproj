@@ -31,14 +31,20 @@
 		2E42F1B3256C097E00736DF1 /* EdProgramModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E42F1B2256C097E00736DF1 /* EdProgramModuleViewController.swift */; };
 		2E6145E52593B73C006E43E6 /* CountryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E6145E32593B73B006E43E6 /* CountryCell.xib */; };
 		2E6145E62593B73C006E43E6 /* UniversityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E6145E42593B73C006E43E6 /* UniversityCell.xib */; };
-		2E6145F22593B7AD006E43E6 /* UniversityCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E6145EB2593B7AD006E43E6 /* UniversityCard.xib */; };
-		2E6145F32593B7AD006E43E6 /* UniversityCard — копия.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E6145EC2593B7AD006E43E6 /* UniversityCard — копия.xib */; };
-		2E6145F42593B7AD006E43E6 /* UniversityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E6145EE2593B7AD006E43E6 /* UniversityTableViewCell.xib */; };
-		2E6145F52593B7AD006E43E6 /* EndTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6145EF2593B7AD006E43E6 /* EndTableViewCell.swift */; };
-		2E6145F62593B7AD006E43E6 /* UniversityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6145F02593B7AD006E43E6 /* UniversityTableViewCell.swift */; };
-		2E6145F72593B7AD006E43E6 /* EndTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E6145F12593B7AD006E43E6 /* EndTableViewCell.xib */; };
-		2E6145FC2593B9F2006E43E6 /* UniversitiesTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E6145FB2593B9F2006E43E6 /* UniversitiesTableViewController.xib */; };
 		2E8CE4932566EC80007C923C /* EgeResultsSelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E00066A25620ACD000693B5 /* EgeResultsSelection.storyboard */; };
+		2EAD67B22593EDE400A0EF05 /* UniversityCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EAD67A42593EDE400A0EF05 /* UniversityCard.xib */; };
+		2EAD67B32593EDE400A0EF05 /* UniversityCard — копия.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EAD67A52593EDE400A0EF05 /* UniversityCard — копия.xib */; };
+		2EAD67B42593EDE400A0EF05 /* UniversityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EAD67A72593EDE400A0EF05 /* UniversityTableViewCell.xib */; };
+		2EAD67B52593EDE400A0EF05 /* EndTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAD67A82593EDE400A0EF05 /* EndTableViewCell.swift */; };
+		2EAD67B62593EDE400A0EF05 /* UniversityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAD67A92593EDE400A0EF05 /* UniversityTableViewCell.swift */; };
+		2EAD67B72593EDE400A0EF05 /* EndTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EAD67AA2593EDE400A0EF05 /* EndTableViewCell.xib */; };
+		2EAD67B82593EDE400A0EF05 /* UniversitiesTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EAD67AB2593EDE400A0EF05 /* UniversitiesTableViewController.xib */; };
+		2EAD67B92593EDE400A0EF05 /* UniversitiesTableViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAD67AC2593EDE400A0EF05 /* UniversitiesTableViewProtocols.swift */; };
+		2EAD67BA2593EDE400A0EF05 /* UniversitiesTableViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAD67AD2593EDE400A0EF05 /* UniversitiesTableViewPresenter.swift */; };
+		2EAD67BB2593EDE400A0EF05 /* UniversitiesTableViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAD67AE2593EDE400A0EF05 /* UniversitiesTableViewRouter.swift */; };
+		2EAD67BC2593EDE400A0EF05 /* UniversitiesTableViewConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAD67AF2593EDE400A0EF05 /* UniversitiesTableViewConfigurator.swift */; };
+		2EAD67BD2593EDE400A0EF05 /* UniversitiesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAD67B02593EDE400A0EF05 /* UniversitiesTableViewController.swift */; };
+		2EAD67BE2593EDE400A0EF05 /* UniversitiesTableViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAD67B12593EDE400A0EF05 /* UniversitiesTableViewInteractor.swift */; };
 		2EAD8B692562159800C4EEA3 /* AchievementsSelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EAD8B622562142A00C4EEA3 /* AchievementsSelection.storyboard */; };
 		2EAD8B6D256215A100C4EEA3 /* AchievementsSelectionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAD8B5B2562138E00C4EEA3 /* AchievementsSelectionInteractor.swift */; };
 		2EAD8B6E256215A100C4EEA3 /* AchievementsSelectionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAD8B5D2562138F00C4EEA3 /* AchievementsSelectionRouter.swift */; };
@@ -81,12 +87,6 @@
 		2EE044C225630F950014FD34 /* HomeScreenConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE044B925630F940014FD34 /* HomeScreenConfigurator.swift */; };
 		2EE044C325630F950014FD34 /* HomeScreenViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE044BB25630F940014FD34 /* HomeScreenViewContoller.swift */; };
 		2EE044C425630F950014FD34 /* HomeScreenProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE044BD25630F950014FD34 /* HomeScreenProtocols.swift */; };
-		2EF1231425937FCA00C60876 /* UniversitiesTableViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF1230E25937FCA00C60876 /* UniversitiesTableViewProtocols.swift */; };
-		2EF1231525937FCA00C60876 /* UniversitiesTableViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF1230F25937FCA00C60876 /* UniversitiesTableViewPresenter.swift */; };
-		2EF1231625937FCA00C60876 /* UniversitiesTableViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF1231025937FCA00C60876 /* UniversitiesTableViewRouter.swift */; };
-		2EF1231725937FCA00C60876 /* UniversitiesTableViewConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF1231125937FCA00C60876 /* UniversitiesTableViewConfigurator.swift */; };
-		2EF1231825937FCA00C60876 /* UniversitiesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF1231225937FCA00C60876 /* UniversitiesTableViewController.swift */; };
-		2EF1231925937FCA00C60876 /* UniversitiesTableViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF1231325937FCA00C60876 /* UniversitiesTableViewInteractor.swift */; };
 		2EF252FB256A36C300D7FE1C /* EdProgramService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF252FA256A36C300D7FE1C /* EdProgramService.swift */; };
 		85173DDA259157E70090D1C6 /* universities.json in Resources */ = {isa = PBXBuildFile; fileRef = 85173DD9259157E70090D1C6 /* universities.json */; };
 		85173DE2259157F60090D1C6 /* Universities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85173DE1259157F60090D1C6 /* Universities.swift */; };
@@ -244,13 +244,6 @@
 		2E42F1B2256C097E00736DF1 /* EdProgramModuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdProgramModuleViewController.swift; sourceTree = "<group>"; };
 		2E6145E32593B73B006E43E6 /* CountryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CountryCell.xib; sourceTree = "<group>"; };
 		2E6145E42593B73C006E43E6 /* UniversityCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UniversityCell.xib; sourceTree = "<group>"; };
-		2E6145EB2593B7AD006E43E6 /* UniversityCard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UniversityCard.xib; sourceTree = "<group>"; };
-		2E6145EC2593B7AD006E43E6 /* UniversityCard — копия.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "UniversityCard — копия.xib"; sourceTree = "<group>"; };
-		2E6145EE2593B7AD006E43E6 /* UniversityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UniversityTableViewCell.xib; sourceTree = "<group>"; };
-		2E6145EF2593B7AD006E43E6 /* EndTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndTableViewCell.swift; sourceTree = "<group>"; };
-		2E6145F02593B7AD006E43E6 /* UniversityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniversityTableViewCell.swift; sourceTree = "<group>"; };
-		2E6145F12593B7AD006E43E6 /* EndTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EndTableViewCell.xib; sourceTree = "<group>"; };
-		2E6145FB2593B9F2006E43E6 /* UniversitiesTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UniversitiesTableViewController.xib; path = "Postuparium/Modules/UniversityMap/Slidebar/ UniversitiesList/UniversitiesTableViewController.xib"; sourceTree = SOURCE_ROOT; };
 		2E6146042593BD63006E43E6 /* SettingsScreenViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenViewContoller.swift; sourceTree = "<group>"; };
 		2E6146052593BD63006E43E6 /* SettingsScreenConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenConfigurator.swift; sourceTree = "<group>"; };
 		2E6146062593BD63006E43E6 /* SettingsScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsScreen.storyboard; sourceTree = "<group>"; };
@@ -258,6 +251,19 @@
 		2E6146082593BD63006E43E6 /* SettingsScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenInteractor.swift; sourceTree = "<group>"; };
 		2E6146092593BD64006E43E6 /* SettingsScreenProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenProtocols.swift; sourceTree = "<group>"; };
 		2E61460A2593BD64006E43E6 /* SettingsScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenPresenter.swift; sourceTree = "<group>"; };
+		2EAD67A42593EDE400A0EF05 /* UniversityCard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UniversityCard.xib; sourceTree = "<group>"; };
+		2EAD67A52593EDE400A0EF05 /* UniversityCard — копия.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "UniversityCard — копия.xib"; sourceTree = "<group>"; };
+		2EAD67A72593EDE400A0EF05 /* UniversityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UniversityTableViewCell.xib; sourceTree = "<group>"; };
+		2EAD67A82593EDE400A0EF05 /* EndTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndTableViewCell.swift; sourceTree = "<group>"; };
+		2EAD67A92593EDE400A0EF05 /* UniversityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniversityTableViewCell.swift; sourceTree = "<group>"; };
+		2EAD67AA2593EDE400A0EF05 /* EndTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EndTableViewCell.xib; sourceTree = "<group>"; };
+		2EAD67AB2593EDE400A0EF05 /* UniversitiesTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UniversitiesTableViewController.xib; sourceTree = "<group>"; };
+		2EAD67AC2593EDE400A0EF05 /* UniversitiesTableViewProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniversitiesTableViewProtocols.swift; sourceTree = "<group>"; };
+		2EAD67AD2593EDE400A0EF05 /* UniversitiesTableViewPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniversitiesTableViewPresenter.swift; sourceTree = "<group>"; };
+		2EAD67AE2593EDE400A0EF05 /* UniversitiesTableViewRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniversitiesTableViewRouter.swift; sourceTree = "<group>"; };
+		2EAD67AF2593EDE400A0EF05 /* UniversitiesTableViewConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniversitiesTableViewConfigurator.swift; sourceTree = "<group>"; };
+		2EAD67B02593EDE400A0EF05 /* UniversitiesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniversitiesTableViewController.swift; sourceTree = "<group>"; };
+		2EAD67B12593EDE400A0EF05 /* UniversitiesTableViewInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniversitiesTableViewInteractor.swift; sourceTree = "<group>"; };
 		2EAD8B5B2562138E00C4EEA3 /* AchievementsSelectionInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsSelectionInteractor.swift; sourceTree = "<group>"; };
 		2EAD8B5C2562138F00C4EEA3 /* AchievementsSelectionConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsSelectionConfigurator.swift; sourceTree = "<group>"; };
 		2EAD8B5D2562138F00C4EEA3 /* AchievementsSelectionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsSelectionRouter.swift; sourceTree = "<group>"; };
@@ -298,12 +304,6 @@
 		2EE044BB25630F940014FD34 /* HomeScreenViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewContoller.swift; sourceTree = "<group>"; };
 		2EE044BC25630F950014FD34 /* HomeScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenPresenter.swift; sourceTree = "<group>"; };
 		2EE044BD25630F950014FD34 /* HomeScreenProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenProtocols.swift; sourceTree = "<group>"; };
-		2EF1230E25937FCA00C60876 /* UniversitiesTableViewProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniversitiesTableViewProtocols.swift; sourceTree = "<group>"; };
-		2EF1230F25937FCA00C60876 /* UniversitiesTableViewPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniversitiesTableViewPresenter.swift; sourceTree = "<group>"; };
-		2EF1231025937FCA00C60876 /* UniversitiesTableViewRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniversitiesTableViewRouter.swift; sourceTree = "<group>"; };
-		2EF1231125937FCA00C60876 /* UniversitiesTableViewConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniversitiesTableViewConfigurator.swift; sourceTree = "<group>"; };
-		2EF1231225937FCA00C60876 /* UniversitiesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniversitiesTableViewController.swift; sourceTree = "<group>"; };
-		2EF1231325937FCA00C60876 /* UniversitiesTableViewInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniversitiesTableViewInteractor.swift; sourceTree = "<group>"; };
 		2EF252FA256A36C300D7FE1C /* EdProgramService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdProgramService.swift; sourceTree = "<group>"; };
 		85173DD9259157E70090D1C6 /* universities.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = universities.json; sourceTree = "<group>"; };
 		85173DE1259157F60090D1C6 /* Universities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Universities.swift; sourceTree = "<group>"; };
@@ -505,26 +505,6 @@
 			path = LoadingViewController;
 			sourceTree = "<group>";
 		};
-		2E6145EA2593B7AD006E43E6 /* UniversitiesCard */ = {
-			isa = PBXGroup;
-			children = (
-				2E6145EB2593B7AD006E43E6 /* UniversityCard.xib */,
-				2E6145EC2593B7AD006E43E6 /* UniversityCard — копия.xib */,
-			);
-			path = UniversitiesCard;
-			sourceTree = "<group>";
-		};
-		2E6145ED2593B7AD006E43E6 /* TableCell */ = {
-			isa = PBXGroup;
-			children = (
-				2E6145EE2593B7AD006E43E6 /* UniversityTableViewCell.xib */,
-				2E6145EF2593B7AD006E43E6 /* EndTableViewCell.swift */,
-				2E6145F02593B7AD006E43E6 /* UniversityTableViewCell.swift */,
-				2E6145F12593B7AD006E43E6 /* EndTableViewCell.xib */,
-			);
-			path = TableCell;
-			sourceTree = "<group>";
-		};
 		2E6146032593BCD7006E43E6 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -537,6 +517,42 @@
 				2E6146062593BD63006E43E6 /* SettingsScreen.storyboard */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		2EAD67A22593EDE400A0EF05 /*  UniversitiesList */ = {
+			isa = PBXGroup;
+			children = (
+				2EAD67A32593EDE400A0EF05 /* UniversitiesCard */,
+				2EAD67A62593EDE400A0EF05 /* TableCell */,
+				2EAD67AB2593EDE400A0EF05 /* UniversitiesTableViewController.xib */,
+				2EAD67AC2593EDE400A0EF05 /* UniversitiesTableViewProtocols.swift */,
+				2EAD67AD2593EDE400A0EF05 /* UniversitiesTableViewPresenter.swift */,
+				2EAD67AE2593EDE400A0EF05 /* UniversitiesTableViewRouter.swift */,
+				2EAD67AF2593EDE400A0EF05 /* UniversitiesTableViewConfigurator.swift */,
+				2EAD67B02593EDE400A0EF05 /* UniversitiesTableViewController.swift */,
+				2EAD67B12593EDE400A0EF05 /* UniversitiesTableViewInteractor.swift */,
+			);
+			path = " UniversitiesList";
+			sourceTree = "<group>";
+		};
+		2EAD67A32593EDE400A0EF05 /* UniversitiesCard */ = {
+			isa = PBXGroup;
+			children = (
+				2EAD67A42593EDE400A0EF05 /* UniversityCard.xib */,
+				2EAD67A52593EDE400A0EF05 /* UniversityCard — копия.xib */,
+			);
+			path = UniversitiesCard;
+			sourceTree = "<group>";
+		};
+		2EAD67A62593EDE400A0EF05 /* TableCell */ = {
+			isa = PBXGroup;
+			children = (
+				2EAD67A72593EDE400A0EF05 /* UniversityTableViewCell.xib */,
+				2EAD67A82593EDE400A0EF05 /* EndTableViewCell.swift */,
+				2EAD67A92593EDE400A0EF05 /* UniversityTableViewCell.swift */,
+				2EAD67AA2593EDE400A0EF05 /* EndTableViewCell.xib */,
+			);
+			path = TableCell;
 			sourceTree = "<group>";
 		};
 		2EAD8B5A2562137500C4EEA3 /* AchievementsSelection */ = {
@@ -635,23 +651,6 @@
 			);
 			path = ProgramsSelectionMenu;
 			sourceTree = "<group>";
-		};
-		2EF1230D25937FCA00C60876 /*  UniversitiesList */ = {
-			isa = PBXGroup;
-			children = (
-				2E6145ED2593B7AD006E43E6 /* TableCell */,
-				2E6145EA2593B7AD006E43E6 /* UniversitiesCard */,
-				2EF1230E25937FCA00C60876 /* UniversitiesTableViewProtocols.swift */,
-				2EF1230F25937FCA00C60876 /* UniversitiesTableViewPresenter.swift */,
-				2EF1231025937FCA00C60876 /* UniversitiesTableViewRouter.swift */,
-				2EF1231125937FCA00C60876 /* UniversitiesTableViewConfigurator.swift */,
-				2EF1231225937FCA00C60876 /* UniversitiesTableViewController.swift */,
-				2EF1231325937FCA00C60876 /* UniversitiesTableViewInteractor.swift */,
-				2E6145FB2593B9F2006E43E6 /* UniversitiesTableViewController.xib */,
-			);
-			name = " UniversitiesList";
-			path = "Postuparium/Modules/UniversityMap/Slidebar/ UniversitiesList";
-			sourceTree = SOURCE_ROOT;
 		};
 		85173DD8259157A90090D1C6 /* mocks */ = {
 			isa = PBXGroup;
@@ -777,7 +776,6 @@
 				8528F5762534B47C004FDE50 /* EdProgramModule */,
 				8528F5712534B240004FDE50 /* UniversityModule */,
 				8528F56B2534B08E004FDE50 /* UniversityMap */,
-				8528F56D2534B134004FDE50 /* Slidebar */,
 				8528F56A2534B021004FDE50 /* FeedbackModule */,
 				8528F5692534AFBE004FDE50 /* Common */,
 				8528F5682534AF9B004FDE50 /* StartScreen */,
@@ -862,6 +860,7 @@
 				854EDE4B258670FD0059ABB5 /* UniversityMapInteractor.swift */,
 				854EDE502586710D0059ABB5 /* UniversityMapConfigurator.swift */,
 				854EDE552586711E0059ABB5 /* UniversityMap.storyboard */,
+				8528F56D2534B134004FDE50 /* Slidebar */,
 			);
 			path = UniversityMap;
 			sourceTree = "<group>";
@@ -869,10 +868,11 @@
 		8528F56D2534B134004FDE50 /* Slidebar */ = {
 			isa = PBXGroup;
 			children = (
-				2EF1230D25937FCA00C60876 /*  UniversitiesList */,
+				2EAD67A22593EDE400A0EF05 /*  UniversitiesList */,
 				8528F64A2534D676004FDE50 /* README.md */,
 			);
-			path = Slidebar;
+			name = Slidebar;
+			path = ../Slidebar;
 			sourceTree = "<group>";
 		};
 		8528F5712534B240004FDE50 /* UniversityModule */ = {
@@ -1273,19 +1273,19 @@
 				2E00061025620302000693B5 /* Logo@2x.png in Resources */,
 				85ABD5CC2569A3890094BC7E /* edPrograms.json in Resources */,
 				2E6145E52593B73C006E43E6 /* CountryCell.xib in Resources */,
-				2E6145F72593B7AD006E43E6 /* EndTableViewCell.xib in Resources */,
-				2E6145F22593B7AD006E43E6 /* UniversityCard.xib in Resources */,
+				2EAD67B72593EDE400A0EF05 /* EndTableViewCell.xib in Resources */,
+				2EAD67B22593EDE400A0EF05 /* UniversityCard.xib in Resources */,
 				85C12E3A258EB10700C3CD71 /* testData.geojson in Resources */,
 				85ABD5E02569AFB60094BC7E /* StudyTileBigCell.xib in Resources */,
 				85ABD6142569D3AE0094BC7E /* EdProgramModule.storyboard in Resources */,
 				854EDE562586711E0059ABB5 /* UniversityMap.storyboard in Resources */,
-				2E6145FC2593B9F2006E43E6 /* UniversitiesTableViewController.xib in Resources */,
+				2EAD67B82593EDE400A0EF05 /* UniversitiesTableViewController.xib in Resources */,
 				CEEE7C0C25691C380094B1DA /* PhotoViewer.storyboard in Resources */,
 				2EAD8B692562159800C4EEA3 /* AchievementsSelection.storyboard in Resources */,
 				8528F5E92534C0F4004FDE50 /* ScoreInput.xib in Resources */,
 				2EDE682C2567119B0064D28B /* ProgramsSelection in Resources */,
 				2EB468352562270000988BAA /* HomeScreen.storyboard in Resources */,
-				2E6145F42593B7AD006E43E6 /* UniversityTableViewCell.xib in Resources */,
+				2EAD67B42593EDE400A0EF05 /* UniversityTableViewCell.xib in Resources */,
 				8528F5F82534C164004FDE50 /* StudyTileSmall.xib in Resources */,
 				2E00060F25620302000693B5 /* Logo@3x.png in Resources */,
 				2E42DCC225661BDE00D82018 /* icon@3x.png in Resources */,
@@ -1310,7 +1310,7 @@
 				2ED1200B25689DE3005D39DA /* LoadingCell.xib in Resources */,
 				2E42DCCD25661E7500D82018 /* LoadingView.xib in Resources */,
 				85ABD5B92569656C0094BC7E /* UniversityModule.storyboard in Resources */,
-				2E6145F32593B7AD006E43E6 /* UniversityCard — копия.xib in Resources */,
+				2EAD67B32593EDE400A0EF05 /* UniversityCard — копия.xib in Resources */,
 				2EB468492562E6E300988BAA /* README.md in Resources */,
 				2EDE684F2567601B0064D28B /* ProgramsSelectionMenu.storyboard in Resources */,
 				2EB468442562E5A300988BAA /* AchievementsItem.xib in Resources */,
@@ -1339,6 +1339,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				853315D4256BFA7F003A89EA /* FeedbackModuleIteractor.swift in Sources */,
+				2EAD67B62593EDE400A0EF05 /* UniversityTableViewCell.swift in Sources */,
+				2EAD67B52593EDE400A0EF05 /* EndTableViewCell.swift in Sources */,
 				854EDE2D258670A50059ABB5 /* UniversityMapViewController.swift in Sources */,
 				2EAD8B972562259500C4EEA3 /* ProgramsSelectionProtocols.swift in Sources */,
 				8528F5932534B733004FDE50 /* Photo.swift in Sources */,
@@ -1349,11 +1351,9 @@
 				85ABD5F52569BC320094BC7E /* EdProgramModuleProtocols.swift in Sources */,
 				2EE044C425630F950014FD34 /* HomeScreenProtocols.swift in Sources */,
 				8528F6432534D575004FDE50 /* InfoListView.swift in Sources */,
-				2E6145F52593B7AD006E43E6 /* EndTableViewCell.swift in Sources */,
 				2EE044BF25630F950014FD34 /* HomeScreenPresenter.swift in Sources */,
 				85ABD5A0256965180094BC7E /* UniversityModuleRouter.swift in Sources */,
 				85ABD5C6256972140094BC7E /* Extension.swift in Sources */,
-				2EF1231925937FCA00C60876 /* UniversitiesTableViewInteractor.swift in Sources */,
 				8528F5F32534C151004FDE50 /* StudyTileSmall.swift in Sources */,
 				2EDE6858256770A80064D28B /* SwipeableViewController.swift in Sources */,
 				CEEE7BB72567D96B0094B1DA /* PhotoTableViewProtocols.swift in Sources */,
@@ -1366,6 +1366,7 @@
 				2EE044BE25630F950014FD34 /* HomeScreenInteractor.swift in Sources */,
 				2EDE68522567601B0064D28B /* ProgramsSelectionMenuViewContoller.swift in Sources */,
 				85C12E40258FB69400C3CD71 /* ModalConfigurator.swift in Sources */,
+				2EAD67BE2593EDE400A0EF05 /* UniversitiesTableViewInteractor.swift in Sources */,
 				85ABD596256963920094BC7E /* EdProgramsGridController.swift in Sources */,
 				853315CA256BFA68003A89EA /* FeedbackModulePresenter.swift in Sources */,
 				CEEE7BC62567D9C70094B1DA /* PhotoTableViewConfigurator.swift in Sources */,
@@ -1374,8 +1375,10 @@
 				2EDE68532567601B0064D28B /* ProgramsSelectionMenuPresenter.swift in Sources */,
 				2EF252FB256A36C300D7FE1C /* EdProgramService.swift in Sources */,
 				8528F5C82534BBA7004FDE50 /* EgeResultsSelectionRouter.swift in Sources */,
+				2EAD67BA2593EDE400A0EF05 /* UniversitiesTableViewPresenter.swift in Sources */,
 				8528F5C32534BB88004FDE50 /* EgeResultsSelectionViewContoller.swift in Sources */,
 				2E00063F25620748000693B5 /* StartScreenPresenter.swift in Sources */,
+				2EAD67BD2593EDE400A0EF05 /* UniversitiesTableViewController.swift in Sources */,
 				CEEE7BBC2567D98B0094B1DA /* PhotoTableViewPresenter.swift in Sources */,
 				8528F5282534AAE2004FDE50 /* ViewController.swift in Sources */,
 				853315BD256BFA4C003A89EA /* FeedbackModuleViewController.swift in Sources */,
@@ -1388,7 +1391,6 @@
 				2E42F1B3256C097E00736DF1 /* EdProgramModuleViewController.swift in Sources */,
 				2EDE684E2567601B0064D28B /* ProgramsSelectionMenuInteractor.swift in Sources */,
 				2EAD8B6F256215A100C4EEA3 /* AchievementsSelectionConfigurator.swift in Sources */,
-				2EF1231425937FCA00C60876 /* UniversitiesTableViewProtocols.swift in Sources */,
 				853315B7256BF8C4003A89EA /* UniversityModulePresenter.swift in Sources */,
 				85ABD5B4256965560094BC7E /* UniversityModuleConfigurator.swift in Sources */,
 				8528F6112534C1CC004FDE50 /* UniversityTile.swift in Sources */,
@@ -1409,6 +1411,7 @@
 				85ABD6222569E0F80094BC7E /* ApplicantMock.swift in Sources */,
 				8528F52E2534AAE2004FDE50 /* Postuparium.xcdatamodeld in Sources */,
 				CEEE7BD3256829390094B1DA /* PhotoTableViewController.swift in Sources */,
+				2EAD67B92593EDE400A0EF05 /* UniversitiesTableViewProtocols.swift in Sources */,
 				8528F5D72534BBEB004FDE50 /* EgeResultsSelectionInteractor.swift in Sources */,
 				8528F5842534B6F2004FDE50 /* Enrollee.swift in Sources */,
 				CEEE7BF72569114E0094B1DA /* PhotoViewerInteractor.swift in Sources */,
@@ -1420,14 +1423,12 @@
 				8528F5DC2534BC04004FDE50 /* EgeResultsSelectionConfigurator.swift in Sources */,
 				85331588256BE2F2003A89EA /* NibLoader.swift in Sources */,
 				8528F59E2534B7AC004FDE50 /* ApiService.swift in Sources */,
-				2EF1231625937FCA00C60876 /* UniversitiesTableViewRouter.swift in Sources */,
 				2ED1200A25689DE3005D39DA /* LoadingCell.swift in Sources */,
 				8528F5242534AAE2004FDE50 /* AppDelegate.swift in Sources */,
 				85ABD5A5256965260094BC7E /* UniversityModuleProtocols.swift in Sources */,
 				2E00065A256209A3000693B5 /* BorderExtension.swift in Sources */,
 				85ABD5D62569AC8A0094BC7E /* Fonts.swift in Sources */,
 				CEEE7BFC2569115F0094B1DA /* PhotoViewerConfigurator.swift in Sources */,
-				2E6145F62593B7AD006E43E6 /* UniversityTableViewCell.swift in Sources */,
 				2EAD8B73256215A100C4EEA3 /* AchievementsSelectionProtocols.swift in Sources */,
 				85ABD6042569BC7A0094BC7E /* EdProgramModuleConfigurator.swift in Sources */,
 				2EAD8B72256215A100C4EEA3 /* AchievementsSelectionViewContoller.swift in Sources */,
@@ -1435,9 +1436,11 @@
 				2E00063E25620748000693B5 /* StartScreenViewContoller.swift in Sources */,
 				2E00064425620748000693B5 /* StartScreenRouter.swift in Sources */,
 				85C12DE7258E7C5B00C3CD71 /* AppNavController.swift in Sources */,
+				2EAD67BC2593EDE400A0EF05 /* UniversitiesTableViewConfigurator.swift in Sources */,
 				85C12E70258FE0C500C3CD71 /* UnoversityCell.swift in Sources */,
 				8528F5262534AAE2004FDE50 /* SceneDelegate.swift in Sources */,
 				2EAD8B962562259500C4EEA3 /* ProgramsSelectionViewContoller.swift in Sources */,
+				2EAD67BB2593EDE400A0EF05 /* UniversitiesTableViewRouter.swift in Sources */,
 				8528F63B2534D566004FDE50 /* ApplicantsTableView.swift in Sources */,
 				854EDE4C258670FD0059ABB5 /* UniversityMapInteractor.swift in Sources */,
 				2E000662256209A8000693B5 /* NibExtension.swift in Sources */,
@@ -1450,7 +1453,6 @@
 				8528F5CD2534BBBE004FDE50 /* EgeResultsSelectionProtocols.swift in Sources */,
 				2EAD8B6E256215A100C4EEA3 /* AchievementsSelectionRouter.swift in Sources */,
 				85ABD5ED2569BBFC0094BC7E /* EdProgramModuleRouter.swift in Sources */,
-				2EF1231525937FCA00C60876 /* UniversitiesTableViewPresenter.swift in Sources */,
 				85C12DFE258E7D1300C3CD71 /* HalfModalnteractiveTransition.swift in Sources */,
 				2EB468402562E59D00988BAA /* AchievementsItem.swift in Sources */,
 				2E00064325620748000693B5 /* StartScreenProtocols.swift in Sources */,
@@ -1463,10 +1465,8 @@
 				CEEE7BE8256911070094B1DA /* PhotoViewerRouter.swift in Sources */,
 				85C12E0C258E7E6300C3CD71 /* ModalViewController.swift in Sources */,
 				853315C5256BFA58003A89EA /* FeedbackModuleRouter.swift in Sources */,
-				2EF1231725937FCA00C60876 /* UniversitiesTableViewConfigurator.swift in Sources */,
 				8528F5A62534B7B8004FDE50 /* StorageService.swift in Sources */,
 				CEEE7C01256911700094B1DA /* PhotoViewerController.swift in Sources */,
-				2EF1231825937FCA00C60876 /* UniversitiesTableViewController.swift in Sources */,
 				8528F5E12534C0C2004FDE50 /* ScoreInput.swift in Sources */,
 				8528F58E2534B71B004FDE50 /* University.swift in Sources */,
 				85C12E49258FB6DE00C3CD71 /* ModalProtocols.swift in Sources */,

@@ -17,7 +17,8 @@ class StartScreenRouter: StartScreenRouterProtocol {
     }
     
     func showRegistrationScreen() {
-        let vc = EgeResultsSelectionConfigurator.configureModule()
+        let vc = ProgramsSelectionConfigurator.configureModule()
+//        let vc = EgeResultsSelectionConfigurator.configureModule()
         viewController?.navigationController?.navigationBar.setBackgroundImage(nil, for: UIBarMetrics.default)
         viewController?.navigationController?.navigationBar.shadowImage = nil
         viewController?.navigationController!.show(vc, sender: viewController)

@@ -19,7 +19,9 @@ class UniversityMapViewController: UIViewController,
     private var universitites = UniversitiesMock.UniversitiesList()
     
     @IBOutlet private var mapView: MKMapView!
-    
+    @IBAction func showSettings() {
+        presenter?.showSettings()
+    }
     
     var presenter: UniversityMapPresenterProtocol!
     var configurator: UniversityMapConfiguratorProtocol = UniversityMapConfigurator()

@@ -43,7 +43,8 @@ class UniversityMapRouter: UniversityMapRouterProtocol {
         
     }
     
-
-   
+    func showSettings() {
+        
+    }
     
 }

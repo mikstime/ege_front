@@ -23,5 +23,9 @@ class UniversityMapPresenter: UniversityMapPresenterProtocol {
         print("В презентере ", id)
         self.router.showModal(id: id)
     }
+    
+    func showSettings() {
+        router?.showSettings()
+    }
 }
 

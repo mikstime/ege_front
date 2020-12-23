@@ -29,6 +29,7 @@ class StartScreenPresenter: StartScreenPresenterProtocol {
     }
     
     func didNotSignin() {
-        router?.showHomeScreen()
+        router?.showRegistrationScreen()
+//        router?.showHomeScreen()
     }
 }

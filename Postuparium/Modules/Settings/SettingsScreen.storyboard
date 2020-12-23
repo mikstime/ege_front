@@ -16,52 +16,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home Screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hId-3f-3sh">
-                                <rect key="frame" x="155" y="442.5" width="104" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbP-tv-Zsr">
-                                <rect key="frame" x="161" y="534" width="93" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="направления"/>
-                                <connections>
-                                    <action selector="showNextScreen" destination="AnT-Ft-OYG" eventType="touchUpInside" id="TbP-H0-8vR"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sjX-mR-3eM">
-                                <rect key="frame" x="177" y="478" width="60" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="фотачки"/>
-                                <connections>
-                                    <action selector="showPhotosScreen" destination="AnT-Ft-OYG" eventType="touchUpInside" id="Asw-kc-mnR"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z03-pt-GN9">
-                                <rect key="frame" x="186" y="572" width="42" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label="Карта"/>
-                                <state key="normal" title="Карта"/>
-                                <connections>
-                                    <action selector="showMapScreen" destination="AnT-Ft-OYG" eventType="touchUpInside" id="xqM-Ec-lYx"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ynj-EZ-tpp">
-                                <rect key="frame" x="159" y="624" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label="Карта"/>
-                                <state key="normal" title="Список вузов"/>
-                                <connections>
-                                    <action selector="showUniversitiesListScreen" destination="AnT-Ft-OYG" eventType="touchUpInside" id="dl7-2F-I9e"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2rv-c0-vfr">
+                                <rect key="frame" x="0.0" y="0.0" width="356" height="896"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MV1-Pr-jUs"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="hId-3f-3sh" firstAttribute="centerY" secondItem="MV1-Pr-jUs" secondAttribute="centerY" id="abl-lH-WP7"/>
-                            <constraint firstItem="hId-3f-3sh" firstAttribute="centerX" secondItem="MV1-Pr-jUs" secondAttribute="centerX" id="l9f-IJ-c5u"/>
+                            <constraint firstItem="2rv-c0-vfr" firstAttribute="leading" secondItem="MV1-Pr-jUs" secondAttribute="leading" id="7oV-jc-8ck"/>
+                            <constraint firstItem="2rv-c0-vfr" firstAttribute="height" secondItem="N8Y-Da-4XK" secondAttribute="height" id="Ub3-14-lbI"/>
+                            <constraint firstItem="MV1-Pr-jUs" firstAttribute="trailing" secondItem="2rv-c0-vfr" secondAttribute="trailing" constant="58" id="VkR-aV-fse"/>
+                            <constraint firstItem="2rv-c0-vfr" firstAttribute="centerY" secondItem="N8Y-Da-4XK" secondAttribute="centerY" id="YpI-1M-aJ9"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="mex-9D-6zX"/>
@@ -72,6 +38,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -19,7 +19,7 @@ protocol UniversityMapPresenterProtocol: class {
     var router: UniversityMapRouterProtocol! { set get }
     
     func showModal(id: Int)
-
+    func showSettings()
     
     func viewDidLoad()
 }
@@ -34,6 +34,7 @@ protocol UniversityMapRouterProtocol: class {
     var id: Int {set get }
     func prepare(for segue: UIStoryboardSegue, sender: Any?)
     func showModal(id: Int)
+    func showSettings()
 //    func showEdProgramModuleScreen(id: String)
 //    func showFeedBackModuleScreen()
 

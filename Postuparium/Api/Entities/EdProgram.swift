@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct EdProgram {
+struct EdProgram: Codable {
     var code: String = ""
     var name: String = ""
     var id: Int = 0

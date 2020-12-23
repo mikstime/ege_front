@@ -18,7 +18,8 @@ class ProgramsSelectionRouter: ProgramsSelectionRouterProtocol {
     
     func showHomeScreen() {
         print("show home")
-        let vc = UniversityMapConfigurator.configureModule()
+//        let vc = UniversityMapConfigurator.configureModule()
+        let vc = HomeScreenConfigurator.configureModule()
         view?.navigationController!.show(vc as UIViewController, sender: view)
         
 //        let vc = HomeScreenConfigurator.configureModule()

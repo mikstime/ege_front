@@ -18,6 +18,10 @@ class HomeScreenPresenter: HomeScreenPresenterProtocol {
         router?.showUniversityModuleScreen()
     }
     
+    func showMapScreen() {
+        router?.showMapScreen()
+    }
+    
     func showPhotosScreen() {
         router?.showPhotosScreen()
     }

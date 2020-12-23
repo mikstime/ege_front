@@ -1,0 +1,45 @@
+[
+  { "name": "МГТУ имени НЭ Баумана 0",
+    "preview": "https://changellenge.com/upload/resize_cache/iblock/8ce/1240_600_2/8cebe4fdb0ce2ce1565312fa4e281596.jpg",
+    "about": "ккккккк",
+    "id": 0,
+    "lat": "55.724091",
+    "lon": "37.617523"
+    
+  },
+  
+  { "name": "МГТУ имени НЭ Баумана 1",
+      "preview": "https://jrnlst.ru/sites/default/files/covers/cover_6.jpg",
+    "about": "уууууу",
+    "id": 1,
+    "lat": "55.725091",
+    "lon": "37.717523"
+  },
+  
+  {
+      "name": "МГТУ имени НЭ Баумана 2",
+      "preview": "https://changellenge.com/upload/resize_cache/iblock/8ce/1240_600_2/8cebe4fdb0ce2ce1565312fa4e281596.jpg",
+    "about": "ццццццц",
+    "id": 2,
+    "lat": "56.725091",
+    "lon": "37.717523"
+  },
+  
+  { "name": "МГТУ имени НЭ Баумана 3",
+      "preview": "https://jrnlst.ru/sites/default/files/covers/cover_6.jpg",
+    "about": "йййййййй",
+    "id": 3,
+    "lat": "55.725091",
+    "lon": "38.717523"
+  },
+  
+  { "name": "МГТУ имени НЭ Баумана 3",
+      "preview": "https://changellenge.com/upload/resize_cache/iblock/8ce/1240_600_2/8cebe4fdb0ce2ce1565312fa4e281596.jpg",
+    "about": "йййййййй",
+    "id": 4,
+    "lat": "55.725091",
+    "lon": "38.717523"
+  },
+
+]
+

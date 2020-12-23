@@ -27,10 +27,6 @@ class HomeScreenViewController: UIViewController, HomeScreenViewControllerProtoc
         presenter?.showPhotosScreen()
     }
     
-    @IBAction func showUniversitiesListScreen(_ sender: Any) {
-        presenter?.showUniversitiesListScreen()
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)

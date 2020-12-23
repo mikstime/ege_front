@@ -17,17 +17,18 @@ class StartScreenRouter: StartScreenRouterProtocol {
     }
     
     func showRegistrationScreen() {
-        let vc = EgeResultsSelectionConfigurator.configureModule()
+        let vc = ProgramsSelectionConfigurator.configureModule()
+//        let vc = EgeResultsSelectionConfigurator.configureModule()
         viewController?.navigationController?.navigationBar.setBackgroundImage(nil, for: UIBarMetrics.default)
         viewController?.navigationController?.navigationBar.shadowImage = nil
         viewController?.navigationController!.show(vc, sender: viewController)
     }
     
     func showHomeScreen() {
+        print("go to home")
         let vc = HomeScreenConfigurator.configureModule()
-        viewController?.navigationController?.navigationBar.setBackgroundImage(nil, for: UIBarMetrics.default)
-        viewController?.navigationController?.navigationBar.shadowImage = nil
-        viewController?.navigationController!.show(vc, sender: viewController)
+//        let vc = UniversityMapConfigurator.configureModule()
+        viewController?.navigationController!.show(vc as UIViewController, sender: viewController)
     }
     
     func prepare(for segue: UIStoryboardSegue, sender: Any?) {

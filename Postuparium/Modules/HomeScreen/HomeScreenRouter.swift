@@ -22,11 +22,15 @@ class HomeScreenRouter: HomeScreenRouterProtocol {
     }
     
     func showUniversitiesListScreen() {
-        print("TEST PRINT")
         let vc = UniversitiesTableViewConfigurator.configureModule()
         view?.navigationController!.show(vc as UIViewController, sender: view)
     }
     
+    func showMapScreen() {
+        let vc = UniversityMapConfigurator.configureModule()
+        view?.navigationController!.show(vc as UIViewController, sender: view)
+    }
+  
     func showUniversityModuleScreen() {
         print("show university/edProgram module")
         let vc = UniversityModuleConfigurator.configureModule()

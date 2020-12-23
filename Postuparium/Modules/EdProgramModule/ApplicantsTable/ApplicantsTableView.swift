@@ -37,7 +37,8 @@ class ApplicantsTableViewController: UIViewController {
     definesPresentationContext = true
     
     searchController.searchBar.scopeButtonTitles = ApplicantMock.Category.allCases.map { $0.rawValue }
-  
+    searchController.searchBar.center.x = view.frame.width / 2
+
 
     searchController.searchBar.delegate = self
     
@@ -70,24 +71,7 @@ class ApplicantsTableViewController: UIViewController {
     }
   }
   
-//  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//    guard
-//      segue.identifier == "ShowDetailSegue",
-//      let indexPath = tableView.indexPathForSelectedRow,
-//      let detailViewController = segue.destination as? DetailViewController
-//      else {
-//        return
-//    }
-//
-//    let candy: Candy
-//    if isFiltering {
-//      candy = filteredCandies[indexPath.row]
-//    } else {
-//      candy = candies[indexPath.row]
-//    }
-//    detailViewController.candy = candy
-//  }
-  
+
   var isSearchBarEmpty: Bool {
     return searchController.searchBar.text?.isEmpty ?? true
   }

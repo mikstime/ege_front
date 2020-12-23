@@ -38,12 +38,23 @@
                                     <action selector="showPhotosScreen" destination="AnT-Ft-OYG" eventType="touchUpInside" id="Asw-kc-mnR"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ix9-ey-flf">
-                                <rect key="frame" x="148" y="381" width="106" height="30"/>
+
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z03-pt-GN9">
+                                <rect key="frame" x="186" y="572" width="42" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title=" Университеты"/>
+                                <accessibility key="accessibilityConfiguration" label="Карта"/>
+                                <state key="normal" title="Карта"/>
                                 <connections>
-                                    <action selector="showUniversitiesListScreen:" destination="AnT-Ft-OYG" eventType="touchUpInside" id="8pq-De-KGR"/>
+                                    <action selector="showMapScreen" destination="AnT-Ft-OYG" eventType="touchUpInside" id="xqM-Ec-lYx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ynj-EZ-tpp">
+                                <rect key="frame" x="159" y="624" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Карта"/>
+                                <state key="normal" title="Список вузов"/>
+                                <connections>
+                                    <action selector="showUniversitiesListScreen" destination="AnT-Ft-OYG" eventType="touchUpInside" id="dl7-2F-I9e"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -58,7 +69,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WkW-qs-0k1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="83" y="106"/>
+            <point key="canvasLocation" x="82.608695652173921" y="105.80357142857143"/>
         </scene>
     </scenes>
     <resources>

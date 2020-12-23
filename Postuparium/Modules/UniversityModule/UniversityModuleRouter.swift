@@ -19,12 +19,14 @@ class UniversityModuleRouter: UniversityModuleRouterProtocol {
             vc.edProgramId = "1"
             }
     }
+    
     func showEdProgramModuleScreen(id: String) {
         print("show edProgram module with id ", id)
         let vc = EdProgramModuleConfigurator.configureModule()
         vc.edProgramId = id
         view?.navigationController!.show(vc as UIViewController, sender: view)
     }
+    
     func showFeedBackModuleScreen() {
         print("show feedbackModule ")
         let vc = FeedbackModuleConfigurator.configureModule()

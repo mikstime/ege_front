@@ -11,4 +11,5 @@ struct EdProgram: Codable {
     var code: String = ""
     var name: String = ""
     var id: Int = 0
+    var preview: String
 }

@@ -71,6 +71,7 @@
 		2EE044C325630F950014FD34 /* HomeScreenViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE044BB25630F940014FD34 /* HomeScreenViewContoller.swift */; };
 		2EE044C425630F950014FD34 /* HomeScreenProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE044BD25630F950014FD34 /* HomeScreenProtocols.swift */; };
 		2EF252FB256A36C300D7FE1C /* EdProgramService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF252FA256A36C300D7FE1C /* EdProgramService.swift */; };
+		3F5B6F452593E6470047C7D6 /* Universities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5B6F442593E6470047C7D6 /* Universities.swift */; };
 		57B5CF7F6C2DC98415308927 /* Pods_Postuparium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36E7588A40F7C3AE27C54690 /* Pods_Postuparium.framework */; };
 		64186E093F7B569D7ADA7136 /* Pods_PostupariumTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 050A9DFE9779FD0C64A89C7B /* Pods_PostupariumTests.framework */; };
 		8528F5242534AAE2004FDE50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8528F5232534AAE2004FDE50 /* AppDelegate.swift */; };
@@ -250,6 +251,7 @@
 		2EF252FA256A36C300D7FE1C /* EdProgramService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdProgramService.swift; sourceTree = "<group>"; };
 		33EF81A9DB9EC160314F3786 /* Pods-PostupariumTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostupariumTests.debug.xcconfig"; path = "Target Support Files/Pods-PostupariumTests/Pods-PostupariumTests.debug.xcconfig"; sourceTree = "<group>"; };
 		36E7588A40F7C3AE27C54690 /* Pods_Postuparium.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Postuparium.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F5B6F442593E6470047C7D6 /* Universities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Universities.swift; sourceTree = "<group>"; };
 		8528F5202534AAE2004FDE50 /* Postuparium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Postuparium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8528F5232534AAE2004FDE50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8528F5252534AAE2004FDE50 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -920,6 +922,7 @@
 				8528F6392534D524004FDE50 /* README.md */,
 				2ED12024256A147C005D39DA /* EnrolleeService.swift */,
 				2EF252FA256A36C300D7FE1C /* EdProgramService.swift */,
+				3F5B6F442593E6470047C7D6 /* Universities.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -1319,6 +1322,7 @@
 				85ABD6222569E0F80094BC7E /* ApplicantMock.swift in Sources */,
 				8528F52E2534AAE2004FDE50 /* Postuparium.xcdatamodeld in Sources */,
 				CEEE7BD3256829390094B1DA /* PhotoTableViewController.swift in Sources */,
+				3F5B6F452593E6470047C7D6 /* Universities.swift in Sources */,
 				8528F5D72534BBEB004FDE50 /* EgeResultsSelectionInteractor.swift in Sources */,
 				8528F5842534B6F2004FDE50 /* Enrollee.swift in Sources */,
 				CEEE7BF72569114E0094B1DA /* PhotoViewerInteractor.swift in Sources */,

@@ -33,7 +33,6 @@
 		2E6145E62593B73C006E43E6 /* UniversityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E6145E42593B73C006E43E6 /* UniversityCell.xib */; };
 		2E8CE4932566EC80007C923C /* EgeResultsSelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E00066A25620ACD000693B5 /* EgeResultsSelection.storyboard */; };
 		2EAD67B22593EDE400A0EF05 /* UniversityCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EAD67A42593EDE400A0EF05 /* UniversityCard.xib */; };
-		2EAD67B32593EDE400A0EF05 /* UniversityCard — копия.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EAD67A52593EDE400A0EF05 /* UniversityCard — копия.xib */; };
 		2EAD67B42593EDE400A0EF05 /* UniversityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EAD67A72593EDE400A0EF05 /* UniversityTableViewCell.xib */; };
 		2EAD67B52593EDE400A0EF05 /* EndTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAD67A82593EDE400A0EF05 /* EndTableViewCell.swift */; };
 		2EAD67B62593EDE400A0EF05 /* UniversityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAD67A92593EDE400A0EF05 /* UniversityTableViewCell.swift */; };
@@ -252,7 +251,6 @@
 		2E6146092593BD64006E43E6 /* SettingsScreenProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenProtocols.swift; sourceTree = "<group>"; };
 		2E61460A2593BD64006E43E6 /* SettingsScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenPresenter.swift; sourceTree = "<group>"; };
 		2EAD67A42593EDE400A0EF05 /* UniversityCard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UniversityCard.xib; sourceTree = "<group>"; };
-		2EAD67A52593EDE400A0EF05 /* UniversityCard — копия.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "UniversityCard — копия.xib"; sourceTree = "<group>"; };
 		2EAD67A72593EDE400A0EF05 /* UniversityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UniversityTableViewCell.xib; sourceTree = "<group>"; };
 		2EAD67A82593EDE400A0EF05 /* EndTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndTableViewCell.swift; sourceTree = "<group>"; };
 		2EAD67A92593EDE400A0EF05 /* UniversityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniversityTableViewCell.swift; sourceTree = "<group>"; };
@@ -539,7 +537,6 @@
 			isa = PBXGroup;
 			children = (
 				2EAD67A42593EDE400A0EF05 /* UniversityCard.xib */,
-				2EAD67A52593EDE400A0EF05 /* UniversityCard — копия.xib */,
 			);
 			path = UniversitiesCard;
 			sourceTree = "<group>";
@@ -1310,7 +1307,6 @@
 				2ED1200B25689DE3005D39DA /* LoadingCell.xib in Resources */,
 				2E42DCCD25661E7500D82018 /* LoadingView.xib in Resources */,
 				85ABD5B92569656C0094BC7E /* UniversityModule.storyboard in Resources */,
-				2EAD67B32593EDE400A0EF05 /* UniversityCard — копия.xib in Resources */,
 				2EB468492562E6E300988BAA /* README.md in Resources */,
 				2EDE684F2567601B0064D28B /* ProgramsSelectionMenu.storyboard in Resources */,
 				2EB468442562E5A300988BAA /* AchievementsItem.xib in Resources */,

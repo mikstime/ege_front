@@ -51,6 +51,9 @@ class LoadingView: UIView {
 }
 protocol LoadableScreen: UIViewController {
     var loader: UIView? {get set}
+    
+    var message1: String! {get set}
+    var message2: String! {get set}
 }
 
 extension LoadableScreen {
@@ -65,7 +68,6 @@ extension LoadableScreen {
         let loaderView = UIView.init(frame: view.bounds)
         loaderView.backgroundColor = UIColor.systemBackground
         let ai = LoadingView()
-        
         DispatchQueue.main.async {
             self.view.addSubview(loaderView)
             loaderView.addSubview(ai)
@@ -76,6 +78,12 @@ extension LoadableScreen {
             NSLayoutConstraint(item: ai, attribute: NSLayoutConstraint.Attribute.top, relatedBy: NSLayoutConstraint.Relation.equal, toItem: loaderView, attribute: NSLayoutConstraint.Attribute.top, multiplier: 1, constant: 0).isActive = true
             NSLayoutConstraint(item: ai, attribute: NSLayoutConstraint.Attribute.bottom, relatedBy: NSLayoutConstraint.Relation.equal, toItem: loaderView, attribute: NSLayoutConstraint.Attribute.bottom, multiplier: 1, constant: 0).isActive = true
             ai.showLoading()
+            if let message1 = self.message1 {
+                ai.firstMessage.text = message1
+            }
+            if let message2 = self.message2 {
+                ai.firstMessage.text = message2
+            }
         }
         
         loader = loaderView

@@ -7,6 +7,10 @@
 
 import UIKit
 class EgeResultsSelectionViewController: UIViewController, LoadableScreen, EgeResultsSelectionViewControllerProtocol {
+    var message1: String!
+    
+    var message2: String!
+    
     var loader: UIView?
     
     
@@ -135,8 +139,10 @@ class EgeResultsSelectionViewController: UIViewController, LoadableScreen, EgeRe
         presenter.viewDidLoad()
         
         hideKeyboardWhenTappedAround()
+        
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
         addSubjectView(startPos: currentSubject % subjects.count)
         currentSubject += 1
         addSubjectView(startPos: currentSubject % subjects.count)

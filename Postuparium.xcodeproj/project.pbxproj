@@ -32,6 +32,7 @@
 		2E6145E52593B73C006E43E6 /* CountryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E6145E32593B73B006E43E6 /* CountryCell.xib */; };
 		2E6145E62593B73C006E43E6 /* UniversityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E6145E42593B73C006E43E6 /* UniversityCell.xib */; };
 		2E8CE4932566EC80007C923C /* EgeResultsSelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E00066A25620ACD000693B5 /* EgeResultsSelection.storyboard */; };
+		2EA2F6AE2596A50400773066 /* FeedBackService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA2F6AD2596A50400773066 /* FeedBackService.swift */; };
 		2EAD67B22593EDE400A0EF05 /* UniversityCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EAD67A42593EDE400A0EF05 /* UniversityCard.xib */; };
 		2EAD67B42593EDE400A0EF05 /* UniversityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EAD67A72593EDE400A0EF05 /* UniversityTableViewCell.xib */; };
 		2EAD67B52593EDE400A0EF05 /* EndTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAD67A82593EDE400A0EF05 /* EndTableViewCell.swift */; };
@@ -257,6 +258,7 @@
 		2E6146082593BD63006E43E6 /* SettingsScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenInteractor.swift; sourceTree = "<group>"; };
 		2E6146092593BD64006E43E6 /* SettingsScreenProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenProtocols.swift; sourceTree = "<group>"; };
 		2E61460A2593BD64006E43E6 /* SettingsScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenPresenter.swift; sourceTree = "<group>"; };
+		2EA2F6AD2596A50400773066 /* FeedBackService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedBackService.swift; sourceTree = "<group>"; };
 		2EAD67A42593EDE400A0EF05 /* UniversityCard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UniversityCard.xib; sourceTree = "<group>"; };
 		2EAD67A72593EDE400A0EF05 /* UniversityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UniversityTableViewCell.xib; sourceTree = "<group>"; };
 		2EAD67A82593EDE400A0EF05 /* EndTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndTableViewCell.swift; sourceTree = "<group>"; };
@@ -1067,6 +1069,7 @@
 				8528F6392534D524004FDE50 /* README.md */,
 				2ED12024256A147C005D39DA /* EnrolleeService.swift */,
 				2EF252FA256A36C300D7FE1C /* EdProgramService.swift */,
+				2EA2F6AD2596A50400773066 /* FeedBackService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -1485,6 +1488,7 @@
 				2EAD8B6E256215A100C4EEA3 /* AchievementsSelectionRouter.swift in Sources */,
 				85ABD5ED2569BBFC0094BC7E /* EdProgramModuleRouter.swift in Sources */,
 				85C12DFE258E7D1300C3CD71 /* HalfModalnteractiveTransition.swift in Sources */,
+				2EA2F6AE2596A50400773066 /* FeedBackService.swift in Sources */,
 				2EB468402562E59D00988BAA /* AchievementsItem.swift in Sources */,
 				2E00064325620748000693B5 /* StartScreenProtocols.swift in Sources */,
 				2E00064225620748000693B5 /* StartScreenConfigurator.swift in Sources */,
@@ -1685,15 +1689,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5ABALJWYVX;
+				DEVELOPMENT_TEAM = CAG8DDF8KX;
 				INFOPLIST_FILE = Postuparium/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = spetrenko.Postuparium1;
+				PRODUCT_BUNDLE_IDENTIFIER = spetrenko.Postuparium;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1704,15 +1710,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5ABALJWYVX;
+				DEVELOPMENT_TEAM = CAG8DDF8KX;
 				INFOPLIST_FILE = Postuparium/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = spetrenko.Postuparium1;
+				PRODUCT_BUNDLE_IDENTIFIER = spetrenko.Postuparium;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1724,7 +1732,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5ABALJWYVX;
+				DEVELOPMENT_TEAM = CAG8DDF8KX;
 				INFOPLIST_FILE = PostupariumTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1746,7 +1754,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5ABALJWYVX;
+				DEVELOPMENT_TEAM = CAG8DDF8KX;
 				INFOPLIST_FILE = PostupariumTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1767,7 +1775,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5ABALJWYVX;
+				DEVELOPMENT_TEAM = CAG8DDF8KX;
 				INFOPLIST_FILE = PostupariumUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1787,7 +1795,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5ABALJWYVX;
+				DEVELOPMENT_TEAM = CAG8DDF8KX;
 				INFOPLIST_FILE = PostupariumUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

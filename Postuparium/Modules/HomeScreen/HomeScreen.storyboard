@@ -56,12 +56,22 @@
                                     <action selector="showUniversitiesListScreen" destination="AnT-Ft-OYG" eventType="touchUpInside" id="dl7-2F-I9e"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zdH-yy-0Vu">
+                                <rect key="frame" x="155" y="404" width="115" height="30"/>
+                                <state key="normal" title="NewEdPrograms"/>
+                                <connections>
+                                    <action selector="showNewEdPrograms:" destination="AnT-Ft-OYG" eventType="touchUpInside" id="fkS-mf-mxQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MV1-Pr-jUs"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="zdH-yy-0Vu" firstAttribute="top" secondItem="MV1-Pr-jUs" secondAttribute="top" constant="360" id="1B3-aQ-NSo"/>
+                            <constraint firstItem="zdH-yy-0Vu" firstAttribute="leading" secondItem="MV1-Pr-jUs" secondAttribute="leading" constant="150" id="JZE-5K-3Ds"/>
                             <constraint firstItem="hId-3f-3sh" firstAttribute="centerY" secondItem="MV1-Pr-jUs" secondAttribute="centerY" id="abl-lH-WP7"/>
                             <constraint firstItem="hId-3f-3sh" firstAttribute="centerX" secondItem="MV1-Pr-jUs" secondAttribute="centerX" id="l9f-IJ-c5u"/>
+                            <constraint firstItem="MV1-Pr-jUs" firstAttribute="trailing" secondItem="zdH-yy-0Vu" secondAttribute="trailing" constant="149" id="wBx-ti-XO2"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="mex-9D-6zX"/>

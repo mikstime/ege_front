@@ -36,4 +36,10 @@ class HomeScreenRouter: HomeScreenRouterProtocol {
         let vc = UniversityModuleConfigurator.configureModule()
         view?.navigationController!.show(vc as UIViewController, sender: view)
     }
+    
+    func showNewEdProgramsScreen() {
+        print("show university/edProgram module")
+        let vc = NewEdProgramsConfigurator.configureModule()
+        view?.navigationController!.show(vc as UIViewController, sender: view)
+    }
 }

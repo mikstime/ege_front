@@ -30,28 +30,21 @@ class EdProgramModuleViewController: UIViewController, EdProgramModuleViewContro
       }
         
     
-//    @IBOutlet var tableView: UITableView!
     
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        navigationController?.setNavigationBarHidden(true, animated: animated)
-        
-//        if let indexPath = tableView.indexPathForSelectedRow {
-//          tableView.deselectRow(at: indexPath, animated: true)
-//        }
         
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-//        navigationController?.setNavigationBarHidden(false, animated: animated)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("before didload in presenter")
         presenter?.viewDidLoad()
+        
         if ((edProgramId) != nil) {
             print("did load edProgram with id", edProgramId!)
         } else{
@@ -65,18 +58,15 @@ class EdProgramModuleViewController: UIViewController, EdProgramModuleViewContro
     
     
     private lazy var firstViewController: ApplicantsTableViewController = {
-        // Load Storyboard
-        print("in first")
         let storyboard = UIStoryboard(name: "EdProgramModule", bundle: Bundle.main)
 
-        // Instantiate View Controller
+        // Создали инстанс вью контроллера
       var viewController = storyboard.instantiateViewController(withIdentifier: "ApplicantsTableViewController") as! ApplicantsTableViewController
-
-        // Add View Controller as Child View Controller
+        
       self.add(asChildViewController: viewController)
     
 
-        return viewController as! ApplicantsTableViewController
+        return viewController
     }()
     
     private lazy var secondViewController: SimilarModuleViewController = {
@@ -148,11 +138,8 @@ class EdProgramModuleViewController: UIViewController, EdProgramModuleViewContro
     private func remove(asChildViewController viewController: UIViewController) {
         // Notify Child View Controller
       viewController.willMove(toParent: nil)
+    viewController.view.removeFromSuperview()
 
-        // Remove Child View From Superview
-        viewController.view.removeFromSuperview()
-
-        // Notify Child View Controller
       viewController.removeFromParent()
     }
 
@@ -168,18 +155,27 @@ class EdProgramModuleViewController: UIViewController, EdProgramModuleViewContro
         }
     }
 
-    //----------------------------------------------------------------
 
     func setupView() {
     setupSegmentedControl()
     updateView()
-        let cellView1 = StudyTileBigCell.instanceFromNib()
-
+    setupTopCellView()
+    
+    }
+    
+    func setupTopCellView() {
+        //todo брать из бека
+        let edPrograms = EdProgramMock.edProgramsList()
+        let edProgram = edPrograms[Int(edProgramId) ?? 0]
+        
+        let cellView1 = StudyTileBigCell.instanceFromNib() as! StudyTileBigCell
+    
+        
+        cellView1.codeLabel.text = edProgram.code
+        cellView1.nameLabel.text = edProgram.name
+        cellView1.codeNameLabel.text = edProgram.codeName
+        cellView1.typeLabel.text = edProgram.edProgram
         self.cellView.addSubview(cellView1)
-    
-        cellView1.center = CGPoint(x: self.cellView.frame.size.width  / 2,
-                                        y: self.cellView.frame.size.height / 2)
-    
     }
     
 

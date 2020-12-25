@@ -23,6 +23,7 @@ class UniversitiesTableViewController: UIViewController, UniversitiesTableViewCo
     }
     
     func startLoad() {
+        print("load")
         self.universitiesTableView.isHidden = true
         self.presenter?.fetch {
             DispatchQueue.main.async {

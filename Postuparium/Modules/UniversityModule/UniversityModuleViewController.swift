@@ -103,7 +103,6 @@ class UniversityModuleViewController: UICollectionViewController, UniversityModu
             presenter?.showNextScreen(id: String(edPrograms[indexPath.row].id))
         }
         
-    
     }
     
     

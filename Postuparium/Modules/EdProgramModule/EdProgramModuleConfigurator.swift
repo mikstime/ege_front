@@ -18,7 +18,6 @@ class EdProgramModuleConfigurator: EdProgramModuleConfiguratorProtocol {
             print("Не удалось найти входной контроллер в EdProgramModule")
             return EdProgramModuleViewController()
         }
-        print("test1")
         let viewController = vc as! EdProgramModuleViewControllerProtocol
         let presenter = EdProgramModulePresenter()
         let interactor = EdProgramModuleInteractor()

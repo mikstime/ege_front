@@ -88,6 +88,13 @@
 		2EE044C325630F950014FD34 /* HomeScreenViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE044BB25630F940014FD34 /* HomeScreenViewContoller.swift */; };
 		2EE044C425630F950014FD34 /* HomeScreenProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE044BD25630F950014FD34 /* HomeScreenProtocols.swift */; };
 		2EF252FB256A36C300D7FE1C /* EdProgramService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF252FA256A36C300D7FE1C /* EdProgramService.swift */; };
+		85136E9025950BF200C74866 /* NewEdProgramsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85136E8F25950BF200C74866 /* NewEdProgramsViewController.swift */; };
+		85136E9825950C0800C74866 /* NewEdProgramsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85136E9725950C0800C74866 /* NewEdProgramsProtocols.swift */; };
+		85136E9D25950C1B00C74866 /* NewEdProgramsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85136E9C25950C1B00C74866 /* NewEdProgramsInteractor.swift */; };
+		85136EA225950C2800C74866 /* NewEdProgramsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85136EA125950C2800C74866 /* NewEdProgramsConfigurator.swift */; };
+		85136EA725950C3900C74866 /* NewEdProgramsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85136EA625950C3900C74866 /* NewEdProgramsPresenter.swift */; };
+		85136EAD25950C4800C74866 /* NewEdProgramsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85136EAC25950C4800C74866 /* NewEdProgramsRouter.swift */; };
+		85136EB225950C5600C74866 /* NewEdPrograms.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85136EB125950C5600C74866 /* NewEdPrograms.storyboard */; };
 		85173DDA259157E70090D1C6 /* universities.json in Resources */ = {isa = PBXBuildFile; fileRef = 85173DD9259157E70090D1C6 /* universities.json */; };
 		85173DE2259157F60090D1C6 /* Universities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85173DE1259157F60090D1C6 /* Universities.swift */; };
 		8528F5242534AAE2004FDE50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8528F5232534AAE2004FDE50 /* AppDelegate.swift */; };
@@ -305,6 +312,13 @@
 		2EE044BC25630F950014FD34 /* HomeScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenPresenter.swift; sourceTree = "<group>"; };
 		2EE044BD25630F950014FD34 /* HomeScreenProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenProtocols.swift; sourceTree = "<group>"; };
 		2EF252FA256A36C300D7FE1C /* EdProgramService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdProgramService.swift; sourceTree = "<group>"; };
+		85136E8F25950BF200C74866 /* NewEdProgramsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEdProgramsViewController.swift; sourceTree = "<group>"; };
+		85136E9725950C0800C74866 /* NewEdProgramsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEdProgramsProtocols.swift; sourceTree = "<group>"; };
+		85136E9C25950C1B00C74866 /* NewEdProgramsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEdProgramsInteractor.swift; sourceTree = "<group>"; };
+		85136EA125950C2800C74866 /* NewEdProgramsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEdProgramsConfigurator.swift; sourceTree = "<group>"; };
+		85136EA625950C3900C74866 /* NewEdProgramsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEdProgramsPresenter.swift; sourceTree = "<group>"; };
+		85136EAC25950C4800C74866 /* NewEdProgramsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEdProgramsRouter.swift; sourceTree = "<group>"; };
+		85136EB125950C5600C74866 /* NewEdPrograms.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewEdPrograms.storyboard; sourceTree = "<group>"; };
 		85173DD9259157E70090D1C6 /* universities.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = universities.json; sourceTree = "<group>"; };
 		85173DE1259157F60090D1C6 /* Universities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Universities.swift; sourceTree = "<group>"; };
 		8528F5202534AAE2004FDE50 /* Postuparium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Postuparium.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -652,6 +666,20 @@
 			path = ProgramsSelectionMenu;
 			sourceTree = "<group>";
 		};
+		85136E8E25950BD000C74866 /* NewEdProgrograms */ = {
+			isa = PBXGroup;
+			children = (
+				85136E8F25950BF200C74866 /* NewEdProgramsViewController.swift */,
+				85136E9725950C0800C74866 /* NewEdProgramsProtocols.swift */,
+				85136E9C25950C1B00C74866 /* NewEdProgramsInteractor.swift */,
+				85136EA125950C2800C74866 /* NewEdProgramsConfigurator.swift */,
+				85136EA625950C3900C74866 /* NewEdProgramsPresenter.swift */,
+				85136EAC25950C4800C74866 /* NewEdProgramsRouter.swift */,
+				85136EB125950C5600C74866 /* NewEdPrograms.storyboard */,
+			);
+			path = NewEdProgrograms;
+			sourceTree = "<group>";
+		};
 		85173DD8259157A90090D1C6 /* mocks */ = {
 			isa = PBXGroup;
 			children = (
@@ -770,6 +798,7 @@
 		8528F5662534AE0D004FDE50 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				85136E8E25950BD000C74866 /* NewEdProgrograms */,
 				2E6146032593BCD7006E43E6 /* Settings */,
 				2EB46833256226EB00988BAA /* HomeScreen */,
 				8528F5772534B4C0004FDE50 /* PhotoGalleryModule */,
@@ -1271,6 +1300,7 @@
 				8528F6332534D395004FDE50 /* .gitignore in Resources */,
 				85C12E71258FE0C500C3CD71 /* UnoversityCell.xib in Resources */,
 				2E00061025620302000693B5 /* Logo@2x.png in Resources */,
+				85136EB225950C5600C74866 /* NewEdPrograms.storyboard in Resources */,
 				85ABD5CC2569A3890094BC7E /* edPrograms.json in Resources */,
 				2E6145E52593B73C006E43E6 /* CountryCell.xib in Resources */,
 				2EAD67B72593EDE400A0EF05 /* EndTableViewCell.xib in Resources */,
@@ -1362,6 +1392,7 @@
 				854EDE512586710D0059ABB5 /* UniversityMapConfigurator.swift in Sources */,
 				85C12E4E258FB77C00C3CD71 /* ModalPresenter.swift in Sources */,
 				2EAD8B6D256215A100C4EEA3 /* AchievementsSelectionInteractor.swift in Sources */,
+				85136E9D25950C1B00C74866 /* NewEdProgramsInteractor.swift in Sources */,
 				85C12E17258EA90C00C3CD71 /* UniversityObj.swift in Sources */,
 				2EE044BE25630F950014FD34 /* HomeScreenInteractor.swift in Sources */,
 				2EDE68522567601B0064D28B /* ProgramsSelectionMenuViewContoller.swift in Sources */,
@@ -1384,6 +1415,7 @@
 				853315BD256BFA4C003A89EA /* FeedbackModuleViewController.swift in Sources */,
 				CEEE7BD825682FF80094B1DA /* PhotoTableViewCell.swift in Sources */,
 				85C12DF6258E7CE200C3CD71 /* HalfModalTransitioningDelegate.swift in Sources */,
+				85136EAD25950C4800C74866 /* NewEdProgramsRouter.swift in Sources */,
 				85ABD5FA2569BC500094BC7E /* EdProgramModulePresenter.swift in Sources */,
 				CEEE7BCB256805330094B1DA /* UIImageExtension.swift in Sources */,
 				85ABD5DF2569AFB60094BC7E /* StudyTileBigCell.swift in Sources */,
@@ -1412,6 +1444,7 @@
 				8528F52E2534AAE2004FDE50 /* Postuparium.xcdatamodeld in Sources */,
 				CEEE7BD3256829390094B1DA /* PhotoTableViewController.swift in Sources */,
 				2EAD67B92593EDE400A0EF05 /* UniversitiesTableViewProtocols.swift in Sources */,
+				85136EA225950C2800C74866 /* NewEdProgramsConfigurator.swift in Sources */,
 				8528F5D72534BBEB004FDE50 /* EgeResultsSelectionInteractor.swift in Sources */,
 				8528F5842534B6F2004FDE50 /* Enrollee.swift in Sources */,
 				CEEE7BF72569114E0094B1DA /* PhotoViewerInteractor.swift in Sources */,
@@ -1446,7 +1479,9 @@
 				2E000662256209A8000693B5 /* NibExtension.swift in Sources */,
 				85ABD59B256965040094BC7E /* UniversityModuleViewController.swift in Sources */,
 				2E00065E256209A6000693B5 /* HideKeyboardExtension.swift in Sources */,
+				85136EA725950C3900C74866 /* NewEdProgramsPresenter.swift in Sources */,
 				85ABD5AF256965410094BC7E /* UniversityModuleIteractor.swift in Sources */,
+				85136E9025950BF200C74866 /* NewEdProgramsViewController.swift in Sources */,
 				8528F5D22534BBCF004FDE50 /* EgeResultsSelectionPresenter.swift in Sources */,
 				854EDE35258670B80059ABB5 /* UniversityMapRouter.swift in Sources */,
 				2ED12025256A147C005D39DA /* EnrolleeService.swift in Sources */,
@@ -1457,6 +1492,7 @@
 				2EB468402562E59D00988BAA /* AchievementsItem.swift in Sources */,
 				2E00064325620748000693B5 /* StartScreenProtocols.swift in Sources */,
 				2E00064225620748000693B5 /* StartScreenConfigurator.swift in Sources */,
+				85136E9825950C0800C74866 /* NewEdProgramsProtocols.swift in Sources */,
 				2EE044C125630F950014FD34 /* HomeScreenRouter.swift in Sources */,
 				2E00064A25620815000693B5 /* EgeResultsSelector.swift in Sources */,
 				85ABD590256958CD0094BC7E /* StudyTileMediumCell.swift in Sources */,
@@ -1654,13 +1690,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CAG8DDF8KX;
+				DEVELOPMENT_TEAM = 5ABALJWYVX;
 				INFOPLIST_FILE = Postuparium/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = spetrenko.Postuparium;
+				PRODUCT_BUNDLE_IDENTIFIER = spetrenko.Postuparium1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1673,13 +1709,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CAG8DDF8KX;
+				DEVELOPMENT_TEAM = 5ABALJWYVX;
 				INFOPLIST_FILE = Postuparium/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = spetrenko.Postuparium;
+				PRODUCT_BUNDLE_IDENTIFIER = spetrenko.Postuparium1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1692,7 +1728,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CAG8DDF8KX;
+				DEVELOPMENT_TEAM = 5ABALJWYVX;
 				INFOPLIST_FILE = PostupariumTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1735,7 +1771,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CAG8DDF8KX;
+				DEVELOPMENT_TEAM = 5ABALJWYVX;
 				INFOPLIST_FILE = PostupariumUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

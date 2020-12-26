@@ -38,4 +38,7 @@ class HomeScreenPresenter: HomeScreenPresenterProtocol {
     func viewDidLoad() {
  
     }
+    func showRegistrationScreen() {
+        router?.showRegistrationScreen()
+    }
 }

@@ -42,4 +42,8 @@ class HomeScreenRouter: HomeScreenRouterProtocol {
         let vc = NewEdProgramsConfigurator.configureModule()
         view?.navigationController!.show(vc as UIViewController, sender: view)
     }
+    func showRegistrationScreen() {
+        let vc = EgeResultsSelectionConfigurator.configureModule()
+        view?.navigationController!.show(vc as UIViewController, sender: view)
+    }
 }

@@ -1,37 +1,44 @@
 //
-//  SwipeableViewController.swift
+//  SwipeableMenu.swift
 //  Postuparium
 //
 //  Created by Михаил on 20.11.2020.
 //
+
 import UIKit
-protocol CardViewControllerProtocol: UIViewController {
+
+protocol MenuViewControllerProtocol: UIViewController {
     var handleArea: UIView! { get set }
 }
-class SwipeableViewController: UIViewController {
+
+class SwipeableMenuViewController: UIViewController {
     
-    var cardViewController:CardViewControllerProtocol! {
+    // Must be set
+    var cardViewController: MenuViewControllerProtocol! {
         didSet {
             setupCard()
         }
     }
-    
-    @IBInspectable var cardHeight:CGFloat = 450
-    @IBInspectable var cardHeightMaxMargin:CGFloat = 200
-    @IBInspectable var cardHandleAreaHeight:CGFloat = 0
-    @IBInspectable var duration = 0.3
-    
-    func showCard() {
-        animateTransitionIfNeeded(state: .expanded, duration: duration)
-    }
-    
     private enum CardState {
         case expanded
         case collapsed
     }
     
+    @IBInspectable var cardHeight:CGFloat = 716
+    @IBInspectable var cardExpansion:CGFloat = 300
+    @IBInspectable var cardHeightMaxMargin:CGFloat = 200
+    @IBInspectable var cardHandleAreaHeight:CGFloat = 296
+    @IBInspectable var duration = 0.3
+    private var maxFraction: CGFloat = 0
+    
+    
     private var runningAnimations = [UIViewPropertyAnimator]()
     private var animationProgressWhenInterrupted:CGFloat = 0
+    private var cardState = CardState.collapsed
+    
+    func showCard() {
+        animateTransitionIfNeeded(state: .expanded, duration: duration)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,7 +57,6 @@ class SwipeableViewController: UIViewController {
         
     }
 
-    var maxFraction: CGFloat = 0
     @objc private func handleCardPan (recognizer:UIPanGestureRecognizer) {
         cardViewController.view.endEditing(true)
         let translation = recognizer.translation(in: self.cardViewController.handleArea)
@@ -58,20 +64,39 @@ class SwipeableViewController: UIViewController {
     
         switch recognizer.state {
         case .began:
-            startInteractiveTransition(state: .collapsed, duration: duration)
+            if cardState == .collapsed {
+                startInteractiveTransition(state: .expanded, duration: duration)
+            } else {
+                startInteractiveTransition(state: .collapsed, duration: duration)
+            }
         case .changed:
-            if translation.y > 0{
+            if cardState == .collapsed && translation.y < 0 {
+                updateInteractiveTransition(fractionCompleted: fractionComplete)
+            }
+            if cardState == .expanded && translation.y > 0 {
                 updateInteractiveTransition(fractionCompleted: fractionComplete)
             }
         case .ended:
-            if translation.y < 0{
-                cancelTransition()
-            }
-            if (fractionComplete < maxFraction * 0.95 || maxFraction < 0.1 ){
-                cancelTransition()
-                animateTransitionIfNeeded(state: .expanded, duration: duration / 3)
+            if cardState == .expanded {
+                if translation.y < 0{
+                    cancelTransition()
+                }
+                if (fractionComplete < maxFraction * 0.95 || maxFraction < 0.05 ){
+                    cancelTransition()
+                    animateTransitionIfNeeded(state: .expanded, duration: duration / 3)
+                } else {
+                    continueInteractiveTransition()
+                }
             } else {
-                continueInteractiveTransition()
+                if translation.y > 0{
+                    cancelTransition()
+                }
+                if (fractionComplete < maxFraction * 0.95 || maxFraction < 0.1 ){
+                    cancelTransition()
+                    animateTransitionIfNeeded(state: .collapsed, duration: duration / 3)
+                } else {
+                    continueInteractiveTransition()
+                }
             }
         default:
             break
@@ -94,6 +119,7 @@ class SwipeableViewController: UIViewController {
             frameAnimator.addCompletion { _ in
                 self.maxFraction = 0
                 self.runningAnimations.removeAll()
+                self.cardState = self.cardState == .collapsed ?.expanded : .collapsed
             }
             
             frameAnimator.startAnimation()
@@ -132,5 +158,9 @@ class SwipeableViewController: UIViewController {
             animator.continueAnimation(withTimingParameters: nil, durationFactor: 0)
         }
     }
+    
+}
+
+extension SwipeableViewController {
     
 }

@@ -21,7 +21,7 @@ class UniversitiesTableViewInteractor: UniversitiesTableViewInteractorProtocol {
     
     func fetch(callback: @escaping  () -> Void ) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
-            if let photo = UIImage(named: "8cebe4fdb0ce2ce1565312fa4e281596") {
+            if let photo = UIImage(named: "vhod") {
                 self.universities.append(University(scores: 192, place: 52, rating: 5, name: "Мисис", image: photo))
                 self.universities.append(University(scores: 210, place: 14, rating: 5, name: "МГУ", image: photo))
                 self.universities.append(University(scores: 270, place: 13, rating: 5, name: "МГТУ", image: photo))
@@ -29,6 +29,7 @@ class UniversitiesTableViewInteractor: UniversitiesTableViewInteractorProtocol {
                 self.universities.append(University(scores: 240, place: 99, rating: 5, name: "МИРЭА", image: photo))
                 self.universities.append(University(scores: 260, place: 89, rating: 5, name: "МАИ", image: photo))
             }
+            
             callback();
         });
     }

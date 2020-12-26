@@ -8,6 +8,10 @@
 import UIKit
 
 class ProgramsSelectionViewController: SwipeableViewController, LoadableScreen, ProgramsSelectionViewControllerProtocol, UITextFieldDelegate {
+    var message1: String!
+    
+    var message2: String!
+    
     var loader: UIView?
     
     var presenter: ProgramsSelectionPresenterProtocol!

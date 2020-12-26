@@ -46,6 +46,8 @@ class StudyTileMediumCell: UICollectionViewCell {
         self.layer.shadowRadius = 5.0
         
         setGradientBackgroundColor()
+        
+        self.typeContainer.addShadow(offset: CGSize.init(width: 0, height: 30), color: UIColor.black, radius: 20, opacity: 0.5)
     }
     
     func cellRandomBackgroundColors() -> [UIColor] {
@@ -72,6 +74,14 @@ class StudyTileMediumCell: UICollectionViewCell {
         let colors = cellRandomBackgroundColors()
         self.typeContainer.setGradientBackgroundColor(colorOne: colors[0], colorTow: colors[1])
     }
+    
+//    override func layoutSubviews() {
+//            super.layoutSubviews()
+//            layer.cornerRadius = 20
+//        dropShadow(radius: 20, offsetX: 10, offsetY: 10, color: .gray)
+//     }
 
 
 }
+
+

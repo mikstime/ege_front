@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AnT-Ft-OYG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AnT-Ft-OYG">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,52 +16,68 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home Screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hId-3f-3sh">
-                                <rect key="frame" x="155" y="442.5" width="104" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbP-tv-Zsr">
-                                <rect key="frame" x="161" y="534" width="93" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="направления"/>
-                                <connections>
-                                    <action selector="showNextScreen" destination="AnT-Ft-OYG" eventType="touchUpInside" id="TbP-H0-8vR"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sjX-mR-3eM">
-                                <rect key="frame" x="177" y="478" width="60" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="фотачки"/>
-                                <connections>
-                                    <action selector="showPhotosScreen" destination="AnT-Ft-OYG" eventType="touchUpInside" id="Asw-kc-mnR"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z03-pt-GN9">
-                                <rect key="frame" x="186" y="572" width="42" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label="Карта"/>
-                                <state key="normal" title="Карта"/>
-                                <connections>
-                                    <action selector="showMapScreen" destination="AnT-Ft-OYG" eventType="touchUpInside" id="xqM-Ec-lYx"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ynj-EZ-tpp">
-                                <rect key="frame" x="159" y="624" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label="Карта"/>
-                                <state key="normal" title="Список вузов"/>
-                                <connections>
-                                    <action selector="showUniversitiesListScreen" destination="AnT-Ft-OYG" eventType="touchUpInside" id="dl7-2F-I9e"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="EDj-Q6-sdp">
+                                <rect key="frame" x="16" y="353" width="382" height="200.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Меню разработчика" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hId-3f-3sh">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbP-tv-Zsr">
+                                        <rect key="frame" x="0.0" y="20.5" width="382" height="30"/>
+                                        <state key="normal" title="направления"/>
+                                        <connections>
+                                            <action selector="showNextScreen" destination="AnT-Ft-OYG" eventType="touchUpInside" id="TbP-H0-8vR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sjX-mR-3eM">
+                                        <rect key="frame" x="0.0" y="50.5" width="382" height="30"/>
+                                        <state key="normal" title="фотачки"/>
+                                        <connections>
+                                            <action selector="showPhotosScreen" destination="AnT-Ft-OYG" eventType="touchUpInside" id="Asw-kc-mnR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z03-pt-GN9">
+                                        <rect key="frame" x="0.0" y="80.5" width="382" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" label="Карта"/>
+                                        <state key="normal" title="Карта"/>
+                                        <connections>
+                                            <action selector="showMapScreen" destination="AnT-Ft-OYG" eventType="touchUpInside" id="xqM-Ec-lYx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ynj-EZ-tpp">
+                                        <rect key="frame" x="0.0" y="110.5" width="382" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" label="Карта"/>
+                                        <state key="normal" title="Список вузов"/>
+                                        <connections>
+                                            <action selector="showUniversitiesListScreen" destination="AnT-Ft-OYG" eventType="touchUpInside" id="dl7-2F-I9e"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zdH-yy-0Vu">
+                                        <rect key="frame" x="0.0" y="140.5" width="382" height="30"/>
+                                        <state key="normal" title="NewEdPrograms"/>
+                                        <connections>
+                                            <action selector="showNewEdPrograms:" destination="AnT-Ft-OYG" eventType="touchUpInside" id="fkS-mf-mxQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="feJ-AA-vEK">
+                                        <rect key="frame" x="0.0" y="170.5" width="382" height="30"/>
+                                        <state key="normal" title="Регистрация"/>
+                                        <connections>
+                                            <action selector="showRegistrationScreen" destination="AnT-Ft-OYG" eventType="touchUpInside" id="fNv-QK-eG6"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MV1-Pr-jUs"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="hId-3f-3sh" firstAttribute="centerY" secondItem="MV1-Pr-jUs" secondAttribute="centerY" id="abl-lH-WP7"/>
-                            <constraint firstItem="hId-3f-3sh" firstAttribute="centerX" secondItem="MV1-Pr-jUs" secondAttribute="centerX" id="l9f-IJ-c5u"/>
+                            <constraint firstItem="MV1-Pr-jUs" firstAttribute="trailing" secondItem="EDj-Q6-sdp" secondAttribute="trailing" constant="16" id="EeC-Hm-RgY"/>
+                            <constraint firstItem="EDj-Q6-sdp" firstAttribute="leading" secondItem="MV1-Pr-jUs" secondAttribute="leading" constant="16" id="Iu9-MW-t85"/>
+                            <constraint firstItem="EDj-Q6-sdp" firstAttribute="centerY" secondItem="MV1-Pr-jUs" secondAttribute="centerY" id="Pad-k6-GBO"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="mex-9D-6zX"/>

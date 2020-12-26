@@ -42,6 +42,9 @@ class UniversityMapViewController: SwipeableMenuViewController,
         menu = HomePageConfigurator.configureModule()
         cardViewController = menu // должно сетиться до вызова родительского метода
         super.viewDidLoad()
+        
+        
+        hideKeyboardWhenTappedAround()
         presenter?.viewDidLoad()
         mapView.delegate = self
         

@@ -10,9 +10,10 @@ import UIKit
 
 import MapKit
 
-class UniversityMapViewController: UIViewController,
+class UniversityMapViewController: SwipeableMenuViewController,
                                    UniversityMapViewControllerProtocol, MKMapViewDelegate {
     var idUn: Int = 0
+    var menu: MenuViewControllerProtocol!
     
     var halfModalTransitioningDelegate: HalfModalTransitioningDelegate!
     
@@ -26,12 +27,22 @@ class UniversityMapViewController: UIViewController,
     var presenter: UniversityMapPresenterProtocol!
     var configurator: UniversityMapConfiguratorProtocol = UniversityMapConfigurator()
 
-    final override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
 
-        presenter?.viewDidLoad()
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+
     
-        
+    final override func viewDidLoad() {
+        menu = HomePageConfigurator.configureModule()
+        cardViewController = menu // должно сетиться до вызова родительского метода
+        super.viewDidLoad()
+        presenter?.viewDidLoad()
         mapView.delegate = self
         
         // Закомменчено на время рефакторинга меток на карте

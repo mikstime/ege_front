@@ -16,8 +16,7 @@ protocol FeedbackServiceProtocol {
 }
 
 class FeedbackService: FeedbackServiceProtocol {
-    static var LoginApiURL: String = "http://77.223.97.172:8080/api/v1/login/"
-    static var UsersApiURL: String = "http://77.223.97.172:8080/api/v1/users/"
+    static var FeedBackApiURL: String = "http://77.223.97.172:8080/api/v1/feedback/"
     
     static var shared: FeedbackServiceProtocol = FeedbackService()
     
@@ -26,8 +25,22 @@ class FeedbackService: FeedbackServiceProtocol {
     private init() {}
     
     func send(email: String, message: String, title: String, onFinish: @escaping (Bool) -> Void) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-            onFinish(true)
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+//            onFinish(true)
+//        }
+        let request = AF.request(FeedbackService.FeedBackApiURL, method: .post, parameters: [
+            "email": email,
+            "message": message,
+            "title": title,
+        ])
+        
+        request.responseJSON { (response) in
+            switch response.result {
+                case .success:
+                    onFinish(true)
+                case .failure(_):
+                    onFinish(false)
+                }
         }
     }
 }

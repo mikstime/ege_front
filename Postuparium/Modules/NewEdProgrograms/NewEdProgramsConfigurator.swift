@@ -16,7 +16,7 @@ class NewEdProgramsConfigurator: NewEdProgramsConfiguratorProtocol {
         guard let vc: UIViewController = storyboard.instantiateInitialViewController()
         else {
             print("Не удалось найти входной контроллер в NewEdPrograms")
-            return NewEdProgramsViewController() as! NewEdProgramsViewControllerProtocol
+            return NewEdProgramsViewController() as NewEdProgramsViewControllerProtocol
         }
         
         let viewController = vc as! NewEdProgramsViewControllerProtocol

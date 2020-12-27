@@ -4,7 +4,6 @@
 //
 //  Created by Михаил on 20.11.2020.
 //
-
 import UIKit
 protocol CardViewControllerProtocol: UIViewController {
     var handleArea: UIView! { get set }
@@ -118,8 +117,6 @@ class SwipeableViewController: UIViewController {
             self.maxFraction = 0
             animationProgressWhenInterrupted = animator.fractionComplete
             animator.stopAnimation(true)
-//            animator.isInterruptible = true
-//            animator.isReversed = true
         }
         self.runningAnimations.removeAll()
     }

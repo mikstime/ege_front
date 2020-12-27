@@ -10,26 +10,40 @@ import UIKit
 
 import MapKit
 
-class UniversityMapViewController: UIViewController,
+class UniversityMapViewController: SSwipeableViewController,
                                    UniversityMapViewControllerProtocol, MKMapViewDelegate {
     var idUn: Int = 0
-    
+    var menu = HomePageConfigurator.configureModule()
+    var umenu = UniversityPageConfigurator.configureModule()
+    var smenu = SettingsScreenConfigurator.configureModule()
     var halfModalTransitioningDelegate: HalfModalTransitioningDelegate!
-    
     private var universitites = UniversitiesMock.UniversitiesList()
     
     @IBOutlet private var mapView: MKMapView!
-    
-    
+    @IBAction func showSettings() {
+        showSCard()
+    }
     var presenter: UniversityMapPresenterProtocol!
     var configurator: UniversityMapConfiguratorProtocol = UniversityMapConfigurator()
 
-    final override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
 
-        presenter?.viewDidLoad()
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+
     
-        
+    final override func viewDidLoad() {
+        cardViewController = menu // должно сетиться до вызова родительского метода
+        ucardViewController = umenu
+        scardViewController = smenu
+        super.viewDidLoad()
+        hideKeyboardWhenTappedAround()
+        presenter?.viewDidLoad()
         mapView.delegate = self
         
         // Закомменчено на время рефакторинга меток на карте
@@ -72,7 +86,8 @@ class UniversityMapViewController: UIViewController,
         mapView.setCenter(view.annotation!.coordinate, animated: true)
         setMapFocus(centerCoordinate: view.annotation!.coordinate, radiusInKm: 0.5)
         print("Ебать нажалось", id! , Int(id!) ?? 0 )
-        self.presenter.showModal(id: Int(id!) ?? 0 )
+        showUCard()
+//        self.presenter.showModal(id: Int(id!) ?? 0 )
     }
     
 

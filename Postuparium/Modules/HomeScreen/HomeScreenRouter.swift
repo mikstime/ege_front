@@ -21,6 +21,11 @@ class HomeScreenRouter: HomeScreenRouterProtocol {
         view?.navigationController!.show(vc as UIViewController, sender: view)
     }
     
+    func showUniversitiesListScreen() {
+        let vc = UniversitiesTableViewConfigurator.configureModule()
+        view?.navigationController!.show(vc as UIViewController, sender: view)
+    }
+    
     func showMapScreen() {
         let vc = UniversityMapConfigurator.configureModule()
         view?.navigationController!.show(vc as UIViewController, sender: view)
@@ -29,6 +34,16 @@ class HomeScreenRouter: HomeScreenRouterProtocol {
     func showUniversityModuleScreen() {
         print("show university/edProgram module")
         let vc = UniversityModuleConfigurator.configureModule()
+        view?.navigationController!.show(vc as UIViewController, sender: view)
+    }
+    
+    func showNewEdProgramsScreen() {
+        print("show university/edProgram module")
+        let vc = NewEdProgramsConfigurator.configureModule()
+        view?.navigationController!.show(vc as UIViewController, sender: view)
+    }
+    func showRegistrationScreen() {
+        let vc = EgeResultsSelectionConfigurator.configureModule()
         view?.navigationController!.show(vc as UIViewController, sender: view)
     }
 }

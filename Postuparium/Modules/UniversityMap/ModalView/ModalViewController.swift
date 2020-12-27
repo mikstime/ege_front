@@ -9,10 +9,10 @@ import Foundation
 
 import UIKit
 
-struct University {
-    var label: String
-    var bgImage: String
-}
+//struct University {
+//    var label: String
+//    var bgImage: String
+//}
 
 
 class ModalViewController: UIViewController, ModalViewControllerProtocol, HalfModalPresentable,

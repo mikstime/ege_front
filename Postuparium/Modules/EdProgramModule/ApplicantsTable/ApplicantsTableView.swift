@@ -30,7 +30,7 @@ class ApplicantsTableViewController: UIViewController {
     searchController.obscuresBackgroundDuringPresentation = false
     // 3
     searchController.searchBar.placeholder = "Поиск"
-//    searchController.searchBar.backgroundColor = .lightGray
+
     // 4
     navigationItem.searchController = searchController
     // 5

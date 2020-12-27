@@ -19,7 +19,11 @@ protocol HomeScreenPresenterProtocol: class {
     
     func showPhotosScreen()
     func showNextScreen()
+    func showUniversitiesListScreen()
     func showMapScreen()
+    func showNewEdProgramsScreen()
+    func showRegistrationScreen()
+    
     func viewDidLoad()
 }
 
@@ -34,7 +38,10 @@ protocol HomeScreenRouterProtocol: class {
     
     func showUniversityModuleScreen()
     func showPhotosScreen()
+    func showUniversitiesListScreen()
+    func showNewEdProgramsScreen()
     func showMapScreen()
+    func showRegistrationScreen()
 }
 
 protocol HomeScreenConfiguratorProtocol: class {

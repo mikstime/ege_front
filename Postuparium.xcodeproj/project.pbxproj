@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -23,13 +23,49 @@
 		2E00065E256209A6000693B5 /* HideKeyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E00065425620856000693B5 /* HideKeyboardExtension.swift */; };
 		2E000662256209A8000693B5 /* NibExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E00065525620856000693B5 /* NibExtension.swift */; };
 		2E000666256209B1000693B5 /* EgeResultsSelector.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E00064925620815000693B5 /* EgeResultsSelector.xib */; };
+		2E0383C92597FDB90044DCC4 /* HomeProgramView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E0383C82597FDB90044DCC4 /* HomeProgramView.xib */; };
+		2E0383D12597FDCC0044DCC4 /* HomeProgramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0383D02597FDCC0044DCC4 /* HomeProgramView.swift */; };
 		2E42DCBB2566161600D82018 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E42DCB02566151B00D82018 /* LoadingView.swift */; };
 		2E42DCC225661BDE00D82018 /* icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E42DCBF25661BDD00D82018 /* icon@3x.png */; };
 		2E42DCC325661BDE00D82018 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E42DCC025661BDD00D82018 /* icon@2x.png */; };
 		2E42DCC425661BDE00D82018 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E42DCC125661BDD00D82018 /* icon.png */; };
 		2E42DCCD25661E7500D82018 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E42DCCC25661E7500D82018 /* LoadingView.xib */; };
 		2E42F1B3256C097E00736DF1 /* EdProgramModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E42F1B2256C097E00736DF1 /* EdProgramModuleViewController.swift */; };
+		2E6145E52593B73C006E43E6 /* CountryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E6145E32593B73B006E43E6 /* CountryCell.xib */; };
+		2E6145E62593B73C006E43E6 /* UniversityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E6145E42593B73C006E43E6 /* UniversityCell.xib */; };
 		2E8CE4932566EC80007C923C /* EgeResultsSelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E00066A25620ACD000693B5 /* EgeResultsSelection.storyboard */; };
+		2E9CF7A425982E4400490939 /* UniversityPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E9CF78F25982C3500490939 /* UniversityPage.storyboard */; };
+		2E9CF7A525982E4400490939 /* UniversityPageViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9CF78B25982C3400490939 /* UniversityPageViewContoller.swift */; };
+		2E9CF7A625982E4400490939 /* UniversityPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9CF78C25982C3400490939 /* UniversityPagePresenter.swift */; };
+		2E9CF7A725982E4400490939 /* UniversityPageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9CF78A25982C3400490939 /* UniversityPageInteractor.swift */; };
+		2E9CF7A825982E4400490939 /* UniversityPageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9CF78925982C3400490939 /* UniversityPageProtocols.swift */; };
+		2E9CF7A925982E4400490939 /* UniversityPageConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9CF78D25982C3500490939 /* UniversityPageConfigurator.swift */; };
+		2E9CF7AA25982E4400490939 /* UniversityPageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9CF78E25982C3500490939 /* UniversityPageRouter.swift */; };
+		2E9CF7AF259832A800490939 /* universitySwipeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9CF7AE259832A800490939 /* universitySwipeable.swift */; };
+		2EA2F6AE2596A50400773066 /* FeedBackService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA2F6AD2596A50400773066 /* FeedBackService.swift */; };
+		2EA2F6C22596BD5C00773066 /* SwipeableMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA2F6C12596BD5C00773066 /* SwipeableMenu.swift */; };
+		2EA2F6C92596BEB900773066 /* HomePageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA2F6B92596BC7B00773066 /* HomePageRouter.swift */; };
+		2EA2F6CA2596BEB900773066 /* HomePageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA2F6BA2596BC7B00773066 /* HomePageInteractor.swift */; };
+		2EA2F6CB2596BEB900773066 /* HomePageConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA2F6B72596BC7B00773066 /* HomePageConfigurator.swift */; };
+		2EA2F6CC2596BEB900773066 /* HomePageViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA2F6B82596BC7B00773066 /* HomePageViewContoller.swift */; };
+		2EA2F6CD2596BEB900773066 /* HomePageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA2F6BB2596BC7B00773066 /* HomePageProtocols.swift */; };
+		2EA2F6CE2596BEB900773066 /* HomePagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA2F6BC2596BC7B00773066 /* HomePagePresenter.swift */; };
+		2EA2F6CF2596BEB900773066 /* HomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EA2F6BD2596BC7B00773066 /* HomePage.storyboard */; };
+		2EA2F6DE2596CB5800773066 /* HomeProgramsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA2F6DD2596CB5800773066 /* HomeProgramsViewController.swift */; };
+		2EA2F6E32596CB6600773066 /* HomeProgramsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA2F6E22596CB6600773066 /* HomeProgramsInteractor.swift */; };
+		2EA2F6F02596CC0D00773066 /* HomePrograms.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EA2F6EF2596CC0D00773066 /* HomePrograms.xib */; };
+		2EAD67B22593EDE400A0EF05 /* UniversityCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EAD67A42593EDE400A0EF05 /* UniversityCard.xib */; };
+		2EAD67B42593EDE400A0EF05 /* UniversityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EAD67A72593EDE400A0EF05 /* UniversityTableViewCell.xib */; };
+		2EAD67B52593EDE400A0EF05 /* EndTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAD67A82593EDE400A0EF05 /* EndTableViewCell.swift */; };
+		2EAD67B62593EDE400A0EF05 /* UniversityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAD67A92593EDE400A0EF05 /* UniversityTableViewCell.swift */; };
+		2EAD67B72593EDE400A0EF05 /* EndTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EAD67AA2593EDE400A0EF05 /* EndTableViewCell.xib */; };
+		2EAD67B82593EDE400A0EF05 /* UniversitiesTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EAD67AB2593EDE400A0EF05 /* UniversitiesTableViewController.xib */; };
+		2EAD67B92593EDE400A0EF05 /* UniversitiesTableViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAD67AC2593EDE400A0EF05 /* UniversitiesTableViewProtocols.swift */; };
+		2EAD67BA2593EDE400A0EF05 /* UniversitiesTableViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAD67AD2593EDE400A0EF05 /* UniversitiesTableViewPresenter.swift */; };
+		2EAD67BB2593EDE400A0EF05 /* UniversitiesTableViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAD67AE2593EDE400A0EF05 /* UniversitiesTableViewRouter.swift */; };
+		2EAD67BC2593EDE400A0EF05 /* UniversitiesTableViewConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAD67AF2593EDE400A0EF05 /* UniversitiesTableViewConfigurator.swift */; };
+		2EAD67BD2593EDE400A0EF05 /* UniversitiesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAD67B02593EDE400A0EF05 /* UniversitiesTableViewController.swift */; };
+		2EAD67BE2593EDE400A0EF05 /* UniversitiesTableViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAD67B12593EDE400A0EF05 /* UniversitiesTableViewInteractor.swift */; };
 		2EAD8B692562159800C4EEA3 /* AchievementsSelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EAD8B622562142A00C4EEA3 /* AchievementsSelection.storyboard */; };
 		2EAD8B6D256215A100C4EEA3 /* AchievementsSelectionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAD8B5B2562138E00C4EEA3 /* AchievementsSelectionInteractor.swift */; };
 		2EAD8B6E256215A100C4EEA3 /* AchievementsSelectionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAD8B5D2562138F00C4EEA3 /* AchievementsSelectionRouter.swift */; };
@@ -50,6 +86,8 @@
 		2EB468402562E59D00988BAA /* AchievementsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAD8B652562144F00C4EEA3 /* AchievementsItem.swift */; };
 		2EB468442562E5A300988BAA /* AchievementsItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EAD8B642562144F00C4EEA3 /* AchievementsItem.xib */; };
 		2EB468492562E6E300988BAA /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2EB468482562E6E300988BAA /* README.md */; };
+		2EC4587325937B4F001BFC0C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2EC4587225937B4F001BFC0C /* Alamofire */; };
+		2EC4587925937BA3001BFC0C /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 2EC4587825937BA3001BFC0C /* SwiftyJSON */; };
 		2ED1200A25689DE3005D39DA /* LoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED1200825689DE3005D39DA /* LoadingCell.swift */; };
 		2ED1200B25689DE3005D39DA /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2ED1200925689DE3005D39DA /* LoadingCell.xib */; };
 		2ED120152568B533005D39DA /* ProgramCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED120142568B533005D39DA /* ProgramCell.swift */; };
@@ -70,9 +108,22 @@
 		2EE044C225630F950014FD34 /* HomeScreenConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE044B925630F940014FD34 /* HomeScreenConfigurator.swift */; };
 		2EE044C325630F950014FD34 /* HomeScreenViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE044BB25630F940014FD34 /* HomeScreenViewContoller.swift */; };
 		2EE044C425630F950014FD34 /* HomeScreenProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE044BD25630F950014FD34 /* HomeScreenProtocols.swift */; };
+		2EF0299925983EE400251AF6 /* SettingsScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6146082593BD63006E43E6 /* SettingsScreenInteractor.swift */; };
+		2EF0299A25983EE400251AF6 /* SettingsScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E6146062593BD63006E43E6 /* SettingsScreen.storyboard */; };
+		2EF0299B25983EE400251AF6 /* SettingsScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6146072593BD63006E43E6 /* SettingsScreenRouter.swift */; };
+		2EF0299C25983EE400251AF6 /* SettingsScreenViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6146042593BD63006E43E6 /* SettingsScreenViewContoller.swift */; };
+		2EF0299D25983EE400251AF6 /* settingsSwipeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF0298A25983E0800251AF6 /* settingsSwipeable.swift */; };
+		2EF0299E25983EE400251AF6 /* SettingsScreenConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6146052593BD63006E43E6 /* SettingsScreenConfigurator.swift */; };
+		2EF0299F25983EE400251AF6 /* SettingsScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E61460A2593BD64006E43E6 /* SettingsScreenPresenter.swift */; };
+		2EF029A025983EE400251AF6 /* SettingsScreenProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6146092593BD64006E43E6 /* SettingsScreenProtocols.swift */; };
 		2EF252FB256A36C300D7FE1C /* EdProgramService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF252FA256A36C300D7FE1C /* EdProgramService.swift */; };
-		57B5CF7F6C2DC98415308927 /* Pods_Postuparium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36E7588A40F7C3AE27C54690 /* Pods_Postuparium.framework */; };
-		64186E093F7B569D7ADA7136 /* Pods_PostupariumTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 050A9DFE9779FD0C64A89C7B /* Pods_PostupariumTests.framework */; };
+		85136E9025950BF200C74866 /* NewEdProgramsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85136E8F25950BF200C74866 /* NewEdProgramsViewController.swift */; };
+		85136E9825950C0800C74866 /* NewEdProgramsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85136E9725950C0800C74866 /* NewEdProgramsProtocols.swift */; };
+		85136E9D25950C1B00C74866 /* NewEdProgramsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85136E9C25950C1B00C74866 /* NewEdProgramsInteractor.swift */; };
+		85136EA225950C2800C74866 /* NewEdProgramsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85136EA125950C2800C74866 /* NewEdProgramsConfigurator.swift */; };
+		85136EA725950C3900C74866 /* NewEdProgramsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85136EA625950C3900C74866 /* NewEdProgramsPresenter.swift */; };
+		85136EAD25950C4800C74866 /* NewEdProgramsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85136EAC25950C4800C74866 /* NewEdProgramsRouter.swift */; };
+		85136EB225950C5600C74866 /* NewEdPrograms.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85136EB125950C5600C74866 /* NewEdPrograms.storyboard */; };
 		85173DDA259157E70090D1C6 /* universities.json in Resources */ = {isa = PBXBuildFile; fileRef = 85173DD9259157E70090D1C6 /* universities.json */; };
 		85173DE2259157F60090D1C6 /* Universities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85173DE1259157F60090D1C6 /* Universities.swift */; };
 		8528F5242534AAE2004FDE50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8528F5232534AAE2004FDE50 /* AppDelegate.swift */; };
@@ -151,7 +202,6 @@
 		85ABD61D2569E0CF0094BC7E /* applicants.json in Resources */ = {isa = PBXBuildFile; fileRef = 85ABD61C2569E0CF0094BC7E /* applicants.json */; };
 		85ABD6222569E0F80094BC7E /* ApplicantMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ABD6212569E0F80094BC7E /* ApplicantMock.swift */; };
 		85ABD62B2569E62A0094BC7E /* SimilarModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ABD62A2569E62A0094BC7E /* SimilarModuleViewController.swift */; };
-		88A8B3F88A03BAD950337A72 /* Pods_Postuparium_PostupariumUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C5CEEC7ADFC7DEAC744D73A /* Pods_Postuparium_PostupariumUITests.framework */; };
 		85C12DE7258E7C5B00C3CD71 /* AppNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C12DE6258E7C5B00C3CD71 /* AppNavController.swift */; };
 		85C12DEE258E7CB200C3CD71 /* HalfModalPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C12DED258E7CB200C3CD71 /* HalfModalPresentationController.swift */; };
 		85C12DF6258E7CE200C3CD71 /* HalfModalTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C12DF5258E7CE200C3CD71 /* HalfModalTransitioningDelegate.swift */; };
@@ -205,10 +255,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01FA2959E6CC22A424C9F0A8 /* Pods-Postuparium-PostupariumUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Postuparium-PostupariumUITests.debug.xcconfig"; path = "Target Support Files/Pods-Postuparium-PostupariumUITests/Pods-Postuparium-PostupariumUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		050A9DFE9779FD0C64A89C7B /* Pods_PostupariumTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PostupariumTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1C5CEEC7ADFC7DEAC744D73A /* Pods_Postuparium_PostupariumUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Postuparium_PostupariumUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2CE5999F78B003D9ED27D9F2 /* Pods-Postuparium-PostupariumUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Postuparium-PostupariumUITests.release.xcconfig"; path = "Target Support Files/Pods-Postuparium-PostupariumUITests/Pods-Postuparium-PostupariumUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2E00060C25620302000693B5 /* Logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo@3x.png"; sourceTree = "<group>"; };
 		2E00060D25620302000693B5 /* Logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo@2x.png"; sourceTree = "<group>"; };
 		2E00060E25620302000693B5 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
@@ -226,12 +272,55 @@
 		2E00065525620856000693B5 /* NibExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibExtension.swift; sourceTree = "<group>"; };
 		2E00065625620856000693B5 /* BorderExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderExtension.swift; sourceTree = "<group>"; };
 		2E00066A25620ACD000693B5 /* EgeResultsSelection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EgeResultsSelection.storyboard; sourceTree = "<group>"; };
+		2E0383C82597FDB90044DCC4 /* HomeProgramView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeProgramView.xib; sourceTree = "<group>"; };
+		2E0383D02597FDCC0044DCC4 /* HomeProgramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProgramView.swift; sourceTree = "<group>"; };
 		2E42DCB02566151B00D82018 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		2E42DCBF25661BDD00D82018 /* icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@3x.png"; sourceTree = "<group>"; };
 		2E42DCC025661BDD00D82018 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		2E42DCC125661BDD00D82018 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		2E42DCCC25661E7500D82018 /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 		2E42F1B2256C097E00736DF1 /* EdProgramModuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdProgramModuleViewController.swift; sourceTree = "<group>"; };
+		2E6145E32593B73B006E43E6 /* CountryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CountryCell.xib; sourceTree = "<group>"; };
+		2E6145E42593B73C006E43E6 /* UniversityCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UniversityCell.xib; sourceTree = "<group>"; };
+		2E6146042593BD63006E43E6 /* SettingsScreenViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenViewContoller.swift; sourceTree = "<group>"; };
+		2E6146052593BD63006E43E6 /* SettingsScreenConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenConfigurator.swift; sourceTree = "<group>"; };
+		2E6146062593BD63006E43E6 /* SettingsScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsScreen.storyboard; sourceTree = "<group>"; };
+		2E6146072593BD63006E43E6 /* SettingsScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenRouter.swift; sourceTree = "<group>"; };
+		2E6146082593BD63006E43E6 /* SettingsScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenInteractor.swift; sourceTree = "<group>"; };
+		2E6146092593BD64006E43E6 /* SettingsScreenProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenProtocols.swift; sourceTree = "<group>"; };
+		2E61460A2593BD64006E43E6 /* SettingsScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenPresenter.swift; sourceTree = "<group>"; };
+		2E9CF78925982C3400490939 /* UniversityPageProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityPageProtocols.swift; sourceTree = "<group>"; };
+		2E9CF78A25982C3400490939 /* UniversityPageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityPageInteractor.swift; sourceTree = "<group>"; };
+		2E9CF78B25982C3400490939 /* UniversityPageViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityPageViewContoller.swift; sourceTree = "<group>"; };
+		2E9CF78C25982C3400490939 /* UniversityPagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityPagePresenter.swift; sourceTree = "<group>"; };
+		2E9CF78D25982C3500490939 /* UniversityPageConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityPageConfigurator.swift; sourceTree = "<group>"; };
+		2E9CF78E25982C3500490939 /* UniversityPageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityPageRouter.swift; sourceTree = "<group>"; };
+		2E9CF78F25982C3500490939 /* UniversityPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UniversityPage.storyboard; sourceTree = "<group>"; };
+		2E9CF7AE259832A800490939 /* universitySwipeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = universitySwipeable.swift; sourceTree = "<group>"; };
+		2EA2F6AD2596A50400773066 /* FeedBackService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedBackService.swift; sourceTree = "<group>"; };
+		2EA2F6B72596BC7B00773066 /* HomePageConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageConfigurator.swift; sourceTree = "<group>"; };
+		2EA2F6B82596BC7B00773066 /* HomePageViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewContoller.swift; sourceTree = "<group>"; };
+		2EA2F6B92596BC7B00773066 /* HomePageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageRouter.swift; sourceTree = "<group>"; };
+		2EA2F6BA2596BC7B00773066 /* HomePageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageInteractor.swift; sourceTree = "<group>"; };
+		2EA2F6BB2596BC7B00773066 /* HomePageProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageProtocols.swift; sourceTree = "<group>"; };
+		2EA2F6BC2596BC7B00773066 /* HomePagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePagePresenter.swift; sourceTree = "<group>"; };
+		2EA2F6BD2596BC7B00773066 /* HomePage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomePage.storyboard; sourceTree = "<group>"; };
+		2EA2F6C12596BD5C00773066 /* SwipeableMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableMenu.swift; sourceTree = "<group>"; };
+		2EA2F6DD2596CB5800773066 /* HomeProgramsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProgramsViewController.swift; sourceTree = "<group>"; };
+		2EA2F6E22596CB6600773066 /* HomeProgramsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProgramsInteractor.swift; sourceTree = "<group>"; };
+		2EA2F6EF2596CC0D00773066 /* HomePrograms.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomePrograms.xib; sourceTree = "<group>"; };
+		2EAD67A42593EDE400A0EF05 /* UniversityCard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UniversityCard.xib; sourceTree = "<group>"; };
+		2EAD67A72593EDE400A0EF05 /* UniversityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UniversityTableViewCell.xib; sourceTree = "<group>"; };
+		2EAD67A82593EDE400A0EF05 /* EndTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndTableViewCell.swift; sourceTree = "<group>"; };
+		2EAD67A92593EDE400A0EF05 /* UniversityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniversityTableViewCell.swift; sourceTree = "<group>"; };
+		2EAD67AA2593EDE400A0EF05 /* EndTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EndTableViewCell.xib; sourceTree = "<group>"; };
+		2EAD67AB2593EDE400A0EF05 /* UniversitiesTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UniversitiesTableViewController.xib; sourceTree = "<group>"; };
+		2EAD67AC2593EDE400A0EF05 /* UniversitiesTableViewProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniversitiesTableViewProtocols.swift; sourceTree = "<group>"; };
+		2EAD67AD2593EDE400A0EF05 /* UniversitiesTableViewPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniversitiesTableViewPresenter.swift; sourceTree = "<group>"; };
+		2EAD67AE2593EDE400A0EF05 /* UniversitiesTableViewRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniversitiesTableViewRouter.swift; sourceTree = "<group>"; };
+		2EAD67AF2593EDE400A0EF05 /* UniversitiesTableViewConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniversitiesTableViewConfigurator.swift; sourceTree = "<group>"; };
+		2EAD67B02593EDE400A0EF05 /* UniversitiesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniversitiesTableViewController.swift; sourceTree = "<group>"; };
+		2EAD67B12593EDE400A0EF05 /* UniversitiesTableViewInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniversitiesTableViewInteractor.swift; sourceTree = "<group>"; };
 		2EAD8B5B2562138E00C4EEA3 /* AchievementsSelectionInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsSelectionInteractor.swift; sourceTree = "<group>"; };
 		2EAD8B5C2562138F00C4EEA3 /* AchievementsSelectionConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsSelectionConfigurator.swift; sourceTree = "<group>"; };
 		2EAD8B5D2562138F00C4EEA3 /* AchievementsSelectionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsSelectionRouter.swift; sourceTree = "<group>"; };
@@ -272,9 +361,15 @@
 		2EE044BB25630F940014FD34 /* HomeScreenViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewContoller.swift; sourceTree = "<group>"; };
 		2EE044BC25630F950014FD34 /* HomeScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenPresenter.swift; sourceTree = "<group>"; };
 		2EE044BD25630F950014FD34 /* HomeScreenProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenProtocols.swift; sourceTree = "<group>"; };
+		2EF0298A25983E0800251AF6 /* settingsSwipeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingsSwipeable.swift; sourceTree = "<group>"; };
 		2EF252FA256A36C300D7FE1C /* EdProgramService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdProgramService.swift; sourceTree = "<group>"; };
-		33EF81A9DB9EC160314F3786 /* Pods-PostupariumTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostupariumTests.debug.xcconfig"; path = "Target Support Files/Pods-PostupariumTests/Pods-PostupariumTests.debug.xcconfig"; sourceTree = "<group>"; };
-		36E7588A40F7C3AE27C54690 /* Pods_Postuparium.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Postuparium.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		85136E8F25950BF200C74866 /* NewEdProgramsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEdProgramsViewController.swift; sourceTree = "<group>"; };
+		85136E9725950C0800C74866 /* NewEdProgramsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEdProgramsProtocols.swift; sourceTree = "<group>"; };
+		85136E9C25950C1B00C74866 /* NewEdProgramsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEdProgramsInteractor.swift; sourceTree = "<group>"; };
+		85136EA125950C2800C74866 /* NewEdProgramsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEdProgramsConfigurator.swift; sourceTree = "<group>"; };
+		85136EA625950C3900C74866 /* NewEdProgramsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEdProgramsPresenter.swift; sourceTree = "<group>"; };
+		85136EAC25950C4800C74866 /* NewEdProgramsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEdProgramsRouter.swift; sourceTree = "<group>"; };
+		85136EB125950C5600C74866 /* NewEdPrograms.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewEdPrograms.storyboard; sourceTree = "<group>"; };
 		85173DD9259157E70090D1C6 /* universities.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = universities.json; sourceTree = "<group>"; };
 		85173DE1259157F60090D1C6 /* Universities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Universities.swift; sourceTree = "<group>"; };
 		8528F5202534AAE2004FDE50 /* Postuparium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Postuparium.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -369,8 +464,6 @@
 		85ABD61C2569E0CF0094BC7E /* applicants.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = applicants.json; sourceTree = "<group>"; };
 		85ABD6212569E0F80094BC7E /* ApplicantMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicantMock.swift; sourceTree = "<group>"; };
 		85ABD62A2569E62A0094BC7E /* SimilarModuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimilarModuleViewController.swift; sourceTree = "<group>"; };
-		94F0D7EC24D821B7B471970B /* Pods-Postuparium.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Postuparium.debug.xcconfig"; path = "Target Support Files/Pods-Postuparium/Pods-Postuparium.debug.xcconfig"; sourceTree = "<group>"; };
-		A0C6D31B0BD69E9D8569C2D9 /* Pods-PostupariumTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostupariumTests.release.xcconfig"; path = "Target Support Files/Pods-PostupariumTests/Pods-PostupariumTests.release.xcconfig"; sourceTree = "<group>"; };
 		85C12DE6258E7C5B00C3CD71 /* AppNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavController.swift; sourceTree = "<group>"; };
 		85C12DED258E7CB200C3CD71 /* HalfModalPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfModalPresentationController.swift; sourceTree = "<group>"; };
 		85C12DF5258E7CE200C3CD71 /* HalfModalTransitioningDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfModalTransitioningDelegate.swift; sourceTree = "<group>"; };
@@ -405,7 +498,6 @@
 		CEEE7BFB2569115F0094B1DA /* PhotoViewerConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewerConfigurator.swift; sourceTree = "<group>"; };
 		CEEE7C00256911700094B1DA /* PhotoViewerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewerController.swift; sourceTree = "<group>"; };
 		CEEE7C0B25691C380094B1DA /* PhotoViewer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PhotoViewer.storyboard; sourceTree = "<group>"; };
-		EF55E965F26CFA9C6047CA9E /* Pods-Postuparium.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Postuparium.release.xcconfig"; path = "Target Support Files/Pods-Postuparium/Pods-Postuparium.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -413,7 +505,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57B5CF7F6C2DC98415308927 /* Pods_Postuparium.framework in Frameworks */,
+				2EC4587925937BA3001BFC0C /* SwiftyJSON in Frameworks */,
+				2EC4587325937B4F001BFC0C /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,7 +514,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64186E093F7B569D7ADA7136 /* Pods_PostupariumTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,26 +521,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88A8B3F88A03BAD950337A72 /* Pods_Postuparium_PostupariumUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2A450ED7CDD4B7EBD52879EF /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				94F0D7EC24D821B7B471970B /* Pods-Postuparium.debug.xcconfig */,
-				EF55E965F26CFA9C6047CA9E /* Pods-Postuparium.release.xcconfig */,
-				01FA2959E6CC22A424C9F0A8 /* Pods-Postuparium-PostupariumUITests.debug.xcconfig */,
-				2CE5999F78B003D9ED27D9F2 /* Pods-Postuparium-PostupariumUITests.release.xcconfig */,
-				33EF81A9DB9EC160314F3786 /* Pods-PostupariumTests.debug.xcconfig */,
-				A0C6D31B0BD69E9D8569C2D9 /* Pods-PostupariumTests.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		2E00061525620453000693B5 /* EgeResultsSelection */ = {
 			isa = PBXGroup;
 			children = (
@@ -483,6 +561,15 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
+		2E0383C22597FDA00044DCC4 /* HomeProgram */ = {
+			isa = PBXGroup;
+			children = (
+				2E0383C82597FDB90044DCC4 /* HomeProgramView.xib */,
+				2E0383D02597FDCC0044DCC4 /* HomeProgramView.swift */,
+			);
+			path = HomeProgram;
+			sourceTree = "<group>";
+		};
 		2E42DCC825661E4400D82018 /* LoadingViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -490,6 +577,96 @@
 				2E42DCCC25661E7500D82018 /* LoadingView.xib */,
 			);
 			path = LoadingViewController;
+			sourceTree = "<group>";
+		};
+		2E6146032593BCD7006E43E6 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				2E6146042593BD63006E43E6 /* SettingsScreenViewContoller.swift */,
+				2E6146072593BD63006E43E6 /* SettingsScreenRouter.swift */,
+				2E6146092593BD64006E43E6 /* SettingsScreenProtocols.swift */,
+				2E61460A2593BD64006E43E6 /* SettingsScreenPresenter.swift */,
+				2E6146082593BD63006E43E6 /* SettingsScreenInteractor.swift */,
+				2E6146052593BD63006E43E6 /* SettingsScreenConfigurator.swift */,
+				2E6146062593BD63006E43E6 /* SettingsScreen.storyboard */,
+				2EF0298A25983E0800251AF6 /* settingsSwipeable.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		2E9CF78525982C1F00490939 /* UniversityPage */ = {
+			isa = PBXGroup;
+			children = (
+				2E9CF78B25982C3400490939 /* UniversityPageViewContoller.swift */,
+				2E9CF78E25982C3500490939 /* UniversityPageRouter.swift */,
+				2E9CF78925982C3400490939 /* UniversityPageProtocols.swift */,
+				2E9CF78C25982C3400490939 /* UniversityPagePresenter.swift */,
+				2E9CF78A25982C3400490939 /* UniversityPageInteractor.swift */,
+				2E9CF78D25982C3500490939 /* UniversityPageConfigurator.swift */,
+				2E9CF78F25982C3500490939 /* UniversityPage.storyboard */,
+				2E9CF7AE259832A800490939 /* universitySwipeable.swift */,
+			);
+			path = UniversityPage;
+			sourceTree = "<group>";
+		};
+		2EA2F6B62596BC2600773066 /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				2EA2F6B82596BC7B00773066 /* HomePageViewContoller.swift */,
+				2EA2F6B92596BC7B00773066 /* HomePageRouter.swift */,
+				2EA2F6BB2596BC7B00773066 /* HomePageProtocols.swift */,
+				2EA2F6BC2596BC7B00773066 /* HomePagePresenter.swift */,
+				2EA2F6BA2596BC7B00773066 /* HomePageInteractor.swift */,
+				2EA2F6B72596BC7B00773066 /* HomePageConfigurator.swift */,
+				2EA2F6BD2596BC7B00773066 /* HomePage.storyboard */,
+			);
+			path = HomePage;
+			sourceTree = "<group>";
+		};
+		2EA2F6D32596CAE600773066 /* HomePrograms */ = {
+			isa = PBXGroup;
+			children = (
+				2E0383C22597FDA00044DCC4 /* HomeProgram */,
+				2EA2F6DD2596CB5800773066 /* HomeProgramsViewController.swift */,
+				2EA2F6E22596CB6600773066 /* HomeProgramsInteractor.swift */,
+				2EA2F6EF2596CC0D00773066 /* HomePrograms.xib */,
+			);
+			path = HomePrograms;
+			sourceTree = "<group>";
+		};
+		2EAD67A22593EDE400A0EF05 /*  UniversitiesList */ = {
+			isa = PBXGroup;
+			children = (
+				2EAD67A32593EDE400A0EF05 /* UniversitiesCard */,
+				2EAD67A62593EDE400A0EF05 /* TableCell */,
+				2EAD67AB2593EDE400A0EF05 /* UniversitiesTableViewController.xib */,
+				2EAD67AC2593EDE400A0EF05 /* UniversitiesTableViewProtocols.swift */,
+				2EAD67AD2593EDE400A0EF05 /* UniversitiesTableViewPresenter.swift */,
+				2EAD67AE2593EDE400A0EF05 /* UniversitiesTableViewRouter.swift */,
+				2EAD67AF2593EDE400A0EF05 /* UniversitiesTableViewConfigurator.swift */,
+				2EAD67B02593EDE400A0EF05 /* UniversitiesTableViewController.swift */,
+				2EAD67B12593EDE400A0EF05 /* UniversitiesTableViewInteractor.swift */,
+			);
+			path = " UniversitiesList";
+			sourceTree = "<group>";
+		};
+		2EAD67A32593EDE400A0EF05 /* UniversitiesCard */ = {
+			isa = PBXGroup;
+			children = (
+				2EAD67A42593EDE400A0EF05 /* UniversityCard.xib */,
+			);
+			path = UniversitiesCard;
+			sourceTree = "<group>";
+		};
+		2EAD67A62593EDE400A0EF05 /* TableCell */ = {
+			isa = PBXGroup;
+			children = (
+				2EAD67A72593EDE400A0EF05 /* UniversityTableViewCell.xib */,
+				2EAD67A82593EDE400A0EF05 /* EndTableViewCell.swift */,
+				2EAD67A92593EDE400A0EF05 /* UniversityTableViewCell.swift */,
+				2EAD67AA2593EDE400A0EF05 /* EndTableViewCell.xib */,
+			);
+			path = TableCell;
 			sourceTree = "<group>";
 		};
 		2EAD8B5A2562137500C4EEA3 /* AchievementsSelection */ = {
@@ -543,7 +720,6 @@
 		2EB46833256226EB00988BAA /* HomeScreen */ = {
 			isa = PBXGroup;
 			children = (
-				2EDE682B2567119B0064D28B /* ProgramsSelection */,
 				2EE044BB25630F940014FD34 /* HomeScreenViewContoller.swift */,
 				2EE044B725630F940014FD34 /* HomeScreenRouter.swift */,
 				2EE044BD25630F950014FD34 /* HomeScreenProtocols.swift */,
@@ -551,6 +727,7 @@
 				2EE044B825630F940014FD34 /* HomeScreenInteractor.swift */,
 				2EE044B925630F940014FD34 /* HomeScreenConfigurator.swift */,
 				2EB468342562270000988BAA /* HomeScreen.storyboard */,
+				2EDE682B2567119B0064D28B /* ProgramsSelection */,
 			);
 			path = HomeScreen;
 			sourceTree = "<group>";
@@ -589,6 +766,20 @@
 			path = ProgramsSelectionMenu;
 			sourceTree = "<group>";
 		};
+		85136E8E25950BD000C74866 /* NewEdProgrograms */ = {
+			isa = PBXGroup;
+			children = (
+				85136E8F25950BF200C74866 /* NewEdProgramsViewController.swift */,
+				85136E9725950C0800C74866 /* NewEdProgramsProtocols.swift */,
+				85136E9C25950C1B00C74866 /* NewEdProgramsInteractor.swift */,
+				85136EA125950C2800C74866 /* NewEdProgramsConfigurator.swift */,
+				85136EA625950C3900C74866 /* NewEdProgramsPresenter.swift */,
+				85136EAC25950C4800C74866 /* NewEdProgramsRouter.swift */,
+				85136EB125950C5600C74866 /* NewEdPrograms.storyboard */,
+			);
+			path = NewEdProgrograms;
+			sourceTree = "<group>";
+		};
 		85173DD8259157A90090D1C6 /* mocks */ = {
 			isa = PBXGroup;
 			children = (
@@ -607,8 +798,6 @@
 				8528F53C2534AAE4004FDE50 /* PostupariumTests */,
 				8528F5472534AAE4004FDE50 /* PostupariumUITests */,
 				8528F5212534AAE2004FDE50 /* Products */,
-				2A450ED7CDD4B7EBD52879EF /* Pods */,
-				DF382CEDCC4E7AF00BA7B62D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -709,12 +898,16 @@
 		8528F5662534AE0D004FDE50 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				2EA2F6D32596CAE600773066 /* HomePrograms */,
+				2EA2F6B62596BC2600773066 /* HomePage */,
+				2E9CF78525982C1F00490939 /* UniversityPage */,
+				85136E8E25950BD000C74866 /* NewEdProgrograms */,
+				2E6146032593BCD7006E43E6 /* Settings */,
 				2EB46833256226EB00988BAA /* HomeScreen */,
 				8528F5772534B4C0004FDE50 /* PhotoGalleryModule */,
 				8528F5762534B47C004FDE50 /* EdProgramModule */,
 				8528F5712534B240004FDE50 /* UniversityModule */,
 				8528F56B2534B08E004FDE50 /* UniversityMap */,
-				8528F56D2534B134004FDE50 /* Slidebar */,
 				8528F56A2534B021004FDE50 /* FeedbackModule */,
 				8528F5692534AFBE004FDE50 /* Common */,
 				8528F5682534AF9B004FDE50 /* StartScreen */,
@@ -785,6 +978,7 @@
 		8528F56B2534B08E004FDE50 /* UniversityMap */ = {
 			isa = PBXGroup;
 			children = (
+				2EA2F6C12596BD5C00773066 /* SwipeableMenu.swift */,
 				85173DD8259157A90090D1C6 /* mocks */,
 				85C12DE6258E7C5B00C3CD71 /* AppNavController.swift */,
 				85C12E3E258FB66700C3CD71 /* ModalView */,
@@ -799,6 +993,7 @@
 				854EDE4B258670FD0059ABB5 /* UniversityMapInteractor.swift */,
 				854EDE502586710D0059ABB5 /* UniversityMapConfigurator.swift */,
 				854EDE552586711E0059ABB5 /* UniversityMap.storyboard */,
+				8528F56D2534B134004FDE50 /* Slidebar */,
 			);
 			path = UniversityMap;
 			sourceTree = "<group>";
@@ -806,9 +1001,11 @@
 		8528F56D2534B134004FDE50 /* Slidebar */ = {
 			isa = PBXGroup;
 			children = (
+				2EAD67A22593EDE400A0EF05 /*  UniversitiesList */,
 				8528F64A2534D676004FDE50 /* README.md */,
 			);
-			path = Slidebar;
+			name = Slidebar;
+			path = ../Slidebar;
 			sourceTree = "<group>";
 		};
 		8528F5712534B240004FDE50 /* UniversityModule */ = {
@@ -977,6 +1174,7 @@
 				8528F6392534D524004FDE50 /* README.md */,
 				2ED12024256A147C005D39DA /* EnrolleeService.swift */,
 				2EF252FA256A36C300D7FE1C /* EdProgramService.swift */,
+				2EA2F6AD2596A50400773066 /* FeedBackService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -1060,6 +1258,8 @@
 		85C12E5D258FDEA300C3CD71 /* Table */ = {
 			isa = PBXGroup;
 			children = (
+				2E6145E32593B73B006E43E6 /* CountryCell.xib */,
+				2E6145E42593B73C006E43E6 /* UniversityCell.xib */,
 				85C12E6E258FE0C500C3CD71 /* UnoversityCell.swift */,
 				85C12E6F258FE0C500C3CD71 /* UnoversityCell.xib */,
 			);
@@ -1089,16 +1289,6 @@
 			path = PhotoStackScroll;
 			sourceTree = "<group>";
 		};
-		DF382CEDCC4E7AF00BA7B62D /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				36E7588A40F7C3AE27C54690 /* Pods_Postuparium.framework */,
-				1C5CEEC7ADFC7DEAC744D73A /* Pods_Postuparium_PostupariumUITests.framework */,
-				050A9DFE9779FD0C64A89C7B /* Pods_PostupariumTests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1106,17 +1296,19 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8528F54D2534AAE4004FDE50 /* Build configuration list for PBXNativeTarget "Postuparium" */;
 			buildPhases = (
-				E364C54F44838C0D99014A30 /* [CP] Check Pods Manifest.lock */,
 				8528F51C2534AAE2004FDE50 /* Sources */,
 				8528F51D2534AAE2004FDE50 /* Frameworks */,
 				8528F51E2534AAE2004FDE50 /* Resources */,
-				2036CD6C4B52AF40152B7023 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Postuparium;
+			packageProductDependencies = (
+				2EC4587225937B4F001BFC0C /* Alamofire */,
+				2EC4587825937BA3001BFC0C /* SwiftyJSON */,
+			);
 			productName = Postuparium;
 			productReference = 8528F5202534AAE2004FDE50 /* Postuparium.app */;
 			productType = "com.apple.product-type.application";
@@ -1125,7 +1317,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8528F5502534AAE4004FDE50 /* Build configuration list for PBXNativeTarget "PostupariumTests" */;
 			buildPhases = (
-				7CE4B353065AE394CCA7E642 /* [CP] Check Pods Manifest.lock */,
 				8528F5352534AAE4004FDE50 /* Sources */,
 				8528F5362534AAE4004FDE50 /* Frameworks */,
 				8528F5372534AAE4004FDE50 /* Resources */,
@@ -1144,11 +1335,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8528F5532534AAE4004FDE50 /* Build configuration list for PBXNativeTarget "PostupariumUITests" */;
 			buildPhases = (
-				F6C508A653EA79D57A69C59F /* [CP] Check Pods Manifest.lock */,
 				8528F5402534AAE4004FDE50 /* Sources */,
 				8528F5412534AAE4004FDE50 /* Frameworks */,
 				8528F5422534AAE4004FDE50 /* Resources */,
-				1C5B38CEEA6DC4DE9D6006FD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1191,6 +1380,10 @@
 				Base,
 			);
 			mainGroup = 8528F5172534AAE2004FDE50;
+			packageReferences = (
+				2EC4587125937B4F001BFC0C /* XCRemoteSwiftPackageReference "Alamofire" */,
+				2EC4587725937BA3001BFC0C /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+			);
 			productRefGroup = 8528F5212534AAE2004FDE50 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1212,16 +1405,25 @@
 				8528F6332534D395004FDE50 /* .gitignore in Resources */,
 				85C12E71258FE0C500C3CD71 /* UnoversityCell.xib in Resources */,
 				2E00061025620302000693B5 /* Logo@2x.png in Resources */,
+				85136EB225950C5600C74866 /* NewEdPrograms.storyboard in Resources */,
 				85ABD5CC2569A3890094BC7E /* edPrograms.json in Resources */,
+				2EA2F6F02596CC0D00773066 /* HomePrograms.xib in Resources */,
+				2E6145E52593B73C006E43E6 /* CountryCell.xib in Resources */,
+				2EAD67B72593EDE400A0EF05 /* EndTableViewCell.xib in Resources */,
+				2EAD67B22593EDE400A0EF05 /* UniversityCard.xib in Resources */,
 				85C12E3A258EB10700C3CD71 /* testData.geojson in Resources */,
+				2EA2F6CF2596BEB900773066 /* HomePage.storyboard in Resources */,
 				85ABD5E02569AFB60094BC7E /* StudyTileBigCell.xib in Resources */,
 				85ABD6142569D3AE0094BC7E /* EdProgramModule.storyboard in Resources */,
 				854EDE562586711E0059ABB5 /* UniversityMap.storyboard in Resources */,
+				2EAD67B82593EDE400A0EF05 /* UniversitiesTableViewController.xib in Resources */,
 				CEEE7C0C25691C380094B1DA /* PhotoViewer.storyboard in Resources */,
 				2EAD8B692562159800C4EEA3 /* AchievementsSelection.storyboard in Resources */,
+				2E9CF7A425982E4400490939 /* UniversityPage.storyboard in Resources */,
 				8528F5E92534C0F4004FDE50 /* ScoreInput.xib in Resources */,
 				2EDE682C2567119B0064D28B /* ProgramsSelection in Resources */,
 				2EB468352562270000988BAA /* HomeScreen.storyboard in Resources */,
+				2EAD67B42593EDE400A0EF05 /* UniversityTableViewCell.xib in Resources */,
 				8528F5F82534C164004FDE50 /* StudyTileSmall.xib in Resources */,
 				2E00060F25620302000693B5 /* Logo@3x.png in Resources */,
 				2E42DCC225661BDE00D82018 /* icon@3x.png in Resources */,
@@ -1230,6 +1432,7 @@
 				8528F5332534AAE3004FDE50 /* LaunchScreen.storyboard in Resources */,
 				8528F5302534AAE3004FDE50 /* Assets.xcassets in Resources */,
 				85ABD61D2569E0CF0094BC7E /* applicants.json in Resources */,
+				2E6145E62593B73C006E43E6 /* UniversityCell.xib in Resources */,
 				85173DDA259157E70090D1C6 /* universities.json in Resources */,
 				85ABD591256958CD0094BC7E /* StudyTileMediumCell.xib in Resources */,
 				2EAD8B902562259500C4EEA3 /* ProgramsSelection.storyboard in Resources */,
@@ -1245,9 +1448,11 @@
 				2ED1200B25689DE3005D39DA /* LoadingCell.xib in Resources */,
 				2E42DCCD25661E7500D82018 /* LoadingView.xib in Resources */,
 				85ABD5B92569656C0094BC7E /* UniversityModule.storyboard in Resources */,
+				2EF0299A25983EE400251AF6 /* SettingsScreen.storyboard in Resources */,
 				2EB468492562E6E300988BAA /* README.md in Resources */,
 				2EDE684F2567601B0064D28B /* ProgramsSelectionMenu.storyboard in Resources */,
 				2EB468442562E5A300988BAA /* AchievementsItem.xib in Resources */,
+				2E0383C92597FDB90044DCC4 /* HomeProgramView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1267,118 +1472,20 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		1C5B38CEEA6DC4DE9D6006FD /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Postuparium-PostupariumUITests/Pods-Postuparium-PostupariumUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Postuparium-PostupariumUITests/Pods-Postuparium-PostupariumUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Postuparium-PostupariumUITests/Pods-Postuparium-PostupariumUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2036CD6C4B52AF40152B7023 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Postuparium/Pods-Postuparium-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Postuparium/Pods-Postuparium-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Postuparium/Pods-Postuparium-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7CE4B353065AE394CCA7E642 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PostupariumTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E364C54F44838C0D99014A30 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Postuparium-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F6C508A653EA79D57A69C59F /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Postuparium-PostupariumUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		8528F51C2534AAE2004FDE50 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				853315D4256BFA7F003A89EA /* FeedbackModuleIteractor.swift in Sources */,
+				2EF0299F25983EE400251AF6 /* SettingsScreenPresenter.swift in Sources */,
+				2EAD67B62593EDE400A0EF05 /* UniversityTableViewCell.swift in Sources */,
+				2EA2F6DE2596CB5800773066 /* HomeProgramsViewController.swift in Sources */,
+				2EAD67B52593EDE400A0EF05 /* EndTableViewCell.swift in Sources */,
 				854EDE2D258670A50059ABB5 /* UniversityMapViewController.swift in Sources */,
 				2EAD8B972562259500C4EEA3 /* ProgramsSelectionProtocols.swift in Sources */,
 				8528F5932534B733004FDE50 /* Photo.swift in Sources */,
+				2EF0299D25983EE400251AF6 /* settingsSwipeable.swift in Sources */,
 				2EE044C325630F950014FD34 /* HomeScreenViewContoller.swift in Sources */,
 				CEEE7BE3256849D70094B1DA /* LoadTableViewCell.swift in Sources */,
 				2EAD8B932562259500C4EEA3 /* ProgramsSelectionInteractor.swift in Sources */,
@@ -1396,11 +1503,17 @@
 				2E000619256204A2000693B5 /* StartScreenButton.swift in Sources */,
 				854EDE512586710D0059ABB5 /* UniversityMapConfigurator.swift in Sources */,
 				85C12E4E258FB77C00C3CD71 /* ModalPresenter.swift in Sources */,
+				2EA2F6CB2596BEB900773066 /* HomePageConfigurator.swift in Sources */,
 				2EAD8B6D256215A100C4EEA3 /* AchievementsSelectionInteractor.swift in Sources */,
+				2EA2F6CD2596BEB900773066 /* HomePageProtocols.swift in Sources */,
+				85136E9D25950C1B00C74866 /* NewEdProgramsInteractor.swift in Sources */,
+				2E9CF7A925982E4400490939 /* UniversityPageConfigurator.swift in Sources */,
 				85C12E17258EA90C00C3CD71 /* UniversityObj.swift in Sources */,
 				2EE044BE25630F950014FD34 /* HomeScreenInteractor.swift in Sources */,
 				2EDE68522567601B0064D28B /* ProgramsSelectionMenuViewContoller.swift in Sources */,
 				85C12E40258FB69400C3CD71 /* ModalConfigurator.swift in Sources */,
+				2E9CF7A725982E4400490939 /* UniversityPageInteractor.swift in Sources */,
+				2EAD67BE2593EDE400A0EF05 /* UniversitiesTableViewInteractor.swift in Sources */,
 				85ABD596256963920094BC7E /* EdProgramsGridController.swift in Sources */,
 				853315CA256BFA68003A89EA /* FeedbackModulePresenter.swift in Sources */,
 				CEEE7BC62567D9C70094B1DA /* PhotoTableViewConfigurator.swift in Sources */,
@@ -1409,13 +1522,20 @@
 				2EDE68532567601B0064D28B /* ProgramsSelectionMenuPresenter.swift in Sources */,
 				2EF252FB256A36C300D7FE1C /* EdProgramService.swift in Sources */,
 				8528F5C82534BBA7004FDE50 /* EgeResultsSelectionRouter.swift in Sources */,
+				2EAD67BA2593EDE400A0EF05 /* UniversitiesTableViewPresenter.swift in Sources */,
+				2EF0299C25983EE400251AF6 /* SettingsScreenViewContoller.swift in Sources */,
 				8528F5C32534BB88004FDE50 /* EgeResultsSelectionViewContoller.swift in Sources */,
 				2E00063F25620748000693B5 /* StartScreenPresenter.swift in Sources */,
+				2EAD67BD2593EDE400A0EF05 /* UniversitiesTableViewController.swift in Sources */,
+				2EA2F6CA2596BEB900773066 /* HomePageInteractor.swift in Sources */,
 				CEEE7BBC2567D98B0094B1DA /* PhotoTableViewPresenter.swift in Sources */,
+				2E9CF7A625982E4400490939 /* UniversityPagePresenter.swift in Sources */,
 				8528F5282534AAE2004FDE50 /* ViewController.swift in Sources */,
 				853315BD256BFA4C003A89EA /* FeedbackModuleViewController.swift in Sources */,
 				CEEE7BD825682FF80094B1DA /* PhotoTableViewCell.swift in Sources */,
+				2EA2F6E32596CB6600773066 /* HomeProgramsInteractor.swift in Sources */,
 				85C12DF6258E7CE200C3CD71 /* HalfModalTransitioningDelegate.swift in Sources */,
+				85136EAD25950C4800C74866 /* NewEdProgramsRouter.swift in Sources */,
 				85ABD5FA2569BC500094BC7E /* EdProgramModulePresenter.swift in Sources */,
 				CEEE7BCB256805330094B1DA /* UIImageExtension.swift in Sources */,
 				85ABD5DF2569AFB60094BC7E /* StudyTileBigCell.swift in Sources */,
@@ -1423,6 +1543,7 @@
 				2E42F1B3256C097E00736DF1 /* EdProgramModuleViewController.swift in Sources */,
 				2EDE684E2567601B0064D28B /* ProgramsSelectionMenuInteractor.swift in Sources */,
 				2EAD8B6F256215A100C4EEA3 /* AchievementsSelectionConfigurator.swift in Sources */,
+				2EA2F6CC2596BEB900773066 /* HomePageViewContoller.swift in Sources */,
 				853315B7256BF8C4003A89EA /* UniversityModulePresenter.swift in Sources */,
 				85ABD5B4256965560094BC7E /* UniversityModuleConfigurator.swift in Sources */,
 				8528F6112534C1CC004FDE50 /* UniversityTile.swift in Sources */,
@@ -1430,6 +1551,7 @@
 				2EE044C225630F950014FD34 /* HomeScreenConfigurator.swift in Sources */,
 				2EAD8B71256215A100C4EEA3 /* AchievementsSelectionPresenter.swift in Sources */,
 				854EDE3A258670C60059ABB5 /* UniversityMapProtocols.swift in Sources */,
+				2EF0299B25983EE400251AF6 /* SettingsScreenRouter.swift in Sources */,
 				85331590256BE311003A89EA /* NibView.swift in Sources */,
 				85ABD5FF2569BC680094BC7E /* EdProgramModuleInteractor.swift in Sources */,
 				853315D9256BFA92003A89EA /* FeedbackModuleConfigurator.swift in Sources */,
@@ -1439,19 +1561,26 @@
 				2EAD8BA6256225E200C4EEA3 /* ProgramsSelectionItem.swift in Sources */,
 				85C12DEE258E7CB200C3CD71 /* HalfModalPresentationController.swift in Sources */,
 				85173DE2259157F60090D1C6 /* Universities.swift in Sources */,
+				2EA2F6C22596BD5C00773066 /* SwipeableMenu.swift in Sources */,
 				85ABD5C1256971BB0094BC7E /* MainCollectionViewCell.swift in Sources */,
 				85ABD6222569E0F80094BC7E /* ApplicantMock.swift in Sources */,
 				8528F52E2534AAE2004FDE50 /* Postuparium.xcdatamodeld in Sources */,
+				2EF0299E25983EE400251AF6 /* SettingsScreenConfigurator.swift in Sources */,
 				CEEE7BD3256829390094B1DA /* PhotoTableViewController.swift in Sources */,
+				2EAD67B92593EDE400A0EF05 /* UniversitiesTableViewProtocols.swift in Sources */,
+				85136EA225950C2800C74866 /* NewEdProgramsConfigurator.swift in Sources */,
 				8528F5D72534BBEB004FDE50 /* EgeResultsSelectionInteractor.swift in Sources */,
 				8528F5842534B6F2004FDE50 /* Enrollee.swift in Sources */,
 				CEEE7BF72569114E0094B1DA /* PhotoViewerInteractor.swift in Sources */,
 				2EAD8B922562259500C4EEA3 /* ProgramsSelectionConfigurator.swift in Sources */,
+				2EA2F6CE2596BEB900773066 /* HomePagePresenter.swift in Sources */,
+				2EF0299925983EE400251AF6 /* SettingsScreenInteractor.swift in Sources */,
 				8528F62E2534CC70004FDE50 /* ApiServiceProtocol.swift in Sources */,
 				8528F5892534B70C004FDE50 /* EdProgram.swift in Sources */,
 				853315CF256BFA72003A89EA /* FeedbackModuleProtocols.swift in Sources */,
 				2EDE68512567601B0064D28B /* ProgramsSelectionMenuProtocols.swift in Sources */,
 				8528F5DC2534BC04004FDE50 /* EgeResultsSelectionConfigurator.swift in Sources */,
+				2EA2F6C92596BEB900773066 /* HomePageRouter.swift in Sources */,
 				85331588256BE2F2003A89EA /* NibLoader.swift in Sources */,
 				8528F59E2534B7AC004FDE50 /* ApiService.swift in Sources */,
 				2ED1200A25689DE3005D39DA /* LoadingCell.swift in Sources */,
@@ -1467,44 +1596,56 @@
 				2E00063E25620748000693B5 /* StartScreenViewContoller.swift in Sources */,
 				2E00064425620748000693B5 /* StartScreenRouter.swift in Sources */,
 				85C12DE7258E7C5B00C3CD71 /* AppNavController.swift in Sources */,
+				2EAD67BC2593EDE400A0EF05 /* UniversitiesTableViewConfigurator.swift in Sources */,
 				85C12E70258FE0C500C3CD71 /* UnoversityCell.swift in Sources */,
 				8528F5262534AAE2004FDE50 /* SceneDelegate.swift in Sources */,
 				2EAD8B962562259500C4EEA3 /* ProgramsSelectionViewContoller.swift in Sources */,
+				2EAD67BB2593EDE400A0EF05 /* UniversitiesTableViewRouter.swift in Sources */,
 				8528F63B2534D566004FDE50 /* ApplicantsTableView.swift in Sources */,
 				854EDE4C258670FD0059ABB5 /* UniversityMapInteractor.swift in Sources */,
 				2E000662256209A8000693B5 /* NibExtension.swift in Sources */,
 				85ABD59B256965040094BC7E /* UniversityModuleViewController.swift in Sources */,
 				2E00065E256209A6000693B5 /* HideKeyboardExtension.swift in Sources */,
+				85136EA725950C3900C74866 /* NewEdProgramsPresenter.swift in Sources */,
 				85ABD5AF256965410094BC7E /* UniversityModuleIteractor.swift in Sources */,
+				85136E9025950BF200C74866 /* NewEdProgramsViewController.swift in Sources */,
 				8528F5D22534BBCF004FDE50 /* EgeResultsSelectionPresenter.swift in Sources */,
+				2EF029A025983EE400251AF6 /* SettingsScreenProtocols.swift in Sources */,
 				854EDE35258670B80059ABB5 /* UniversityMapRouter.swift in Sources */,
 				2ED12025256A147C005D39DA /* EnrolleeService.swift in Sources */,
 				8528F5CD2534BBBE004FDE50 /* EgeResultsSelectionProtocols.swift in Sources */,
 				2EAD8B6E256215A100C4EEA3 /* AchievementsSelectionRouter.swift in Sources */,
+				2E9CF7AF259832A800490939 /* universitySwipeable.swift in Sources */,
 				85ABD5ED2569BBFC0094BC7E /* EdProgramModuleRouter.swift in Sources */,
 				85C12DFE258E7D1300C3CD71 /* HalfModalnteractiveTransition.swift in Sources */,
+				2EA2F6AE2596A50400773066 /* FeedBackService.swift in Sources */,
 				2EB468402562E59D00988BAA /* AchievementsItem.swift in Sources */,
 				2E00064325620748000693B5 /* StartScreenProtocols.swift in Sources */,
 				2E00064225620748000693B5 /* StartScreenConfigurator.swift in Sources */,
+				85136E9825950C0800C74866 /* NewEdProgramsProtocols.swift in Sources */,
 				2EE044C125630F950014FD34 /* HomeScreenRouter.swift in Sources */,
 				2E00064A25620815000693B5 /* EgeResultsSelector.swift in Sources */,
 				85ABD590256958CD0094BC7E /* StudyTileMediumCell.swift in Sources */,
 				2EDE684D2567601B0064D28B /* ProgramsSelectionMenuRouter.swift in Sources */,
 				2EAD8B912562259500C4EEA3 /* ProgramsSelectionRouter.swift in Sources */,
 				CEEE7BE8256911070094B1DA /* PhotoViewerRouter.swift in Sources */,
+				2E9CF7A525982E4400490939 /* UniversityPageViewContoller.swift in Sources */,
 				85C12E0C258E7E6300C3CD71 /* ModalViewController.swift in Sources */,
 				853315C5256BFA58003A89EA /* FeedbackModuleRouter.swift in Sources */,
 				8528F5A62534B7B8004FDE50 /* StorageService.swift in Sources */,
 				CEEE7C01256911700094B1DA /* PhotoViewerController.swift in Sources */,
 				8528F5E12534C0C2004FDE50 /* ScoreInput.swift in Sources */,
+				2E9CF7A825982E4400490939 /* UniversityPageProtocols.swift in Sources */,
 				8528F58E2534B71B004FDE50 /* University.swift in Sources */,
 				85C12E49258FB6DE00C3CD71 /* ModalProtocols.swift in Sources */,
 				CEEE7BED256911220094B1DA /* PhotoViewerProtocols.swift in Sources */,
 				2ED120152568B533005D39DA /* ProgramCell.swift in Sources */,
 				8528F5EE2534C132004FDE50 /* EdProgramTile.swift in Sources */,
+				2E9CF7AA25982E4400490939 /* UniversityPageRouter.swift in Sources */,
 				CEEE7BF2256911370094B1DA /* PhotoViewerPresenter.swift in Sources */,
 				2EAD8B942562259500C4EEA3 /* ProgramsSelectionPresenter.swift in Sources */,
 				2E42DCBB2566161600D82018 /* LoadingView.swift in Sources */,
+				2E0383D12597FDCC0044DCC4 /* HomeProgramView.swift in Sources */,
 				2EDE68502567601B0064D28B /* ProgramsSelectionMenuConfigurator.swift in Sources */,
 				2E00064125620748000693B5 /* StartScreenInteractor.swift in Sources */,
 			);
@@ -1679,19 +1820,20 @@
 		};
 		8528F54E2534AAE4004FDE50 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 94F0D7EC24D821B7B471970B /* Pods-Postuparium.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5ABALJWYVX;
+				DEVELOPMENT_TEAM = CAG8DDF8KX;
 				INFOPLIST_FILE = Postuparium/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = spetrenko.Postuparium1;
+				PRODUCT_BUNDLE_IDENTIFIER = spetrenko.Postuparium;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1699,19 +1841,20 @@
 		};
 		8528F54F2534AAE4004FDE50 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EF55E965F26CFA9C6047CA9E /* Pods-Postuparium.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5ABALJWYVX;
+				DEVELOPMENT_TEAM = CAG8DDF8KX;
 				INFOPLIST_FILE = Postuparium/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = spetrenko.Postuparium1;
+				PRODUCT_BUNDLE_IDENTIFIER = spetrenko.Postuparium;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1719,12 +1862,11 @@
 		};
 		8528F5512534AAE4004FDE50 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 33EF81A9DB9EC160314F3786 /* Pods-PostupariumTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5ABALJWYVX;
+				DEVELOPMENT_TEAM = CAG8DDF8KX;
 				INFOPLIST_FILE = PostupariumTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1742,12 +1884,11 @@
 		};
 		8528F5522534AAE4004FDE50 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A0C6D31B0BD69E9D8569C2D9 /* Pods-PostupariumTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5ABALJWYVX;
+				DEVELOPMENT_TEAM = CAG8DDF8KX;
 				INFOPLIST_FILE = PostupariumTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1765,11 +1906,10 @@
 		};
 		8528F5542534AAE4004FDE50 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 01FA2959E6CC22A424C9F0A8 /* Pods-Postuparium-PostupariumUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5ABALJWYVX;
+				DEVELOPMENT_TEAM = CAG8DDF8KX;
 				INFOPLIST_FILE = PostupariumUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1786,11 +1926,10 @@
 		};
 		8528F5552534AAE4004FDE50 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2CE5999F78B003D9ED27D9F2 /* Pods-Postuparium-PostupariumUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5ABALJWYVX;
+				DEVELOPMENT_TEAM = CAG8DDF8KX;
 				INFOPLIST_FILE = PostupariumUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1845,6 +1984,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2EC4587125937B4F001BFC0C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.1;
+			};
+		};
+		2EC4587725937BA3001BFC0C /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2EC4587225937B4F001BFC0C /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2EC4587125937B4F001BFC0C /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		2EC4587825937BA3001BFC0C /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2EC4587725937BA3001BFC0C /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		8528F52C2534AAE2004FDE50 /* Postuparium.xcdatamodeld */ = {

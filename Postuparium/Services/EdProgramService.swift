@@ -11,12 +11,19 @@ protocol EdProgramServiceProtocol {
     static var shared: EdProgramServiceProtocol {get}
     func loadPrograms(since: EdProgram!, didLoad:@escaping ([EdProgram]?) -> Void)
     func searchPrograms(searchString: String, since: EdProgram?, didFind:@escaping ([EdProgram]?) -> Void)
+    func loadChosenPrograms(since: EdProgram!, didLoad:@escaping([EdProgram]?) -> Void)
 }
 
 class EdProgramService: EdProgramServiceProtocol {
     var programs: [EdProgram] = []
-    let names = ["Материаловедение", "Математика", "Физика"]
-    let codes = ["11.0.1", "13.0.2", "14.2.12"]
+    let names = ["Техническая физика", "Математическая информатика", "Вычислительная математика и кибернетика", "Техническая физика", "Математическая информатика"]
+    let codes = ["11.0.1", "13.0.2", "14.2.12", "11.0.1", "13.0.2"]
+    let universities = ["МГТУ им. Н. Э. Баумана", "МГТУ им. Н. Э. Баумана", "МГУ им. М. В. Ломоносова", "МГТУ им. Н. Э. Баумана", "МГТУ им. Н. Э. Баумана", ]
+    let photos = ["https://ekd.me/wp-content/uploads/2019/02/img_52531-e1551272911192.jpg", "https://upload.wikimedia.org/wikipedia/commons/2/25/Moscow%2C_Lefortovskaya_Nab_5_Aug_2009_04.JPG",
+        "https://cdn23.img.ria.ru/images/155486/69/1554866980_0:0:3071:2048_1440x900_80_1_1_720a2d8b1c2687afcb3816d7fb2a04be.jpg?source-sid=rian_photo",
+        "https://ekd.me/wp-content/uploads/2019/02/img_52531-e1551272911192.jpg", "https://upload.wikimedia.org/wikipedia/commons/2/25/Moscow%2C_Lefortovskaya_Nab_5_Aug_2009_04.JPG",]
+    let probabilities = ["86%", "63%", "23%", "86%", "63%"]
+    let probablilitiesNumbers = [0.86, 0.63, 0.23, 0.86, 0.63]
     var counter = 0
     static var shared: EdProgramServiceProtocol = EdProgramService()
     
@@ -25,6 +32,10 @@ class EdProgramService: EdProgramServiceProtocol {
             var program = EdProgram()
             program.name = names[counter % names.count]
             program.code = codes[counter % names.count]
+            program.university = universities[counter % names.count]
+            program.photo = photos[counter % names.count]
+            program.probability = probabilities[counter % names.count]
+            program.probablilityNumber = probablilitiesNumbers[counter % names.count]
             counter += 1
             program.id = counter
             programs.append(program)
@@ -38,7 +49,6 @@ class EdProgramService: EdProgramServiceProtocol {
     }
     
     func searchPrograms(searchString: String, since: EdProgram?, didFind:@escaping ([EdProgram]?) -> Void) {
-        print(searchString)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             if searchString.isEmpty {
                 didFind(self.programs)
@@ -47,6 +57,12 @@ class EdProgramService: EdProgramServiceProtocol {
                     program in program.name.contains(searchString) || program.code.contains(searchString)
                 })
             }
+        }
+    }
+    
+    func loadChosenPrograms(since: EdProgram!, didLoad: @escaping ([EdProgram]?) -> Void) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            didLoad(self.programs)
         }
     }
 }

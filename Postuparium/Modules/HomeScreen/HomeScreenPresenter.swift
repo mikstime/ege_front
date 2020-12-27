@@ -9,6 +9,14 @@ import Foundation
 import UIKit
 
 class HomeScreenPresenter: HomeScreenPresenterProtocol {
+    func showNewEdProgramsScreen() {
+        router?.showNewEdProgramsScreen()
+    }
+    
+    func showUniversitiesListScreen() {
+        router?.showUniversitiesListScreen()
+    }
+    
 
     weak var view: HomeScreenViewControllerProtocol!
     var interactor: HomeScreenInteractorProtocol!
@@ -26,7 +34,11 @@ class HomeScreenPresenter: HomeScreenPresenterProtocol {
         router?.showPhotosScreen()
     }
     
+    
     func viewDidLoad() {
  
+    }
+    func showRegistrationScreen() {
+        router?.showRegistrationScreen()
     }
 }

@@ -23,6 +23,8 @@
 		2E00065E256209A6000693B5 /* HideKeyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E00065425620856000693B5 /* HideKeyboardExtension.swift */; };
 		2E000662256209A8000693B5 /* NibExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E00065525620856000693B5 /* NibExtension.swift */; };
 		2E000666256209B1000693B5 /* EgeResultsSelector.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E00064925620815000693B5 /* EgeResultsSelector.xib */; };
+		2E0383C92597FDB90044DCC4 /* HomeProgramView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E0383C82597FDB90044DCC4 /* HomeProgramView.xib */; };
+		2E0383D12597FDCC0044DCC4 /* HomeProgramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0383D02597FDCC0044DCC4 /* HomeProgramView.swift */; };
 		2E42DCBB2566161600D82018 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E42DCB02566151B00D82018 /* LoadingView.swift */; };
 		2E42DCC225661BDE00D82018 /* icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E42DCBF25661BDD00D82018 /* icon@3x.png */; };
 		2E42DCC325661BDE00D82018 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E42DCC025661BDD00D82018 /* icon@2x.png */; };
@@ -254,6 +256,8 @@
 		2E00065525620856000693B5 /* NibExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibExtension.swift; sourceTree = "<group>"; };
 		2E00065625620856000693B5 /* BorderExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderExtension.swift; sourceTree = "<group>"; };
 		2E00066A25620ACD000693B5 /* EgeResultsSelection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EgeResultsSelection.storyboard; sourceTree = "<group>"; };
+		2E0383C82597FDB90044DCC4 /* HomeProgramView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeProgramView.xib; sourceTree = "<group>"; };
+		2E0383D02597FDCC0044DCC4 /* HomeProgramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProgramView.swift; sourceTree = "<group>"; };
 		2E42DCB02566151B00D82018 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		2E42DCBF25661BDD00D82018 /* icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@3x.png"; sourceTree = "<group>"; };
 		2E42DCC025661BDD00D82018 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
@@ -532,6 +536,15 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
+		2E0383C22597FDA00044DCC4 /* HomeProgram */ = {
+			isa = PBXGroup;
+			children = (
+				2E0383C82597FDB90044DCC4 /* HomeProgramView.xib */,
+				2E0383D02597FDCC0044DCC4 /* HomeProgramView.swift */,
+			);
+			path = HomeProgram;
+			sourceTree = "<group>";
+		};
 		2E42DCC825661E4400D82018 /* LoadingViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -572,6 +585,7 @@
 		2EA2F6D32596CAE600773066 /* HomePrograms */ = {
 			isa = PBXGroup;
 			children = (
+				2E0383C22597FDA00044DCC4 /* HomeProgram */,
 				2EA2F6DD2596CB5800773066 /* HomeProgramsViewController.swift */,
 				2EA2F6E22596CB6600773066 /* HomeProgramsInteractor.swift */,
 				2EA2F6EF2596CC0D00773066 /* HomePrograms.xib */,
@@ -1394,6 +1408,7 @@
 				2EB468492562E6E300988BAA /* README.md in Resources */,
 				2EDE684F2567601B0064D28B /* ProgramsSelectionMenu.storyboard in Resources */,
 				2EB468442562E5A300988BAA /* AchievementsItem.xib in Resources */,
+				2E0383C92597FDB90044DCC4 /* HomeProgramView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1572,6 +1587,7 @@
 				CEEE7BF2256911370094B1DA /* PhotoViewerPresenter.swift in Sources */,
 				2EAD8B942562259500C4EEA3 /* ProgramsSelectionPresenter.swift in Sources */,
 				2E42DCBB2566161600D82018 /* LoadingView.swift in Sources */,
+				2E0383D12597FDCC0044DCC4 /* HomeProgramView.swift in Sources */,
 				2EDE68502567601B0064D28B /* ProgramsSelectionMenuConfigurator.swift in Sources */,
 				2E00064125620748000693B5 /* StartScreenInteractor.swift in Sources */,
 			);

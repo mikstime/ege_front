@@ -26,7 +26,6 @@ class SwipeableMenuViewController: UIViewController {
     
     @IBInspectable var cardHeight:CGFloat = 716
     @IBInspectable var cardExpansion:CGFloat = 300
-    @IBInspectable var cardHeightMaxMargin:CGFloat = 200
     @IBInspectable var cardHandleAreaHeight:CGFloat = 296
     @IBInspectable var duration = 0.3
     private var maxFraction: CGFloat = 0
@@ -48,7 +47,7 @@ class SwipeableMenuViewController: UIViewController {
         self.addChild(cardViewController)
         self.view.addSubview(cardViewController.view)
         
-        cardViewController.view.frame = CGRect(x: 0, y: self.view.frame.height - cardHandleAreaHeight, width: self.view.bounds.width, height: cardHeight + cardHeightMaxMargin)
+        cardViewController.view.frame = CGRect(x: 0, y: self.view.frame.height - cardHandleAreaHeight, width: self.view.bounds.width, height: cardHeight)
 
         let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(self.handleCardPan(recognizer:)))
 //        panGestureRecognizer.cancelsTouchesInView = false

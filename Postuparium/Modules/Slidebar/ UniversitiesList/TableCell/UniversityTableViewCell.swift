@@ -8,6 +8,8 @@ class UniversityTableViewCell: UITableViewCell {
     @IBOutlet weak var placeLabel: UILabel!
     @IBOutlet weak var scoresLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var opacityLayerView: UIView!
+    
     
     var university: University? {
         didSet {
@@ -23,16 +25,25 @@ class UniversityTableViewCell: UITableViewCell {
     func setImage(image: UIImage) {
         self.imageUniversity.backgroundColor = UIColor.black.withAlphaComponent(0.5)
         self.imageUniversity.isOpaque = false
-        self.imageUniversity.alpha = 0.8
+        //self.imageUniversity.alpha = 0.8
         self.imageUniversity.image = image
+    }
+    
+    func setOpacityLayer(){
+        self.opacityLayerView.backgroundColor = UIColor.black
+        self.opacityLayerView.isOpaque = true
+        self.opacityLayerView.alpha = 0.5
+        self.opacityLayerView.layer.cornerRadius = 15
+        self.opacityLayerView.layer.masksToBounds = true
     }
     
     func setUniversityData(university: University){
         self.placeLabel.text = String(university.place)
         self.scoresLabel.text = String(university.scores)
         self.ratingLabel.text = String(university.rating)
-        self.nameLabel.text =   university.name
+        self.nameLabel.text = university.name
         self.loadImage(image: university.image)
+        self.setOpacityLayer()
     }
     
     private func roundImage() {

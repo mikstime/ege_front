@@ -1,14 +1,14 @@
+
+
 import UIKit
 
-class EndTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var nextLabel: UILabel!
-    @IBOutlet weak var gradientView: UIView!
-    @IBOutlet weak var imageV: UIImageView!
+class EdProgramsViewCell: UITableViewCell {
+    
     var grayGradient: CAGradientLayer!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.roundImage()
         self.setupGradient()
     }
     
@@ -26,7 +26,6 @@ class EndTableViewCell: UITableViewCell {
         grayGradient.startPoint = .init(x: 0.5, y: 0)
         grayGradient.endPoint = .init(x: 0.5, y: 1)
         grayGradient.locations = [0.0, 1.0]
-        imageV.layer.insertSublayer(grayGradient, at: 0)
         updateGrayGradient()
     }
     
@@ -34,11 +33,4 @@ class EndTableViewCell: UITableViewCell {
         grayGradient.colors = [UIColor(named: "GrayGradientTop")?.cgColor ?? #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1).cgColor, UIColor(named: "GrayGradientBottom")?.cgColor ?? #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1).cgColor]
     }
     
-    private func roundImage() {
-        imageV.layer.cornerRadius = 21
-        imageV.layer.masksToBounds = true
-        imageV.layer.borderColor = UIColor.lightGray.cgColor
-    }
-
-
 }

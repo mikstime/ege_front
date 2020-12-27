@@ -3,8 +3,9 @@ import UIKit
 
 class UniversitiesTableViewController: UIViewController, UniversitiesTableViewControllerProtocol {
     
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var universitiesTableView: UITableView!
-    @IBOutlet weak var homeProgramsView: HomePrograms!
+//    @IBOutlet weak var homeProgramsView: HomePrograms!
     
     
     var presenter: UniversitiesTableViewPresenterProtocol!
@@ -13,10 +14,11 @@ class UniversitiesTableViewController: UIViewController, UniversitiesTableViewCo
         super.viewDidLoad()
         self.configureTableView()
         self.startLoad()
+        self.designSearchBar()
     }
     
     func configureTableView() {
-        homeProgramsView.isHidden = presenter!.hideHomePrograms
+//        homeProgramsView.isHidden = presenter!.hideHomePrograms
         
         self.universitiesTableView.separatorStyle = .none
 
@@ -25,6 +27,7 @@ class UniversitiesTableViewController: UIViewController, UniversitiesTableViewCo
 
         universitiesTableView.register(UINib(nibName: "EndTableViewCell", bundle: nil), forCellReuseIdentifier: "EndTableViewCell")
         universitiesTableView.register(UINib(nibName: "UniversityTableViewCell", bundle: nil), forCellReuseIdentifier: "UniversityTableViewCell")
+        universitiesTableView.register(UINib(nibName: "EdProgramsViewCell", bundle: nil), forCellReuseIdentifier: "EdProgramsViewCell")
     }
     
     func startLoad() {
@@ -45,7 +48,20 @@ extension UniversitiesTableViewController: UITableViewDataSource{
         return presenter!.getNumberOfRowsInSection()
     }
     
+    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        if (indexPath.row != 0 ) {
+            return indexPath
+        }else{
+            return nil
+        }
+    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        if indexPath.row == 0 {
+            let cell = self.universitiesTableView.dequeueReusableCell(withIdentifier: "EdProgramsViewCell") as! EdProgramsViewCell
+            
+            return cell
+        }
         if (presenter!.isEndCell(indexPath: indexPath)) {
             let cell = self.universitiesTableView.dequeueReusableCell(withIdentifier: "EndTableViewCell") as! EndTableViewCell
             return cell
@@ -68,10 +84,8 @@ extension UniversitiesTableViewController: UITableViewDelegate {
 
         if (self.presenter!.isEndCell(indexPath: indexPath)) {
             let endCell = self.universitiesTableView.cellForRow(at: indexPath) as! EndTableViewCell
-            endCell.loader(animate: true)
             self.presenter?.fetch {
                 DispatchQueue.main.async {
-                    endCell.loader(animate: false)
                     self.universitiesTableView.reloadData()
                 }
             }
@@ -84,9 +98,24 @@ extension UniversitiesTableViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if (self.presenter!.isEndCell(indexPath: indexPath)){
-            return 60.0
+            return 68.0
+        }
+        if indexPath.row == 0 {
+            return 252.0
         }
         return 196.0
 
+    }
+    
+    func designSearchBar() {
+        searchBar.isTranslucent = false
+        searchBar.barTintColor = UIColor.systemBackground
+        searchBar.backgroundImage = UIImage()
+        if let textfield = searchBar.value(forKey: "searchField") as? UITextField {
+            textfield.backgroundColor = UIColor.systemBackground
+            textfield.borderWidth = 1
+            textfield.cornerRadius = 10
+            textfield.borderColor = UIColor.systemGray5
+        }
     }
 }

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AnT-Ft-OYG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AnT-Ft-OYG">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="EDj-Q6-sdp">
-                                <rect key="frame" x="16" y="353" width="382" height="200.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="EDj-Q6-sdp">
+                                <rect key="frame" x="16" y="344" width="382" height="218.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Меню разработчика" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hId-3f-3sh">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="20.5"/>
@@ -26,21 +26,21 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbP-tv-Zsr">
-                                        <rect key="frame" x="0.0" y="20.5" width="382" height="30"/>
-                                        <state key="normal" title="направления"/>
+                                        <rect key="frame" x="0.0" y="23.5" width="382" height="30"/>
+                                        <state key="normal" title="Стр направления"/>
                                         <connections>
                                             <action selector="showNextScreen" destination="AnT-Ft-OYG" eventType="touchUpInside" id="TbP-H0-8vR"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sjX-mR-3eM">
-                                        <rect key="frame" x="0.0" y="50.5" width="382" height="30"/>
+                                        <rect key="frame" x="0.0" y="56.5" width="382" height="30"/>
                                         <state key="normal" title="фотачки"/>
                                         <connections>
                                             <action selector="showPhotosScreen" destination="AnT-Ft-OYG" eventType="touchUpInside" id="Asw-kc-mnR"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z03-pt-GN9">
-                                        <rect key="frame" x="0.0" y="80.5" width="382" height="30"/>
+                                        <rect key="frame" x="0.0" y="89.5" width="382" height="30"/>
                                         <accessibility key="accessibilityConfiguration" label="Карта"/>
                                         <state key="normal" title="Карта"/>
                                         <connections>
@@ -48,7 +48,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ynj-EZ-tpp">
-                                        <rect key="frame" x="0.0" y="110.5" width="382" height="30"/>
+                                        <rect key="frame" x="0.0" y="122.5" width="382" height="30"/>
                                         <accessibility key="accessibilityConfiguration" label="Карта"/>
                                         <state key="normal" title="Список вузов"/>
                                         <connections>
@@ -56,14 +56,14 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zdH-yy-0Vu">
-                                        <rect key="frame" x="0.0" y="140.5" width="382" height="30"/>
+                                        <rect key="frame" x="0.0" y="155.5" width="382" height="30"/>
                                         <state key="normal" title="NewEdPrograms"/>
                                         <connections>
                                             <action selector="showNewEdPrograms:" destination="AnT-Ft-OYG" eventType="touchUpInside" id="fkS-mf-mxQ"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="feJ-AA-vEK">
-                                        <rect key="frame" x="0.0" y="170.5" width="382" height="30"/>
+                                        <rect key="frame" x="0.0" y="188.5" width="382" height="30"/>
                                         <state key="normal" title="Регистрация"/>
                                         <connections>
                                             <action selector="showRegistrationScreen" destination="AnT-Ft-OYG" eventType="touchUpInside" id="fNv-QK-eG6"/>

@@ -12,7 +12,7 @@ class UniversityMarkerView: MKMarkerAnnotationView {
   override var annotation: MKAnnotation? {
     willSet {
       // 1
-      guard let university = newValue as? UniversityObj else {
+      guard let university = newValue as? UniversitiesMock else {
         return
       }
       canShowCallout = true
@@ -31,19 +31,19 @@ class UniversityMarkerView: MKMarkerAnnotationView {
 class UniversityView: MKAnnotationView {
   override var annotation: MKAnnotation? {
     willSet {
-      guard let university = newValue as? UniversityObj else {
+      guard let university = newValue as? UniversitiesMock else {
         return
       }
 
       canShowCallout = true
       calloutOffset = CGPoint(x: -5, y: 5)
     
-      image = university.image
+//        image = university.preview
       
       let detailLabel = UILabel()
       detailLabel.numberOfLines = 0
       detailLabel.font = detailLabel.font.withSize(12)
-      detailLabel.text = university.subtitle
+        detailLabel.text = university.name
       detailCalloutAccessoryView = detailLabel
      
 

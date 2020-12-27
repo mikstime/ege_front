@@ -76,8 +76,8 @@ class EnrolleeService: EnrolleeServiceProtocol {
                     if let json = response.data {
                             let jsonDecoder = JSONDecoder()
                             print("json::: ", response)
-                            let person = try! jsonDecoder.decode(Enrollee.self, from: json)
-                            person.save()
+                            let person = try? jsonDecoder.decode(Enrollee.self, from: json)
+                            person?.save()
                             didSignUp(person)
                     }
                 case .failure(_):

@@ -25,8 +25,8 @@ class ProgramsSelectionItem: UIView {
             label?.text = newValue
         }
     }
-    var source: EdProgram = EdProgram() {
-        
+    var source: EdProgram = EdProgram(code: "1", name: "1", university: "1", photo: "1", probability: "1", probablilityNumber: 0.0, id: 0) {
+
         didSet {
             text = source.name
         }

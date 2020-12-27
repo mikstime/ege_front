@@ -7,10 +7,10 @@
 
 import UIKit
 
-class SettingsScreenViewController: UIViewController, SettingsScreenViewControllerProtocol, UITextFieldDelegate {
+class SettingsScreenViewController: UIViewController, CardViewControllerProtocol, SettingsScreenViewControllerProtocol {
+    var handleArea: UIView!
     
     var presenter: SettingsScreenPresenterProtocol!
-    
     @IBAction func showNextScreen() {
         presenter?.showNextScreen()
     }
@@ -38,6 +38,7 @@ class SettingsScreenViewController: UIViewController, SettingsScreenViewControll
     }
 
     override func viewDidLoad() {
+        handleArea = self.view
         super.viewDidLoad()
         presenter?.viewDidLoad()
     }

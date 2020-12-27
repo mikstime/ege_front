@@ -10,20 +10,19 @@ import UIKit
 
 import MapKit
 
-class UniversityMapViewController: SwipeableMenuViewController,
+class UniversityMapViewController: SSwipeableViewController,
                                    UniversityMapViewControllerProtocol, MKMapViewDelegate {
     var idUn: Int = 0
-    var menu: MenuViewControllerProtocol!
-    
+    var menu = HomePageConfigurator.configureModule()
+    var umenu = UniversityPageConfigurator.configureModule()
+    var smenu = SettingsScreenConfigurator.configureModule()
     var halfModalTransitioningDelegate: HalfModalTransitioningDelegate!
-    
     private var universitites = UniversitiesMock.UniversitiesList()
     
     @IBOutlet private var mapView: MKMapView!
     @IBAction func showSettings() {
-        presenter?.showSettings()
+        showSCard()
     }
-    
     var presenter: UniversityMapPresenterProtocol!
     var configurator: UniversityMapConfiguratorProtocol = UniversityMapConfigurator()
 
@@ -39,11 +38,10 @@ class UniversityMapViewController: SwipeableMenuViewController,
 
     
     final override func viewDidLoad() {
-        menu = HomePageConfigurator.configureModule()
         cardViewController = menu // должно сетиться до вызова родительского метода
+        ucardViewController = umenu
+        scardViewController = smenu
         super.viewDidLoad()
-        
-        
         hideKeyboardWhenTappedAround()
         presenter?.viewDidLoad()
         mapView.delegate = self
@@ -88,7 +86,8 @@ class UniversityMapViewController: SwipeableMenuViewController,
         mapView.setCenter(view.annotation!.coordinate, animated: true)
         setMapFocus(centerCoordinate: view.annotation!.coordinate, radiusInKm: 0.5)
         print("Ебать нажалось", id! , Int(id!) ?? 0 )
-        self.presenter.showModal(id: Int(id!) ?? 0 )
+        showUCard()
+//        self.presenter.showModal(id: Int(id!) ?? 0 )
     }
     
 

@@ -39,8 +39,7 @@ class UniversityMapRouter: UniversityMapRouterProtocol {
         
         print("В роутере ", id)
         self.id = id
-        self.view.performSegue(withIdentifier: "fromAnnotationMap", sender: self.view)
-        
+//        self.view.performSegue(withIdentifier: "fromAnnotationMap", sender: self.view)
     }
     
     func showSettings() {

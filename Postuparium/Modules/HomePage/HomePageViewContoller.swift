@@ -36,7 +36,7 @@ class ShadowView: UIView {
     }
 }
 
-class ShadowButton: UIView {
+class ShadowButton: UIButton {
     private var shadowLayer: CAShapeLayer!
 
     override func layoutSubviews() {

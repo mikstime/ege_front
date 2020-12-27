@@ -84,11 +84,23 @@ class NewEdProgramsViewController: UIViewController, UICollectionViewDelegate, U
             cell.nameLabel.text = "Отсутствует направление?"
             cell.codeNameLabel.text = ""
             cell.typeLabel.text = "Напишите нам"
-            cell.setGradientBackgroundColor(colorOne: .blue, colorTow: .systemBlue)
             cell.typeContainer.setGradientBackgroundColor(colorOne: .blue, colorTow: .systemBlue)
             
         }
-        cell.addShadow(offset: CGSize.init(width: 0, height: 3), color: UIColor.black, radius: 20, opacity: 0.5)
+//        cell.shadowDecorate()
+    
+            
+        
+        // Configure the cell
+            cell.layer.cornerRadius = 10.0
+        cell.layer.borderWidth = 0
+            cell.layer.shadowColor = UIColor.gray.cgColor
+        cell.layer.shadowOffset = CGSize(width: -3, height: -3)
+        cell.layer.shadowRadius = 10.0
+        cell.layer.shadowOpacity = 0.25
+            cell.layer.masksToBounds = false //<-
+    
+        
         return cell
     }
 
@@ -112,4 +124,23 @@ class NewEdProgramsViewController: UIViewController, UICollectionViewDelegate, U
     
     
 
+}
+
+
+extension UICollectionViewCell {
+    func shadowDecorate() {
+        let radius: CGFloat = 10
+        contentView.layer.cornerRadius = radius
+        contentView.layer.borderWidth = 1
+        contentView.layer.borderColor = UIColor.clear.cgColor
+        contentView.layer.masksToBounds = true
+    
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOffset = CGSize(width: 0, height: 1.0)
+        layer.shadowRadius = 2.0
+        layer.shadowOpacity = 0.5
+        layer.masksToBounds = false
+        layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: radius).cgPath
+        layer.cornerRadius = radius
+    }
 }

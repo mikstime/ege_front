@@ -35,19 +35,15 @@ class StudyTileMediumCell: UICollectionViewCell {
         
         self.typeContainer.roundCorners([.topRight, .bottomRight, .bottomLeft], radius: 10)
         self.roundCorners([.topRight, .topLeft, .bottomRight, .bottomLeft], radius: 10)
-        
-    
-        self.layer.cornerRadius = 20
-        self.layer.masksToBounds = true
 
-        self.layer.shadowColor = UIColor.darkGray.cgColor
-        self.layer.shadowOffset = CGSize(width: 2.0, height: 2.0)
-        self.layer.shadowOpacity = 0.4
-        self.layer.shadowRadius = 5.0
-        
+
+      
+//
         setGradientBackgroundColor()
+//
+
         
-        self.typeContainer.addShadow(offset: CGSize.init(width: 0, height: 30), color: UIColor.black, radius: 20, opacity: 0.5)
+//        self.shadowDecorate()
     }
     
     func cellRandomBackgroundColors() -> [UIColor] {

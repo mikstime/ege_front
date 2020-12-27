@@ -80,3 +80,4 @@ class UniversityObj: NSObject, MKAnnotation {
     return UIImage.init(systemName: "mappin" )!
   }
 }
+

@@ -27,8 +27,8 @@ protocol EnrolleeServiceProtocol {
 }
 
 class EnrolleeService: EnrolleeServiceProtocol {
-    static var LoginApiURL: String = "http://77.223.97.172:8080/api/v1/login/"
-    static var UsersApiURL: String = "http://77.223.97.172:8080/api/v1/users/"
+    static var LoginApiURL: String = "http://77.223.97.172:8081/api/v1/login/"
+    static var UsersApiURL: String = "http://77.223.97.172:8081/api/v1/users/"
     
     static var shared: EnrolleeServiceProtocol = EnrolleeService()
     
@@ -67,7 +67,16 @@ class EnrolleeService: EnrolleeServiceProtocol {
             enrollee.token = UUID().uuidString
         }
         
-        let request = AF.request(EnrolleeService.UsersApiURL, method: .post, parameters: enrollee.dictionary, encoding: JSONEncoding.default)
+        var headers: HTTPHeaders = []
+        
+        let cookieName = "csrftoken"
+        if let cookie = HTTPCookieStorage.shared.cookies?.first(where: { $0.name == cookieName }) {
+            headers["X-CSRFToken"] = cookie.value
+        }
+        
+        
+        
+        let request = AF.request(EnrolleeService.UsersApiURL, method: .post, parameters: enrollee.dictionary, encoding: JSONEncoding.default, headers: headers)
         
         request.responseJSON { (response) in
             switch response.result {
@@ -76,8 +85,8 @@ class EnrolleeService: EnrolleeServiceProtocol {
                     if let json = response.data {
                             let jsonDecoder = JSONDecoder()
                             print("json::: ", response)
-                            let person = try! jsonDecoder.decode(Enrollee.self, from: json)
-                            person.save()
+                            let person = try? jsonDecoder.decode(Enrollee.self, from: json)
+                            person?.save()
                             didSignUp(person)
                     }
                 case .failure(_):
@@ -87,13 +96,19 @@ class EnrolleeService: EnrolleeServiceProtocol {
     }
     
     func signin(didSignIn: @escaping (Enrollee?) -> Void) {
-        let request = AF.request(EnrolleeService.LoginApiURL, method: .post, parameters: enrollee.dictionaryLogin)
+        var headers: HTTPHeaders = []
+        
+        let cookieName = "csrftoken"
+        if let cookie = HTTPCookieStorage.shared.cookies?.first(where: { $0.name == cookieName }) {
+            headers["X-CSRFToken"] = cookie.value
+        }
+        
+        let request = AF.request(EnrolleeService.LoginApiURL, method: .post, parameters: enrollee.dictionaryLogin, headers: headers)
         
         request.responseJSON { (response) in
             switch response.result {
                 case .success:
-                    print("Validation Successful)")
-
+                    print("signin response: ", response)
                     if let json = response.data {
                             let jsonDecoder = JSONDecoder()
                             var person = try? jsonDecoder.decode(Enrollee.self, from: json)

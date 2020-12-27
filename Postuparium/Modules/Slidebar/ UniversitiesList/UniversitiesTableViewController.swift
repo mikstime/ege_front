@@ -78,10 +78,10 @@ extension UniversitiesTableViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.section == 0 {
-            return 196.0
-        } else{
-            return 40.0
+        if (self.presenter!.isEndCell(indexPath: indexPath)){
+            return 60.0
         }
+        return 196.0
+
     }
 }

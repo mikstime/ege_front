@@ -9,7 +9,7 @@ import Foundation
 
 import UIKit
 
-class ApplicantsTableViewController: UIViewController {
+class ApplicantsTableViewController: UIViewController, UITableViewDelegate {
     
     
   @IBOutlet var tableView: UITableView!
@@ -23,6 +23,7 @@ class ApplicantsTableViewController: UIViewController {
     super.viewDidLoad()
     
     applicants = ApplicantMock.applicantsList()
+
     
     // 1
     searchController.searchResultsUpdater = self
@@ -47,8 +48,10 @@ class ApplicantsTableViewController: UIViewController {
     searchController.searchBar.showsCancelButton = false
     
     
+    self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
     
-  
+
+
     
     
     
@@ -67,7 +70,7 @@ class ApplicantsTableViewController: UIViewController {
     super.viewWillAppear(animated)
     
     if let indexPath = tableView.indexPathForSelectedRow {
-      tableView.deselectRow(at: indexPath, animated: true)
+        self.tableView.deselectRow(at: indexPath, animated: true)
     }
   }
   
@@ -105,8 +108,6 @@ class ApplicantsTableViewController: UIViewController {
     }
     
 
-    // 2
-//    let keyboardHeight = keyboardFrame.cgRectValue.size.height
     UIView.animate(withDuration: 0.1, animations: { () -> Void in
       self.view.layoutIfNeeded()
     })
@@ -124,14 +125,20 @@ extension ApplicantsTableViewController: UITableViewDataSource {
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+//        as! ApplicantCell
+    
     let applicant: ApplicantMock
     if isFiltering {
       applicant = filteredApplicants[indexPath.row]
     } else {
       applicant = applicants[indexPath.row]
     }
+//    cell.index.text = "test"
+    print("applicant \(indexPath)", applicant.name)
     cell.textLabel?.text = applicant.name
     cell.detailTextLabel?.text = applicant.category.rawValue
+    
+  
     return cell
   }
 }

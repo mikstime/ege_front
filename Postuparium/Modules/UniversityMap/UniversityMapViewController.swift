@@ -12,20 +12,15 @@ import MapKit
 
 
 class UniversityMapViewController: SSwipeableViewController,
-                                   UniversityMapViewControllerProtocol, MKMapViewDelegate {
+                                   UniversityMapViewControllerProtocol, MKMapViewDelegate, CLLocationManagerDelegate {
     var idUn: Int = 0
     var menu = HomePageConfigurator.configureModule()
     var umenu = UniversityPageConfigurator.configureModule()
     var smenu = SettingsScreenConfigurator.configureModule()
 
-class UniversityMapViewController: SwipeableMenuViewController,
-                                   UniversityMapViewControllerProtocol, MKMapViewDelegate, CLLocationManagerDelegate {
-    var idUn: Int = 0
-    var menu: MenuViewControllerProtocol!
-    
 
-    private var locationManager: CLLocationManager!
-    private var currentLocation: CLLocation?
+    let locationManager = CLLocationManager()
+    var location: CLLocation!
     
     func zoomMap(byFactor delta: Double) {
         var region: MKCoordinateRegion = self.mapView.region
@@ -45,12 +40,8 @@ class UniversityMapViewController: SwipeableMenuViewController,
     
     @IBOutlet weak var zoomPlusBiutton: UIButton!
     @IBAction func zoomPlus(_ sender: Any) {
-        do {
-            try zoomMap(byFactor: 0.5)
-        } catch{
-            print("error")
-        }
-       
+        zoomMap(byFactor: 0.5)
+    
     }
     
     
@@ -58,9 +49,7 @@ class UniversityMapViewController: SwipeableMenuViewController,
     @IBOutlet weak var zoomMinusButton: UIButton!
     
     @IBAction func zoomMinus(_ sender: Any) {
-        do {
-            try! zoomMap(byFactor: 2.0)
-        }
+        zoomMap(byFactor: 2.0)
     }
     
     @IBOutlet weak var zoomToUserButton: UIButton!
@@ -68,8 +57,10 @@ class UniversityMapViewController: SwipeableMenuViewController,
 
     
     @IBAction func zoomToUser(_ sender: Any) {
-        //Zoom to user location
-//        self.mapView.setUserTrackingMode( MKUserTrackingMode.follow, animated: true)
+        let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+        let span = MKCoordinateSpan(latitudeDelta: 0.003, longitudeDelta: 0.003)
+           let region = MKCoordinateRegion(center: center, span: span)
+           self.mapView.setRegion(region, animated: true)
     
     }
     
@@ -101,6 +92,10 @@ class UniversityMapViewController: SwipeableMenuViewController,
         
     }
     
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        self.location = locations.last as CLLocation?
+    }
+    
     final override func viewDidLoad() {
         cardViewController = menu // должно сетиться до вызова родительского метода
         ucardViewController = umenu
@@ -111,17 +106,20 @@ class UniversityMapViewController: SwipeableMenuViewController,
         self.initButtons()
         
         
+        
+        
+        
         hideKeyboardWhenTappedAround()
         presenter?.viewDidLoad()
         mapView.delegate = self
         
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+        mapView.showsUserLocation = true
+        
     
-        
-        
-        // Закомменчено на время рефакторинга меток на карте
-        mapView.register(
-          UniversityView.self,
-          forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
         
     
        
@@ -145,18 +143,7 @@ class UniversityMapViewController: SwipeableMenuViewController,
     
     }
     
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        defer { currentLocation = locations.last }
 
-        if currentLocation == nil {
-            // Zoom to user location
-            if let userLocation = locations.last {
-                let viewRegion = MKCoordinateRegion(center: userLocation.coordinate, latitudinalMeters: 2000, longitudinalMeters: 2000)
-                mapView.setRegion(viewRegion, animated: false)
-            }
-        }
-    }
-    
 
     func setMapFocus(centerCoordinate: CLLocationCoordinate2D, radiusInKm radius: CLLocationDistance)
     {
@@ -175,39 +162,42 @@ class UniversityMapViewController: SwipeableMenuViewController,
 //        self.presenter.showModal(id: Int(id!) ?? 0 )
     }
     
-//    func mapView(_ mapView: MKMapView,
-//                   viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-//
-//        // Leave default annotation for user location
-//        if annotation is MKUserLocation {
-//          return nil
-//        }
-//
-//        let reuseID = "Location"
-//        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseID)
-//        if annotationView == nil {
-//          let pin = MKAnnotationView(annotation: annotation,
-//                                     reuseIdentifier: reuseID)
-//              pin.image = UIImage(named: "cabifyPin")
-//              pin.isEnabled = true
-//              pin.canShowCallout = true
-//
-//          let label = UILabel(frame: CGRect(x: 0, y: 0, width: 120, height: 30))
-//              label.textColor = .white
-//          label.backgroundColor = .blue
-//            label.cornerRadius = 5
-//            label.textAlignment = .center
-////              label.text = annotation.id // set text here
-//                label.text = "Направлений: \(5)"
-//              pin.addSubview(label)
-//
-//          annotationView = pin
-//        } else {
-//          annotationView?.annotation = annotation
-//        }
-//
-//        return annotationView
-//      }
+    func mapView(_ mapView: MKMapView,
+                   viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+
+        // Leave default annotation for user location
+        if annotation is MKUserLocation {
+          return nil
+        }
+
+        let reuseID = "Location"
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseID)
+        if annotationView == nil {
+          let pin = MKAnnotationView(annotation: annotation,
+                                     reuseIdentifier: reuseID)
+              pin.image = UIImage(named: "largecircle.fill.circle")
+              pin.isEnabled = true
+              pin.canShowCallout = false
+
+          let label = UILabel(frame: CGRect(x: 0, y: 0, width: 180, height: 30))
+            label.setGradientBackgroundColor(colorOne: .blue, colorTow: .systemBlue)
+            label.cornerRadius = 5
+            pin.addSubview(label)
+            let textLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 180, height: 30))
+            textLabel.textColor = .white
+            textLabel.cornerRadius = 5
+            textLabel.textAlignment = .center
+            
+            textLabel.text = "Направлений: \(5)"
+            pin.addSubview(textLabel)
+
+          annotationView = pin
+        } else {
+          annotationView?.annotation = annotation
+        }
+
+        return annotationView
+      }
     
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

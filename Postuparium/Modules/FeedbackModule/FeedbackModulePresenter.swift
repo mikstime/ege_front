@@ -21,4 +21,17 @@ class FeedbackModulePresenter: FeedbackModulePresenterProtocol {
     func viewDidLoad() {
  
     }
+    
+    func didTapSubmit(email: String, message: String, title: String) {
+        view?.startLoading()
+        interactor?.send(email: email, message: message, title: title, onFinish: {status in
+            self.view?.finishLoading()
+            if(status) {
+                self.view?.didSubmit()
+            } else{
+                self.view?.didNotSubmit()
+            }
+        }
+        )
+    }
 }

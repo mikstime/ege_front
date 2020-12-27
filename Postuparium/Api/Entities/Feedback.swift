@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct FeedBack: Codable {
+    var title: String = ""
+    var email: String = ""
+    var message: String = ""
+}

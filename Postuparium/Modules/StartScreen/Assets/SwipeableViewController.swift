@@ -4,30 +4,22 @@
 //
 //  Created by Михаил on 20.11.2020.
 //
-
 import UIKit
-
 protocol CardViewControllerProtocol: UIViewController {
     var handleArea: UIView! { get set }
 }
-
 class SwipeableViewController: UIViewController {
     
-    // Must be set
-    var cardViewController: CardViewControllerProtocol! {
+    var cardViewController:CardViewControllerProtocol! {
         didSet {
             setupCard()
         }
     }
     
     @IBInspectable var cardHeight:CGFloat = 450
-    @IBInspectable var cardExpansion:CGFloat = 200
     @IBInspectable var cardHeightMaxMargin:CGFloat = 200
-    @IBInspectable var cardHandleAreaHeight:CGFloat = 200
+    @IBInspectable var cardHandleAreaHeight:CGFloat = 0
     @IBInspectable var duration = 0.3
-    
-    private var maxFraction: CGFloat = 0
-    private var fractionComplete: CGFloat = 0
     
     func showCard() {
         animateTransitionIfNeeded(state: .expanded, duration: duration)
@@ -36,15 +28,8 @@ class SwipeableViewController: UIViewController {
     private enum CardState {
         case expanded
         case collapsed
-        case fully_expanded
     }
     
-    private enum Direction {
-        case up
-        case down
-        case no
-    }
-    private var cardState = CardState.collapsed
     private var runningAnimations = [UIViewPropertyAnimator]()
     private var animationProgressWhenInterrupted:CGFloat = 0
     
@@ -62,84 +47,31 @@ class SwipeableViewController: UIViewController {
 //        panGestureRecognizer.cancelsTouchesInView = false
         cardViewController.handleArea.addGestureRecognizer(panGestureRecognizer)
         
+        
     }
-    private var direction = Direction.no
+
+    var maxFraction: CGFloat = 0
     @objc private func handleCardPan (recognizer:UIPanGestureRecognizer) {
         cardViewController.view.endEditing(true)
         let translation = recognizer.translation(in: self.cardViewController.handleArea)
-        fractionComplete = abs(translation.y) / cardHeight
+        let fractionComplete = abs(translation.y) / cardHeight
     
         switch recognizer.state {
         case .began:
-            if cardState == .collapsed {
-                startInteractiveTransition(state: .expanded, duration: duration)
-            }
-            if cardState == .expanded {
-                if translation.y > 0 {
-                    direction = .up
-                    startInteractiveTransition(state: .fully_expanded, duration: duration)
-                } else {
-                    direction = .down
-                    startInteractiveTransition(state: .collapsed, duration: duration)
-                }
-            }
-            if cardState == .fully_expanded {
-                startInteractiveTransition(state: .expanded, duration: duration)
-            }
+            startInteractiveTransition(state: .collapsed, duration: duration)
         case .changed:
-            if cardState == .collapsed {
-                if translation.y < 0{
-                    updateInteractiveTransition(fractionCompleted: fractionComplete)
-                }
-            }
-            if cardState == .expanded {
-                if translation.y < 0 {
-                    if direction == .up {
-                        updateInteractiveTransition(fractionCompleted: fractionComplete)
-                    } else {
-                        direction = .down
-                        cancelTransition()
-                        startInteractiveTransition(state: .expanded, duration: duration)
-                    }
-                }
-                if translation.y > 0 {
-                    if direction == .down {
-                        updateInteractiveTransition(fractionCompleted: fractionComplete)
-                    } else {
-                        direction = .up
-                        cancelTransition()
-                        startInteractiveTransition(state: .fully_expanded, duration: duration)
-                    }
-                    
-                }
-            }
-            if cardState == .fully_expanded {
-                if translation.y > 0{
-                    updateInteractiveTransition(fractionCompleted: fractionComplete)
-                }
+            if translation.y > 0{
+                updateInteractiveTransition(fractionCompleted: fractionComplete)
             }
         case .ended:
-            if cardState == .collapsed {
-                if translation.y > 0{
-                    cancelTransition()
-                }
-                if (fractionComplete < maxFraction * 0.95 || maxFraction < 0.1 ){
-                    cancelTransition()
-                    animateTransitionIfNeeded(state: .collapsed, duration: duration / 3)
-                } else {
-                    continueInteractiveTransition()
-                }
+            if translation.y < 0{
+                cancelTransition()
             }
-            if cardState == .expanded {
-                if translation.y < 0{
-                    cancelTransition()
-                }
-                if (fractionComplete < maxFraction * 0.95 || maxFraction < 0.1 ){
-                    cancelTransition()
-                    animateTransitionIfNeeded(state: .expanded, duration: duration / 3)
-                } else {
-                    continueInteractiveTransition()
-                }
+            if (fractionComplete < maxFraction * 0.95 || maxFraction < 0.1 ){
+                cancelTransition()
+                animateTransitionIfNeeded(state: .expanded, duration: duration / 3)
+            } else {
+                continueInteractiveTransition()
             }
         default:
             break
@@ -156,18 +88,11 @@ class SwipeableViewController: UIViewController {
                     self.cardViewController.view.frame.origin.y = self.view.frame.height - self.cardHeight
                 case .collapsed:
                     self.cardViewController.view.frame.origin.y = self.view.frame.height - self.cardHandleAreaHeight
-                case .fully_expanded:
-                    self.cardViewController.view.frame.origin.y = self.view.frame.height - self.cardHeight - self.cardExpansion
                 }
             }
             
             frameAnimator.addCompletion { _ in
-                if (!(self.fractionComplete < self.maxFraction * 0.95 || self.maxFraction < 0.1) ){
-                    self.cardState = self.direction == .no ? self.cardState == .expanded ? .collapsed : .expanded : self.direction == .up ? .fully_expanded : .expanded
-                }
                 self.maxFraction = 0
-                self.fractionComplete = 0
-                self.direction = .no
                 self.runningAnimations.removeAll()
             }
             
@@ -192,8 +117,6 @@ class SwipeableViewController: UIViewController {
             self.maxFraction = 0
             animationProgressWhenInterrupted = animator.fractionComplete
             animator.stopAnimation(true)
-//            animator.isInterruptible = true
-//            animator.isReversed = true
         }
         self.runningAnimations.removeAll()
     }
@@ -209,9 +132,5 @@ class SwipeableViewController: UIViewController {
             animator.continueAnimation(withTimingParameters: nil, durationFactor: 0)
         }
     }
-    
-}
-
-extension SwipeableViewController {
     
 }

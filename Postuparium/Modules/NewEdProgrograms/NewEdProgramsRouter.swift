@@ -11,15 +11,13 @@ import UIKit
 
 class NewEdProgramsRouter: NewEdProgramsRouterProtocol {
 
- 
-    
     weak var view: NewEdProgramsViewControllerProtocol!
     
     func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // prepare here some data for destination viewController
         if let vc = segue.destination as? EdProgramModuleViewControllerProtocol {
             vc.edProgramId = "1"
-            }
+        }
     }
     
     func showEdProgramModuleScreen(id: String) {

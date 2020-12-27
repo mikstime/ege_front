@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="oip-U1-f7c">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="oip-U1-f7c">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -23,28 +23,42 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="uk6-qz-2aw">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </mapView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MRb-dI-tGe" customClass="UIButton">
-                                <rect key="frame" x="36" y="76" width="60" height="60"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MRb-dI-tGe" customClass="ShadowButton" customModule="Postuparium" customModuleProvider="target">
+                                <rect key="frame" x="36" y="64" width="44" height="44"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line.horizontal.3" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="3eb-9w-m3S">
+                                        <rect key="frame" x="8" y="13" width="28" height="18.5"/>
+                                        <color key="tintColor" systemColor="secondaryLabelColor"/>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="FY2-nn-qRM"/>
-                                    <constraint firstAttribute="width" constant="60" id="RSx-MT-nEJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="3eb-9w-m3S" secondAttribute="bottom" constant="8" id="30d-nw-2J0"/>
+                                    <constraint firstAttribute="height" constant="44" id="FY2-nn-qRM"/>
+                                    <constraint firstAttribute="width" constant="44" id="RSx-MT-nEJ"/>
+                                    <constraint firstItem="3eb-9w-m3S" firstAttribute="leading" secondItem="MRb-dI-tGe" secondAttribute="leading" constant="8" id="cfw-RU-3FX"/>
+                                    <constraint firstAttribute="trailing" secondItem="3eb-9w-m3S" secondAttribute="trailing" constant="8" id="hid-aG-J1U"/>
+                                    <constraint firstItem="3eb-9w-m3S" firstAttribute="top" secondItem="MRb-dI-tGe" secondAttribute="top" constant="8" id="oNc-tb-iDE"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="30"/>
+                                        <integer key="value" value="22"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="showSettings" destination="oip-U1-f7c" eventType="touchUpInside" id="1UV-vc-TM6"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="MRb-dI-tGe" firstAttribute="leading" secondItem="69P-uo-et4" secondAttribute="leadingMargin" constant="16" id="5Tl-u9-LWw"/>
                             <constraint firstItem="uk6-qz-2aw" firstAttribute="leading" secondItem="69P-uo-et4" secondAttribute="leading" id="7M5-77-N7t"/>
-                            <constraint firstItem="MRb-dI-tGe" firstAttribute="top" secondItem="zwj-ih-9A6" secondAttribute="bottom" constant="32" id="JjI-wI-cLN"/>
                             <constraint firstAttribute="trailing" secondItem="uk6-qz-2aw" secondAttribute="trailing" id="Q16-an-T55"/>
+                            <constraint firstItem="MRb-dI-tGe" firstAttribute="top" secondItem="zwj-ih-9A6" secondAttribute="bottom" constant="20" id="W68-gK-Goi"/>
                             <constraint firstAttribute="bottom" secondItem="uk6-qz-2aw" secondAttribute="bottom" id="Xf7-Dc-718"/>
                             <constraint firstItem="uk6-qz-2aw" firstAttribute="top" secondItem="69P-uo-et4" secondAttribute="top" id="fUe-iN-urO"/>
-                            <constraint firstItem="MRb-dI-tGe" firstAttribute="leading" secondItem="69P-uo-et4" secondAttribute="leadingMargin" constant="16" id="lYg-gl-Sk3"/>
                         </constraints>
                     </view>
                     <connections>
@@ -185,6 +199,10 @@
         <segue reference="YtT-69-kZ3"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -89,7 +89,6 @@ class NewEdProgramsViewController: UIViewController, UICollectionViewDelegate, U
             
         }
         cell.addShadow(offset: CGSize.init(width: 0, height: 3), color: UIColor.black, radius: 20, opacity: 0.5)
-    
         return cell
     }
 

@@ -40,11 +40,14 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </searchBar>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="818-aA-vnr" customClass="HomePrograms" customModule="Postuparium" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="87" width="414" height="208"/>
+                                                <rect key="frame" x="0.0" y="87" width="414" height="214"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="208" id="AxR-Oj-S7r"/>
+                                                    <constraint firstAttribute="height" constant="214" id="AxR-Oj-S7r"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

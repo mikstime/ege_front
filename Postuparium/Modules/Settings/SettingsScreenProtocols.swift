@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-protocol SettingsScreenViewControllerProtocol: UIViewController {
+protocol SettingsScreenViewControllerProtocol: CardViewControllerProtocol {
     var presenter: SettingsScreenPresenterProtocol! {get set}
 }
 

@@ -17,19 +17,26 @@ class ShadowView: UIView {
             shadowLayer = CAShapeLayer()
             shadowLayer.path = UIBezierPath(roundedRect: bounds, cornerRadius: 20).cgPath
             shadowLayer.fillColor = UIColor.systemBackground.cgColor
-
             shadowLayer.shadowColor = UIColor(named: "Shadow")?.cgColor ?? UIColor.label.cgColor
             shadowLayer.shadowPath = shadowLayer.path
             shadowLayer.shadowOpacity = 0.16
             shadowLayer.shadowOffset = .zero
             shadowLayer.shadowRadius = 6
             layer.insertSublayer(shadowLayer, at: 0)
-            //layer.insertSublayer(shadowLayer, below: nil) // also works
         }
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        guard UIApplication.shared.applicationState == .inactive else {
+            return
+        }
+        shadowLayer.fillColor = UIColor.systemBackground.cgColor
+        shadowLayer.shadowColor = UIColor(named: "Shadow")?.cgColor ?? UIColor.label.cgColor
     }
 }
 
-class ShadowButton: UIView {
+class ShadowButton: UIButton {
     private var shadowLayer: CAShapeLayer!
 
     override func layoutSubviews() {
@@ -37,21 +44,27 @@ class ShadowButton: UIView {
 
         if shadowLayer == nil {
             shadowLayer = CAShapeLayer()
-            shadowLayer.path = UIBezierPath(roundedRect: bounds, cornerRadius: 20).cgPath
+            shadowLayer.path = UIBezierPath(roundedRect: bounds, cornerRadius: 15).cgPath
             shadowLayer.fillColor = UIColor.systemBackground.cgColor
-
             shadowLayer.shadowColor = UIColor(named: "Shadow")?.cgColor ?? UIColor.label.cgColor
             shadowLayer.shadowPath = shadowLayer.path
-            shadowLayer.shadowOpacity = 0.16
+            shadowLayer.shadowOpacity = 0.3
             shadowLayer.shadowOffset = .zero
             shadowLayer.shadowRadius = 6
             layer.insertSublayer(shadowLayer, at: 0)
-            //layer.insertSublayer(shadowLayer, below: nil) // also works
         }
+    }
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        guard UIApplication.shared.applicationState == .inactive else {
+            return
+        }
+        shadowLayer.fillColor = UIColor.systemBackground.cgColor
+        shadowLayer.shadowColor = UIColor(named: "Shadow")?.cgColor ?? UIColor.label.cgColor
     }
 }
 
-class HomePageViewController: UIViewController, MenuViewControllerProtocol, HomePageViewControllerProtocol, UITextFieldDelegate {
+class HomePageViewController: UIViewController, MenuViewControllerProtocol, HomePageViewControllerProtocol {
     
     @IBOutlet weak var shadow: UIView!
     @IBOutlet weak var container: UIView!
@@ -70,7 +83,7 @@ class HomePageViewController: UIViewController, MenuViewControllerProtocol, Home
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -88,7 +101,7 @@ class HomePageViewController: UIViewController, MenuViewControllerProtocol, Home
             view.addConstraint(NSLayoutConstraint(item: view1, attribute: .trailing, relatedBy: .equal, toItem: view, attribute: .trailing, multiplier: 1, constant: 0))
             view.addConstraint(NSLayoutConstraint(item: view1, attribute: .leading, relatedBy: .equal, toItem: view, attribute: .leading, multiplier: 1, constant: 0))
             view.addConstraint(NSLayoutConstraint(item: view1, attribute: .top, relatedBy: .equal, toItem: programs, attribute: .bottom, multiplier: 1, constant: 0))
-            view1.addConstraint(NSLayoutConstraint(item: view1, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute,multiplier: 1, constant: 1000))
+            view.addConstraint(NSLayoutConstraint(item: view1, attribute: .bottom, relatedBy: .equal, toItem: self.view, attribute: .bottom, multiplier: 1, constant: 0))
             addChild(universities)
         }
     }

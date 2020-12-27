@@ -4,6 +4,9 @@ import UIKit
 class UniversitiesTableViewController: UIViewController, UniversitiesTableViewControllerProtocol {
     
     @IBOutlet weak var universitiesTableView: UITableView!
+    @IBOutlet weak var homeProgramsView: HomePrograms!
+    
+    
     var presenter: UniversitiesTableViewPresenterProtocol!
     
     override func viewDidLoad() {
@@ -13,6 +16,8 @@ class UniversitiesTableViewController: UIViewController, UniversitiesTableViewCo
     }
     
     func configureTableView() {
+        homeProgramsView.isHidden = presenter!.hideHomePrograms
+        
         self.universitiesTableView.separatorStyle = .none
 
         self.universitiesTableView.dataSource = self
@@ -73,6 +78,15 @@ extension UniversitiesTableViewController: UITableViewDelegate {
             return
         }
 
+
         // тут вставитт логику работы с нажатием на ячейку таблицы университетов
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if (self.presenter!.isEndCell(indexPath: indexPath)){
+            return 60.0
+        }
+        return 196.0
+
     }
 }

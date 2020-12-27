@@ -8,6 +8,7 @@ class UniversitiesTableViewPresenter: UniversitiesTableViewPresenterProtocol {
     var router: UniversitiesTableViewRouterProtocol!
 
     var pageIndex: Int = 0
+    var hideHomePrograms: Bool = true
     
     func viewDidLoad() {}
     

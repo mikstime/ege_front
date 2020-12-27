@@ -9,6 +9,9 @@ class UniversityTableViewCell: UITableViewCell {
     @IBOutlet weak var scoresLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     
+    var gradient: CAGradientLayer!
+    var grayGradient: CAGradientLayer!
+    
     var university: University? {
         didSet {
             self.setUniversityData(university: university!)
@@ -18,20 +21,36 @@ class UniversityTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.roundImage()
+        self.setupGradient()
     }
     
-    func setImage(image: UIImage) {
-        self.imageUniversity.backgroundColor = UIColor.black.withAlphaComponent(0.5)
-        self.imageUniversity.isOpaque = false
-        self.imageUniversity.alpha = 0.8
-        self.imageUniversity.image = image
+    final override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        guard UIApplication.shared.applicationState == .inactive else {
+            return
+        }
+        updateGrayGradient()
+    }
+    
+    func setupGradient() {
+        grayGradient = CAGradientLayer()
+        grayGradient.frame.size = frame.size
+        grayGradient.startPoint = .init(x: 0.5, y: 0)
+        grayGradient.endPoint = .init(x: 0.5, y: 1)
+        grayGradient.locations = [0.0, 1.0]
+        imageUniversity.layer.insertSublayer(grayGradient, at: 0)
+        updateGrayGradient()
+    }
+    
+    func updateGrayGradient() {
+        grayGradient.colors = [UIColor(named: "GrayGradientTop")?.cgColor ?? #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1).cgColor, UIColor(named: "GrayGradientBottom")?.cgColor ?? #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1).cgColor]
     }
     
     func setUniversityData(university: University){
         self.placeLabel.text = String(university.place)
         self.scoresLabel.text = String(university.scores)
         self.ratingLabel.text = String(university.rating)
-        self.nameLabel.text =   university.name
+        self.nameLabel.text = university.name
         self.loadImage(image: university.image)
     }
     
@@ -42,7 +61,7 @@ class UniversityTableViewCell: UITableViewCell {
     }
     
     public func loadImage(image: UIImage) -> Void {
-        self.setImage(image: image)
+        self.imageUniversity.image = image
         self.imageUniversity.backgroundColor = self.backgroundColor
     }
     

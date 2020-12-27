@@ -6,8 +6,9 @@ protocol UniversitiesTableViewControllerProtocol: UIViewController {
 }
 
 protocol UniversitiesTableViewPresenterProtocol: class {
-    var router: UniversitiesTableViewRouterProtocol! { set get }
+    var router: UniversitiesTableViewRouterProtocol! {set get}
     var view: UniversitiesTableViewControllerProtocol! {set get}
+    var hideHomePrograms: Bool {set get}
     func fetch(callback: @escaping  () -> Void )
     func getNumberOfRowsInSection() -> Int
     func isEndCell(indexPath: IndexPath) -> Bool
@@ -27,5 +28,5 @@ protocol UniversitiesTableViewRouterProtocol: class {
 }
 
 protocol UniversitiesTableViewConfiguratorProtocol: class {
-    static func configureModule() -> UniversitiesTableViewControllerProtocol
+    static func configureModule(hideHomePrograms: Bool) -> UniversitiesTableViewControllerProtocol
 }

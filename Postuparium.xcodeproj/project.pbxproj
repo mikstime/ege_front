@@ -1193,6 +1193,8 @@
 				2ED12024256A147C005D39DA /* EnrolleeService.swift */,
 				2EF252FA256A36C300D7FE1C /* EdProgramService.swift */,
 				2EA2F6AD2596A50400773066 /* FeedBackService.swift */,
+				CE3E8FC82598A06300E33E46 /* PhotoGridService.swift */,
+				CE3E8FCD2598A59400E33E46 /* UniversitiesServce.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -1536,6 +1538,7 @@
 				2EAD8B932562259500C4EEA3 /* ProgramsSelectionInteractor.swift in Sources */,
 				85C12E04258E7D5400C3CD71 /* HalfModalTransitioningAnimator.swift in Sources */,
 				85ABD5F52569BC320094BC7E /* EdProgramModuleProtocols.swift in Sources */,
+				CE3E8FC92598A06300E33E46 /* PhotoGridService.swift in Sources */,
 				2EE044C425630F950014FD34 /* HomeScreenProtocols.swift in Sources */,
 				8528F6432534D575004FDE50 /* InfoListView.swift in Sources */,
 				2EE044BF25630F950014FD34 /* HomeScreenPresenter.swift in Sources */,
@@ -1596,6 +1599,7 @@
 				8528F6112534C1CC004FDE50 /* UniversityTile.swift in Sources */,
 				85ABD5D12569AA290094BC7E /* EdProgramMock.swift in Sources */,
 				2EE044C225630F950014FD34 /* HomeScreenConfigurator.swift in Sources */,
+				CE3E8FCE2598A59400E33E46 /* UniversitiesServce.swift in Sources */,
 				2EAD8B71256215A100C4EEA3 /* AchievementsSelectionPresenter.swift in Sources */,
 				854EDE3A258670C60059ABB5 /* UniversityMapProtocols.swift in Sources */,
 				2EF0299B25983EE400251AF6 /* SettingsScreenRouter.swift in Sources */,

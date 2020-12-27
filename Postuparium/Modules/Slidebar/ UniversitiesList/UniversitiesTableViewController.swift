@@ -4,6 +4,9 @@ import UIKit
 class UniversitiesTableViewController: UIViewController, UniversitiesTableViewControllerProtocol {
     
     @IBOutlet weak var universitiesTableView: UITableView!
+    @IBOutlet weak var homeProgramsView: HomePrograms!
+    
+    
     var presenter: UniversitiesTableViewPresenterProtocol!
     
     override func viewDidLoad() {
@@ -13,6 +16,8 @@ class UniversitiesTableViewController: UIViewController, UniversitiesTableViewCo
     }
     
     func configureTableView() {
+        homeProgramsView.isHidden = presenter!.hideHomePrograms
+        
         self.universitiesTableView.separatorStyle = .none
 
         self.universitiesTableView.dataSource = self

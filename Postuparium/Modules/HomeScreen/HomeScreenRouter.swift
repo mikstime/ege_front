@@ -22,7 +22,7 @@ class HomeScreenRouter: HomeScreenRouterProtocol {
     }
     
     func showUniversitiesListScreen() {
-        let vc = UniversitiesTableViewConfigurator.configureModule()
+        let vc = UniversitiesTableViewConfigurator.configureModule(hideHomePrograms: true)
         view?.navigationController!.show(vc as UIViewController, sender: view)
     }
     

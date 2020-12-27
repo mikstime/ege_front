@@ -69,7 +69,7 @@ class HomePageViewController: UIViewController, MenuViewControllerProtocol, Home
     @IBOutlet weak var shadow: UIView!
     @IBOutlet weak var container: UIView!
     @IBOutlet weak var programs: UIView!
-    var universities = UniversitiesTableViewConfigurator.configureModule()
+    var universities = UniversitiesTableViewConfigurator.configureModule(hideHomePrograms: false)
     
     var presenter: HomePagePresenterProtocol!
     var handleArea: UIView!

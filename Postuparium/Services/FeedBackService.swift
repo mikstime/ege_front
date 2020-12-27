@@ -16,7 +16,7 @@ protocol FeedbackServiceProtocol {
 }
 
 class FeedbackService: FeedbackServiceProtocol {
-    static var FeedBackApiURL: String = "http://77.223.97.172:8080/api/v1/feedback/"
+    static var FeedBackApiURL: String = "http://77.223.97.172:8081/api/v1/feedback/"
     
     static var shared: FeedbackServiceProtocol = FeedbackService()
     
@@ -28,15 +28,22 @@ class FeedbackService: FeedbackServiceProtocol {
 //        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
 //            onFinish(true)
 //        }
+        var headers: HTTPHeaders = []
+        let cookieName = "csrftoken"
+        if let cookie = HTTPCookieStorage.shared.cookies?.first(where: { $0.name == cookieName }) {
+            headers["X-CSRFToken"] = cookie.value
+        }
+        
         let request = AF.request(FeedbackService.FeedBackApiURL, method: .post, parameters: [
             "email": email,
             "message": message,
-            "title": title,
-        ])
+            "title": title],
+            headers: headers)
         
         request.responseJSON { (response) in
             switch response.result {
                 case .success:
+                    
                     onFinish(true)
                 case .failure(_):
                     onFinish(false)

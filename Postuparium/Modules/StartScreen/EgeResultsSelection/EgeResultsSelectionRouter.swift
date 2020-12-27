@@ -18,12 +18,15 @@ class EgeResultsSelectionRouter: EgeResultsSelectionRouterProtocol {
     }
     
     func showHomeScreen() {
-        let vc = HomeScreenConfigurator.configureModule()
-        
-        view?.navigationController?.navigationBar.setBackgroundImage(nil, for: UIBarMetrics.default)
-        view?.navigationController?.navigationBar.shadowImage = nil
-        
+        let vc = UniversityMapConfigurator.configureModule()
         view?.navigationController!.show(vc as UIViewController, sender: view)
+        
+//        let vc = HomeScreenConfigurator.configureModule()
+//
+//        view?.navigationController?.navigationBar.setBackgroundImage(nil, for: UIBarMetrics.default)
+//        view?.navigationController?.navigationBar.shadowImage = nil
+//
+//        view?.navigationController!.show(vc as UIViewController, sender: view)
     }
     
     func prepare(for segue: UIStoryboardSegue, sender: Any?) {

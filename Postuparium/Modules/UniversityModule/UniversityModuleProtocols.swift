@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 protocol UniversityModuleViewControllerProtocol: UIViewController {
+    var id: Int {set get}
     var presenter: UniversityModulePresenterProtocol! {get set}
 }
 

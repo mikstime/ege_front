@@ -15,6 +15,11 @@ class HomeScreenViewController: UIViewController, HomeScreenViewControllerProtoc
         presenter?.showNextScreen()
     }
     
+    @IBAction func showMapScreen() {
+        presenter?.showMapScreen()
+    }
+    
+    
     @IBAction func showPhotosScreen() {
         presenter?.showPhotosScreen()
     }

@@ -13,8 +13,6 @@ class SSwipeableViewController: USwipeableViewController {
             setupCard()
         }
     }
-    @IBInspectable var scardHeight:CGFloat = 716
-    @IBInspectable var scardHandleAreaHeight:CGFloat = 0
     @IBInspectable var sduration = 0.3
     
     func showSCard() {
@@ -37,7 +35,7 @@ class SSwipeableViewController: USwipeableViewController {
         self.addChild(scardViewController)
         self.view.addSubview(scardViewController.view)
         
-        scardViewController.view.frame = CGRect(x: 0, y: self.view.frame.height - scardHandleAreaHeight, width: self.view.bounds.width, height: scardHeight)
+        scardViewController.view.frame = CGRect(x: -self.view.frame.width, y: 0, width: self.view.bounds.width, height: self.view.bounds.height)
 
         let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(self.shandleCardPan(recognizer:)))
 //        panGestureRecognizer.cancelsTouchesInView = false
@@ -50,17 +48,17 @@ class SSwipeableViewController: USwipeableViewController {
     @objc private func shandleCardPan (recognizer:UIPanGestureRecognizer) {
         scardViewController.view.endEditing(true)
         let translation = recognizer.translation(in: self.scardViewController.handleArea)
-        let fractionComplete = abs(translation.y) / scardHeight
+        let fractionComplete = abs(translation.x) / self.view.frame.width
     
         switch recognizer.state {
         case .began:
             startInteractiveTransition(state: .collapsed, duration: sduration)
         case .changed:
-            if translation.y > 0{
+            if translation.x < 0{
                 updateInteractiveTransition(fractionCompleted: fractionComplete)
             }
         case .ended:
-            if translation.y < 0{
+            if translation.x > 0{
                 cancelTransition()
             }
             if (fractionComplete < smaxFraction * 0.95 || smaxFraction < 0.1 ){
@@ -81,9 +79,11 @@ class SSwipeableViewController: USwipeableViewController {
             let frameAnimator = UIViewPropertyAnimator(duration: duration, curve: .easeOut) {
                 switch state {
                 case .expanded:
-                    self.scardViewController.view.frame.origin.y = self.view.frame.height - self.scardHeight
+                    self.scardViewController.view.frame.origin.y = 0// - self.scardHeight
+                    self.scardViewController.view.frame.origin.x = 0
                 case .collapsed:
-                    self.scardViewController.view.frame.origin.y = self.view.frame.height - self.scardHandleAreaHeight
+                    self.scardViewController.view.frame.origin.x = -self.view.frame.width
+                    self.scardViewController.view.frame.origin.y = 0//self.view.frame.height - self.scardHandleAreaHeight
                 }
             }
             

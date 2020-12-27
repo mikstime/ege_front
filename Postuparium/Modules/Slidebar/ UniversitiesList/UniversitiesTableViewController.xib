@@ -21,16 +21,16 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Что вы хотите найти?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GED-Km-cXm">
-                    <rect key="frame" x="10" y="44" width="394" height="34"/>
+                    <rect key="frame" x="10" y="49" width="394" height="34"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yek-rn-Ss4">
-                    <rect key="frame" x="10" y="292" width="394" height="580"/>
+                    <rect key="frame" x="10" y="297" width="394" height="575"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
                 <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="FHq-iK-4OV">
-                    <rect key="frame" x="0.0" y="78" width="414" height="214"/>
+                    <rect key="frame" x="0.0" y="83" width="414" height="214"/>
                     <subviews>
                         <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mAx-cy-aPW" customClass="HomePrograms" customModule="Postuparium" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="214"/>
@@ -56,7 +56,7 @@
                 <constraint firstItem="FHq-iK-4OV" firstAttribute="top" secondItem="GED-Km-cXm" secondAttribute="bottom" id="oEx-3b-BLA"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="GED-Km-cXm" secondAttribute="trailing" constant="10" id="quK-80-IUS"/>
                 <constraint firstItem="yek-rn-Ss4" firstAttribute="top" secondItem="FHq-iK-4OV" secondAttribute="bottom" id="v7G-mq-bkZ"/>
-                <constraint firstItem="GED-Km-cXm" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="zFR-Xw-pyU"/>
+                <constraint firstItem="GED-Km-cXm" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="5" id="zFR-Xw-pyU"/>
             </constraints>
             <point key="canvasLocation" x="18.840579710144929" y="103.79464285714285"/>
         </view>

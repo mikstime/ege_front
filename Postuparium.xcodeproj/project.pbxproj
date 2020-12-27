@@ -116,6 +116,8 @@
 		2EF0299E25983EE400251AF6 /* SettingsScreenConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6146052593BD63006E43E6 /* SettingsScreenConfigurator.swift */; };
 		2EF0299F25983EE400251AF6 /* SettingsScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E61460A2593BD64006E43E6 /* SettingsScreenPresenter.swift */; };
 		2EF029A025983EE400251AF6 /* SettingsScreenProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6146092593BD64006E43E6 /* SettingsScreenProtocols.swift */; };
+		2EF029D3259923FB00251AF6 /* UniversitiesServce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF029D2259923FB00251AF6 /* UniversitiesServce.swift */; };
+		2EF029D82599243300251AF6 /* PhotoGridService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF029D72599243200251AF6 /* PhotoGridService.swift */; };
 		2EF252FB256A36C300D7FE1C /* EdProgramService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF252FA256A36C300D7FE1C /* EdProgramService.swift */; };
 		85136E9025950BF200C74866 /* NewEdProgramsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85136E8F25950BF200C74866 /* NewEdProgramsViewController.swift */; };
 		85136E9825950C0800C74866 /* NewEdProgramsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85136E9725950C0800C74866 /* NewEdProgramsProtocols.swift */; };
@@ -371,6 +373,8 @@
 		2EE044BC25630F950014FD34 /* HomeScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenPresenter.swift; sourceTree = "<group>"; };
 		2EE044BD25630F950014FD34 /* HomeScreenProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenProtocols.swift; sourceTree = "<group>"; };
 		2EF0298A25983E0800251AF6 /* settingsSwipeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingsSwipeable.swift; sourceTree = "<group>"; };
+		2EF029D2259923FB00251AF6 /* UniversitiesServce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniversitiesServce.swift; sourceTree = "<group>"; };
+		2EF029D72599243200251AF6 /* PhotoGridService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoGridService.swift; sourceTree = "<group>"; };
 		2EF252FA256A36C300D7FE1C /* EdProgramService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdProgramService.swift; sourceTree = "<group>"; };
 		85136E8F25950BF200C74866 /* NewEdProgramsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEdProgramsViewController.swift; sourceTree = "<group>"; };
 		85136E9725950C0800C74866 /* NewEdProgramsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEdProgramsProtocols.swift; sourceTree = "<group>"; };
@@ -1187,14 +1191,14 @@
 		8528F59C2534B791004FDE50 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				2EF029D72599243200251AF6 /* PhotoGridService.swift */,
+				2EF029D2259923FB00251AF6 /* UniversitiesServce.swift */,
 				8528F59D2534B7AC004FDE50 /* ApiService.swift */,
 				8528F5A52534B7B8004FDE50 /* StorageService.swift */,
 				8528F6392534D524004FDE50 /* README.md */,
 				2ED12024256A147C005D39DA /* EnrolleeService.swift */,
 				2EF252FA256A36C300D7FE1C /* EdProgramService.swift */,
 				2EA2F6AD2596A50400773066 /* FeedBackService.swift */,
-				CE3E8FC82598A06300E33E46 /* PhotoGridService.swift */,
-				CE3E8FCD2598A59400E33E46 /* UniversitiesServce.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -1538,7 +1542,6 @@
 				2EAD8B932562259500C4EEA3 /* ProgramsSelectionInteractor.swift in Sources */,
 				85C12E04258E7D5400C3CD71 /* HalfModalTransitioningAnimator.swift in Sources */,
 				85ABD5F52569BC320094BC7E /* EdProgramModuleProtocols.swift in Sources */,
-				CE3E8FC92598A06300E33E46 /* PhotoGridService.swift in Sources */,
 				2EE044C425630F950014FD34 /* HomeScreenProtocols.swift in Sources */,
 				8528F6432534D575004FDE50 /* InfoListView.swift in Sources */,
 				2EE044BF25630F950014FD34 /* HomeScreenPresenter.swift in Sources */,
@@ -1599,7 +1602,6 @@
 				8528F6112534C1CC004FDE50 /* UniversityTile.swift in Sources */,
 				85ABD5D12569AA290094BC7E /* EdProgramMock.swift in Sources */,
 				2EE044C225630F950014FD34 /* HomeScreenConfigurator.swift in Sources */,
-				CE3E8FCE2598A59400E33E46 /* UniversitiesServce.swift in Sources */,
 				2EAD8B71256215A100C4EEA3 /* AchievementsSelectionPresenter.swift in Sources */,
 				854EDE3A258670C60059ABB5 /* UniversityMapProtocols.swift in Sources */,
 				2EF0299B25983EE400251AF6 /* SettingsScreenRouter.swift in Sources */,
@@ -1672,6 +1674,7 @@
 				2E9CF7AF259832A800490939 /* universitySwipeable.swift in Sources */,
 				85C9AF522598ECB900AE2DBA /* NewEdProgramModuleProtocols.swift in Sources */,
 				85ABD5ED2569BBFC0094BC7E /* EdProgramModuleRouter.swift in Sources */,
+				2EF029D82599243300251AF6 /* PhotoGridService.swift in Sources */,
 				85C12DFE258E7D1300C3CD71 /* HalfModalnteractiveTransition.swift in Sources */,
 				2EA2F6AE2596A50400773066 /* FeedBackService.swift in Sources */,
 				2EB468402562E59D00988BAA /* AchievementsItem.swift in Sources */,
@@ -1684,6 +1687,7 @@
 				2EDE684D2567601B0064D28B /* ProgramsSelectionMenuRouter.swift in Sources */,
 				2EAD8B912562259500C4EEA3 /* ProgramsSelectionRouter.swift in Sources */,
 				CEEE7BE8256911070094B1DA /* PhotoViewerRouter.swift in Sources */,
+				2EF029D3259923FB00251AF6 /* UniversitiesServce.swift in Sources */,
 				2E9CF7A525982E4400490939 /* UniversityPageViewContoller.swift in Sources */,
 				85C12E0C258E7E6300C3CD71 /* ModalViewController.swift in Sources */,
 				853315C5256BFA58003A89EA /* FeedbackModuleRouter.swift in Sources */,
@@ -1881,7 +1885,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5ABALJWYVX;
+				DEVELOPMENT_TEAM = CAG8DDF8KX;
 				INFOPLIST_FILE = Postuparium/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1902,7 +1906,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5ABALJWYVX;
+				DEVELOPMENT_TEAM = CAG8DDF8KX;
 				INFOPLIST_FILE = Postuparium/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

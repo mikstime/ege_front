@@ -85,23 +85,26 @@ class EdProgramService: EdProgramServiceProtocol {
     func loadChosenPrograms(since: EdProgram!, didLoad: @escaping ([EdProgram]?) -> Void) {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            
-            let request = AF.request(EdProgramService.favoriteProgrammsURL, method: .get)
-            
-            request.responseJSON { (response) in
-                switch response.result {
-                    case .success:
-                        print("response::: ", response.result)
-                        if let json = response.data {
-                            let jsonDecoder = JSONDecoder()
-                            let edPrograms = try! jsonDecoder.decode([EdProgram].self, from: json)
-                            didLoad(edPrograms)
-                               
-                        }
-                    case .failure(_):
-                        didLoad(nil)
-                    }
-            }
+            didLoad(self.programs)
         }
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+//
+//            let request = AF.request(EdProgramService.favoriteProgrammsURL, method: .get)
+//
+//            request.responseJSON { (response) in
+//                switch response.result {
+//                    case .success:
+//                        print("response::: ", response.result)
+//                        if let json = response.data {
+//                            let jsonDecoder = JSONDecoder()
+//                            let edPrograms = try! jsonDecoder.decode([EdProgram].self, from: json)
+//                            didLoad(edPrograms)
+//
+//                        }
+//                    case .failure(_):
+//                        didLoad(nil)
+//                    }
+//            }
+//        }
     }
 }

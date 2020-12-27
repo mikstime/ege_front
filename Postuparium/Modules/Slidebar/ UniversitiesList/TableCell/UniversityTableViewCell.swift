@@ -55,7 +55,7 @@ class UniversityTableViewCell: UITableViewCell {
     }
     
     private func roundImage() {
-        self.imageUniversity.layer.cornerRadius = 15
+        self.imageUniversity.layer.cornerRadius = 21
         self.imageUniversity.layer.masksToBounds = true
         self.imageUniversity.layer.borderColor = UIColor.lightGray.cgColor
     }

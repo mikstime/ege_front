@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EdProgramsViewCell" customModule="Postuparium" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="214" id="0GF-H8-D34" customClass="EdProgramsViewCell" customModule="Postuparium" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="214"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0GF-H8-D34" id="hoM-RP-WbG">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="214"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yil-uP-dqp" customClass="HomePrograms" customModule="Postuparium" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="176"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FQd-by-fOo">
+                        <rect key="frame" x="0.0" y="176" width="375" height="38"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ВУЗЫ РЯДОМ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kwW-af-ieA">
+                                <rect key="frame" x="16" y="17" width="87.5" height="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kwW-af-ieA" firstAttribute="leading" secondItem="FQd-by-fOo" secondAttribute="leading" constant="16" id="5ba-vS-Kw8"/>
+                            <constraint firstAttribute="bottom" secondItem="kwW-af-ieA" secondAttribute="bottom" constant="7" id="Kqn-TT-vXi"/>
+                            <constraint firstItem="kwW-af-ieA" firstAttribute="top" secondItem="FQd-by-fOo" secondAttribute="top" constant="17" id="bYy-dW-1HW"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="FQd-by-fOo" secondAttribute="bottom" id="40V-bc-9Ec"/>
+                    <constraint firstAttribute="trailing" secondItem="FQd-by-fOo" secondAttribute="trailing" id="ATp-C4-2I1"/>
+                    <constraint firstAttribute="trailing" secondItem="Yil-uP-dqp" secondAttribute="trailing" id="La5-pQ-xl6"/>
+                    <constraint firstAttribute="bottom" secondItem="Yil-uP-dqp" secondAttribute="bottom" constant="38" id="NYx-1y-txQ"/>
+                    <constraint firstItem="Yil-uP-dqp" firstAttribute="leading" secondItem="hoM-RP-WbG" secondAttribute="leading" id="VHn-Q2-6L2"/>
+                    <constraint firstItem="FQd-by-fOo" firstAttribute="top" secondItem="Yil-uP-dqp" secondAttribute="bottom" id="mOW-S0-gPH"/>
+                    <constraint firstItem="FQd-by-fOo" firstAttribute="leading" secondItem="hoM-RP-WbG" secondAttribute="leading" id="xrK-Ir-bi8"/>
+                    <constraint firstItem="Yil-uP-dqp" firstAttribute="top" secondItem="hoM-RP-WbG" secondAttribute="top" id="zYR-eZ-Vfk"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="116.66666666666667" y="112.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

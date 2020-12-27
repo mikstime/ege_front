@@ -17,10 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g3a-Iz-izV" customClass="ShadowView" customModule="Postuparium" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lks-bv-dyZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="852"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bfw-us-rOL">
                                                 <rect key="frame" x="177" y="7.5" width="60" height="4"/>
@@ -35,15 +35,11 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="L3U-fg-oKz">
-                                                <rect key="frame" x="0.0" y="31" width="414" height="56"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </searchBar>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="818-aA-vnr" customClass="HomePrograms" customModule="Postuparium" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="87" width="414" height="214"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="818-aA-vnr">
+                                                <rect key="frame" x="0.0" y="11.5" width="414" height="0.0"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="214" id="AxR-Oj-S7r"/>
+                                                    <constraint firstAttribute="height" id="AxR-Oj-S7r"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
@@ -53,13 +49,10 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="818-aA-vnr" firstAttribute="leading" secondItem="Lks-bv-dyZ" secondAttribute="leading" id="8js-YN-TIi"/>
-                                            <constraint firstItem="L3U-fg-oKz" firstAttribute="top" secondItem="bfw-us-rOL" secondAttribute="bottom" constant="19.5" id="BTe-w1-p2E"/>
-                                            <constraint firstItem="818-aA-vnr" firstAttribute="top" secondItem="L3U-fg-oKz" secondAttribute="bottom" id="Kmj-ra-lds"/>
                                             <constraint firstAttribute="trailing" secondItem="818-aA-vnr" secondAttribute="trailing" id="MoA-df-asS"/>
                                             <constraint firstItem="bfw-us-rOL" firstAttribute="top" secondItem="Lks-bv-dyZ" secondAttribute="top" constant="7.5" id="fZ5-XU-1kG"/>
-                                            <constraint firstAttribute="trailing" secondItem="L3U-fg-oKz" secondAttribute="trailing" id="g8o-z2-vg5"/>
+                                            <constraint firstItem="818-aA-vnr" firstAttribute="top" secondItem="bfw-us-rOL" secondAttribute="bottom" id="qqY-IX-llg"/>
                                             <constraint firstItem="bfw-us-rOL" firstAttribute="centerX" secondItem="Lks-bv-dyZ" secondAttribute="centerX" id="qwN-Ux-eKV"/>
-                                            <constraint firstItem="L3U-fg-oKz" firstAttribute="leading" secondItem="Lks-bv-dyZ" secondAttribute="leading" id="yF9-up-Fu4"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -77,7 +70,7 @@
                         <constraints>
                             <constraint firstItem="g3a-Iz-izV" firstAttribute="top" secondItem="MV1-Pr-jUs" secondAttribute="top" id="OZj-v5-D7y"/>
                             <constraint firstItem="g3a-Iz-izV" firstAttribute="leading" secondItem="MV1-Pr-jUs" secondAttribute="leading" id="h4s-Dk-p0p"/>
-                            <constraint firstItem="MV1-Pr-jUs" firstAttribute="bottom" secondItem="g3a-Iz-izV" secondAttribute="bottom" id="hOk-2T-eKB"/>
+                            <constraint firstItem="g3a-Iz-izV" firstAttribute="bottom" secondItem="N8Y-Da-4XK" secondAttribute="bottom" id="hOk-2T-eKB"/>
                             <constraint firstItem="MV1-Pr-jUs" firstAttribute="trailing" secondItem="g3a-Iz-izV" secondAttribute="trailing" id="xj2-rA-SQl"/>
                         </constraints>
                     </view>

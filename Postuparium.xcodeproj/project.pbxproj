@@ -118,6 +118,8 @@
 		2EF029A025983EE400251AF6 /* SettingsScreenProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6146092593BD64006E43E6 /* SettingsScreenProtocols.swift */; };
 		2EF029D3259923FB00251AF6 /* UniversitiesServce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF029D2259923FB00251AF6 /* UniversitiesServce.swift */; };
 		2EF029D82599243300251AF6 /* PhotoGridService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF029D72599243200251AF6 /* PhotoGridService.swift */; };
+		2EF029DD25992D4200251AF6 /* EdProgramsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF029DC25992D4200251AF6 /* EdProgramsViewCell.swift */; };
+		2EF029E225992E2200251AF6 /* EdProgramsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EF029E125992E2200251AF6 /* EdProgramsViewCell.xib */; };
 		2EF252FB256A36C300D7FE1C /* EdProgramService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF252FA256A36C300D7FE1C /* EdProgramService.swift */; };
 		85136E9025950BF200C74866 /* NewEdProgramsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85136E8F25950BF200C74866 /* NewEdProgramsViewController.swift */; };
 		85136E9825950C0800C74866 /* NewEdProgramsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85136E9725950C0800C74866 /* NewEdProgramsProtocols.swift */; };
@@ -375,6 +377,8 @@
 		2EF0298A25983E0800251AF6 /* settingsSwipeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingsSwipeable.swift; sourceTree = "<group>"; };
 		2EF029D2259923FB00251AF6 /* UniversitiesServce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniversitiesServce.swift; sourceTree = "<group>"; };
 		2EF029D72599243200251AF6 /* PhotoGridService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoGridService.swift; sourceTree = "<group>"; };
+		2EF029DC25992D4200251AF6 /* EdProgramsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdProgramsViewCell.swift; sourceTree = "<group>"; };
+		2EF029E125992E2200251AF6 /* EdProgramsViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EdProgramsViewCell.xib; sourceTree = "<group>"; };
 		2EF252FA256A36C300D7FE1C /* EdProgramService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdProgramService.swift; sourceTree = "<group>"; };
 		85136E8F25950BF200C74866 /* NewEdProgramsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEdProgramsViewController.swift; sourceTree = "<group>"; };
 		85136E9725950C0800C74866 /* NewEdProgramsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEdProgramsProtocols.swift; sourceTree = "<group>"; };
@@ -684,9 +688,11 @@
 			isa = PBXGroup;
 			children = (
 				2EAD67A72593EDE400A0EF05 /* UniversityTableViewCell.xib */,
-				2EAD67A82593EDE400A0EF05 /* EndTableViewCell.swift */,
 				2EAD67A92593EDE400A0EF05 /* UniversityTableViewCell.swift */,
+				2EAD67A82593EDE400A0EF05 /* EndTableViewCell.swift */,
 				2EAD67AA2593EDE400A0EF05 /* EndTableViewCell.xib */,
+				2EF029DC25992D4200251AF6 /* EdProgramsViewCell.swift */,
+				2EF029E125992E2200251AF6 /* EdProgramsViewCell.xib */,
 			);
 			path = TableCell;
 			sourceTree = "<group>";
@@ -1483,6 +1489,7 @@
 				8528F5332534AAE3004FDE50 /* LaunchScreen.storyboard in Resources */,
 				8528F5302534AAE3004FDE50 /* Assets.xcassets in Resources */,
 				85ABD61D2569E0CF0094BC7E /* applicants.json in Resources */,
+				2EF029E225992E2200251AF6 /* EdProgramsViewCell.xib in Resources */,
 				2E6145E62593B73C006E43E6 /* UniversityCell.xib in Resources */,
 				85173DDA259157E70090D1C6 /* universities.json in Resources */,
 				85ABD591256958CD0094BC7E /* StudyTileMediumCell.xib in Resources */,
@@ -1635,6 +1642,7 @@
 				853315CF256BFA72003A89EA /* FeedbackModuleProtocols.swift in Sources */,
 				2EDE68512567601B0064D28B /* ProgramsSelectionMenuProtocols.swift in Sources */,
 				8528F5DC2534BC04004FDE50 /* EgeResultsSelectionConfigurator.swift in Sources */,
+				2EF029DD25992D4200251AF6 /* EdProgramsViewCell.swift in Sources */,
 				2EA2F6C92596BEB900773066 /* HomePageRouter.swift in Sources */,
 				85331588256BE2F2003A89EA /* NibLoader.swift in Sources */,
 				8528F59E2534B7AC004FDE50 /* ApiService.swift in Sources */,

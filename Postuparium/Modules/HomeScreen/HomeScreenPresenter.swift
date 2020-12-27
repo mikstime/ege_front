@@ -34,6 +34,9 @@ class HomeScreenPresenter: HomeScreenPresenterProtocol {
         router?.showPhotosScreen()
     }
     
+    func showNewEdProgramModuleScreen() {
+        router?.showNewEdProgramModuleScreen()
+    }
     
     func viewDidLoad() {
  

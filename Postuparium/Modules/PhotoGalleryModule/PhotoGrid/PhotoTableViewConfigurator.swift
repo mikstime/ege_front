@@ -18,8 +18,6 @@ class PhotoTableViewConfigurator: PhotoTableViewConfiguratorProtocol {
         let interactor = PhotoTableViewInteractor()
         let router = PhotoTableViewRouter()
         
-        interactor.photos = []
-        
         viewController.presenter = presenter
         interactor.presenter = presenter
         

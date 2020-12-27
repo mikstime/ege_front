@@ -218,6 +218,7 @@
 		85C12E58258FB80400C3CD71 /* ModalRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C12E57258FB80400C3CD71 /* ModalRouter.swift */; };
 		85C12E70258FE0C500C3CD71 /* UnoversityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C12E6E258FE0C500C3CD71 /* UnoversityCell.swift */; };
 		85C12E71258FE0C500C3CD71 /* UnoversityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85C12E6F258FE0C500C3CD71 /* UnoversityCell.xib */; };
+		CE3E8FC92598A06300E33E46 /* PhotoGridService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E8FC82598A06300E33E46 /* PhotoGridService.swift */; };
 		CEEE7BA82567D3A50094B1DA /* PhotoTableView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEEE7BA72567D3A50094B1DA /* PhotoTableView.storyboard */; };
 		CEEE7BB22567D94C0094B1DA /* PhotoTableViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE7BB12567D94C0094B1DA /* PhotoTableViewRouter.swift */; };
 		CEEE7BB72567D96B0094B1DA /* PhotoTableViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE7BB62567D96B0094B1DA /* PhotoTableViewProtocols.swift */; };
@@ -481,6 +482,7 @@
 		85C12E57258FB80400C3CD71 /* ModalRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalRouter.swift; sourceTree = "<group>"; };
 		85C12E6E258FE0C500C3CD71 /* UnoversityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnoversityCell.swift; sourceTree = "<group>"; };
 		85C12E6F258FE0C500C3CD71 /* UnoversityCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UnoversityCell.xib; sourceTree = "<group>"; };
+		CE3E8FC82598A06300E33E46 /* PhotoGridService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGridService.swift; sourceTree = "<group>"; };
 		CEEE7BA72567D3A50094B1DA /* PhotoTableView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PhotoTableView.storyboard; sourceTree = "<group>"; };
 		CEEE7BB12567D94C0094B1DA /* PhotoTableViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewRouter.swift; sourceTree = "<group>"; };
 		CEEE7BB62567D96B0094B1DA /* PhotoTableViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewProtocols.swift; sourceTree = "<group>"; };
@@ -1175,6 +1177,7 @@
 				2ED12024256A147C005D39DA /* EnrolleeService.swift */,
 				2EF252FA256A36C300D7FE1C /* EdProgramService.swift */,
 				2EA2F6AD2596A50400773066 /* FeedBackService.swift */,
+				CE3E8FC82598A06300E33E46 /* PhotoGridService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -1491,6 +1494,7 @@
 				2EAD8B932562259500C4EEA3 /* ProgramsSelectionInteractor.swift in Sources */,
 				85C12E04258E7D5400C3CD71 /* HalfModalTransitioningAnimator.swift in Sources */,
 				85ABD5F52569BC320094BC7E /* EdProgramModuleProtocols.swift in Sources */,
+				CE3E8FC92598A06300E33E46 /* PhotoGridService.swift in Sources */,
 				2EE044C425630F950014FD34 /* HomeScreenProtocols.swift in Sources */,
 				8528F6432534D575004FDE50 /* InfoListView.swift in Sources */,
 				2EE044BF25630F950014FD34 /* HomeScreenPresenter.swift in Sources */,

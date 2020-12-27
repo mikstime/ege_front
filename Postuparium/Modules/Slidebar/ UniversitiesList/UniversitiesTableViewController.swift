@@ -73,6 +73,15 @@ extension UniversitiesTableViewController: UITableViewDelegate {
             return
         }
 
+
         // тут вставитт логику работы с нажатием на ячейку таблицы университетов
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.section == 0 {
+            return 196.0
+        } else{
+            return 40.0
+        }
     }
 }

@@ -48,9 +48,9 @@ extension UniversitiesService {
                         if self.useMocks {
                             didLoad(self.MOCK_UNIVERSITIES)
                         } else {
-//                            let jsonDecoder = JSONDecoder()
-//                            let universities = try! jsonDecoder.decode([University].self, from: json)
-//                            didLoad(universities)
+                            let jsonDecoder = JSONDecoder()
+                            let universities = try! jsonDecoder.decode([University].self, from: json)
+                            didLoad(universities)
                         }
                     }
                 case .failure(_):

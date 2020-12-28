@@ -11,6 +11,7 @@ import UIKit
 
 protocol HomePageViewControllerProtocol: MenuViewControllerProtocol {
     var presenter: HomePagePresenterProtocol! {get set}
+    var dispatcher: HomePageDispatcher! {get set}
 }
 
 protocol HomePagePresenterProtocol: class {

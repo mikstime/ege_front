@@ -84,13 +84,6 @@ class UniversityMapViewController: SSwipeableViewController,
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
-
-    func initButtons() {
-        self.zoomMinusButton.cornerRadius = self.zoomMinusButton.frame.width / 2
-        self.zoomPlusBiutton.cornerRadius = self.zoomPlusBiutton.frame.width / 2
-        self.zoomToUserButton.cornerRadius = self.zoomToUserButton.frame.width / 2
-        
-    }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         self.location = locations.last as CLLocation?
@@ -100,10 +93,8 @@ class UniversityMapViewController: SSwipeableViewController,
         cardViewController = menu // должно сетиться до вызова родительского метода
         ucardViewController = umenu
         scardViewController = smenu
+        menu.dispatcher = self
         super.viewDidLoad()
-
-
-        self.initButtons()
         
         
         
@@ -167,31 +158,33 @@ class UniversityMapViewController: SSwipeableViewController,
 
         // Leave default annotation for user location
         if annotation is MKUserLocation {
-          return nil
+            return nil
         }
 
         let reuseID = "Location"
         var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseID)
         if annotationView == nil {
-          let pin = MKAnnotationView(annotation: annotation,
-                                     reuseIdentifier: reuseID)
-              pin.image = UIImage(named: "largecircle.fill.circle")
-              pin.isEnabled = true
-              pin.canShowCallout = false
-
-          let label = UILabel(frame: CGRect(x: 0, y: 0, width: 180, height: 30))
-            label.setGradientBackgroundColor(colorOne: .blue, colorTow: .systemBlue)
-            label.cornerRadius = 5
-            pin.addSubview(label)
-            let textLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 180, height: 30))
+            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseID)
+            annotationView?.canShowCallout = true
+            // Resize image
+            let pinImage = UIImage()
+            let size = CGSize(width: 187, height: 39)
+            UIGraphicsBeginImageContext(size)
+            pinImage.draw(in: CGRect(x: 0, y: 0, width: size.width, height: size.height))
+            let resizedImage = UIGraphicsGetImageFromCurrentImageContext()
+            
+            annotationView?.image = resizedImage
+            let label = UILabel(frame: CGRect(x: 0, y: 0, width: 187, height: 39))
+            label.setGradientBackgroundColor(colorOne: UIColor(named: "BlueGradientTop") ?? .blue, colorTow: UIColor(named: "BlueGradientBottom") ?? .systemBlue)
+            label.roundCorners([.bottomLeft, .bottomRight, .topRight], radius: 15)
+            annotationView?.addSubview(label)
+            let textLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 187, height: 39))
             textLabel.textColor = .white
-            textLabel.cornerRadius = 5
             textLabel.textAlignment = .center
             
             textLabel.text = "Направлений: \(5)"
-            pin.addSubview(textLabel)
-
-          annotationView = pin
+            annotationView?.canShowCallout = false
+            annotationView?.addSubview(textLabel)
         } else {
           annotationView?.annotation = annotation
         }
@@ -234,6 +227,11 @@ extension ViewController: MKMapViewDelegate {
   }
 }
 
-
+extension UniversityMapViewController: HomePageDispatcher {
+    func showUniversity(university: University) {
+        umenu.university = university
+        showUCard()
+    }
+}
 
 

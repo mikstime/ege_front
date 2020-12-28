@@ -9,7 +9,7 @@ import UIKit
 
 class UniversityPageViewController: UIViewController, UniversityPageViewControllerProtocol, CardViewControllerProtocol {
     var presenter: UniversityPagePresenterProtocol!
-    
+    var university: University!
     var handleArea: UIView!
     @IBOutlet weak var container: UIView!
     @IBOutlet weak var tableView: UITableView!

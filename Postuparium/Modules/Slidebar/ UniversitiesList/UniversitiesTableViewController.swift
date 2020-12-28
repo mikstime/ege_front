@@ -1,12 +1,16 @@
 import Foundation
 import UIKit
 
+protocol UniversitiesTableViewControllerDispatcher: class {
+    func didTapOnUniversity(university: University)
+}
 class UniversitiesTableViewController: UIViewController, UniversitiesTableViewControllerProtocol {
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var universitiesTableView: UITableView!
 //    @IBOutlet weak var homeProgramsView: HomePrograms!
     
+    var dispatcher: UniversitiesTableViewControllerDispatcher!
     
     var presenter: UniversitiesTableViewPresenterProtocol!
     
@@ -75,13 +79,25 @@ extension UniversitiesTableViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
     }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        guard UIApplication.shared.applicationState == .inactive else {
+            return
+        }
+        designSearchBar()
+    }
 }
 
 
 extension UniversitiesTableViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) -> Void {
         self.universitiesTableView.deselectRow(at: indexPath, animated: true)
-
+        
+        if indexPath.row == 0 {
+            return
+        }
+        
         if (self.presenter!.isEndCell(indexPath: indexPath)) {
             self.presenter?.fetch {
                 DispatchQueue.main.async {
@@ -90,9 +106,10 @@ extension UniversitiesTableViewController: UITableViewDelegate {
             }
             return
         }
-
-
-        // тут вставитт логику работы с нажатием на ячейку таблицы университетов
+        
+        if let dispatcher = dispatcher {
+            dispatcher.didTapOnUniversity(university: presenter?.getCellData(indexPath: indexPath) ?? University() )
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

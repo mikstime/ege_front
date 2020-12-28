@@ -3,12 +3,14 @@ import UIKit
 
 protocol UniversitiesTableViewControllerProtocol: UIViewController {
     var presenter: UniversitiesTableViewPresenterProtocol! {get set}
+    var dispatcher: UniversitiesTableViewControllerDispatcher! {get set}
 }
 
 protocol UniversitiesTableViewPresenterProtocol: class {
     var router: UniversitiesTableViewRouterProtocol! {set get}
     var view: UniversitiesTableViewControllerProtocol! {set get}
     var hideHomePrograms: Bool {set get}
+    func getCellData(indexPath: IndexPath) -> University
     func fetch(callback: @escaping  () -> Void )
     func getNumberOfRowsInSection() -> Int
     func isEndCell(indexPath: IndexPath) -> Bool

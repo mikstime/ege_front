@@ -49,6 +49,9 @@ class HomePrograms: UIView {
             ContainerWidthConstraint?.constant += 134
             programsViews.append(programView)
         }
+        if programs.count > 0 {
+            ContainerWidthConstraint?.constant -= 17
+        }
     }
     
     func programsAreNotLoaded() {

@@ -11,6 +11,7 @@ import UIKit
 
 protocol UniversityPageViewControllerProtocol: CardViewControllerProtocol {
     var presenter: UniversityPagePresenterProtocol! {get set}
+    var university: University! {get set}
 }
 
 protocol UniversityPagePresenterProtocol: class {

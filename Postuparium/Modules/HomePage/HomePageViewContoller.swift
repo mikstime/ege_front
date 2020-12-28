@@ -64,11 +64,16 @@ class ShadowButton: UIButton {
     }
 }
 
+protocol HomePageDispatcher: class {
+    func showUniversity(university: University)
+}
+
 class HomePageViewController: UIViewController, MenuViewControllerProtocol, HomePageViewControllerProtocol {
     
     @IBOutlet weak var shadow: UIView!
     @IBOutlet weak var container: UIView!
     @IBOutlet weak var programs: UIView!
+    var dispatcher: HomePageDispatcher!
     var universities = UniversitiesTableViewConfigurator.configureModule(hideHomePrograms: false)
     
     var presenter: HomePagePresenterProtocol!
@@ -96,6 +101,7 @@ class HomePageViewController: UIViewController, MenuViewControllerProtocol, Home
 
     }
     func addUniversities(){
+        universities.dispatcher = self
         if let view1 = universities.view {
             view.addSubview(view1)
             view1.translatesAutoresizingMaskIntoConstraints = false
@@ -105,5 +111,11 @@ class HomePageViewController: UIViewController, MenuViewControllerProtocol, Home
             view.addConstraint(NSLayoutConstraint(item: view1, attribute: .bottom, relatedBy: .equal, toItem: self.view, attribute: .bottom, multiplier: 1, constant: 0))
             addChild(universities)
         }
+    }
+}
+
+extension HomePageViewController: UniversitiesTableViewControllerDispatcher {
+    func didTapOnUniversity(university: University) {
+        dispatcher?.showUniversity(university: university)
     }
 }

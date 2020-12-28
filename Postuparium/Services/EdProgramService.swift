@@ -16,7 +16,7 @@ protocol EdProgramServiceProtocol {
 
 class EdProgramService: EdProgramServiceProtocol {
     
-    var useMocks = true
+    var useMocks = false
     private var MOCKED_PROGRAMS = [
         EdProgram(code: "09.03.01", name: "Прикладная физика", university: "МГТУ им. Н. Э.Баумана", universityId: 1, photo: "http://77.223.97.172:8081/media/1.2.jpg", probability: "10%", probablilityNumber: 0.1, id: 1),
         EdProgram(code: "09.03.01", name: "Прикладная математика", university: "МГУ", universityId: 2, photo: "http://77.223.97.172:8081/media/1.3.jpg", probability: "15%", probablilityNumber: 0.15, id: 2)

@@ -232,6 +232,9 @@ extension UniversityMapViewController: HomePageDispatcher {
         umenu.university = university
         showUCard()
     }
+    func didStartEditing() {
+        showCard()
+    }
 }
 
 

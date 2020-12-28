@@ -12,6 +12,7 @@ protocol UniversitiesTableViewPresenterProtocol: class {
     var hideHomePrograms: Bool {set get}
     func getCellData(indexPath: IndexPath) -> University
     func fetch(callback: @escaping  () -> Void )
+    func search(query: String, callback: @escaping  () -> Void )
     func getNumberOfRowsInSection() -> Int
     func isEndCell(indexPath: IndexPath) -> Bool
     func setCellData(cell: UniversityTableViewCell, indexPath: IndexPath)
@@ -25,6 +26,7 @@ protocol UniversitiesTableViewInteractorProtocol: class {
     func getUniversitiesCount() -> Int
     func hasNext() -> Bool
     func fetch(callback: @escaping  () -> Void )
+    func search(query: String, callback: @escaping  () -> Void )
 }
 
 protocol UniversitiesTableViewRouterProtocol: class {

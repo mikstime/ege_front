@@ -15,6 +15,6 @@ struct University {
     var place: Int = 0
     var rating: Double = 0.0
     var name: String = ""
-    var image: UIImage = UIImage()
+    var image: String = ""
     var description: String = ""
  }

@@ -66,6 +66,7 @@ class ShadowButton: UIButton {
 
 protocol HomePageDispatcher: class {
     func showUniversity(university: University)
+    func didStartEditing()
 }
 
 class HomePageViewController: UIViewController, MenuViewControllerProtocol, HomePageViewControllerProtocol {
@@ -115,6 +116,10 @@ class HomePageViewController: UIViewController, MenuViewControllerProtocol, Home
 }
 
 extension HomePageViewController: UniversitiesTableViewControllerDispatcher {
+    func didStartEditing() {
+        dispatcher?.didStartEditing()
+    }
+    
     func didTapOnUniversity(university: University) {
         dispatcher?.showUniversity(university: university)
     }

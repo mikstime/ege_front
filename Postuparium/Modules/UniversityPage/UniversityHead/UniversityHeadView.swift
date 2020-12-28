@@ -11,7 +11,7 @@ class UniversityHead: UIView {
     var university: University? {
         didSet {
             setDetails()
-            setImage()
+            setImage(from: university?.image ?? "")
         }
     }
     @IBOutlet weak var uImageView: UIImageView!
@@ -35,9 +35,28 @@ class UniversityHead: UIView {
 
     func _init() {
         fromNib()
-        setImage()
+        if let url = university?.image {
+            setImage(from: url)
+        }
         setDetails()
         setupGradient()
+    }
+    
+    func setImage(from url: String) {
+        guard let imageURL = URL(string: url) else { return }
+        self.uImageView?.image = UIImage()
+        DispatchQueue.global().async {
+            guard let imageData = try? Data(contentsOf: imageURL) else { return }
+
+            let image = UIImage(data: imageData)
+            DispatchQueue.main.async {
+                self.uImageView?.image = image
+                self.grayGradient.frame.size = self.frame.size
+                self.grayGradient.startPoint = .init(x: 0.5, y: 0)
+                self.grayGradient.endPoint = .init(x: 0.5, y: 1)
+                self.grayGradient.locations = [0.0, 1.0]
+            }
+        }
     }
     
     final override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
@@ -64,14 +83,6 @@ class UniversityHead: UIView {
         updateGrayGradient()
     }
     
-    func setImage() {
-        let image = university?.image
-        uImageView.image = image
-        grayGradient?.frame.size = frame.size
-        grayGradient?.startPoint = .init(x: 0.5, y: 0)
-        grayGradient?.endPoint = .init(x: 0.5, y: 1)
-        grayGradient?.locations = [0.0, 1.0]
-    }
     
     func setDetails() {
         uratingView?.text = String(university?.rating ?? 0)

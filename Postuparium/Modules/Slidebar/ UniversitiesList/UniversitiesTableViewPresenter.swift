@@ -16,6 +16,10 @@ class UniversitiesTableViewPresenter: UniversitiesTableViewPresenterProtocol {
         interactor?.fetch(callback: callback)
     }
     
+    func search(query: String, callback: @escaping () -> Void) {
+        interactor?.search(query: query, callback: callback)
+    }
+    
     func getNumberOfRowsInSection() -> Int {
         return self.interactor!.hasNext() ? self.interactor!.getUniversitiesCount() + 1 : self.interactor!.getUniversitiesCount()
     }

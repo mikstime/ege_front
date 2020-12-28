@@ -3,8 +3,9 @@ import UIKit
 
 protocol UniversitiesTableViewControllerDispatcher: class {
     func didTapOnUniversity(university: University)
+    func didStartEditing()
 }
-class UniversitiesTableViewController: UIViewController, UniversitiesTableViewControllerProtocol {
+class UniversitiesTableViewController: UIViewController, UniversitiesTableViewControllerProtocol, UISearchBarDelegate {
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var universitiesTableView: UITableView!
@@ -18,7 +19,19 @@ class UniversitiesTableViewController: UIViewController, UniversitiesTableViewCo
         super.viewDidLoad()
         self.configureTableView()
         self.startLoad()
+        searchBar?.delegate = self
         self.designSearchBar()
+    }
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        dispatcher?.didStartEditing()
+    }
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        self.presenter?.search(query: searchText, callback: {
+            DispatchQueue.main.async {
+                self.universitiesTableView.reloadData()
+            }
+        }
+        )
     }
     
     func configureTableView() {
@@ -36,10 +49,10 @@ class UniversitiesTableViewController: UIViewController, UniversitiesTableViewCo
     
     func startLoad() {
         print("load")
-        self.universitiesTableView.isHidden = true
+//        self.universitiesTableView.isHidden = true
         self.presenter?.fetch {
             DispatchQueue.main.async {
-                self.universitiesTableView.isHidden = false
+//                self.universitiesTableView.isHidden = false
                 self.universitiesTableView.reloadData()
             }
         }
@@ -49,7 +62,7 @@ class UniversitiesTableViewController: UIViewController, UniversitiesTableViewCo
 extension UniversitiesTableViewController: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return presenter!.getNumberOfRowsInSection()
+        return presenter!.getNumberOfRowsInSection() > 0 ? presenter!.getNumberOfRowsInSection() : 1
     }
 
     func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
@@ -113,11 +126,12 @@ extension UniversitiesTableViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if (self.presenter!.isEndCell(indexPath: indexPath)){
-            return 68.0
-        }
         if indexPath.row == 0 {
             return 252.0
+        }
+        
+        if (self.presenter!.isEndCell(indexPath: indexPath)){
+            return 68.0
         }
         return 196.0
 

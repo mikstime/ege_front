@@ -51,7 +51,8 @@ class UniversityTableViewCell: UITableViewCell {
         self.scoresLabel.text = String(university.scores)
         self.ratingLabel.text = String(university.rating)
         self.nameLabel.text = university.name
-        self.loadImage(image: university.image)
+//        self.loadImage(image: university.image)
+        self.setImage(from: university.image)
     }
     
     private func roundImage() {
@@ -64,5 +65,16 @@ class UniversityTableViewCell: UITableViewCell {
         self.imageUniversity.image = image
         self.imageUniversity.backgroundColor = self.backgroundColor
     }
-    
+    func setImage(from url: String) {
+        guard let imageURL = URL(string: url) else { return }
+
+        DispatchQueue.global().async {
+            guard let imageData = try? Data(contentsOf: imageURL) else { return }
+
+            let image = UIImage(data: imageData)
+            DispatchQueue.main.async {
+                self.imageUniversity?.image = image
+            }
+        }
+    }
 }

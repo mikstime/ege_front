@@ -1,10 +1,11 @@
 
 import UIKit
 
-class PhotoViewerController: UIViewController, PhotoViewerControllerProtocol {
+class PhotoViewerController: UIViewController, UIScrollViewDelegate, PhotoViewerControllerProtocol {
     @IBOutlet weak var viewerPhoto: UIImageView!
-    var presenter: PhotoViewerPresenterProtocol!
+    @IBOutlet weak var scrollView: UIScrollView!
     
+    var presenter: PhotoViewerPresenterProtocol!
     var photo: UIImage? {
         didSet {
             viewerPhoto.image = photo
@@ -18,17 +19,13 @@ class PhotoViewerController: UIViewController, PhotoViewerControllerProtocol {
         navigationController?.navigationBar.setBackgroundImage(nil, for: UIBarMetrics.default)
         navigationController?.navigationBar.shadowImage = nil
         
-        viewerPhoto.isUserInteractionEnabled = true
-        let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(self.pinchGesture))
-        viewerPhoto.addGestureRecognizer(pinchGesture)
+        //viewerPhoto.isUserInteractionEnabled = true
+        self.scrollView.minimumZoomScale = 1.0
+        self.scrollView.maximumZoomScale = 4.0
+        self.scrollView.delegate = self
     }
-    
-    @objc func pinchGesture(sender: UIPinchGestureRecognizer) {
-        if let scale = (sender.view?.transform.scaledBy(x: sender.scale, y: sender.scale)) {
-            guard scale.a > 1.0 else {return}
-            guard scale.d > 1.0 else {return}
-            sender.view?.transform = scale
-            sender.scale = 1.0
-        }
+        
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return viewerPhoto
     }
 }

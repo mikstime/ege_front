@@ -34,7 +34,8 @@ class FeedbackModuleViewController: UIViewController, LoadableScreen, FeedbackMo
                                       message: "Вам ответят в течении нескольких дней", preferredStyle: .alert)
 
         alert.addAction(UIAlertAction(title: "Отлично!", style: .default, handler: {_ in
-            self.presenter?.showNextScreen()
+//            self.presenter?.showNextScreen()
+            self.navigationController?.popViewController(animated: true)
         }))
 
         self.present(alert, animated: true)

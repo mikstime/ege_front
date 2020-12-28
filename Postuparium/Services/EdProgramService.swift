@@ -12,7 +12,7 @@ protocol EdProgramServiceProtocol {
     static var shared: EdProgramServiceProtocol {get}
     func loadPrograms(since: EdProgram!, didLoad:@escaping ([EdProgram]?) -> Void)
     func searchPrograms(searchString: String, since: EdProgram?, didFind:@escaping ([EdProgram]?) -> Void)
-    func loadChosenPrograms(since: EdProgram!, didLoad:@escaping([EdProgram]?) -> Void)
+    func loadChosenPrograms(since: EdProgram!, university: University!, didLoad:@escaping([EdProgram]?) -> Void)
     func loadProgramsByUniversity(universityId: Int!, didLoad:@escaping ([EdProgram]?) -> Void)
 }
 
@@ -106,29 +106,41 @@ class EdProgramService: EdProgramServiceProtocol {
         }
     }
     
-    func loadChosenPrograms(since: EdProgram!, didLoad: @escaping ([EdProgram]?) -> Void) {
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            didLoad(self.programs)
+    func loadChosenPrograms(since: EdProgram!, university: University! = nil, didLoad: @escaping ([EdProgram]?) -> Void) {
+
+        if university == nil {
+            let request = AF.request(EdProgramService.favoriteProgrammsURL, method: .get)
+            
+            request.responseJSON { (response) in
+                switch response.result {
+                    case .success:
+                        print("response::: ", response.result)
+                        if let json = response.data {
+                            let jsonDecoder = JSONDecoder()
+                            let edPrograms = try! jsonDecoder.decode([EdProgram].self, from: json)
+                            didLoad(edPrograms)
+                        }
+                    case .failure(_):
+                        didLoad(nil)
+                    }
+            }
+        } else {
+            //@TODO 
+            let request = AF.request(EdProgramService.favoriteProgrammsURL, method: .get)
+            
+            request.responseJSON { (response) in
+                switch response.result {
+                    case .success:
+                        print("response::: ", response.result)
+                        if let json = response.data {
+                            let jsonDecoder = JSONDecoder()
+                            let edPrograms = try! jsonDecoder.decode([EdProgram].self, from: json)
+                            didLoad(edPrograms)
+                        }
+                    case .failure(_):
+                        didLoad(nil)
+                    }
+            }
         }
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-//
-//            let request = AF.request(EdProgramService.favoriteProgrammsURL, method: .get)
-//
-//            request.responseJSON { (response) in
-//                switch response.result {
-//                    case .success:
-//                        print("response::: ", response.result)
-//                        if let json = response.data {
-//                            let jsonDecoder = JSONDecoder()
-//                            let edPrograms = try! jsonDecoder.decode([EdProgram].self, from: json)
-//                            didLoad(edPrograms)
-//
-//                        }
-//                    case .failure(_):
-//                        didLoad(nil)
-//                    }
-//            }
-//        }
     }
 }

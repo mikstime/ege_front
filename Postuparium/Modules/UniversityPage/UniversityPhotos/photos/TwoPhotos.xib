@@ -8,7 +8,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TwoPhotos" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TwoPhotos" customModule="Postuparium" customModuleProvider="target">
+            <connections>
+                <outlet property="fImage" destination="36l-TL-I36" id="oDQ-nX-UrR"/>
+                <outlet property="fPhotoContainer" destination="ih2-0E-Krs" id="5E8-zz-Ojr"/>
+                <outlet property="sImage" destination="mJ0-Sg-Ge6" id="b1z-bV-aVN"/>
+                <outlet property="sPhotoContainer" destination="zFw-xe-UGW" id="aoc-43-hhJ"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="110" height="197"/>
@@ -17,10 +24,10 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3fZ-ol-vhX">
                     <rect key="frame" x="0.0" y="0.0" width="110" height="197"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ih2-0E-Krs">
+                        <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ih2-0E-Krs" customClass="ShadowView" customModule="Postuparium" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="110" height="113"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="36l-TL-I36">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="36l-TL-I36">
                                     <rect key="frame" x="0.0" y="0.0" width="110" height="113"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -30,14 +37,19 @@
                                 </imageView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TnK-dl-itJ">
                                     <rect key="frame" x="0.0" y="0.0" width="110" height="113"/>
+                                    <connections>
+                                        <action selector="onTapOne" destination="-1" eventType="touchUpInside" id="Xbo-VU-XM0"/>
+                                    </connections>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="TnK-dl-itJ" firstAttribute="top" secondItem="ih2-0E-Krs" secondAttribute="top" id="89A-9A-ZUx"/>
                                 <constraint firstAttribute="bottom" secondItem="TnK-dl-itJ" secondAttribute="bottom" id="B6T-cL-TBJ"/>
                                 <constraint firstItem="36l-TL-I36" firstAttribute="top" secondItem="ih2-0E-Krs" secondAttribute="top" id="FDY-63-wRl"/>
                                 <constraint firstAttribute="trailing" secondItem="TnK-dl-itJ" secondAttribute="trailing" id="G7W-Uj-9Uy"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="113" id="OO7-wK-rYf"/>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="110" id="YUj-TC-AAN"/>
                                 <constraint firstAttribute="trailing" secondItem="36l-TL-I36" secondAttribute="trailing" id="YW8-o5-FbX"/>
                                 <constraint firstItem="TnK-dl-itJ" firstAttribute="leading" secondItem="ih2-0E-Krs" secondAttribute="leading" id="guN-ob-4GG"/>
                                 <constraint firstItem="36l-TL-I36" firstAttribute="leading" secondItem="ih2-0E-Krs" secondAttribute="leading" id="j1q-8a-a8t"/>
@@ -46,11 +58,12 @@
                                 <constraint firstAttribute="bottom" secondItem="36l-TL-I36" secondAttribute="bottom" id="tbk-FN-Zc8"/>
                             </constraints>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zFw-xe-UGW">
+                        <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zFw-xe-UGW" customClass="ShadowView" customModule="Postuparium" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="130" width="110" height="67"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mJ0-Sg-Ge6">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mJ0-Sg-Ge6">
                                     <rect key="frame" x="0.0" y="0.0" width="110" height="67"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                             <real key="value" value="15"/>
@@ -59,14 +72,19 @@
                                 </imageView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1RJ-i5-t90">
                                     <rect key="frame" x="0.0" y="0.0" width="110" height="67"/>
+                                    <connections>
+                                        <action selector="onTapTwo" destination="-1" eventType="touchUpInside" id="FLz-XA-iK2"/>
+                                    </connections>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="mJ0-Sg-Ge6" firstAttribute="top" secondItem="zFw-xe-UGW" secondAttribute="top" id="2Tw-7w-Lex"/>
                                 <constraint firstAttribute="trailing" secondItem="1RJ-i5-t90" secondAttribute="trailing" id="9cW-q8-j3l"/>
                                 <constraint firstAttribute="height" constant="67" id="Odn-gd-X6c"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="67" id="XDL-CZ-O5I"/>
                                 <constraint firstAttribute="width" constant="110" id="cdQ-tQ-53p"/>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="110" id="fan-11-A41"/>
                                 <constraint firstItem="1RJ-i5-t90" firstAttribute="top" secondItem="zFw-xe-UGW" secondAttribute="top" id="gcp-pD-zXL"/>
                                 <constraint firstItem="mJ0-Sg-Ge6" firstAttribute="leading" secondItem="zFw-xe-UGW" secondAttribute="leading" id="ivS-A1-gdU"/>
                                 <constraint firstAttribute="bottom" secondItem="mJ0-Sg-Ge6" secondAttribute="bottom" id="l71-Mh-J2Q"/>
@@ -76,22 +94,24 @@
                             </constraints>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="ih2-0E-Krs" secondAttribute="trailing" id="1D8-3I-Qi9"/>
                         <constraint firstAttribute="width" constant="110" id="383-jn-0wW"/>
                         <constraint firstAttribute="trailing" secondItem="zFw-xe-UGW" secondAttribute="trailing" id="6K3-xy-Kfb"/>
                         <constraint firstItem="zFw-xe-UGW" firstAttribute="leading" secondItem="3fZ-ol-vhX" secondAttribute="leading" id="Mwh-B8-Jwy"/>
                         <constraint firstItem="ih2-0E-Krs" firstAttribute="top" secondItem="3fZ-ol-vhX" secondAttribute="top" id="PfC-7C-9lL"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="110" id="V7Q-yF-0Dy"/>
                         <constraint firstAttribute="bottom" secondItem="zFw-xe-UGW" secondAttribute="bottom" id="XcI-vR-ch7"/>
                         <constraint firstAttribute="height" constant="197" id="Y5G-OD-H49"/>
                         <constraint firstItem="ih2-0E-Krs" firstAttribute="leading" secondItem="3fZ-ol-vhX" secondAttribute="leading" id="dza-eX-TfU"/>
                         <constraint firstItem="zFw-xe-UGW" firstAttribute="top" secondItem="ih2-0E-Krs" secondAttribute="bottom" constant="17" id="icc-Kw-llw"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="197" id="m22-5Q-9hP"/>
                     </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="3fZ-ol-vhX" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="Gg4-qL-S7H"/>
                 <constraint firstItem="3fZ-ol-vhX" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="SXi-2C-93I"/>

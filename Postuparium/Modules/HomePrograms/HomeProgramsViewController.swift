@@ -11,7 +11,7 @@ import UIKit
 @IBDesignable
 class HomePrograms: UIView {
     var interactor = HomeProgramsInteractor()
-    
+    var university: University!
     var programsViews: [HomeProgramView] = []
     
     @IBOutlet weak var programsContainer: UIStackView!

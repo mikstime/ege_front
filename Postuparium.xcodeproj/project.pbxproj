@@ -92,6 +92,9 @@
 		2EAD8B972562259500C4EEA3 /* ProgramsSelectionProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAD8B792562242E00C4EEA3 /* ProgramsSelectionProtocols.swift */; };
 		2EAD8BA2256225DE00C4EEA3 /* ProgramsSelectionItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EAD8B9E2562259E00C4EEA3 /* ProgramsSelectionItem.xib */; };
 		2EAD8BA6256225E200C4EEA3 /* ProgramsSelectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAD8B9D2562259E00C4EEA3 /* ProgramsSelectionItem.swift */; };
+		2EB0236F259A3BDF00AD9DE0 /* MorePhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB0236E259A3BDF00AD9DE0 /* MorePhotos.swift */; };
+		2EB02374259A3BEB00AD9DE0 /* MorePhotos.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EB02373259A3BEB00AD9DE0 /* MorePhotos.xib */; };
+		2EB02379259A44BC00AD9DE0 /* UniversityPhotosInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB02378259A44BB00AD9DE0 /* UniversityPhotosInteractor.swift */; };
 		2EB468352562270000988BAA /* HomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EB468342562270000988BAA /* HomeScreen.storyboard */; };
 		2EB468402562E59D00988BAA /* AchievementsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAD8B652562144F00C4EEA3 /* AchievementsItem.swift */; };
 		2EB468442562E5A300988BAA /* AchievementsItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EAD8B642562144F00C4EEA3 /* AchievementsItem.xib */; };
@@ -372,6 +375,9 @@
 		2EAD8B7F256224C100C4EEA3 /* ProgramsSelection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProgramsSelection.storyboard; sourceTree = "<group>"; };
 		2EAD8B9D2562259E00C4EEA3 /* ProgramsSelectionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramsSelectionItem.swift; sourceTree = "<group>"; };
 		2EAD8B9E2562259E00C4EEA3 /* ProgramsSelectionItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgramsSelectionItem.xib; sourceTree = "<group>"; };
+		2EB0236E259A3BDF00AD9DE0 /* MorePhotos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorePhotos.swift; sourceTree = "<group>"; };
+		2EB02373259A3BEB00AD9DE0 /* MorePhotos.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MorePhotos.xib; sourceTree = "<group>"; };
+		2EB02378259A44BB00AD9DE0 /* UniversityPhotosInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityPhotosInteractor.swift; sourceTree = "<group>"; };
 		2EB468342562270000988BAA /* HomeScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeScreen.storyboard; sourceTree = "<group>"; };
 		2EB468482562E6E300988BAA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2ED1200825689DE3005D39DA /* LoadingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCell.swift; sourceTree = "<group>"; };
@@ -640,6 +646,7 @@
 				2E6A933325997CD1005B294E /* photos */,
 				2E6A932625997859005B294E /* UniversityPhotos.xib */,
 				2E6A932B25997869005B294E /* UniversityPhotosView.swift */,
+				2EB02378259A44BB00AD9DE0 /* UniversityPhotosInteractor.swift */,
 			);
 			path = UniversityPhotos;
 			sourceTree = "<group>";
@@ -682,6 +689,8 @@
 				2E6A933525997CDD005B294E /* TwoPhotos.xib */,
 				2E6A933B25997CFC005B294E /* OnePhoto.xib */,
 				2E6A933425997CDD005B294E /* TwoPhotos.swift */,
+				2EB0236E259A3BDF00AD9DE0 /* MorePhotos.swift */,
+				2EB02373259A3BEB00AD9DE0 /* MorePhotos.xib */,
 			);
 			path = photos;
 			sourceTree = "<group>";
@@ -1560,6 +1569,7 @@
 				2E00061125620302000693B5 /* Logo.png in Resources */,
 				8528F5332534AAE3004FDE50 /* LaunchScreen.storyboard in Resources */,
 				8528F5302534AAE3004FDE50 /* Assets.xcassets in Resources */,
+				2EB02374259A3BEB00AD9DE0 /* MorePhotos.xib in Resources */,
 				85ABD61D2569E0CF0094BC7E /* applicants.json in Resources */,
 				2EF029E225992E2200251AF6 /* EdProgramsViewCell.xib in Resources */,
 				2E6A934625998E81005B294E /* TwoPhotos.xib in Resources */,
@@ -1680,6 +1690,7 @@
 				85C9AF662598ED1900AE2DBA /* NewEdProgramModuleViewPresenter.swift in Sources */,
 				2E42F1B3256C097E00736DF1 /* EdProgramModuleViewController.swift in Sources */,
 				2EDE684E2567601B0064D28B /* ProgramsSelectionMenuInteractor.swift in Sources */,
+				2EB02379259A44BC00AD9DE0 /* UniversityPhotosInteractor.swift in Sources */,
 				2EAD8B6F256215A100C4EEA3 /* AchievementsSelectionConfigurator.swift in Sources */,
 				2EA2F6CC2596BEB900773066 /* HomePageViewContoller.swift in Sources */,
 				853315B7256BF8C4003A89EA /* UniversityModulePresenter.swift in Sources */,
@@ -1728,6 +1739,7 @@
 				8528F5242534AAE2004FDE50 /* AppDelegate.swift in Sources */,
 				85ABD5A5256965260094BC7E /* UniversityModuleProtocols.swift in Sources */,
 				2E00065A256209A3000693B5 /* BorderExtension.swift in Sources */,
+				2EB0236F259A3BDF00AD9DE0 /* MorePhotos.swift in Sources */,
 				2E6A933625997CF3005B294E /* TwoPhotos.swift in Sources */,
 				85ABD5D62569AC8A0094BC7E /* Fonts.swift in Sources */,
 				CEEE7BFC2569115F0094B1DA /* PhotoViewerConfigurator.swift in Sources */,
@@ -1979,7 +1991,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = spetrenko.Postuparium;
+				PRODUCT_BUNDLE_IDENTIFIER = spetrenko.Postuparium12;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -2000,7 +2012,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = spetrenko.Postuparium;
+				PRODUCT_BUNDLE_IDENTIFIER = spetrenko.Postuparium12;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -2014,7 +2026,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5ABALJWYVX;
+				DEVELOPMENT_TEAM = CAG8DDF8KX;
 				INFOPLIST_FILE = PostupariumTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2036,7 +2048,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5ABALJWYVX;
+				DEVELOPMENT_TEAM = CAG8DDF8KX;
 				INFOPLIST_FILE = PostupariumTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2057,7 +2069,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5ABALJWYVX;
+				DEVELOPMENT_TEAM = CAG8DDF8KX;
 				INFOPLIST_FILE = PostupariumUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2077,7 +2089,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5ABALJWYVX;
+				DEVELOPMENT_TEAM = CAG8DDF8KX;
 				INFOPLIST_FILE = PostupariumUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

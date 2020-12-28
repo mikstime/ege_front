@@ -19,12 +19,14 @@ class PhotoGridService: PhotoGridServiceProtocol{
     
     func loadImage(url: String, completion: @escaping ()->()) {
         guard let imageURL = URL(string: url) else { return }
-        DispatchQueue.main.async {
+        DispatchQueue.global(qos: .utility).async {
             guard let imageData = try? Data(contentsOf: imageURL) else { return }
 
             if let image = UIImage(data: imageData){
                 self.photos.append(image)
-                completion()
+                DispatchQueue.main.sync {
+                    completion()
+                }
             }
         }
     }
@@ -33,10 +35,22 @@ class PhotoGridService: PhotoGridServiceProtocol{
         // тут должно быть получение большего числа фоток
         // сейчас здесь заглушка
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
+        DispatchQueue.global(qos: .utility).async {
             self.loadImage(url: "https://www.interfax.ru/ftproot/textphotos/2020/10/20/700ba.jpg", completion: completion)
             self.loadImage(url: "https://ekd.me/wp-content/uploads/2019/02/img_52531-e1551272911192.jpg", completion: completion)
             self.loadImage(url: "https://abiturient.bmstu.ru/assets/bg/start.jpg", completion: completion)
-        })
+        
+            self.loadImage(url: "https://www.interfax.ru/ftproot/textphotos/2020/10/20/700ba.jpg", completion: completion)
+            self.loadImage(url: "https://ekd.me/wp-content/uploads/2019/02/img_52531-e1551272911192.jpg", completion: completion)
+            self.loadImage(url: "https://abiturient.bmstu.ru/assets/bg/start.jpg", completion: completion)
+            
+            self.loadImage(url: "https://www.interfax.ru/ftproot/textphotos/2020/10/20/700ba.jpg", completion: completion)
+            self.loadImage(url: "https://ekd.me/wp-content/uploads/2019/02/img_52531-e1551272911192.jpg", completion: completion)
+            self.loadImage(url: "https://abiturient.bmstu.ru/assets/bg/start.jpg", completion: completion)
+            
+            self.loadImage(url: "https://www.interfax.ru/ftproot/textphotos/2020/10/20/700ba.jpg", completion: completion)
+            self.loadImage(url: "https://ekd.me/wp-content/uploads/2019/02/img_52531-e1551272911192.jpg", completion: completion)
+            self.loadImage(url: "https://abiturient.bmstu.ru/assets/bg/start.jpg", completion: completion)
+        }
     }
 }

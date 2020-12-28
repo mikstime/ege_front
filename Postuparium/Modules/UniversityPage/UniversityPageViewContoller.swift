@@ -29,6 +29,7 @@ class UniversityPageViewController: UIViewController, UniversityPageViewControll
     override func viewDidLoad() {
         handleArea = self.view
         super.viewDidLoad()
+        univerityPhotos.dispatcher = self
         presenter?.viewDidLoad()
         initHead()
         initDescription()
@@ -59,7 +60,7 @@ class UniversityPageViewController: UIViewController, UniversityPageViewControll
     }
     
     func initChosenPrograms() {
-//        chosenPrograms.university = university
+        chosenPrograms.university = university
         containerView.addArrangedSubview(chosenPrograms)
         chosenPrograms.interactor.dispatcher = self
         chosenPrograms.translatesAutoresizingMaskIntoConstraints = false
@@ -77,7 +78,7 @@ class UniversityPageViewController: UIViewController, UniversityPageViewControll
         NSLayoutConstraint.init(item: univerityPhotos, attribute: .leading, relatedBy: .equal, toItem: containerView, attribute: .leading, multiplier: 1, constant: 0).isActive = true
         NSLayoutConstraint.init(item: univerityPhotos, attribute: .trailing, relatedBy: .equal, toItem: containerView, attribute: .trailing, multiplier: 1, constant: 0).isActive = true
         NSLayoutConstraint.init(item: univerityPhotos, attribute: .top, relatedBy: .equal, toItem: chosenPrograms, attribute: .bottom, multiplier: 1, constant: 0).isActive = true
-        NSLayoutConstraint.init(item: univerityPhotos, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 235).isActive = true
+        NSLayoutConstraint.init(item: univerityPhotos, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 273).isActive = true
         containerView.sizeToFit()
         containerView.layoutIfNeeded()
     }
@@ -106,4 +107,18 @@ extension UniversityPageViewController: HomeProgramDispatcher {
         let vc = NewEdProgramModuleConfigurator.configureModule(program: program)
         navigationController?.show(vc, sender: self)
     }
+}
+
+extension UniversityPageViewController: UniversityPhotoDispatcher {
+    func didTapOnPhoto(photo: UIImage) {
+        let vc = PhotoViewerConfigurator.configureModule(photo: photo)
+        navigationController?.show(vc, sender: self)
+    }
+    
+    func didTapOnMore() {
+        let vc = PhotoTableViewConfigurator.configureModule()
+        navigationController?.show(vc, sender: self)
+    }
+    
+    
 }

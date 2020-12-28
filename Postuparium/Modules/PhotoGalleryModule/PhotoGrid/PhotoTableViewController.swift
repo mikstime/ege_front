@@ -48,7 +48,7 @@ class PhotoTableViewController: UITableViewController, PhotoTableViewControllerP
     }
     
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        presenter?.checkScroll(scrollView: scrollView, starter: {tableView.reloadSections(IndexSet(integer: 1), with: .none)}, completion: tableView.reloadData)
+//        presenter?.checkScroll(scrollView: scrollView, starter: {tableView.reloadSections(IndexSet(integer: 1), with: .none)}, completion: tableView.reloadData)
     }
     
 }

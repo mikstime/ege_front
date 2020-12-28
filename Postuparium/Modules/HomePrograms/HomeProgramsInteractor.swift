@@ -15,7 +15,7 @@ class HomeProgramsInteractor: HomeProgramDispatcher {
     weak var view: HomePrograms!
     weak var dispatcher: HomeProgramDispatcher!
     func loadPrograms() {
-        EdProgramService.shared.loadChosenPrograms(since: nil, didLoad: { programs in
+        EdProgramService.shared.loadChosenPrograms(since: nil, university: view.university,didLoad: { programs in
             if let programs = programs {
                 self.view?.programsAreLoaded(programs: programs)
             } else {

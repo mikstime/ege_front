@@ -10,10 +10,7 @@ import Alamofire
 
 protocol EdProgramServiceProtocol {
     static var shared: EdProgramServiceProtocol {get}
-//    func loadPrograms(since: EdProgram!, didLoad:@escaping ([EdProgram]?) -> Void)
     func searchPrograms(searchString: String, university: University!, since: EdProgram?, didFind:@escaping ([EdProgram]?) -> Void)
-//    func loadChosenPrograms(since: EdProgram!, university: University!, didLoad:@escaping([EdProgram]?) -> Void)
-//    func loadProgramsByUniversity(universityId: Int!, didLoad:@escaping ([EdProgram]?) -> Void)
 }
 
 class EdProgramService: EdProgramServiceProtocol {
@@ -57,21 +54,19 @@ extension EdProgramService {
     
     func getAllPrograms(didLoad: @escaping ([EdProgram]?) -> Void) {
         // Поиск по всем направлениям
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            let request = AF.request(EdProgramService.allProgrammsURL, method: .get)
+        let request = AF.request(EdProgramService.allProgrammsURL, method: .get)
             
-            request.responseJSON { (response) in
-                switch response.result {
-                    case .success:
-                        print("response::: ", response.result)
-                        if let json = response.data {
-                            let jsonDecoder = JSONDecoder()
-                            let edPrograms = try! jsonDecoder.decode([EdProgram].self, from: json)
-                            didLoad(edPrograms)
-                        }
-                    case .failure(_):
-                        didLoad(nil)
-                }
+        request.responseJSON { (response) in
+            switch response.result {
+                case .success:
+                    print("response::: ", response.result)
+                    if let json = response.data {
+                        let jsonDecoder = JSONDecoder()
+                        let edPrograms = try! jsonDecoder.decode([EdProgram].self, from: json)
+                        didLoad(edPrograms)
+                    }
+                case .failure(_):
+                    didLoad(nil)
             }
         }
     }

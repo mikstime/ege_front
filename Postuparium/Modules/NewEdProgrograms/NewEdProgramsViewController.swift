@@ -43,13 +43,12 @@ class NewEdProgramsViewController: UIViewController, UICollectionViewDelegate, U
 
     @IBOutlet var collection: UICollectionView!
     
-    var edPrograms: [EdProgramMock] = []
+    var edPrograms: [EdProgram] = []
  
     
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.viewDidLoad()
-        edPrograms = EdProgramMock.edProgramsList()
         
         collection.delegate = self
         collection.dataSource = self
@@ -75,10 +74,10 @@ class NewEdProgramsViewController: UIViewController, UICollectionViewDelegate, U
         
         if(indexPath.row < edPrograms.count ){
         let edProgram = edPrograms[indexPath.row]
-        cell.codeLabel.text = edProgram.code
-        cell.nameLabel.text = edProgram.name
-        cell.codeNameLabel.text = edProgram.codeName
-        cell.typeLabel.text = edProgram.edProgram
+            cell.codeLabel.text = edProgram.code
+            cell.nameLabel.text = edProgram.name
+//            cell.codeNameLabel.text = edProgram.codeName
+//            cell.typeLabel.text = edProgram.edProgram
         } else{
             cell.codeLabel.text = ""
             cell.nameLabel.text = "Отсутствует направление?"
@@ -92,13 +91,13 @@ class NewEdProgramsViewController: UIViewController, UICollectionViewDelegate, U
             
         
         // Configure the cell
-            cell.layer.cornerRadius = 10.0
+        cell.layer.cornerRadius = 15.0
         cell.layer.borderWidth = 0
-            cell.layer.shadowColor = UIColor.gray.cgColor
-        cell.layer.shadowOffset = CGSize(width: -3, height: -3)
-        cell.layer.shadowRadius = 10.0
-        cell.layer.shadowOpacity = 0.25
-            cell.layer.masksToBounds = false //<-
+        cell.layer.shadowColor = UIColor(named: "Shadow")?.cgColor ?? UIColor.gray.cgColor
+        cell.layer.shadowOffset = .zero
+        cell.layer.shadowRadius = 6.0
+        cell.layer.shadowOpacity = 0.16
+        cell.layer.masksToBounds = false //<-
     
         
         return cell
@@ -116,7 +115,7 @@ class NewEdProgramsViewController: UIViewController, UICollectionViewDelegate, U
         if(indexPath.row == edPrograms.count){
             presenter?.showFeedbackScreen()
         } else{
-            presenter?.showNextScreen(id: String(edPrograms[indexPath.row].id))
+            presenter?.showNextScreen(program: edPrograms[indexPath.row])
         }
         
     }
@@ -129,16 +128,15 @@ class NewEdProgramsViewController: UIViewController, UICollectionViewDelegate, U
 
 extension UICollectionViewCell {
     func shadowDecorate() {
-        let radius: CGFloat = 10
+        let radius: CGFloat = 15
         contentView.layer.cornerRadius = radius
-        contentView.layer.borderWidth = 1
-        contentView.layer.borderColor = UIColor.clear.cgColor
+//        contentView.layer.borderWidth = 1
+//        contentView.layer.borderColor = UIColor.clear.cgColor
         contentView.layer.masksToBounds = true
-    
-        layer.shadowColor = UIColor.black.cgColor
-        layer.shadowOffset = CGSize(width: 0, height: 1.0)
-        layer.shadowRadius = 2.0
-        layer.shadowOpacity = 0.5
+        layer.shadowColor = UIColor(named: "Shadow")?.cgColor ?? UIColor.gray.cgColor
+        layer.shadowOffset = .zero
+        layer.shadowRadius = 6.0
+        layer.shadowOpacity = 0.16
         layer.masksToBounds = false
         layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: radius).cgPath
         layer.cornerRadius = radius

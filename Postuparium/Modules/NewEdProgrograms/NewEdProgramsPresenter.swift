@@ -17,11 +17,11 @@ class NewEdProgramsPresenter: NewEdProgramsPresenterProtocol {
     var router: NewEdProgramsRouterProtocol!
     
     func viewDidLoad() {
-        
+        let programs = interactor.loadPrograms()
     }
     
-    func showNextScreen(id: String) {
-        router?.showEdProgramModuleScreen(id: id)
+    func showNextScreen(program: EdProgram) {
+        router?.showEdProgramModuleScreen(program: program)
     }
     
     func showFeedbackScreen() {

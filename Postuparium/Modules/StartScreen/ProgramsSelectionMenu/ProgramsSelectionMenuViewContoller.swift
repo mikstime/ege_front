@@ -131,11 +131,11 @@ extension ProgramsSelectionMenuViewController: UITableViewDelegate, UITableViewD
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offsetY = scrollView.contentOffset.y
-        let contentHeight = scrollView.contentSize.height
+//        let contentHeight = scrollView.contentSize.height
         
-        if offsetY > contentHeight - scrollView.frame.height {
-            actionsDispatcher?.requestForMoreData()
-        }
+//        if offsetY > contentHeight - scrollView.frame.height {
+//            actionsDispatcher?.requestForMoreData()
+//        }
         updateHeight(offsetY: offsetY)
     }
     

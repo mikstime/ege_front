@@ -14,27 +14,21 @@ class StudyTileMediumCell: UICollectionViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var typeLabel: UILabel!
     @IBOutlet weak var typeContainer: UIView!
+    var program: EdProgram!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-    
-        
-        self.codeNameLabel.text = "?"
-        
-        self.codeLabel.text = "00.00.00"
-        
-        self.nameLabel.text = "Название направления"
-        
-//        self.nameLabel.adjustsFontSizeToFitWidth = true
-//        self.nameLabel.minimumScaleFactor = 0.5
+//        self.codeNameLabel.text = "?"
+//        self.codeLabel.text = "00.00.00"
+//        self.nameLabel.text = "Название направления"
+//        self.typeLabel.text = "Специальность"
     
         self.nameLabel.fitTextToBounds()
         
-        self.typeLabel.text = "Специальность"
         
-        self.typeContainer.roundCorners([.topRight, .bottomRight, .bottomLeft], radius: 10)
-        self.roundCorners([.topRight, .topLeft, .bottomRight, .bottomLeft], radius: 10)
+//        self.typeContainer.roundCorners([.topRight, .bottomRight, .bottomLeft], radius: 15)
+        self.roundCorners([.topRight, .topLeft, .bottomRight, .bottomLeft], radius: 15)
 
 
       
@@ -70,13 +64,6 @@ class StudyTileMediumCell: UICollectionViewCell {
         let colors = cellRandomBackgroundColors()
         self.typeContainer.setGradientBackgroundColor(colorOne: colors[0], colorTow: colors[1])
     }
-    
-//    override func layoutSubviews() {
-//            super.layoutSubviews()
-//            layer.cornerRadius = 20
-//        dropShadow(radius: 20, offsetX: 10, offsetY: 10, color: .gray)
-//     }
-
 
 }
 

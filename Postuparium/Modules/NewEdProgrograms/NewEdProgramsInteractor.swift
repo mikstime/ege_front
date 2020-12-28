@@ -11,5 +11,7 @@ class NewEdProgramsInteractor: NewEdProgramsInteractorProtocol {
     
     weak var presenter: NewEdProgramsPresenterProtocol!
     
-    
+    func loadPrograms() -> [EdProgram]{
+        return []
+    }
 }

@@ -18,7 +18,7 @@ protocol NewEdProgramsPresenterProtocol: class {
     var view: NewEdProgramsViewControllerProtocol! {set get}
     var router: NewEdProgramsRouterProtocol! { set get }
     
-    func showNextScreen(id: String)
+    func showNextScreen(program: EdProgram)
     func showFeedbackScreen()
     
     func viewDidLoad()
@@ -26,13 +26,14 @@ protocol NewEdProgramsPresenterProtocol: class {
 
 protocol NewEdProgramsInteractorProtocol: class {
     var presenter: NewEdProgramsPresenterProtocol! { get set }
+    func loadPrograms() -> [EdProgram]
 }
 
 protocol NewEdProgramsRouterProtocol: class {
     var view: NewEdProgramsViewControllerProtocol! {set get}
     
     func prepare(for segue: UIStoryboardSegue, sender: Any?)
-    func showEdProgramModuleScreen(id: String)
+    func showEdProgramModuleScreen(program: EdProgram)
     func showFeedBackModuleScreen()
 
 }

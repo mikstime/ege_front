@@ -15,7 +15,7 @@ class ProgramsSelectionInteractor: ProgramsSelectionInteractorProtocol {
     var lastProgram: EdProgram!
     
     func searchForPrograms(searchString: String) {
-        EdProgramService.shared.searchPrograms(searchString: searchString, since: lastProgram, didFind: {programs in
+        EdProgramService.shared.searchPrograms(searchString: searchString, university: nil, since: lastProgram, didFind: {programs in
             if programs != nil {
                 self.lastProgram = programs!.last
                 self.presenter?.programsDidLoad(programs: programs!)

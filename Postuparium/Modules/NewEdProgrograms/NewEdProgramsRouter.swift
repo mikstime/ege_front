@@ -20,10 +20,8 @@ class NewEdProgramsRouter: NewEdProgramsRouterProtocol {
         }
     }
     
-    func showEdProgramModuleScreen(id: String) {
-        print("show edProgram module with id ", id)
-        let vc = EdProgramModuleConfigurator.configureModule()
-        vc.edProgramId = id
+    func showEdProgramModuleScreen(program: EdProgram) {
+        let vc = NewEdProgramModuleConfigurator.configureModule(program: program)
         view?.navigationController!.show(vc as UIViewController, sender: view)
     }
     

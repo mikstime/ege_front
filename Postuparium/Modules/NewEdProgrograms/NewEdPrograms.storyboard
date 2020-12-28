@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tNk-K3-3RM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tNk-K3-3RM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -74,6 +74,7 @@
                                                         <constraint firstAttribute="trailing" secondItem="aJw-Lo-mMq" secondAttribute="trailing" constant="38" id="0ac-5V-LFw"/>
                                                         <constraint firstAttribute="bottom" secondItem="aJw-Lo-mMq" secondAttribute="bottom" constant="8" id="8F9-MK-xJA"/>
                                                         <constraint firstItem="aJw-Lo-mMq" firstAttribute="top" secondItem="5h7-L2-O9U" secondAttribute="top" constant="8" id="b2V-Fo-xiQ"/>
+                                                        <constraint firstAttribute="height" constant="55" id="tba-3U-a1y"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -92,8 +93,11 @@
                                             <constraints>
                                                 <constraint firstItem="5h7-L2-O9U" firstAttribute="top" secondItem="709-bX-l6x" secondAttribute="bottom" constant="8" symbolic="YES" id="2gN-5p-RDx"/>
                                                 <constraint firstItem="Y6J-BX-NAR" firstAttribute="leading" secondItem="jI6-cl-Y5n" secondAttribute="leading" constant="8" id="8X3-Ln-bOC"/>
+                                                <constraint firstItem="5h7-L2-O9U" firstAttribute="bottom" secondItem="2fx-F3-j7G" secondAttribute="bottom" id="Cnl-eS-pun"/>
                                                 <constraint firstAttribute="trailing" secondItem="XC2-12-Eau" secondAttribute="trailing" constant="8" id="DTG-x2-p9e"/>
                                                 <constraint firstItem="709-bX-l6x" firstAttribute="leading" secondItem="jI6-cl-Y5n" secondAttribute="leading" constant="8" id="Ii8-oH-zS8"/>
+                                                <constraint firstItem="5h7-L2-O9U" firstAttribute="leading" secondItem="2fx-F3-j7G" secondAttribute="leading" id="OJK-2l-nN9"/>
+                                                <constraint firstItem="5h7-L2-O9U" firstAttribute="trailing" secondItem="2fx-F3-j7G" secondAttribute="trailing" id="OTY-jM-Y3q"/>
                                                 <constraint firstItem="709-bX-l6x" firstAttribute="top" secondItem="Y6J-BX-NAR" secondAttribute="bottom" constant="34.5" id="SPn-N3-Sgh"/>
                                                 <constraint firstAttribute="bottom" secondItem="5h7-L2-O9U" secondAttribute="bottom" id="XS7-9v-Zh2"/>
                                                 <constraint firstItem="Y6J-BX-NAR" firstAttribute="top" secondItem="jI6-cl-Y5n" secondAttribute="top" constant="8" id="XSp-Di-lBH"/>
@@ -113,7 +117,7 @@
                                         </collectionViewCellContentView>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="20"/>
+                                                <real key="value" value="15"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                 <real key="value" value="0.0"/>

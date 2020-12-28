@@ -17,14 +17,16 @@ class UniversityDescription: UIView {
     @IBOutlet weak var toggleDetailsButton: UIButton!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBAction func toggleDetails() {
-        if isExpanded {
-            descriptionLabel?.numberOfLines = 5
-            toggleDetailsButton?.setTitle("ПОДРОБНЕЕ", for: .normal)
-        } else {
-            descriptionLabel?.numberOfLines = 20
-            toggleDetailsButton?.setTitle("МЕНЬШЕ", for: .normal)
-        }
-        isExpanded = !isExpanded
+//        if isExpanded {
+//            descriptionLabel?.numberOfLines = 5
+//            toggleDetailsButton?.setTitle("ПОДРОБНЕЕ", for: .normal)
+//        } else {
+//            descriptionLabel?.numberOfLines = 0
+//            toggleDetailsButton?.setTitle("МЕНЬШЕ", for: .normal)
+//        }
+//        isExpanded = !isExpanded
+//        sizeToFit()
+//        layoutIfNeeded()
     }
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -42,7 +44,7 @@ class UniversityDescription: UIView {
     }
     
     func setDetails() {
-        descriptionLabel?.text = (university?.description ?? "")
-        
+        descriptionLabel?.text = (university?.description.count ?? 0) == 0 ? "Описание отсутствует" : university.description
+        self.layoutIfNeeded()
     }
 }

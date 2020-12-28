@@ -3,7 +3,6 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -20,7 +19,7 @@
                             <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cdh-Y6-aFZ" customClass="ShadowView" customModule="Postuparium" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I0S-zj-xMU" customClass="UniversityHead" customModule="Postuparium" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I0S-zj-xMU">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="196"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -30,32 +29,11 @@
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="opv-SN-73M">
                                         <rect key="frame" x="0.0" y="196" width="414" height="656"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Utu-JD-dar">
-                                                <rect key="frame" x="0.0" y="0.0" width="417" height="372"/>
-                                                <subviews>
-                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c1f-zM-5lo" customClass="UniversityDescription" customModule="Postuparium" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="417" height="120"/>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="SZf-6T-TZd"/>
-                                                        </constraints>
-                                                    </view>
-                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u4Z-wa-tAN" customClass="HomePrograms" customModule="Postuparium" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="120" width="417" height="252"/>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="252" id="Fka-83-wYg"/>
-                                                        </constraints>
-                                                    </view>
-                                                </subviews>
-                                                <color key="backgroundColor" name="homeProgramHighTop"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Utu-JD-dar">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="3000"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="c1f-zM-5lo" secondAttribute="trailing" id="3FD-AY-C3N"/>
-                                                    <constraint firstItem="c1f-zM-5lo" firstAttribute="top" secondItem="Utu-JD-dar" secondAttribute="top" id="Kbl-Vk-l2U"/>
-                                                    <constraint firstAttribute="trailing" secondItem="u4Z-wa-tAN" secondAttribute="trailing" id="Ohq-cn-9mD"/>
-                                                    <constraint firstItem="u4Z-wa-tAN" firstAttribute="leading" secondItem="Utu-JD-dar" secondAttribute="leading" id="bTw-h0-Qrw"/>
-                                                    <constraint firstItem="u4Z-wa-tAN" firstAttribute="top" secondItem="c1f-zM-5lo" secondAttribute="bottom" id="d4a-jF-hCA"/>
-                                                    <constraint firstItem="c1f-zM-5lo" firstAttribute="leading" secondItem="Utu-JD-dar" secondAttribute="leading" id="iTf-TV-uqS"/>
+                                                    <constraint firstAttribute="width" constant="375" id="R5n-z6-94p"/>
                                                 </constraints>
                                             </stackView>
                                         </subviews>
@@ -104,7 +82,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="container" destination="Tzv-pL-Pja" id="RdF-xn-SG6"/>
+                        <outlet property="containerView" destination="Utu-JD-dar" id="BI8-uG-0fh"/>
+                        <outlet property="headContainer" destination="I0S-zj-xMU" id="YaS-ou-Dm4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8LN-HB-hcw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -113,12 +92,6 @@
         </scene>
     </scenes>
     <resources>
-        <namedColor name="homeProgramHighTop">
-            <color red="0.19599999487400055" green="0.84299999475479126" blue="0.29399999976158142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemGray3Color">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

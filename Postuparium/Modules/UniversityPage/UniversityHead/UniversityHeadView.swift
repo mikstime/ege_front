@@ -35,9 +35,9 @@ class UniversityHead: UIView {
 
     func _init() {
         fromNib()
-        setupGradient()
         setImage()
         setDetails()
+        setupGradient()
     }
     
     final override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
@@ -53,6 +53,8 @@ class UniversityHead: UIView {
     }
     
     func setupGradient() {
+        self.uImageView.layer.masksToBounds = true
+        self.uImageView.roundCorners([.topLeft, .topRight], radius: 20)
         grayGradient = CAGradientLayer()
         grayGradient.frame.size = frame.size
         grayGradient.startPoint = .init(x: 0.5, y: 0)
@@ -60,13 +62,15 @@ class UniversityHead: UIView {
         grayGradient.locations = [0.0, 1.0]
         uImageView.layer.insertSublayer(grayGradient, at: 0)
         updateGrayGradient()
-        self.uImageView.layer.masksToBounds = true
-        self.uImageView.roundCorners([.topLeft, .topRight], radius: 20)
     }
     
     func setImage() {
         let image = university?.image
         uImageView.image = image
+        grayGradient?.frame.size = frame.size
+        grayGradient?.startPoint = .init(x: 0.5, y: 0)
+        grayGradient?.endPoint = .init(x: 0.5, y: 1)
+        grayGradient?.locations = [0.0, 1.0]
     }
     
     func setDetails() {

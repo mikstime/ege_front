@@ -11,11 +11,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UniversityPhotos" customModule="Postuparium" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="251"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="289"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3fZ-ol-vhX">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="251"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="289"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eO0-mR-cOp">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="38"/>
@@ -35,6 +35,24 @@
                                 <constraint firstItem="dgS-Wl-Dqc" firstAttribute="top" secondItem="eO0-mR-cOp" secondAttribute="top" constant="17" id="oa6-gh-svA"/>
                             </constraints>
                         </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z5a-mz-Vg7">
+                            <rect key="frame" x="0.0" y="251" width="375" height="38"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ДОСТУПНЫЕ НАПРАВЛЕНИЯ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WtN-9a-KhD">
+                                    <rect key="frame" x="16" y="17" width="185" height="15"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="WtN-9a-KhD" firstAttribute="leading" secondItem="z5a-mz-Vg7" secondAttribute="leading" constant="16" id="3aH-YP-n8J"/>
+                                <constraint firstItem="WtN-9a-KhD" firstAttribute="top" secondItem="z5a-mz-Vg7" secondAttribute="top" constant="17" id="8eC-R8-pIr"/>
+                                <constraint firstAttribute="height" constant="38" id="fPg-e8-w8R"/>
+                                <constraint firstAttribute="bottom" secondItem="WtN-9a-KhD" secondAttribute="bottom" constant="6" id="u75-0A-eL2"/>
+                            </constraints>
+                        </view>
                         <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="89z-HC-jum">
                             <rect key="frame" x="16" y="38" width="343" height="213"/>
                         </scrollView>
@@ -43,8 +61,11 @@
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="eO0-mR-cOp" secondAttribute="trailing" id="CKM-9T-y9e"/>
                         <constraint firstAttribute="trailing" secondItem="89z-HC-jum" secondAttribute="trailing" constant="16" id="GX4-TI-nIz"/>
+                        <constraint firstAttribute="trailing" secondItem="z5a-mz-Vg7" secondAttribute="trailing" id="LQd-JP-ATb"/>
                         <constraint firstItem="eO0-mR-cOp" firstAttribute="leading" secondItem="3fZ-ol-vhX" secondAttribute="leading" id="R3G-ap-lnN"/>
-                        <constraint firstAttribute="bottom" secondItem="89z-HC-jum" secondAttribute="bottom" id="Zwe-3V-BJS"/>
+                        <constraint firstAttribute="bottom" secondItem="z5a-mz-Vg7" secondAttribute="bottom" id="YEb-bS-tnZ"/>
+                        <constraint firstAttribute="bottom" secondItem="89z-HC-jum" secondAttribute="bottom" constant="38" id="Zwe-3V-BJS"/>
+                        <constraint firstItem="z5a-mz-Vg7" firstAttribute="leading" secondItem="3fZ-ol-vhX" secondAttribute="leading" id="mf6-6N-00E"/>
                         <constraint firstItem="89z-HC-jum" firstAttribute="top" secondItem="eO0-mR-cOp" secondAttribute="bottom" id="qbE-9e-NgP"/>
                         <constraint firstItem="eO0-mR-cOp" firstAttribute="top" secondItem="3fZ-ol-vhX" secondAttribute="top" id="vnn-rQ-5QQ"/>
                         <constraint firstItem="89z-HC-jum" firstAttribute="leading" secondItem="3fZ-ol-vhX" secondAttribute="leading" constant="16" id="yfA-of-MmM"/>

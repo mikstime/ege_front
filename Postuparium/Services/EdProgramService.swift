@@ -57,7 +57,6 @@ class EdProgramService: EdProgramServiceProtocol {
 }
 
 extension EdProgramService {
-    
     func getAllPrograms(didLoad: @escaping ([EdProgram]?) -> Void) {
         // Поиск по всем направлениям
         print("I AM IN GET ALL PROGRAMMS")

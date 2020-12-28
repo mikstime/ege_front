@@ -42,7 +42,7 @@ class PhotoTableViewPresenter: PhotoTableViewPresenterProtocol {
     
         if offsetY > contentHeight - scrollView.frame.height {
             if !(interactor?.getIsFetching() ?? true) {
-                interactor?.fetchPhotos(starter: starter, completion: completion)
+//                interactor?.fetchPhotos(starter: starter, completion: completion)
             }
         }
     }

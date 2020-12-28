@@ -17,7 +17,7 @@ class UniversitiesTableViewController: UIViewController, UniversitiesTableViewCo
     @IBOutlet weak var universitiesTableView: UITableView!
 //    @IBOutlet weak var homeProgramsView: HomePrograms!
     
-    var dispatcher: UniversitiesTableViewControllerDispatcher!
+    weak var dispatcher: UniversitiesTableViewControllerDispatcher!
     
     var presenter: UniversitiesTableViewPresenterProtocol!
     

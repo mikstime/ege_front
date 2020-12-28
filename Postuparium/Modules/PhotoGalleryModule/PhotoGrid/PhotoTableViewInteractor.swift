@@ -16,12 +16,12 @@ class PhotoTableViewInteractor: PhotoTableViewInteractorProtocol {
         return isFetching
     }
     
-    func fetchPhotos(starter: ()->(), completion: @escaping ()->()) {
+    func fetchPhotos(starter: ()->(), completion: @escaping ([UIImage]) -> Void) {
         self.isFetching = true
         starter()
-        PhotoGridService.shared.fetchPhotos(completion:{
+        PhotoGridService.shared.fetchPhotos(completion:{ photos in
             self.isFetching = false
-            completion()
+            completion(photos)
         })
         
         

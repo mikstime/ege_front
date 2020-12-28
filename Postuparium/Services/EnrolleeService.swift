@@ -57,9 +57,9 @@ class EnrolleeService: EnrolleeServiceProtocol {
     }
     
     func commitUpdates(didCommit:@escaping (Enrollee?) -> Void) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+        EdProgramService.shared.addProgramsToChosen(programs: enrollee.chosenPrograms, done: {
             didCommit(self.enrollee)
-        }
+        })
     }
 
     func signup(didSignUp:@escaping (Enrollee?) -> Void) {

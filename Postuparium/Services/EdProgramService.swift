@@ -12,16 +12,18 @@ protocol EdProgramServiceProtocol {
     static var shared: EdProgramServiceProtocol {get}
     func searchPrograms(searchString: String, university: University!, since: EdProgram?, didFind:@escaping ([EdProgram]?) -> Void)
     func loadChosenPrograms(since: EdProgram!, university: University!, didLoad: @escaping ([EdProgram]?) -> Void)
+    func addProgramsToChosen(programs:[EdProgram], done: @escaping () -> Void)
 }
 
 class EdProgramService: EdProgramServiceProtocol {
     
-    var useMocks = true
+    var useMocks = false
     private var MOCKED_PROGRAMS = [
         EdProgram(code: "09.03.01", name: "Прикладная физика", university: "МГТУ им. Н. Э.Баумана", universityId: 1, photo: "http://77.223.97.172:8081/media/1.2.jpg", probability: "10%", probablilityNumber: 0.1, id: 1),
         EdProgram(code: "09.03.01", name: "Прикладная математика", university: "МГУ", universityId: 2, photo: "http://77.223.97.172:8081/media/1.3.jpg", probability: "15%", probablilityNumber: 0.15, id: 2)
     ]
     static var allProgrammsURL: String = "http://77.223.97.172:8081/api/v1/education_programs/"
+    static var addChosenURL: String = "http://77.223.97.172:8081/api/v1/education_programs/"
     static var searchProgramsURL: String = ""
     static var universityURL: String = "http://77.223.97.172:8081/api/v1/universities/"
     static var favoriteProgrammsURL: String = "http://77.223.97.172:8081/api/v1/users/education_programs/"
@@ -29,6 +31,28 @@ class EdProgramService: EdProgramServiceProtocol {
     var programs: [EdProgram] = []
     static var shared: EdProgramServiceProtocol = EdProgramService()
 
+    func addProgramsToChosen(programs: [EdProgram], done: @escaping () -> Void) {
+        // Поиск по всем направлениям
+        let params: [String] = programs.map { program in
+            return String(program.id)
+        }
+        let paramsString: String = params.joined(separator: ", ")
+        let res: String = "[" + paramsString + "]"
+        print("chosen: ", res)
+        let request = AF.request(EdProgramService.allProgrammsURL, method: .post, parameters: res)
+            
+        request.responseJSON { (response) in
+            switch response.result {
+                case .success:
+                    print("response::: ", response.result)
+                    done()
+                case .failure(_):
+                    print("GET ALL PROGRAMMS FAILED")
+                    done()
+            }
+        }
+    }
+    
     func searchPrograms(searchString: String, university: University! = nil, since: EdProgram?, didFind:@escaping ([EdProgram]?) -> Void) {
 
         if searchString.isEmpty {
@@ -59,7 +83,6 @@ class EdProgramService: EdProgramServiceProtocol {
 extension EdProgramService {
     func getAllPrograms(didLoad: @escaping ([EdProgram]?) -> Void) {
         // Поиск по всем направлениям
-        print("I AM IN GET ALL PROGRAMMS")
         let request = AF.request(EdProgramService.allProgrammsURL, method: .get)
             
         request.responseJSON { (response) in

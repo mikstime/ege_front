@@ -7,4 +7,9 @@
 
 import Foundation
 
-
+struct Photo: Codable {
+    var id: Int = 0
+    var photo: String = ""
+    var description: String = ""
+    var university: Int = 0
+}

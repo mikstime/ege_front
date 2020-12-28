@@ -31,7 +31,9 @@ class ProgramsSelectionInteractor: ProgramsSelectionInteractorProtocol {
     func tryToCreateUser() {
         EnrolleeService.shared.signup(didSignUp: {enrolleeDetails in
             if enrolleeDetails != nil {
-                self.presenter?.didCreateUser()
+                EnrolleeService.shared.commitUpdates(didCommit: {_ in 
+                    self.presenter?.didCreateUser()
+                })
             } else {
                 self.presenter?.didNotCreateUser()
             }

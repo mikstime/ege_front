@@ -13,6 +13,7 @@ protocol EdProgramServiceProtocol {
     func loadPrograms(since: EdProgram!, didLoad:@escaping ([EdProgram]?) -> Void)
     func searchPrograms(searchString: String, since: EdProgram?, didFind:@escaping ([EdProgram]?) -> Void)
     func loadChosenPrograms(since: EdProgram!, didLoad:@escaping([EdProgram]?) -> Void)
+    func loadProgramsByUniversity(universityId: Int!, didLoad:@escaping ([EdProgram]?) -> Void)
 }
 
 class EdProgramService: EdProgramServiceProtocol {
@@ -69,24 +70,11 @@ class EdProgramService: EdProgramServiceProtocol {
         }
     }
     
-    func searchPrograms(searchString: String, since: EdProgram?, didFind:@escaping ([EdProgram]?) -> Void) {
-        print("I AM IN searchPrograms")
+    func loadProgramsByUniversity(universityId: Int!, didLoad:@escaping ([EdProgram]?) -> Void) {
+        print("I AM IN loadProgramsByUniversity")
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            if searchString.isEmpty {
-                didFind(self.programs)
-            } else {
-                didFind(self.programs.filter {
-                    program in program.name.contains(searchString) || program.code.contains(searchString)
-                })
-            }
-        }
-    }
-    
-    func loadChosenPrograms(since: EdProgram!, didLoad: @escaping ([EdProgram]?) -> Void) {
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            
-            let request = AF.request(EdProgramService.favoriteProgrammsURL, method: .get)
+            let requestURL = "http://77.223.97.172:8081/api/v1/universities/" + String( universityId) + "/programs"
+            let request = AF.request(requestURL, method: .get)
             
             request.responseJSON { (response) in
                 switch response.result {
@@ -103,5 +91,44 @@ class EdProgramService: EdProgramServiceProtocol {
                     }
             }
         }
+    }
+    
+    func searchPrograms(searchString: String, since: EdProgram?, didFind:@escaping ([EdProgram]?) -> Void) {
+        print("I AM IN searchPrograms")
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            if searchString.isEmpty {
+                didFind(self.programs)
+            } else {
+                didFind(self.programs.filter {
+                    program in program.name.contains(searchString) || program.code.contains(searchString)
+                })
+            }
+        }
+    }
+    
+    func loadChosenPrograms(since: EdProgram!, didLoad: @escaping ([EdProgram]?) -> Void) {
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            didLoad(self.programs)
+        }
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+//
+//            let request = AF.request(EdProgramService.favoriteProgrammsURL, method: .get)
+//
+//            request.responseJSON { (response) in
+//                switch response.result {
+//                    case .success:
+//                        print("response::: ", response.result)
+//                        if let json = response.data {
+//                            let jsonDecoder = JSONDecoder()
+//                            let edPrograms = try! jsonDecoder.decode([EdProgram].self, from: json)
+//                            didLoad(edPrograms)
+//
+//                        }
+//                    case .failure(_):
+//                        didLoad(nil)
+//                    }
+//            }
+//        }
     }
 }

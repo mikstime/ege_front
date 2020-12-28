@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="oip-U1-f7c">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="oip-U1-f7c">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -51,77 +50,106 @@
                                     <action selector="showSettings" destination="oip-U1-f7c" eventType="touchUpInside" id="1UV-vc-TM6"/>
                                 </connections>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HXf-mE-IB2">
-                                <rect key="frame" x="350" y="64" width="44" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Gm-v1-ABq" customClass="ShadowButton" customModule="Postuparium" customModuleProvider="target">
+                                <rect key="frame" x="334" y="322" width="44" height="44"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="minus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="jjr-UG-f5g">
+                                        <rect key="frame" x="8" y="16.5" width="28" height="11.5"/>
+                                        <color key="tintColor" systemColor="secondaryLabelColor"/>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <imageReference key="image" image="plus" catalog="system" symbolScale="large"/>
-                                </state>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="jjr-UG-f5g" secondAttribute="trailing" constant="8" id="IGz-YY-LIW"/>
+                                    <constraint firstAttribute="bottom" secondItem="jjr-UG-f5g" secondAttribute="bottom" constant="8" id="OGs-qW-HPd"/>
+                                    <constraint firstAttribute="height" constant="44" id="Sbu-Ae-6J9"/>
+                                    <constraint firstItem="jjr-UG-f5g" firstAttribute="top" secondItem="7Gm-v1-ABq" secondAttribute="top" constant="8" id="hIb-gy-6zK"/>
+                                    <constraint firstItem="jjr-UG-f5g" firstAttribute="leading" secondItem="7Gm-v1-ABq" secondAttribute="leading" constant="8" id="rar-Zj-mcE"/>
+                                    <constraint firstAttribute="width" constant="44" id="sn5-Yq-oSR"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="22"/>
+                                        <integer key="value" value="22"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="zoomPlus:" destination="oip-U1-f7c" eventType="touchUpInside" id="jfp-L9-Zcf"/>
+                                    <action selector="zoomMinus:" destination="oip-U1-f7c" eventType="touchUpInside" id="TCy-mj-WKm"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zM6-eQ-0g9">
-                                <rect key="frame" x="350" y="380" width="44" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s45-Kw-rFY" customClass="ShadowButton" customModule="Postuparium" customModuleProvider="target">
+                                <rect key="frame" x="334" y="230" width="44" height="44"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ZvL-9b-AHb">
+                                        <rect key="frame" x="8" y="10" width="28" height="24"/>
+                                        <color key="tintColor" systemColor="secondaryLabelColor"/>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <imageReference key="image" image="paperplane.fill" catalog="system" symbolScale="large"/>
-                                </state>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="6Co-ru-zNd"/>
+                                    <constraint firstItem="ZvL-9b-AHb" firstAttribute="leading" secondItem="s45-Kw-rFY" secondAttribute="leading" constant="8" id="LQJ-QU-pD5"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZvL-9b-AHb" secondAttribute="trailing" constant="8" id="SpB-HA-qJZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZvL-9b-AHb" secondAttribute="bottom" constant="8" id="WNR-zE-siP"/>
+                                    <constraint firstAttribute="width" constant="44" id="dxU-Ef-DHG"/>
+                                    <constraint firstItem="ZvL-9b-AHb" firstAttribute="top" secondItem="s45-Kw-rFY" secondAttribute="top" constant="8" id="wsN-Ym-8SO"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="0.0"/>
+                                        <integer key="value" value="22"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="zoomMinus:" destination="oip-U1-f7c" eventType="touchUpInside" id="i8r-OE-okn"/>
-                                    <action selector="zoomToUser:" destination="oip-U1-f7c" eventType="touchUpInside" id="E8W-JV-7qV"/>
+                                    <action selector="zoomPlus:" destination="oip-U1-f7c" eventType="touchUpInside" id="qXH-Bw-vuT"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L3h-OG-oR2">
-                                <rect key="frame" x="350" y="135" width="44" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dul-V9-1eR" customClass="ShadowButton" customModule="Postuparium" customModuleProvider="target">
+                                <rect key="frame" x="334" y="491" width="44" height="44"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paperplane" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="pCS-zk-GAo">
+                                        <rect key="frame" x="8" y="8.5" width="28" height="27.5"/>
+                                        <color key="tintColor" systemColor="secondaryLabelColor"/>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <imageReference key="image" image="minus" catalog="system" symbolScale="large"/>
-                                </state>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="3Sr-9X-NHe"/>
+                                    <constraint firstAttribute="height" constant="44" id="GfK-eD-81O"/>
+                                    <constraint firstItem="pCS-zk-GAo" firstAttribute="top" secondItem="dul-V9-1eR" secondAttribute="top" constant="8" id="Ine-al-Udq"/>
+                                    <constraint firstAttribute="trailing" secondItem="pCS-zk-GAo" secondAttribute="trailing" constant="8" id="J7X-VH-xbJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="pCS-zk-GAo" secondAttribute="bottom" constant="8" id="cXE-HO-ZO7"/>
+                                    <constraint firstItem="pCS-zk-GAo" firstAttribute="leading" secondItem="dul-V9-1eR" secondAttribute="leading" constant="8" id="n5R-3n-xAF"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="22"/>
+                                        <integer key="value" value="22"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="zoomMinus:" destination="oip-U1-f7c" eventType="touchUpInside" id="eUr-b6-Vt0"/>
+                                    <action selector="zoomToUser:" destination="oip-U1-f7c" eventType="touchUpInside" id="dtJ-Ml-gdj"/>
                                 </connections>
-                            </button>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="MRb-dI-tGe" firstAttribute="leading" secondItem="69P-uo-et4" secondAttribute="leadingMargin" constant="16" id="5Tl-u9-LWw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="s45-Kw-rFY" secondAttribute="trailing" constant="16" id="6jh-Cv-Qr6"/>
                             <constraint firstItem="uk6-qz-2aw" firstAttribute="leading" secondItem="69P-uo-et4" secondAttribute="leading" id="7M5-77-N7t"/>
+                            <constraint firstItem="GL5-Qg-8TM" firstAttribute="top" secondItem="s45-Kw-rFY" secondAttribute="bottom" constant="588" id="K0P-MK-hle"/>
                             <constraint firstAttribute="trailing" secondItem="uk6-qz-2aw" secondAttribute="trailing" id="Q16-an-T55"/>
                             <constraint firstItem="MRb-dI-tGe" firstAttribute="top" secondItem="zwj-ih-9A6" secondAttribute="bottom" constant="20" id="W68-gK-Goi"/>
                             <constraint firstAttribute="bottom" secondItem="uk6-qz-2aw" secondAttribute="bottom" id="Xf7-Dc-718"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7Gm-v1-ABq" secondAttribute="trailing" constant="16" id="YHw-oE-q6Q"/>
+                            <constraint firstItem="GL5-Qg-8TM" firstAttribute="top" secondItem="dul-V9-1eR" secondAttribute="bottom" constant="327" id="buf-It-1Id"/>
+                            <constraint firstItem="GL5-Qg-8TM" firstAttribute="top" secondItem="7Gm-v1-ABq" secondAttribute="bottom" constant="496" id="fMl-2A-xEd"/>
                             <constraint firstItem="uk6-qz-2aw" firstAttribute="top" secondItem="69P-uo-et4" secondAttribute="top" id="fUe-iN-urO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dul-V9-1eR" secondAttribute="trailing" constant="16" id="orY-hz-VLg"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="mapView" destination="uk6-qz-2aw" id="EdG-zi-Zz4"/>
-                        <outlet property="zoomMinusButton" destination="L3h-OG-oR2" id="Hvv-ey-4EN"/>
-                        <outlet property="zoomPlusBiutton" destination="HXf-mE-IB2" id="TUh-pJ-JR5"/>
-                        <outlet property="zoomToUserButton" destination="zM6-eQ-0g9" id="aCD-uQ-14u"/>
                         <segue destination="O94-mD-MWm" kind="show" identifier="fromAnnotationMap" id="Zad-T1-rFf"/>
                     </connections>
                 </viewController>
@@ -258,16 +286,13 @@
         <segue reference="YtT-69-kZ3"/>
     </inferredMetricsTieBreakers>
     <resources>
-
         <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
+        <image name="minus" catalog="system" width="128" height="24"/>
+        <image name="paperplane" catalog="system" width="128" height="118"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-
-        <image name="minus" catalog="system" width="128" height="24"/>
-        <image name="paperplane.fill" catalog="system" width="128" height="118"/>
-        <image name="plus" catalog="system" width="128" height="113"/>
-      
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

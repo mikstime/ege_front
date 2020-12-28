@@ -10,9 +10,11 @@ import Foundation
 import UIKit
 
 struct University {
-     var scores: Int
-     var place: Int
-     var rating: Double
-     var name: String
-     var image: UIImage
+    var scores: Int = 0
+    var numberOfPrograms: Int = 0
+    var place: Int = 0
+    var rating: Double = 0.0
+    var name: String = ""
+    var image: String = ""
+    var description: String = ""
  }

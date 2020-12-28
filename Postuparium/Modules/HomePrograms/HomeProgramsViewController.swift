@@ -38,15 +38,19 @@ class HomePrograms: UIView {
         programs.forEach { program in
             let programView = HomeProgramView()
             programView.program = program
-            programView.translatesAutoresizingMaskIntoConstraints = false
+            programView.dispatcher = self.interactor
+//            programView.translatesAutoresizingMaskIntoConstraints = false
             programsContainer?.addSubview(programView)
             if let neighbour = programsViews.last {
                 NSLayoutConstraint(item: programView, attribute: .leading, relatedBy: .equal, toItem: neighbour, attribute: .trailing, multiplier: 1, constant: 17).isActive = true
             } else {
                 NSLayoutConstraint(item: programView, attribute: .leading, relatedBy: .equal, toItem: programsContainer, attribute: .leading, multiplier: 1, constant: 0).isActive = true
             }
-            ContainerWidthConstraint.constant += 134
+            ContainerWidthConstraint?.constant += 134
             programsViews.append(programView)
+        }
+        if programs.count > 0 {
+            ContainerWidthConstraint?.constant -= 17
         }
     }
     

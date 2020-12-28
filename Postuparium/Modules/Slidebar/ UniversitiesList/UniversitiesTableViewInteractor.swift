@@ -20,4 +20,8 @@ class UniversitiesTableViewInteractor: UniversitiesTableViewInteractorProtocol {
     func fetch(callback: @escaping  () -> Void ) {
         UniversitiesService.shared.fetchUniversities(callback: callback)
     }
+    
+    func search(query: String, callback: @escaping () -> Void) {
+        UniversitiesService.shared.searchUniversities(query: query,callback: callback)
+    }
 }

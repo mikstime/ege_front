@@ -16,6 +16,10 @@ class UniversitiesTableViewPresenter: UniversitiesTableViewPresenterProtocol {
         interactor?.fetch(callback: callback)
     }
     
+    func search(query: String, callback: @escaping () -> Void) {
+        interactor?.search(query: query, callback: callback)
+    }
+    
     func getNumberOfRowsInSection() -> Int {
         return self.interactor!.hasNext() ? self.interactor!.getUniversitiesCount() + 1 : self.interactor!.getUniversitiesCount()
     }
@@ -28,4 +32,11 @@ class UniversitiesTableViewPresenter: UniversitiesTableViewPresenterProtocol {
         cell.university = interactor!.getUniversities()[indexPath.row]
     }
     
+    func getCellData(indexPath: IndexPath) -> University {
+        return interactor!.getUniversities()[indexPath.row]
+    }
+    
+    func showProgram(program: EdProgram) {
+        router?.showProgram(program: program)
+    }
 }

@@ -1,11 +1,17 @@
 import Foundation
 import UIKit
 
-class UniversitiesTableViewController: UIViewController, UniversitiesTableViewControllerProtocol {
+protocol UniversitiesTableViewControllerDispatcher: class {
+    func didTapOnUniversity(university: University)
+    func didStartEditing()
+}
+class UniversitiesTableViewController: UIViewController, UniversitiesTableViewControllerProtocol, UISearchBarDelegate {
     
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var universitiesTableView: UITableView!
-    @IBOutlet weak var homeProgramsView: HomePrograms!
+//    @IBOutlet weak var homeProgramsView: HomePrograms!
     
+    var dispatcher: UniversitiesTableViewControllerDispatcher!
     
     var presenter: UniversitiesTableViewPresenterProtocol!
     
@@ -13,10 +19,23 @@ class UniversitiesTableViewController: UIViewController, UniversitiesTableViewCo
         super.viewDidLoad()
         self.configureTableView()
         self.startLoad()
+        searchBar?.delegate = self
+        self.designSearchBar()
+    }
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        dispatcher?.didStartEditing()
+    }
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        self.presenter?.search(query: searchText, callback: {
+            DispatchQueue.main.async {
+                self.universitiesTableView.reloadData()
+            }
+        }
+        )
     }
     
     func configureTableView() {
-        homeProgramsView.isHidden = presenter!.hideHomePrograms
+//        homeProgramsView.isHidden = presenter!.hideHomePrograms
         
         self.universitiesTableView.separatorStyle = .none
 
@@ -25,14 +44,15 @@ class UniversitiesTableViewController: UIViewController, UniversitiesTableViewCo
 
         universitiesTableView.register(UINib(nibName: "EndTableViewCell", bundle: nil), forCellReuseIdentifier: "EndTableViewCell")
         universitiesTableView.register(UINib(nibName: "UniversityTableViewCell", bundle: nil), forCellReuseIdentifier: "UniversityTableViewCell")
+        universitiesTableView.register(UINib(nibName: "EdProgramsViewCell", bundle: nil), forCellReuseIdentifier: "EdProgramsViewCell")
     }
     
     func startLoad() {
         print("load")
-        self.universitiesTableView.isHidden = true
+//        self.universitiesTableView.isHidden = true
         self.presenter?.fetch {
             DispatchQueue.main.async {
-                self.universitiesTableView.isHidden = false
+//                self.universitiesTableView.isHidden = false
                 self.universitiesTableView.reloadData()
             }
         }
@@ -42,10 +62,23 @@ class UniversitiesTableViewController: UIViewController, UniversitiesTableViewCo
 extension UniversitiesTableViewController: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return presenter!.getNumberOfRowsInSection()
+        return presenter!.getNumberOfRowsInSection() > 0 ? presenter!.getNumberOfRowsInSection() : 1
     }
-    
+
+    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        if (indexPath.row != 0 ) {
+            return indexPath
+        }else{
+            return nil
+        }
+    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        if indexPath.row == 0 {
+            let cell = self.universitiesTableView.dequeueReusableCell(withIdentifier: "EdProgramsViewCell") as! EdProgramsViewCell
+            cell.dispatcher = self
+            return cell
+        }
         if (presenter!.isEndCell(indexPath: indexPath)) {
             let cell = self.universitiesTableView.dequeueReusableCell(withIdentifier: "EndTableViewCell") as! EndTableViewCell
             return cell
@@ -59,34 +92,66 @@ extension UniversitiesTableViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
     }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        guard UIApplication.shared.applicationState == .inactive else {
+            return
+        }
+        designSearchBar()
+    }
 }
 
 
 extension UniversitiesTableViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) -> Void {
         self.universitiesTableView.deselectRow(at: indexPath, animated: true)
-
+        
+        if indexPath.row == 0 {
+            return
+        }
+        
         if (self.presenter!.isEndCell(indexPath: indexPath)) {
-            let endCell = self.universitiesTableView.cellForRow(at: indexPath) as! EndTableViewCell
-            endCell.loader(animate: true)
             self.presenter?.fetch {
                 DispatchQueue.main.async {
-                    endCell.loader(animate: false)
                     self.universitiesTableView.reloadData()
                 }
             }
             return
         }
-
-
-        // тут вставитт логику работы с нажатием на ячейку таблицы университетов
+        
+        if let dispatcher = dispatcher {
+            dispatcher.didTapOnUniversity(university: presenter?.getCellData(indexPath: indexPath) ?? University() )
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == 0 {
+            return 252.0
+        }
+        
         if (self.presenter!.isEndCell(indexPath: indexPath)){
-            return 60.0
+            return 68.0
         }
         return 196.0
 
+    }
+    
+    func designSearchBar() {
+        searchBar.isTranslucent = false
+        searchBar.barTintColor = UIColor.systemBackground
+        searchBar.backgroundImage = UIImage()
+        if let textfield = searchBar.value(forKey: "searchField") as? UITextField {
+            textfield.backgroundColor = UIColor.systemBackground
+            textfield.borderWidth = 1
+            textfield.cornerRadius = 10
+            textfield.borderColor = UIColor.systemGray5
+        }
+    }
+}
+
+extension UniversitiesTableViewController: HomeProgramDispatcher {
+    func programTapped(program: EdProgram) {
+        presenter?.showProgram(program: program)
     }
 }

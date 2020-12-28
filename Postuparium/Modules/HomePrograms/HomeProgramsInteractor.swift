@@ -6,10 +6,14 @@
 //
 
 import Foundation
+import UIKit
+protocol HomeProgramDispatcher: class {
+    func programTapped(program: EdProgram)
+}
 
-class HomeProgramsInteractor {
+class HomeProgramsInteractor: HomeProgramDispatcher {
     weak var view: HomePrograms!
-    
+    weak var dispatcher: HomeProgramDispatcher!
     func loadPrograms() {
         EdProgramService.shared.loadChosenPrograms(since: nil, didLoad: { programs in
             if let programs = programs {
@@ -18,5 +22,9 @@ class HomeProgramsInteractor {
                 self.view?.programsAreNotLoaded()
             }
         })
+    }
+    
+    func programTapped(program: EdProgram) {
+        dispatcher?.programTapped(program: program)
     }
 }

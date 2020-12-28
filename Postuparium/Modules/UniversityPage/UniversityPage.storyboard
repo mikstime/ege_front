@@ -16,20 +16,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cdh-Y6-aFZ">
+                            <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cdh-Y6-aFZ" customClass="ShadowView" customModule="Postuparium" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I0S-zj-xMU">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="196"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="196" id="opZ-pe-CQU"/>
+                                        </constraints>
+                                    </view>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="opv-SN-73M">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="852"/>
+                                        <rect key="frame" x="0.0" y="196" width="414" height="656"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Страница университета" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hui-gd-TBw">
-                                                <rect key="frame" x="111" y="57" width="192" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Utu-JD-dar">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="3000"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="375" id="R5n-z6-94p"/>
+                                                </constraints>
+                                            </stackView>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Utu-JD-dar" secondAttribute="trailing" id="34G-zq-WbC"/>
+                                            <constraint firstItem="Utu-JD-dar" firstAttribute="leading" secondItem="opv-SN-73M" secondAttribute="leading" id="YSc-Dc-Vnf"/>
+                                            <constraint firstAttribute="bottom" secondItem="Utu-JD-dar" secondAttribute="bottom" id="nd6-Hy-E5E"/>
+                                            <constraint firstItem="Utu-JD-dar" firstAttribute="top" secondItem="opv-SN-73M" secondAttribute="top" id="szk-q0-GNZ"/>
+                                        </constraints>
                                     </scrollView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wZT-qn-k8p">
                                         <rect key="frame" x="177" y="7.5" width="60" height="4"/>
@@ -45,19 +58,22 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="opv-SN-73M" firstAttribute="top" secondItem="Cdh-Y6-aFZ" secondAttribute="top" id="3wd-Q3-UKf"/>
+                                    <constraint firstItem="opv-SN-73M" firstAttribute="top" secondItem="I0S-zj-xMU" secondAttribute="bottom" id="3wd-Q3-UKf"/>
                                     <constraint firstAttribute="bottom" secondItem="opv-SN-73M" secondAttribute="bottom" id="MLc-Cv-oHa"/>
+                                    <constraint firstAttribute="trailing" secondItem="I0S-zj-xMU" secondAttribute="trailing" id="Qhw-Qn-ycm"/>
+                                    <constraint firstItem="I0S-zj-xMU" firstAttribute="leading" secondItem="Cdh-Y6-aFZ" secondAttribute="leading" id="TZf-KA-Yg8"/>
                                     <constraint firstItem="wZT-qn-k8p" firstAttribute="top" secondItem="Cdh-Y6-aFZ" secondAttribute="top" constant="7.5" id="gCY-uo-AIQ"/>
                                     <constraint firstAttribute="trailing" secondItem="opv-SN-73M" secondAttribute="trailing" id="iH5-Bg-0DS"/>
                                     <constraint firstItem="opv-SN-73M" firstAttribute="leading" secondItem="Cdh-Y6-aFZ" secondAttribute="leading" id="kYY-79-Leo"/>
                                     <constraint firstItem="wZT-qn-k8p" firstAttribute="centerX" secondItem="Cdh-Y6-aFZ" secondAttribute="centerX" id="ugA-Nc-zhy"/>
+                                    <constraint firstItem="I0S-zj-xMU" firstAttribute="top" secondItem="Cdh-Y6-aFZ" secondAttribute="top" id="x55-P9-2LE"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Tcr-er-O8d"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Cdh-Y6-aFZ" firstAttribute="bottom" secondItem="Tzv-pL-Pja" secondAttribute="bottom" id="Pt7-qe-MdA"/>
                             <constraint firstItem="Cdh-Y6-aFZ" firstAttribute="trailing" secondItem="Tcr-er-O8d" secondAttribute="trailing" id="a2i-dL-yRy"/>
@@ -66,18 +82,16 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="container" destination="Tzv-pL-Pja" id="RdF-xn-SG6"/>
+                        <outlet property="containerView" destination="Utu-JD-dar" id="BI8-uG-0fh"/>
+                        <outlet property="headContainer" destination="I0S-zj-xMU" id="YaS-ou-Dm4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8LN-HB-hcw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-322" y="105"/>
+            <point key="canvasLocation" x="-323.1884057971015" y="104.46428571428571"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemGray3Color">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

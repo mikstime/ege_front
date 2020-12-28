@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 protocol NewEdProgramModuleViewControllerProtocol: UIViewController {
+    var program: EdProgram! {get set}
     var presenter: NewEdProgramModulePresenterProtocol! {get set}
     var edProgramId: String! {get set}
     
@@ -33,5 +34,5 @@ protocol NewEdProgramModuleRouterProtocol: class {
 }
 
 protocol NewEdProgramModuleConfiguratorProtocol: class {
-    static func configureModule() -> NewEdProgramModuleViewControllerProtocol
+    static func configureModule(program: EdProgram) -> NewEdProgramModuleViewControllerProtocol
 }

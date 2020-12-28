@@ -41,6 +41,8 @@
 		2E6A932C25997869005B294E /* UniversityPhotosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A932B25997869005B294E /* UniversityPhotosView.swift */; };
 		2E6A933625997CF3005B294E /* TwoPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A933425997CDD005B294E /* TwoPhotos.swift */; };
 		2E6A933C25997CFC005B294E /* OnePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A933A25997CFC005B294E /* OnePhoto.swift */; };
+		2E6A934625998E81005B294E /* TwoPhotos.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E6A933525997CDD005B294E /* TwoPhotos.xib */; };
+		2E6A934A25998E84005B294E /* OnePhoto.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E6A933B25997CFC005B294E /* OnePhoto.xib */; };
 		2E8CE4932566EC80007C923C /* EgeResultsSelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E00066A25620ACD000693B5 /* EgeResultsSelection.storyboard */; };
 		2E9CF7A425982E4400490939 /* UniversityPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E9CF78F25982C3500490939 /* UniversityPage.storyboard */; };
 		2E9CF7A525982E4400490939 /* UniversityPageViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9CF78B25982C3400490939 /* UniversityPageViewContoller.swift */; };
@@ -1560,6 +1562,7 @@
 				8528F5302534AAE3004FDE50 /* Assets.xcassets in Resources */,
 				85ABD61D2569E0CF0094BC7E /* applicants.json in Resources */,
 				2EF029E225992E2200251AF6 /* EdProgramsViewCell.xib in Resources */,
+				2E6A934625998E81005B294E /* TwoPhotos.xib in Resources */,
 				2E6145E62593B73C006E43E6 /* UniversityCell.xib in Resources */,
 				85173DDA259157E70090D1C6 /* universities.json in Resources */,
 				2E6A932225997135005B294E /* UniversityDescription.xib in Resources */,
@@ -1572,6 +1575,7 @@
 				8528F52B2534AAE2004FDE50 /* Main.storyboard in Resources */,
 				8528F55B2534AC72004FDE50 /* terminalScript.sh in Resources */,
 				CEEE7BA82567D3A50094B1DA /* PhotoTableView.storyboard in Resources */,
+				2E6A934A25998E84005B294E /* OnePhoto.xib in Resources */,
 				2E42DCC425661BDE00D82018 /* icon.png in Resources */,
 				2E000666256209B1000693B5 /* EgeResultsSelector.xib in Resources */,
 				2ED1200B25689DE3005D39DA /* LoadingCell.xib in Resources */,

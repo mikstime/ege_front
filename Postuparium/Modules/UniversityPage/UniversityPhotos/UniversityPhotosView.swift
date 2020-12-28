@@ -12,6 +12,12 @@ protocol UniversityPhotoDispatcher: class {
     func didTapOnMore()
 }
 class UniversityPhotos: UIView {
+    var university: University! {
+        didSet {
+            photos = []
+            interactor.initView()
+        }
+    }
     weak var dispatcher: UniversityPhotoDispatcher! {
         didSet {
             initPhotos()

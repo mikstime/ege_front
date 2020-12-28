@@ -21,7 +21,7 @@ protocol PhotoTableViewInteractorProtocol: class {
     var presenter: PhotoTableViewPresenterProtocol! {get set}
     func getPhotos() -> [UIImage]
     func getIsFetching() -> Bool
-    func fetchPhotos(starter: ()->(), completion: @escaping ()->())
+    func fetchPhotos(starter: ()->(), completion: @escaping ([UIImage]) -> Void)
 }
 
 protocol PhotoTableViewRouterProtocol: class {

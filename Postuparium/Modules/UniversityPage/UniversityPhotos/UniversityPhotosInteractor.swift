@@ -12,8 +12,8 @@ class UniversityPhotosInteractor {
     weak var view: UniversityPhotos!
     
     func initView() {
-        PhotoGridService.shared.fetchPhotos {
-//            self.view?.photos = PhotoGridService.shared.photos
+        PhotoGridService.shared.fetchPhotos { photos in
+            self.view?.photos = photos
         }
     }
 }

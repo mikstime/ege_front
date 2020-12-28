@@ -13,7 +13,7 @@ class UniversityPageViewController: UIViewController, UniversityPageViewControll
         didSet {
             universityHead.university = university
             universityDescription.university = university
-//            univerityPhotos.university = university
+            univerityPhotos.university = university
             
         }
     }

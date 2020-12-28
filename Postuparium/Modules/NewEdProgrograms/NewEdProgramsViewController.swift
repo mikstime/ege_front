@@ -43,7 +43,11 @@ class NewEdProgramsViewController: UIViewController, UICollectionViewDelegate, U
 
     @IBOutlet var collection: UICollectionView!
     
-    var edPrograms: [EdProgram] = []
+    var edPrograms: [EdProgram] = [] {
+        didSet {
+            self.collection.reloadData()
+        }
+    }
  
     
     override func viewDidLoad() {

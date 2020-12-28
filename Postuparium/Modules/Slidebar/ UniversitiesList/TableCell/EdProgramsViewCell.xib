@@ -16,10 +16,6 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="214"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yil-uP-dqp" customClass="HomePrograms" customModule="Postuparium" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="176"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
                     <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FQd-by-fOo">
                         <rect key="frame" x="0.0" y="176" width="375" height="38"/>
                         <subviews>
@@ -41,12 +37,8 @@
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="FQd-by-fOo" secondAttribute="bottom" id="40V-bc-9Ec"/>
                     <constraint firstAttribute="trailing" secondItem="FQd-by-fOo" secondAttribute="trailing" id="ATp-C4-2I1"/>
-                    <constraint firstAttribute="trailing" secondItem="Yil-uP-dqp" secondAttribute="trailing" id="La5-pQ-xl6"/>
-                    <constraint firstAttribute="bottom" secondItem="Yil-uP-dqp" secondAttribute="bottom" constant="38" id="NYx-1y-txQ"/>
-                    <constraint firstItem="Yil-uP-dqp" firstAttribute="leading" secondItem="hoM-RP-WbG" secondAttribute="leading" id="VHn-Q2-6L2"/>
-                    <constraint firstItem="FQd-by-fOo" firstAttribute="top" secondItem="Yil-uP-dqp" secondAttribute="bottom" id="mOW-S0-gPH"/>
+                    <constraint firstItem="FQd-by-fOo" firstAttribute="top" secondItem="hoM-RP-WbG" secondAttribute="bottom" constant="-38" id="mOW-S0-gPH"/>
                     <constraint firstItem="FQd-by-fOo" firstAttribute="leading" secondItem="hoM-RP-WbG" secondAttribute="leading" id="xrK-Ir-bi8"/>
-                    <constraint firstItem="Yil-uP-dqp" firstAttribute="top" secondItem="hoM-RP-WbG" secondAttribute="top" id="zYR-eZ-Vfk"/>
                 </constraints>
             </tableViewCellContentView>
             <point key="canvasLocation" x="116.66666666666667" y="112.5"/>
@@ -55,9 +47,6 @@
     <resources>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

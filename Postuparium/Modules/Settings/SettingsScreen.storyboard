@@ -12,13 +12,27 @@
         <scene sceneID="csb-UF-A7W">
             <objects>
                 <viewController storyboardIdentifier="SettingsScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AnT-Ft-OYG" customClass="SettingsScreenViewController" customModule="Postuparium" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="N8Y-Da-4XK">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="N8Y-Da-4XK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2rv-c0-vfr" customClass="ShadowView" customModule="Postuparium" customModuleProvider="target">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2rv-c0-vfr" customClass="ShadowView" customModule="Postuparium" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="356" height="896"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Lu-Du-BtQ" customClass="HomeProgramView" customModule="Postuparium" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="117" height="169"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="252" id="XGS-11-yFR"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="2Lu-Du-BtQ" firstAttribute="top" secondItem="2rv-c0-vfr" secondAttribute="top" id="6Iz-KG-xVB"/>
+                                    <constraint firstItem="2Lu-Du-BtQ" firstAttribute="leading" secondItem="2rv-c0-vfr" secondAttribute="leading" id="OJ5-MA-apt"/>
+                                    <constraint firstAttribute="trailing" secondItem="2Lu-Du-BtQ" secondAttribute="trailing" id="cfB-a9-6Ir"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MV1-Pr-jUs"/>

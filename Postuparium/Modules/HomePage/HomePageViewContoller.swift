@@ -93,6 +93,7 @@ class HomePageViewController: UIViewController, MenuViewControllerProtocol, Home
         handleArea = self.view
         presenter?.viewDidLoad()
         addUniversities()
+
     }
     func addUniversities(){
         if let view1 = universities.view {

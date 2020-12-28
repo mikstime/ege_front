@@ -11,7 +11,11 @@ import UIKit
 class NewEdProgramModuleViewController: UIViewController, NewEdProgramModuleViewControllerProtocol{
     
     
-    
+    var program: EdProgram! {// СОДЕРЖИТ ИНФОРМАЦИЮ О НАПРАВЛЕНИИ. ВЫСТАВЛЯЕТСЯ КОНФИГУРАТОРОМ
+        didSet {
+            
+        }
+    }
     var edProgramId: String!
     var presenter: NewEdProgramModulePresenterProtocol!
     

@@ -4,12 +4,21 @@ import UIKit
 
 class EdProgramsViewCell: UITableViewCell {
     
+    var programs = HomePrograms()
     var grayGradient: CAGradientLayer!
-    
-    
+    var dispatcher: HomeProgramDispatcher! {
+        didSet {
+            programs.interactor.dispatcher = dispatcher
+        }
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         self.setupGradient()
+        self.contentView.addSubview(programs)
+        NSLayoutConstraint(item: programs, attribute: .top, relatedBy: .equal, toItem: self.contentView, attribute: .top, multiplier: 1, constant: 0).isActive = true
+        NSLayoutConstraint(item: programs, attribute: .leading, relatedBy: .equal, toItem: self.contentView, attribute: .leading, multiplier: 1, constant: 0).isActive = true
+        NSLayoutConstraint(item: programs, attribute: .trailing, relatedBy: .equal, toItem: self.contentView, attribute: .trailing, multiplier: 1, constant: 0).isActive = true
+        NSLayoutConstraint(item: programs, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 214).isActive = true
     }
     
     final override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {

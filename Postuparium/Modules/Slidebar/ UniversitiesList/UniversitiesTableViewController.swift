@@ -47,7 +47,7 @@ extension UniversitiesTableViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return presenter!.getNumberOfRowsInSection()
     }
-    
+
     func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
         if (indexPath.row != 0 ) {
             return indexPath
@@ -59,7 +59,7 @@ extension UniversitiesTableViewController: UITableViewDataSource{
         
         if indexPath.row == 0 {
             let cell = self.universitiesTableView.dequeueReusableCell(withIdentifier: "EdProgramsViewCell") as! EdProgramsViewCell
-            
+            cell.dispatcher = self
             return cell
         }
         if (presenter!.isEndCell(indexPath: indexPath)) {
@@ -83,7 +83,6 @@ extension UniversitiesTableViewController: UITableViewDelegate {
         self.universitiesTableView.deselectRow(at: indexPath, animated: true)
 
         if (self.presenter!.isEndCell(indexPath: indexPath)) {
-            let endCell = self.universitiesTableView.cellForRow(at: indexPath) as! EndTableViewCell
             self.presenter?.fetch {
                 DispatchQueue.main.async {
                     self.universitiesTableView.reloadData()
@@ -117,5 +116,11 @@ extension UniversitiesTableViewController: UITableViewDelegate {
             textfield.cornerRadius = 10
             textfield.borderColor = UIColor.systemGray5
         }
+    }
+}
+
+extension UniversitiesTableViewController: HomeProgramDispatcher {
+    func programTapped(program: EdProgram) {
+        presenter?.showProgram(program: program)
     }
 }

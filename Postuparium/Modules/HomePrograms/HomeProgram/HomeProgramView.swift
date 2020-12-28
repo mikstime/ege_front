@@ -10,7 +10,7 @@ import UIKit
 
 @IBDesignable
 class HomeProgramView: UIView {
-    
+    weak var dispatcher: HomeProgramDispatcher!
     @IBOutlet weak var shadow: UIView!
     @IBOutlet weak var universityNameView: UILabel!
     @IBOutlet weak var programNameView: UILabel!
@@ -18,6 +18,16 @@ class HomeProgramView: UIView {
     @IBOutlet weak var universityLogo: UIImageView!
     @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var probabilityColorView: UIView!
+    
+    @IBAction func onTap(_ sender: Any) {
+        print("tapped")
+        dispatcher?.programTapped(program: self.program)
+    }
+    //    @IBAction func onTap(gestureRecognizer: UITapGestureRecognizer) {
+//        print("tapped")
+//        dispatcher?.programTapped(program: self.program)
+//    }
+    
     var program: EdProgram! {
         didSet {
             universityNameView?.text = program.university

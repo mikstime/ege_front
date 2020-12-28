@@ -13,6 +13,9 @@ class HomePagePresenter: HomePagePresenterProtocol {
     var interactor: HomePageInteractorProtocol!
     var router: HomePageRouterProtocol!
     
+    func showProgram(program: EdProgram) {
+        router?.showProgram(program: program)
+    }
     func viewDidLoad() {
  
     }

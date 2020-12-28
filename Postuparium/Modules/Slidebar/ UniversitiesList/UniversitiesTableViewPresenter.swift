@@ -28,4 +28,7 @@ class UniversitiesTableViewPresenter: UniversitiesTableViewPresenterProtocol {
         cell.university = interactor!.getUniversities()[indexPath.row]
     }
     
+    func showProgram(program: EdProgram) {
+        router?.showProgram(program: program)
+    }
 }

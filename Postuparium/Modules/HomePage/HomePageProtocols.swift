@@ -16,7 +16,7 @@ protocol HomePageViewControllerProtocol: MenuViewControllerProtocol {
 protocol HomePagePresenterProtocol: class {
     var view: HomePageViewControllerProtocol! {set get}
     var router: HomePageRouterProtocol! { set get }
-    
+    func showProgram(program: EdProgram)
     func viewDidLoad()
 }
 
@@ -27,6 +27,7 @@ protocol HomePageInteractorProtocol: class {
 protocol HomePageRouterProtocol: class {
     var view: HomePageViewControllerProtocol! {set get}
     
+    func showProgram(program: EdProgram)
     func prepare(for segue: UIStoryboardSegue, sender: Any?)
 }
 

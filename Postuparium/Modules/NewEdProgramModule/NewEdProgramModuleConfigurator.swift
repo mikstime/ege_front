@@ -10,7 +10,7 @@ import UIKit
 
 class NewEdProgramModuleConfigurator: NewEdProgramModuleConfiguratorProtocol {
     
-    static func configureModule() -> NewEdProgramModuleViewControllerProtocol {
+    static func configureModule(program: EdProgram = EdProgram()) -> NewEdProgramModuleViewControllerProtocol {
         
         let storyboard = UIStoryboard(name: "NewEdProgramModule", bundle: nil)
         guard let vc: UIViewController = storyboard.instantiateInitialViewController()
@@ -22,7 +22,7 @@ class NewEdProgramModuleConfigurator: NewEdProgramModuleConfiguratorProtocol {
         let presenter = NewEdProgramModulePresenter()
         let interactor = NewEdProgramModuleInteractor()
         let router = NewEdProgramModuleRouter()
-        
+        viewController.program = program
         viewController.presenter = presenter
         interactor.presenter = presenter
         

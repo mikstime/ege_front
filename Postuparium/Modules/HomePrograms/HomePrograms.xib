@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomePrograms" customModule="Postuparium">
             <connections>
-                <outlet property="ContainerWidthConstraint" destination="iE5-Hx-8kT" id="4Ms-9h-qbl"/>
+                <outlet property="ContainerWidthConstraint" destination="0qz-2C-cHw" id="azW-35-sO7"/>
                 <outlet property="programsContainer" destination="dKn-6D-v4z" id="KT7-Z7-lYt"/>
             </connections>
         </placeholder>
@@ -28,31 +28,34 @@
                             <color key="textColor" systemColor="secondaryLabelColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XMA-WE-0q1">
-                            <rect key="frame" x="16" y="40" width="343" height="168"/>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XMA-WE-0q1">
+                            <rect key="frame" x="16" y="39" width="343" height="169"/>
                             <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="dKn-6D-v4z">
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="dKn-6D-v4z">
                                     <rect key="frame" x="0.0" y="0.0" width="0.0" height="169"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" id="iE5-Hx-8kT"/>
+                                        <constraint firstAttribute="width" id="0qz-2C-cHw"/>
                                     </constraints>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
                                     </userDefinedRuntimeAttributes>
                                 </stackView>
                             </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="dKn-6D-v4z" secondAttribute="trailing" id="2QG-0A-FTV"/>
                                 <constraint firstAttribute="bottom" secondItem="dKn-6D-v4z" secondAttribute="bottom" id="F1d-ol-N8a"/>
                                 <constraint firstItem="dKn-6D-v4z" firstAttribute="leading" secondItem="XMA-WE-0q1" secondAttribute="leading" id="LA9-Zd-6cb"/>
                                 <constraint firstItem="dKn-6D-v4z" firstAttribute="top" secondItem="XMA-WE-0q1" secondAttribute="top" id="Tbb-fe-vIK"/>
+                                <constraint firstItem="dKn-6D-v4z" firstAttribute="centerY" secondItem="XMA-WE-0q1" secondAttribute="centerY" id="fQ8-Gg-waj"/>
                             </constraints>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
                             </userDefinedRuntimeAttributes>
                         </scrollView>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="iBQ-Jo-32B" firstAttribute="leading" secondItem="ESi-cI-Pwf" secondAttribute="leading" constant="16" id="0LE-GZ-WHG"/>
                         <constraint firstItem="XMA-WE-0q1" firstAttribute="leading" secondItem="ESi-cI-Pwf" secondAttribute="leading" constant="16" id="3hp-Tj-enE"/>
@@ -67,7 +70,7 @@
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="2dv-9L-7NB"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="ESi-cI-Pwf" firstAttribute="top" secondItem="uT0-8b-ufY" secondAttribute="top" id="IDR-sa-D4k"/>
                 <constraint firstItem="2dv-9L-7NB" firstAttribute="trailing" secondItem="ESi-cI-Pwf" secondAttribute="trailing" id="KMm-lK-fMg"/>
@@ -82,9 +85,6 @@
     <resources>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

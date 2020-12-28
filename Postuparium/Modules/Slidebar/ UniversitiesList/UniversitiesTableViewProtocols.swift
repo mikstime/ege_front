@@ -13,6 +13,8 @@ protocol UniversitiesTableViewPresenterProtocol: class {
     func getNumberOfRowsInSection() -> Int
     func isEndCell(indexPath: IndexPath) -> Bool
     func setCellData(cell: UniversityTableViewCell, indexPath: IndexPath)
+    
+    func showProgram(program: EdProgram)
 }
 
 protocol UniversitiesTableViewInteractorProtocol: class {
@@ -25,6 +27,7 @@ protocol UniversitiesTableViewInteractorProtocol: class {
 
 protocol UniversitiesTableViewRouterProtocol: class {
     var view: UniversitiesTableViewControllerProtocol! {set get}
+    func showProgram(program: EdProgram)
 }
 
 protocol UniversitiesTableViewConfiguratorProtocol: class {

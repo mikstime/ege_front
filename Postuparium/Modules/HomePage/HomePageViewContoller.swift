@@ -71,11 +71,12 @@ protocol HomePageDispatcher: class {
 
 class HomePageViewController: UIViewController, MenuViewControllerProtocol, HomePageViewControllerProtocol {
     
+    
     @IBOutlet weak var shadow: UIView!
     @IBOutlet weak var container: UIView!
     @IBOutlet weak var programs: UIView!
     var dispatcher: HomePageDispatcher!
-    var universities = UniversitiesTableViewConfigurator.configureModule(hideHomePrograms: false)
+    var universities: UniversitiesTableViewControllerProtocol! = UniversitiesTableViewConfigurator.configureModule(hideHomePrograms: false)
     
     var presenter: HomePagePresenterProtocol!
     var handleArea: UIView!

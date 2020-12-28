@@ -6,7 +6,13 @@ protocol UniversitiesTableViewControllerDispatcher: class {
     func didStartEditing()
 }
 class UniversitiesTableViewController: UIViewController, UniversitiesTableViewControllerProtocol, UISearchBarDelegate {
-    
+    var universities: [University] = [] {
+        didSet {
+            universitiesToShow = universities
+            self.universitiesTableView.reloadData()
+        }
+    }
+    var universitiesToShow: [University] = []
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var universitiesTableView: UITableView!
 //    @IBOutlet weak var homeProgramsView: HomePrograms!
@@ -26,12 +32,10 @@ class UniversitiesTableViewController: UIViewController, UniversitiesTableViewCo
         dispatcher?.didStartEditing()
     }
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        self.presenter?.search(query: searchText, callback: {
-            DispatchQueue.main.async {
-                self.universitiesTableView.reloadData()
-            }
+        universitiesToShow = universities.filter { u in
+            return u.name.lowercased().contains(searchText)
         }
-        )
+        self.universitiesTableView.reloadData()
     }
     
     func configureTableView() {
@@ -48,21 +52,20 @@ class UniversitiesTableViewController: UIViewController, UniversitiesTableViewCo
     }
     
     func startLoad() {
-        print("load")
 //        self.universitiesTableView.isHidden = true
-        self.presenter?.fetch {
-            DispatchQueue.main.async {
-//                self.universitiesTableView.isHidden = false
-                self.universitiesTableView.reloadData()
-            }
-        }
+//        self.presenter?.fetch {
+//            DispatchQueue.main.async {
+////                self.universitiesTableView.isHidden = false
+//                self.universitiesTableView.reloadData()
+//            }
+//        }
     }
 }
 
 extension UniversitiesTableViewController: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return presenter!.getNumberOfRowsInSection() > 0 ? presenter!.getNumberOfRowsInSection() : 1
+        return universitiesToShow.count > 0 ? universitiesToShow.count + 1: 1
     }
 
     func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
@@ -79,13 +82,14 @@ extension UniversitiesTableViewController: UITableViewDataSource{
             cell.dispatcher = self
             return cell
         }
-        if (presenter!.isEndCell(indexPath: indexPath)) {
-            let cell = self.universitiesTableView.dequeueReusableCell(withIdentifier: "EndTableViewCell") as! EndTableViewCell
-            return cell
-        }
+//        if (presenter!.isEndCell(indexPath: indexPath)) {
+//            let cell = self.universitiesTableView.dequeueReusableCell(withIdentifier: "EndTableViewCell") as! EndTableViewCell
+//            return cell
+//        }
 
         let cell = self.universitiesTableView.dequeueReusableCell(withIdentifier: "UniversityTableViewCell") as! UniversityTableViewCell
-        presenter!.setCellData(cell: cell, indexPath: indexPath)
+//        presenter!.setCellData(cell: cell, indexPath: indexPath)
+        cell.university = universitiesToShow[indexPath.row - 1]
         return cell
     }
     
@@ -111,17 +115,17 @@ extension UniversitiesTableViewController: UITableViewDelegate {
             return
         }
         
-        if (self.presenter!.isEndCell(indexPath: indexPath)) {
-            self.presenter?.fetch {
-                DispatchQueue.main.async {
-                    self.universitiesTableView.reloadData()
-                }
-            }
-            return
-        }
+//        if (self.presenter!.isEndCell(indexPath: indexPath)) {
+//            self.presenter?.fetch {
+//                DispatchQueue.main.async {
+//                    self.universitiesTableView.reloadData()
+//                }
+//            }
+//            return
+//        }
         
         if let dispatcher = dispatcher {
-            dispatcher.didTapOnUniversity(university: presenter?.getCellData(indexPath: indexPath) ?? University() )
+            dispatcher.didTapOnUniversity(university: universitiesToShow[indexPath.row - 1] )
         }
     }
     
@@ -130,9 +134,9 @@ extension UniversitiesTableViewController: UITableViewDelegate {
             return 252.0
         }
         
-        if (self.presenter!.isEndCell(indexPath: indexPath)){
-            return 68.0
-        }
+//        if (self.presenter!.isEndCell(indexPath: indexPath)){
+//            return 68.0
+//        }
         return 196.0
 
     }

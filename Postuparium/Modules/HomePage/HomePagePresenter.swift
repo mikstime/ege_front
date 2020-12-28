@@ -17,6 +17,8 @@ class HomePagePresenter: HomePagePresenterProtocol {
         router?.showProgram(program: program)
     }
     func viewDidLoad() {
- 
+        interactor?.loadUniversities{ universities in
+            self.view?.universities.universities = universities
+        }
     }
 }

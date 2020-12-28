@@ -13,7 +13,7 @@ class UniversityPhotosInteractor {
     
     func initView() {
         PhotoGridService.shared.fetchPhotos {
-            self.view?.photos = PhotoGridService.shared.photos
+//            self.view?.photos = PhotoGridService.shared.photos
         }
     }
 }

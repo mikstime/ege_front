@@ -11,5 +11,12 @@ class HomePageInteractor: HomePageInteractorProtocol {
     
     weak var presenter: HomePagePresenterProtocol!
     
+    var universities:[University] = []
     
+    func loadUniversities(onFinish: @escaping ([University]) -> Void) {
+        UniversitiesService.shared.searchForUniversities(query: "", didFind: { universities in
+            self.universities = universities
+            onFinish(universities)
+        })
+    }
 }

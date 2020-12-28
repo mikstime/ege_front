@@ -4,6 +4,7 @@ import UIKit
 protocol UniversitiesTableViewControllerProtocol: UIViewController {
     var presenter: UniversitiesTableViewPresenterProtocol! {get set}
     var dispatcher: UniversitiesTableViewControllerDispatcher! {get set}
+    var universities: [University] {get set}
 }
 
 protocol UniversitiesTableViewPresenterProtocol: class {

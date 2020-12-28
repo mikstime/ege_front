@@ -12,6 +12,7 @@ import UIKit
 protocol HomePageViewControllerProtocol: MenuViewControllerProtocol {
     var presenter: HomePagePresenterProtocol! {get set}
     var dispatcher: HomePageDispatcher! {get set}
+    var universities: UniversitiesTableViewControllerProtocol! {get set}
 }
 
 protocol HomePagePresenterProtocol: class {
@@ -23,6 +24,7 @@ protocol HomePagePresenterProtocol: class {
 
 protocol HomePageInteractorProtocol: class {
     var presenter: HomePagePresenterProtocol! { get set }
+    func loadUniversities(onFinish: @escaping ([University]) -> Void)
 }
 
 protocol HomePageRouterProtocol: class {

@@ -6,11 +6,13 @@ class UniversitiesTableViewInteractor: UniversitiesTableViewInteractorProtocol {
     private var isNext = true
     
     func getUniversities() -> [University] {
-        return UniversitiesService.shared.universities
+        return []
+//        return UniversitiesService.shared.universities
     }
     
     func getUniversitiesCount() -> Int {
-        return UniversitiesService.shared.universities.count
+        return 0
+//        return UniversitiesService.shared.universities.count
     }
     
     func hasNext() -> Bool {
@@ -18,10 +20,10 @@ class UniversitiesTableViewInteractor: UniversitiesTableViewInteractorProtocol {
     }
     
     func fetch(callback: @escaping  () -> Void ) {
-        UniversitiesService.shared.fetchUniversities(callback: callback)
+//        UniversitiesService.shared.fetchUniversities(callback: callback)
     }
     
     func search(query: String, callback: @escaping () -> Void) {
-        UniversitiesService.shared.searchUniversities(query: query,callback: callback)
+//        UniversitiesService.shared.searchUniversities(query: query,callback: callback)
     }
 }

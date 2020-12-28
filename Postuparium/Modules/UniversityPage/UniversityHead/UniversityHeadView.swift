@@ -75,8 +75,8 @@ class UniversityHead: UIView {
     
     func setDetails() {
         uratingView?.text = String(university?.rating ?? 0)
-        uprogramsView?.text = String(university?.scores ?? 0)
+        uprogramsView?.text = String(university?.place ?? 0)
         unameLabel?.text = String(university?.name ?? "")
-        urankLabel?.text = String(university?.place ?? 0)
+        urankLabel?.text = String(university?.scores ?? 0)
     }
 }

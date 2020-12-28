@@ -17,30 +17,26 @@ class PhotoGridService: PhotoGridServiceProtocol{
     var photos: [UIImage] = []
     static var shared: PhotoGridServiceProtocol = PhotoGridService()
     
+    func loadImage(url: String, completion: @escaping ()->()) {
+        guard let imageURL = URL(string: url) else { return }
+        DispatchQueue.main.async {
+            guard let imageData = try? Data(contentsOf: imageURL) else { return }
+
+            if let image = UIImage(data: imageData){
+                self.photos.append(image)
+                completion()
+            }
+        }
+    }
+    
     func fetchPhotos(completion: @escaping ()->()) {
         // тут должно быть получение большего числа фоток
         // сейчас здесь заглушка
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
-            if let photo_1 = UIImage(named: "8cebe4fdb0ce2ce1565312fa4e281596") {
-                self.photos.append(photo_1)
-            }
-            if let photo_2 = UIImage(named: "vhod") {
-                self.photos.append(photo_2)
-            }
-            if let photo_3 = UIImage(named: "700ba") {
-                self.photos.append(photo_3)
-            }
-            if let photo_1 = UIImage(named: "8cebe4fdb0ce2ce1565312fa4e281596") {
-                self.photos.append(photo_1)
-            }
-            if let photo_2 = UIImage(named: "vhod") {
-                self.photos.append(photo_2)
-            }
-            if let photo_3 = UIImage(named: "700ba") {
-                self.photos.append(photo_3)
-            }
-            completion()
+            self.loadImage(url: "https://www.interfax.ru/ftproot/textphotos/2020/10/20/700ba.jpg", completion: completion)
+            self.loadImage(url: "https://ekd.me/wp-content/uploads/2019/02/img_52531-e1551272911192.jpg", completion: completion)
+            self.loadImage(url: "https://abiturient.bmstu.ru/assets/bg/start.jpg", completion: completion)
         })
     }
 }

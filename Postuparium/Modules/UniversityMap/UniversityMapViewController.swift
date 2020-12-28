@@ -150,6 +150,8 @@ class UniversityMapViewController: SSwipeableViewController,
         print("Ебать нажалось", id! , Int(id!) ?? 0 )
 
         showUCard()
+        
+        self.mapView.deselectAnnotation(view.annotation, animated: false)
 //        self.presenter.showModal(id: Int(id!) ?? 0 )
     }
     

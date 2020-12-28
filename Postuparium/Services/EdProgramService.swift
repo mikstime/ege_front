@@ -23,7 +23,7 @@ class EdProgramService: EdProgramServiceProtocol {
         EdProgram(code: "09.03.01", name: "Прикладная математика", university: "МГУ", universityId: 2, photo: "http://77.223.97.172:8081/media/1.3.jpg", probability: "15%", probablilityNumber: 0.15, id: 2)
     ]
     static var allProgrammsURL: String = "http://77.223.97.172:8081/api/v1/education_programs/"
-    static var addChosenURL: String = "http://77.223.97.172:8081/api/v1/education_programs/"
+    static var addChosenURL: String = "http://77.223.97.172:8081/api/v1/users/education_programs/"
     static var searchProgramsURL: String = ""
     static var universityURL: String = "http://77.223.97.172:8081/api/v1/universities/"
     static var favoriteProgrammsURL: String = "http://77.223.97.172:8081/api/v1/users/education_programs/"
@@ -36,21 +36,21 @@ class EdProgramService: EdProgramServiceProtocol {
         let params: [String] = programs.map { program in
             return String(program.id)
         }
-        let paramsString: String = params.joined(separator: ", ")
-        let res: String = "[" + paramsString + "]"
-        print("chosen: ", res)
-        let request = AF.request(EdProgramService.allProgrammsURL, method: .post, parameters: res)
-            
-        request.responseJSON { (response) in
-            switch response.result {
-                case .success:
-                    print("response::: ", response.result)
-                    done()
-                case .failure(_):
-                    print("GET ALL PROGRAMMS FAILED")
-                    done()
-            }
+        let paramsDict = ["education_programs_ids": params]
+        
+        var headers: HTTPHeaders = []
+        
+        let cookieName = "csrftoken"
+        if let cookie = HTTPCookieStorage.shared.cookies?.first(where: { $0.name == cookieName }) {
+            headers["X-CSRFToken"] = cookie.value
         }
+        
+        let request = AF.request(EdProgramService.addChosenURL, method: .post, parameters: paramsDict, encoding: JSONEncoding.default, headers: headers)
+        
+        request.responseString{ response in
+            print("Status code: \(response.response?.statusCode)")
+        }
+        done()
     }
     
     func searchPrograms(searchString: String, university: University! = nil, since: EdProgram?, didFind:@escaping ([EdProgram]?) -> Void) {

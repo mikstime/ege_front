@@ -33,21 +33,23 @@ class ApplicantsService: ApplicantsServiceProtocol{
     
     static var shared: ApplicantsServiceProtocol = ApplicantsService()
     var useMocks = true
+
     private var MOCK_APPLICANTS = [
-        Applicant(scores: 300, name: "Василий Романов", id: 1),
-        Applicant(scores: 200, name: "Василий Романов", id: 2),
-        Applicant(scores: 190, name: "Василий Романов", id: 2),
-        Applicant(scores: 180, name: "Василий Романов", id: 3),
-        Applicant(scores: 170, name: "Василий Романов", id: 4),
-        Applicant(scores: 160, name: "Василий Романов", id: 5),
-        Applicant(scores: 150, name: "Василий Романов", id: 6),
-        Applicant(scores: 140, name: "Василий Романов", id: 7),
-        Applicant(scores: 130, name: "Василий Романов", id: 8),
-        Applicant(scores: 120, name: "Василий Романов", id: 9),
-        Applicant(scores: 110, name: "Василий Романов", id: 10),
-        Applicant(scores: 100, name: "Василий Романов", id: 11),
-        Applicant(scores: 90, name: "Василий Романов", id: 12),
-        Applicant(scores: 80, name: "Василий Романов", id: 13),
+        Applicant(scores: 300, name: "Михаил Балицкий", id: 1),
+        Applicant(scores: 282, name: "Вы", id: 2),
+        Applicant(scores: 200, name: "Дмитрий Болдин", id: 3),
+        Applicant(scores: 190, name: "Сергей Петренко", id: 4),
+        Applicant(scores: 180, name: "Александр Аверкиев", id: 5),
+        Applicant(scores: 170, name: "Эдвард Каллен", id: 6),
+        Applicant(scores: 160, name: "Эстебанита Бенеддечи", id: 7),
+        Applicant(scores: 150, name: "Альваро Санчез", id: 8),
+        Applicant(scores: 140, name: "Елена Корогодина", id: 9),
+        Applicant(scores: 130, name: "Ли Сунь-Хуй", id: 10),
+        Applicant(scores: 120, name: "Петр Васильев", id: 11),
+        Applicant(scores: 110, name: "Игорь Коваленко", id: 12),
+        Applicant(scores: 100, name: "Зая лупкин", id: 13),
+        Applicant(scores: 90, name: "Петя Дудкин", id: 14),
+        Applicant(scores: 80, name: "Саша Ступкин", id: 15),
     ]
     
 }
@@ -94,4 +96,3 @@ extension ApplicantsService {
         }
     }
 }
-

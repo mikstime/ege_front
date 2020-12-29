@@ -28,15 +28,16 @@ class UniversitiesService: UniversitiesServiceProtocol{
     
     static var shared: UniversitiesServiceProtocol = UniversitiesService()
     var useMocks = true
-    private var MOCK_UNIVERSITIES = [
-        University(scores: 12, numberOfPrograms: 15, place: 192, rating: 3.2, name: "МГТУ им. Н. Э. Баумана", image: "https://www.interfax.ru/ftproot/textphotos/2020/10/20/700ba.jpg", description: "Ну вообще, как бы, это – лучший технический вуз страны. В нем еще твой дед учился. На электрика. Или кого-то еще.", id: 1),
-        University(scores: 270, place: 13, rating: 3.1, name: "МГУ", image:  "https://www.msu.ru/upload/iblock/3f9/20170913_010.jpg", description: "Первый ВУЗ страны после МГТУ", id: 2)
-    ]
+//    private var MOCK_UNIVERSITIES = [
+//        University(scores: 12, numberOfPrograms: 15, place: 192, rating: 3.2, name: "МГТУ им. Н. Э. Баумана", image: "https://www.interfax.ru/ftproot/textphotos/2020/10/20/700ba.jpg", description: "Ну вообще, как бы, это – лучший технический вуз страны. В нем еще твой дед учился. На электрика. Или кого-то еще.", id: 1),
+//        University(scores: 270, place: 13, rating: 3.1, name: "МГУ", image:  "https://www.msu.ru/upload/iblock/3f9/20170913_010.jpg", description: "Первый ВУЗ страны после МГТУ", id: 2)
+//    ]
     
 }
 
 extension UniversitiesService {
     private func getAllUniversities(didLoad: @escaping  ([University]) -> Void) {
+        print("get all universities")
         let requestURL = UniversitiesService.universityURL
         let request = AF.request(requestURL, method: .get)
         
@@ -45,15 +46,14 @@ extension UniversitiesService {
                 case .success:
                     print("response::: ", response.result)
                     if let json = response.data {
-                        if self.useMocks {
-                            didLoad(self.MOCK_UNIVERSITIES)
-                        } else {
-                            let jsonDecoder = JSONDecoder()
-                            let universities = try! jsonDecoder.decode([University].self, from: json)
-                            didLoad(universities)
-                        }
+                        let jsonDecoder = JSONDecoder()
+                        print("json::: ", json)
+                        let universities = try! jsonDecoder.decode([University].self, from: json)
+                        print(universities)
+                        didLoad(universities)
                     }
                 case .failure(_):
+                    print("FAIL:: ", response.result)
                     didLoad([])
                 }
         }

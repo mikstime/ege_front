@@ -13,6 +13,9 @@ class HomePrograms: UIView {
     var interactor = HomeProgramsInteractor()
     var university: University! {
         didSet {
+            programsViews.forEach{ $0.removeFromSuperview() }
+            programsViews.removeAll()
+            ContainerWidthConstraint.constant = 0
 //            if let heightConstraint = heightConstraint {
 //                if heightConstraint.constant > 0 {
 //                    defaultHeight = heightConstraint.constant

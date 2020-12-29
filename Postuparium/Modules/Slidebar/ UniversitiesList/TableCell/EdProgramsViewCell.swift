@@ -6,6 +6,11 @@ class EdProgramsViewCell: UITableViewCell {
     
     var programs = HomePrograms()
     var grayGradient: CAGradientLayer!
+    var university: University! {
+        didSet {
+            programs.university = university
+        }
+    }
     var dispatcher: HomeProgramDispatcher! {
         didSet {
             programs.interactor.dispatcher = dispatcher
@@ -15,6 +20,7 @@ class EdProgramsViewCell: UITableViewCell {
         super.awakeFromNib()
         self.setupGradient()
         self.contentView.addSubview(programs)
+        programs.university = university
         NSLayoutConstraint(item: programs, attribute: .top, relatedBy: .equal, toItem: self.contentView, attribute: .top, multiplier: 1, constant: 0).isActive = true
         NSLayoutConstraint(item: programs, attribute: .leading, relatedBy: .equal, toItem: self.contentView, attribute: .leading, multiplier: 1, constant: 0).isActive = true
         NSLayoutConstraint(item: programs, attribute: .trailing, relatedBy: .equal, toItem: self.contentView, attribute: .trailing, multiplier: 1, constant: 0).isActive = true

@@ -18,7 +18,8 @@ class StartScreenRouter: StartScreenRouterProtocol {
     
     func showRegistrationScreen() {
         print("go to home")
-        let vc = HomeScreenConfigurator.configureModule()
+//        let vc = HomeScreenConfigurator.configureModule()
+        let vc = EgeResultsSelectionConfigurator.configureModule()
 //        let vc = UniversityMapConfigurator.configureModule()
         viewController?.navigationController!.show(vc as UIViewController, sender: viewController)
         
@@ -31,8 +32,8 @@ class StartScreenRouter: StartScreenRouterProtocol {
     
     func showHomeScreen() {
         print("go to home")
-        let vc = HomeScreenConfigurator.configureModule()
-//        let vc = UniversityMapConfigurator.configureModule()
+//        let vc = HomeScreenConfigurator.configureModule()
+        let vc = UniversityMapConfigurator.configureModule()
         viewController?.navigationController!.show(vc as UIViewController, sender: viewController)
     }
     

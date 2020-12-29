@@ -80,6 +80,7 @@ extension UniversitiesTableViewController: UITableViewDataSource{
         if indexPath.row == 0 {
             let cell = self.universitiesTableView.dequeueReusableCell(withIdentifier: "EdProgramsViewCell") as! EdProgramsViewCell
             cell.dispatcher = self
+            cell.university = nil
             return cell
         }
 //        if (presenter!.isEndCell(indexPath: indexPath)) {

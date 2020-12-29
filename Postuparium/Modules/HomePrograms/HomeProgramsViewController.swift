@@ -11,9 +11,19 @@ import UIKit
 @IBDesignable
 class HomePrograms: UIView {
     var interactor = HomeProgramsInteractor()
-    var university: University!
+    var university: University! {
+        didSet {
+            if let heightConstraint = heightConstraint {
+                if heightConstraint.constant > 0 {
+                    defaultHeight = heightConstraint.constant
+                }
+                heightConstraint.constant = 0
+            }
+            interactor.loadPrograms()
+        }
+    }
     var programsViews: [HomeProgramView] = []
-    
+    var heightConstraint: NSLayoutConstraint!
     @IBOutlet weak var programsContainer: UIStackView!
     @IBOutlet weak var ContainerWidthConstraint: NSLayoutConstraint!
 
@@ -26,15 +36,15 @@ class HomePrograms: UIView {
         super.init(frame: frame)
         _init()
     }
-
+    private var defaultHeight: CGFloat = 0
     func _init() {
         interactor.view = self
-        interactor.loadPrograms()
         fromNib()
 //        isExclusiveTouch = true
     }
     
     func programsAreLoaded(programs: [EdProgram]) {
+        heightConstraint?.constant = defaultHeight
         programs.forEach { program in
             let programView = HomeProgramView()
             programView.program = program

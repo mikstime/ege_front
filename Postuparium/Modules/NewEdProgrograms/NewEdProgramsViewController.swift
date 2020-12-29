@@ -37,7 +37,7 @@ extension UIView {
 
 class NewEdProgramsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, NewEdProgramsViewControllerProtocol {
     var id: Int = 0
-    
+    var heightConstraint: NSLayoutConstraint!
     var presenter: NewEdProgramsPresenterProtocol!
     
 

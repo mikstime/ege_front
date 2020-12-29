@@ -60,12 +60,12 @@ class PhotoGridService: PhotoGridServiceProtocol{
 //                        semaphore.wait()
                         resultPhotos[i] = photo
                         counter += 1
-                        if counter >= photoStrings.count - 1 {
-                            print(resultPhotos)
-                            DispatchQueue.main.async{
-                                completion(resultPhotos)
-                            }
+//                        if counter >= photoStrings.count - 1 {
+//                            print(resultPhotos)
+                        DispatchQueue.main.async{
+                            completion(resultPhotos)
                         }
+//                        }
 //                        semaphore.signal()
                     })
                 }

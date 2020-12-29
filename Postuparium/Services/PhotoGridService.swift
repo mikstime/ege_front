@@ -77,7 +77,7 @@ class PhotoGridService: PhotoGridServiceProtocol{
     
     func loadPhotosFromNetwork(university: University!, onLoad: @escaping ([String]) -> Void) {
         if useMocks {
-            DispatchQueue.global(qos: .utility).asyncAfter(deadline: .now() + 1, execute: {
+            DispatchQueue.global(qos: .utility).asyncAfter(deadline: .now() + 0.1, execute: {
                 onLoad(self.MOCK_PHOTOS)
             })
         } else {

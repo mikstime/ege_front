@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MorePhotos" customModule="Postuparium" customModuleProvider="target">
+            <connections>
+                <outlet property="uButton" destination="xAa-I3-YRo" id="U7x-oA-s48"/>
+                <outlet property="uImageView" destination="2NK-Yx-6cQ" id="j2G-Wx-evp"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="108" height="197"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vPM-IR-SNO" customClass="ShadowView" customModule="Postuparium" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="108" height="197"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2NK-Yx-6cQ">
+                            <rect key="frame" x="0.0" y="0.0" width="108" height="197"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xAa-I3-YRo">
+                            <rect key="frame" x="0.0" y="0.0" width="108" height="197"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <state key="normal" title="Ещё">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="onTapOne" destination="-1" eventType="touchUpInside" id="xnS-P5-WnP"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="xAa-I3-YRo" firstAttribute="leading" secondItem="vPM-IR-SNO" secondAttribute="leading" id="1FC-Qj-pql"/>
+                        <constraint firstItem="2NK-Yx-6cQ" firstAttribute="leading" secondItem="vPM-IR-SNO" secondAttribute="leading" id="Kuo-Mv-NCG"/>
+                        <constraint firstAttribute="trailing" secondItem="xAa-I3-YRo" secondAttribute="trailing" id="Oh8-HI-RBn"/>
+                        <constraint firstItem="xAa-I3-YRo" firstAttribute="top" secondItem="vPM-IR-SNO" secondAttribute="top" id="OhU-CG-xWf"/>
+                        <constraint firstItem="2NK-Yx-6cQ" firstAttribute="top" secondItem="vPM-IR-SNO" secondAttribute="top" id="RLO-Oq-PjF"/>
+                        <constraint firstAttribute="bottom" secondItem="2NK-Yx-6cQ" secondAttribute="bottom" id="Rjs-wy-mK7"/>
+                        <constraint firstAttribute="bottom" secondItem="xAa-I3-YRo" secondAttribute="bottom" id="c9H-hI-Bei"/>
+                        <constraint firstAttribute="width" constant="108" id="gI3-u4-yfu"/>
+                        <constraint firstAttribute="height" constant="197" id="lTn-tK-g7b"/>
+                        <constraint firstAttribute="trailing" secondItem="2NK-Yx-6cQ" secondAttribute="trailing" id="tm2-nd-hVn"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="vPM-IR-SNO" secondAttribute="trailing" id="6DN-zg-QGF"/>
+                <constraint firstItem="vPM-IR-SNO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="7IL-N5-icJ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="vPM-IR-SNO" secondAttribute="bottom" id="7gI-l9-MJl"/>
+                <constraint firstItem="vPM-IR-SNO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="rAj-5J-kOJ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-73.913043478260875" y="71.986607142857139"/>
+        </view>
+    </objects>
+</document>

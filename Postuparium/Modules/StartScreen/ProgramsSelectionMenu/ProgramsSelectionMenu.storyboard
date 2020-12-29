@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wtt-DG-dsr">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Programs Selection Menu View Controller-->
+        <scene sceneID="9bb-Fs-mfH">
+            <objects>
+                <viewController storyboardIdentifier="ProgramsSelectionMenu" id="wtt-DG-dsr" customClass="ProgramsSelectionMenuViewController" customModule="Postuparium" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e2z-vx-yms">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XYj-6T-6cZ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gew-sS-Fu8">
+                                        <rect key="frame" x="177" y="7.5" width="60" height="4"/>
+                                        <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="arJ-fK-xrJ"/>
+                                            <constraint firstAttribute="height" constant="4" id="nA3-8R-ja9"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <searchBar contentMode="redraw" placeholder="Например, Агрономия" translatesAutoresizingMaskIntoConstraints="NO" id="HDg-WC-d7f">
+                                        <rect key="frame" x="0.0" y="30" width="414" height="56"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </searchBar>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="grouped" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Cje-HG-Kwu">
+                                        <rect key="frame" x="0.0" y="86" width="414" height="766"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="HDg-WC-d7f" secondAttribute="trailing" id="7zO-az-QiZ"/>
+                                    <constraint firstItem="gew-sS-Fu8" firstAttribute="centerX" secondItem="XYj-6T-6cZ" secondAttribute="centerX" id="EkM-Ug-nVh"/>
+                                    <constraint firstItem="HDg-WC-d7f" firstAttribute="leading" secondItem="XYj-6T-6cZ" secondAttribute="leading" id="LpG-4j-HAe"/>
+                                    <constraint firstItem="Cje-HG-Kwu" firstAttribute="leading" secondItem="XYj-6T-6cZ" secondAttribute="leading" id="LzD-9v-LbD"/>
+                                    <constraint firstAttribute="trailing" secondItem="Cje-HG-Kwu" secondAttribute="trailing" id="V9d-fv-AOy"/>
+                                    <constraint firstAttribute="bottom" secondItem="Cje-HG-Kwu" secondAttribute="bottom" id="eZ5-uh-8bR"/>
+                                    <constraint firstItem="Cje-HG-Kwu" firstAttribute="top" secondItem="HDg-WC-d7f" secondAttribute="bottom" id="fiR-If-8S4"/>
+                                    <constraint firstItem="gew-sS-Fu8" firstAttribute="top" secondItem="XYj-6T-6cZ" secondAttribute="top" constant="7.5" id="iV3-1J-JgE"/>
+                                    <constraint firstItem="HDg-WC-d7f" firstAttribute="top" secondItem="gew-sS-Fu8" secondAttribute="bottom" constant="18.5" id="jlf-gr-H5d"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xRb-6z-vfq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XYj-6T-6cZ" firstAttribute="top" secondItem="xRb-6z-vfq" secondAttribute="top" id="NS8-Z5-mUN"/>
+                            <constraint firstItem="XYj-6T-6cZ" firstAttribute="trailing" secondItem="xRb-6z-vfq" secondAttribute="trailing" id="VPN-dD-WVt"/>
+                            <constraint firstItem="XYj-6T-6cZ" firstAttribute="bottom" secondItem="e2z-vx-yms" secondAttribute="bottom" id="XJf-cS-qwi"/>
+                            <constraint firstItem="XYj-6T-6cZ" firstAttribute="leading" secondItem="xRb-6z-vfq" secondAttribute="leading" id="qOw-tx-Ptf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="container" destination="XYj-6T-6cZ" id="JSM-zj-SkE"/>
+                        <outlet property="handleAreaView" destination="gew-sS-Fu8" id="4s7-V1-b3h"/>
+                        <outlet property="searchBar" destination="HDg-WC-d7f" id="Sqh-cq-zRv"/>
+                        <outlet property="tableView" destination="Cje-HG-Kwu" id="1I4-BG-uKY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XC5-nR-ZaY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="40.579710144927539" y="79.6875"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EgeResultsSelector" customModule="Postuparium" customModuleProvider="target">
+            <connections>
+                <outlet property="container" destination="ezD-oe-k5g" id="IA9-PI-ffe"/>
+                <outlet property="deletionButton" destination="bmg-gp-raA" id="EsR-3R-TFd"/>
+                <outlet property="score" destination="mW8-sY-1H1" id="nuY-9H-mIV"/>
+                <outlet property="subjectPicker" destination="wsu-eL-UvL" id="pmS-KK-evL"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="86"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ezD-oe-k5g">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="86"/>
+                    <subviews>
+                        <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wsu-eL-UvL">
+                            <rect key="frame" x="0.0" y="0.0" width="254" height="86"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="ErI-4e-67S"/>
+                                <outlet property="delegate" destination="-1" id="HK7-H7-gzl"/>
+                            </connections>
+                        </pickerView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xNH-9R-HZW">
+                            <rect key="frame" x="254" y="28" width="1" height="30"/>
+                            <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="1" id="Qsx-6t-JPS"/>
+                                <constraint firstAttribute="height" constant="30" id="Wks-tL-jcZ"/>
+                            </constraints>
+                        </view>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="86" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mW8-sY-1H1">
+                            <rect key="frame" x="255" y="0.0" width="127" height="86"/>
+                            <color key="textColor" systemColor="secondaryLabelColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="t5k-g5-4pk"/>
+                            </connections>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmg-gp-raA">
+                            <rect key="frame" x="382" y="33.5" width="20" height="19"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="SP9-Su-VQP"/>
+                                <constraint firstAttribute="width" secondItem="bmg-gp-raA" secondAttribute="height" multiplier="9:9" id="d46-Fc-y1d"/>
+                            </constraints>
+                            <color key="tintColor" systemColor="secondaryLabelColor"/>
+                            <state key="normal" backgroundImage="x.circle.fill" catalog="system"/>
+                            <connections>
+                                <action selector="tappedDelete" destination="-1" eventType="touchUpInside" id="V0K-64-Lwp"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gC9-5N-Cqf">
+                            <rect key="frame" x="402" y="0.0" width="12" height="86"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="12" id="CIg-WF-Pgi"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" name="StartScreenSecondaryColor"/>
+                    <constraints>
+                        <constraint firstItem="mW8-sY-1H1" firstAttribute="width" secondItem="wsu-eL-UvL" secondAttribute="width" multiplier="0.5" id="6hJ-Tk-Sl3"/>
+                        <constraint firstItem="mW8-sY-1H1" firstAttribute="height" secondItem="ezD-oe-k5g" secondAttribute="height" id="ZnZ-G8-guu"/>
+                        <constraint firstItem="wsu-eL-UvL" firstAttribute="height" secondItem="ezD-oe-k5g" secondAttribute="height" id="gz5-fR-bBo"/>
+                        <constraint firstItem="wsu-eL-UvL" firstAttribute="centerY" secondItem="ezD-oe-k5g" secondAttribute="centerY" id="kv0-Lr-2VU"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="16"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="ezD-oe-k5g" secondAttribute="bottom" id="0YH-As-JOY"/>
+                <constraint firstAttribute="trailing" secondItem="ezD-oe-k5g" secondAttribute="trailing" id="HOq-vu-gO0"/>
+                <constraint firstItem="ezD-oe-k5g" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="HkH-0Q-Wrc"/>
+                <constraint firstItem="ezD-oe-k5g" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Pzc-9Q-wit"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="47.826086956521742" y="-251.11607142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="x.circle.fill" catalog="system" width="128" height="121"/>
+        <namedColor name="StartScreenSecondaryColor">
+            <color red="0.94900000095367432" green="0.94900000095367432" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

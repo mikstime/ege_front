@@ -205,8 +205,14 @@ class UniversityMapViewController: SSwipeableViewController,
             let textLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 187, height: 39))
             textLabel.textColor = .white
             textLabel.textAlignment = .center
+            for i in 0 ... (universitiesToShow.count - 1) {
+                if universitiesToShow[i].id == Int(annotation.subtitle! ?? "0") {
+                    textLabel.text = "Направлений: " + (universitiesToShow[i].place )
+                    break
+                }
+            }
             
-            textLabel.text = "Направлений: \(5)"
+            
             annotationView?.canShowCallout = false
             annotationView?.addSubview(textLabel)
         } else {

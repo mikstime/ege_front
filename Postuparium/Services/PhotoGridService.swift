@@ -7,6 +7,8 @@
 
 import Foundation
 import UIKit
+import Alamofire
+
 
 protocol PhotoGridServiceProtocol {
     var photos: [UIImage] {get set}
@@ -14,7 +16,7 @@ protocol PhotoGridServiceProtocol {
 }
 
 class PhotoGridService: PhotoGridServiceProtocol{
-    
+    static var universityURL: String = "http://77.223.97.172:8081/api/v1/universities/"
     var photos: [UIImage] = []
     private var MOCK_PHOTOS = [
         "https://www.interfax.ru/ftproot/textphotos/2020/10/20/700ba.jpg",
@@ -41,7 +43,7 @@ class PhotoGridService: PhotoGridServiceProtocol{
             guard let imageData = try? Data(contentsOf: imageURL) else { return }
 
             if let image = UIImage(data: imageData){
-            self.photos.append(image)
+//            self.photos.append(image)
             completion(image)
         }
     }
@@ -76,12 +78,29 @@ class PhotoGridService: PhotoGridServiceProtocol{
     }
     
     func loadPhotosFromNetwork(university: University!, onLoad: @escaping ([String]) -> Void) {
-        if useMocks {
-            DispatchQueue.global(qos: .utility).asyncAfter(deadline: .now() + 0.1, execute: {
-                onLoad(self.MOCK_PHOTOS)
-            })
-        } else {
-            // ДИМА, ЗАПИЛИ ФОТКИ
+        if university == nil {
+            onLoad(self.MOCK_PHOTOS)
+            return
+        }
+        
+        let finalURL = PhotoGridService.universityURL+String(university.id)+"/photos"
+        
+        let request = AF.request(finalURL, method: .get)
+        
+        request.responseJSON { (response) in
+            switch response.result {
+                case .success:
+                    print("response::: ", response.result)
+                    if let json = response.data {
+                        let jsonDecoder = JSONDecoder()
+                        let universityPhotos = try! jsonDecoder.decode([String].self, from: json)
+                        
+                        onLoad(universityPhotos)
+                    }
+                case .failure(_):
+                    print("FAIL:: ", response.result)
+                    onLoad(self.MOCK_PHOTOS)
+                }
         }
     }
 }

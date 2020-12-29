@@ -82,15 +82,18 @@ class NewEdProgramModuleViewController: UIViewController, NewEdProgramModuleView
         topCellVIew.layer.shadowOffset = .zero
         topCellVIew.layer.shadowRadius = 6.0
         topCellVIew.layer.shadowOpacity = 0.16
-        topCellVIew.layer.masksToBounds = false //<-
+        topCellVIew.layer.masksToBounds = true //<- Если эту хуйню поменять на false, то будет норм тень но сука блять будет овервфлоу нахуй у нижней панельки какого хуя сука
         
         
         topCellCodeLabel.text = edProgram.code
-        topCellLabel.text = edProgram.name
-        topCellCodeNameLabel.text = edProgram.codeName
+        topCellLabel.text = edProgram.codeName
+        topCellCodeNameLabel.text = edProgram.name
         topCellTypeLabel.text = edProgram.edProgram
         let colors = cellRandomBackgroundColors()
         topCellTypeContainer.setGradientBackgroundColor(colorOne: colors[0], colorTow: colors[1])
+        topCellTypeContainer.roundCorners([.topRight, .bottomRight, .bottomLeft], radius: 15)
+//        topCellVIew.roundCorners([.topRight, .topLeft, .bottomRight, .bottomLeft], radius: 15)
+        
         
     
         

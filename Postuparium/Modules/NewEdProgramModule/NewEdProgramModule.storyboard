@@ -13,7 +13,7 @@
         <scene sceneID="iiw-uW-1HT">
             <objects>
                 <viewController storyboardIdentifier="NewEdProgramModule" id="CQy-kO-UHJ" customClass="NewEdProgramModuleViewController" customModule="Postuparium" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="3Gz-Kx-4ft">
+                    <view key="view" contentMode="scaleToFill" id="3Gz-Kx-4ft" customClass="ShadowView" customModule="Postuparium" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>

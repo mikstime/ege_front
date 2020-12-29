@@ -11,7 +11,7 @@ import UIKit
 class NewEdProgramModuleViewController: UIViewController, NewEdProgramModuleViewControllerProtocol{
     
     
-    @IBOutlet weak var topCellVIew: UIView!
+    @IBOutlet weak var topCellVIew: ShadowView!
     @IBOutlet weak var topCellLabel: UILabel!
     @IBOutlet weak var topCellCodeLabel: UILabel!
     @IBOutlet weak var topCellTypeContainer: UIView!
@@ -82,8 +82,8 @@ class NewEdProgramModuleViewController: UIViewController, NewEdProgramModuleView
         topCellVIew.layer.shadowOffset = .zero
         topCellVIew.layer.shadowRadius = 6.0
         topCellVIew.layer.shadowOpacity = 0.16
-        topCellVIew.layer.masksToBounds = false //<- Если эту хуйню поменять на false, то будет норм тень но сука блять будет овервфлоу нахуй у нижней панельки какого хуя сука
-        
+//        topCellVIew.layer.masksToBounds = false //<- Если эту хуйню поменять на false, то будет норм тень но сука блять будет овервфлоу нахуй у нижней панельки какого хуя сука
+//
         
         topCellCodeLabel.text = edProgram.code
         topCellLabel.text = edProgram.codeName
@@ -116,10 +116,13 @@ class NewEdProgramModuleViewController: UIViewController, NewEdProgramModuleView
         let bluePurple = [#colorLiteral(red: 0.4613699913, green: 0.3118675947, blue: 0.8906354308, alpha: 1),#colorLiteral(red: 0.3018293083, green: 0.1458326578, blue: 0.7334778905, alpha: 1)]
         let purple = [#colorLiteral(red: 0.7080290914, green: 0.3073516488, blue: 0.8653779626, alpha: 1),#colorLiteral(red: 0.5031493902, green: 0.1100070402, blue: 0.6790940762, alpha: 1)]
         let pink = [#colorLiteral(red: 0.9495453238, green: 0.4185881019, blue: 0.6859942079, alpha: 1),#colorLiteral(red: 0.8123683333, green: 0.1657164991, blue: 0.5003474355, alpha: 1)]
+//
+//        let colorsTable: [Int: [UIColor]] = [0: red, 1: orangeRed, 2: orange, 3: yellow, 4: green, 5: greenBlue, 6: kindaBlue, 7: skyBlue, 8: blue, 9: bluePurple, 10: bluePurple, 11: purple, 12: pink]
         
-        let colorsTable: [Int: [UIColor]] = [0: red, 1: orangeRed, 2: orange, 3: yellow, 4: green, 5: greenBlue, 6: kindaBlue, 7: skyBlue, 8: blue, 9: bluePurple, 10: bluePurple, 11: purple, 12: pink]
+        let mishaFavorites: [Int: [UIColor]] = [ 0: greenBlue, 1: kindaBlue, 2: skyBlue, 3: blue, 4: bluePurple, 5: bluePurple]
         
-        let randomColors = colorsTable.values.randomElement()
+        let randomColors = mishaFavorites.values.randomElement()
         return randomColors!
     }
 }
+

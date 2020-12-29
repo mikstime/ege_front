@@ -63,6 +63,8 @@ class ApplicantsTableViewController: UITableViewController {
       cell.name?.text = applicant.name
       cell.score?.text = "\(applicant.scores)"
       cell.index?.text = "\(indexPath.row)"
+        
+
     
       return cell
     }
@@ -76,3 +78,19 @@ class ApplicantsTableViewController: UITableViewController {
 
 
 
+extension UITableView {
+
+    func isLast(for indexPath: IndexPath) -> Bool {
+
+        let indexOfLastSection = numberOfSections > 0 ? numberOfSections - 1 : 0
+        let indexOfLastRowInLastSection = numberOfRows(inSection: indexOfLastSection) - 1
+
+        return indexPath.section == indexOfLastSection && indexPath.row == indexOfLastRowInLastSection
+    }
+    func isLastVisibleCell(at indexPath: IndexPath) -> Bool {
+        guard let lastIndexPath = indexPathsForVisibleRows?.last else {
+            return false
+        }
+        return lastIndexPath == indexPath
+    }
+}

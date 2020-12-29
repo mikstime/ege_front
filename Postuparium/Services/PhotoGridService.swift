@@ -10,10 +10,11 @@ import UIKit
 
 protocol PhotoGridServiceProtocol {
     var photos: [UIImage] {get set}
-    func fetchPhotos(completion: @escaping ([UIImage])-> Void)
+    func fetchPhotos(university: University!, completion: @escaping ([UIImage])-> Void)
 }
 
 class PhotoGridService: PhotoGridServiceProtocol{
+    
     var photos: [UIImage] = []
     private var MOCK_PHOTOS = [
         "https://www.interfax.ru/ftproot/textphotos/2020/10/20/700ba.jpg",
@@ -45,14 +46,14 @@ class PhotoGridService: PhotoGridServiceProtocol{
         }
     }
     
-    func fetchPhotos(completion: @escaping ([UIImage])-> Void) {
+    func fetchPhotos(university: University!, completion: @escaping ([UIImage])-> Void) {
         // тут должно быть получение большего числа фоток
         // сейчас здесь заглушка
         
 //        let semaphore = DispatchSemaphore(value: 0)
         var counter = 0
         DispatchQueue.global(qos: .utility).async {
-            self.loadPhotosFromNetwork { photoStrings in
+            self.loadPhotosFromNetwork(university: university, onLoad:  { photoStrings in
                 var resultPhotos = [UIImage](repeating: UIImage(), count: photoStrings.count)
 
                 for i in 0...photoStrings.count - 1 {
@@ -70,11 +71,11 @@ class PhotoGridService: PhotoGridServiceProtocol{
                     })
                 }
 
-            }
+            })
         }
     }
     
-    func loadPhotosFromNetwork(onLoad: @escaping ([String]) -> Void) {
+    func loadPhotosFromNetwork(university: University!, onLoad: @escaping ([String]) -> Void) {
         if useMocks {
             DispatchQueue.global(qos: .utility).asyncAfter(deadline: .now() + 1, execute: {
                 onLoad(self.MOCK_PHOTOS)

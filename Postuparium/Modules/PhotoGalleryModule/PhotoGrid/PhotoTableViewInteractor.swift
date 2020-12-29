@@ -7,9 +7,10 @@ class PhotoTableViewInteractor: PhotoTableViewInteractorProtocol {
     
     var sectionsCount = 2
     var isFetching = false
-    
+    var photos: [UIImage] = []
     func getPhotos() -> [UIImage] {
-        return PhotoGridService.shared.photos
+        return photos
+//        return PhotoGridService.shared.photos
     }
     
     func getIsFetching() -> Bool {
@@ -19,8 +20,9 @@ class PhotoTableViewInteractor: PhotoTableViewInteractorProtocol {
     func fetchPhotos(starter: ()->(), completion: @escaping ([UIImage]) -> Void) {
         self.isFetching = true
         starter()
-        PhotoGridService.shared.fetchPhotos(completion:{ photos in
+        PhotoGridService.shared.fetchPhotos(university: presenter.view.university, completion:{ photos in
             self.isFetching = false
+            self.photos = photos
             completion(photos)
         })
         

@@ -17,7 +17,6 @@ protocol UniversityPageViewControllerProtocol: CardViewControllerProtocol {
 protocol UniversityPagePresenterProtocol: class {
     var view: UniversityPageViewControllerProtocol! {set get}
     var router: UniversityPageRouterProtocol! { set get }
-    
     func viewDidLoad()
 }
 

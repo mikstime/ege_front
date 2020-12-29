@@ -3,11 +3,13 @@ import UIKit
 
 protocol PhotoTableViewControllerProtocol: UITableViewController {
     var presenter: PhotoTableViewPresenterProtocol! {get set}
+    var university: University! {get set}
 }
 
 protocol PhotoTableViewPresenterProtocol: class {
     var router: PhotoTableViewRouterProtocol! { set get }
     var view: PhotoTableViewControllerProtocol! {set get}
+    var interactor: PhotoTableViewInteractorProtocol! {get set}
     func viewDidLoad()
     func getPhotos() ->[UIImage] 
     func getSectionsCount() -> Int
@@ -18,6 +20,7 @@ protocol PhotoTableViewPresenterProtocol: class {
 }
 
 protocol PhotoTableViewInteractorProtocol: class {
+    var photos: [UIImage] {get set}
     var presenter: PhotoTableViewPresenterProtocol! {get set}
     func getPhotos() -> [UIImage]
     func getIsFetching() -> Bool

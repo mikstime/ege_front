@@ -4,7 +4,11 @@ import UIKit
 class PhotoTableViewController: UITableViewController, PhotoTableViewControllerProtocol {
     
     var presenter: PhotoTableViewPresenterProtocol!
-    
+    var university: University! {
+        didSet {
+            
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.viewDidLoad()

@@ -124,6 +124,7 @@ extension UniversityPageViewController: UniversityPhotoDispatcher {
     
     func didTapOnMore() {
         let vc = PhotoTableViewConfigurator.configureModule()
+        vc.presenter.interactor.photos = univerityPhotos.photos
         navigationController?.show(vc, sender: self)
     }
     

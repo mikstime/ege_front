@@ -9,153 +9,88 @@ import Foundation
 
 import UIKit
 
-class ApplicantsTableViewController: UIViewController, UITableViewDelegate {
+class ApplicantsTableViewController: UITableViewController {
     
     
-  @IBOutlet var tableView: UITableView!
-  @IBOutlet var searchFooterBottomConstraint: NSLayoutConstraint!
+//  @IBOutlet var tableView: UITableView!
   
-  var applicants: [ApplicantMock] = []
-  let searchController = UISearchController(searchResultsController: nil)
-  var filteredApplicants: [ApplicantMock] = []
+  var applicants: [Applicant] = []
   
+    func loadApplicants(applicants: [Applicant]) {
+    
+        self.applicants = applicants
+        tableView.reloadData()
+    }
+    
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    applicants = ApplicantMock.applicantsList()
+    ApplicantsService.shared.searchForApplicants(query: "", didFind: loadApplicants)
 
     
-    // 1
-    searchController.searchResultsUpdater = self
-    // 2
-    searchController.obscuresBackgroundDuringPresentation = false
-    // 3
-    searchController.searchBar.placeholder = "Поиск"
-
-    // 4
-    navigationItem.searchController = searchController
-    // 5
-    definesPresentationContext = true
+    let cellNib = UINib(nibName: "ApplicantCell", bundle: nil)
+    tableView.register(cellNib, forCellReuseIdentifier:
+                                "ApplicantCell")
     
-    searchController.searchBar.scopeButtonTitles = ApplicantMock.Category.allCases.map { $0.rawValue }
-    searchController.searchBar.center.x = view.frame.width / 2
-
-
-    searchController.searchBar.delegate = self
+  
     
-    searchController.searchBar.showsScopeBar = true
-
-    searchController.searchBar.showsCancelButton = false
-    
-    
-    self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+   
     
 
-
-    
-    
-    
-    let notificationCenter = NotificationCenter.default
-    notificationCenter.addObserver(forName: UIResponder.keyboardWillChangeFrameNotification,
-                                   object: nil, queue: .main) { (notification) in
-                                    self.handleKeyboard(notification: notification) }
-    notificationCenter.addObserver(forName: UIResponder.keyboardWillHideNotification,
-                                   object: nil, queue: .main) { (notification) in
-                                    self.handleKeyboard(notification: notification) }
-    
-    self.tableView.tableHeaderView = searchController.searchBar
   }
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     
-    if let indexPath = tableView.indexPathForSelectedRow {
-        self.tableView.deselectRow(at: indexPath, animated: true)
-    }
+//    if let indexPath = tableView.indexPathForSelectedRow {
+//        self.tableView.deselectRow(at: indexPath, animated: true)
+//    }
   }
-  
+    
+    override func tableView(_ tableView: UITableView,
+                   numberOfRowsInSection section: Int) -> Int {
 
-  var isSearchBarEmpty: Bool {
-    return searchController.searchBar.text?.isEmpty ?? true
-  }
-  
-  var isFiltering: Bool {
-    let searchBarScopeIsFiltering = searchController.searchBar.selectedScopeButtonIndex != 0
-    return searchController.isActive && (!isSearchBarEmpty || searchBarScopeIsFiltering)
-  }
-  
-  func filterContentForSearchText(_ searchText: String,
-                                  category: ApplicantMock.Category? = nil) {
-    filteredApplicants = applicants.filter { (applicant: ApplicantMock) -> Bool in
-      let doesCategoryMatch = category == .all || applicant.category == category
+      return applicants.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ApplicantCell", for: indexPath) as? ApplicantCell else {
+        fatalError("Pizdec")
+    }
       
-      if isSearchBarEmpty {
-        return doesCategoryMatch
-      } else {
-        return doesCategoryMatch && applicant.name.lowercased().contains(searchText.lowercased())
-      }
-    }
-    
-    tableView.reloadData()
-  }
-  
-  func handleKeyboard(notification: Notification) {
-    // 1
-    guard notification.name == UIResponder.keyboardWillChangeFrameNotification else {
-//      searchFooterBottomConstraint.constant = 0
-      view.layoutIfNeeded()
-      return
-    }
-    
+      let applicant: Applicant = applicants[indexPath.row]
+      print("applicant \(indexPath.row)", applicant)
 
-    UIView.animate(withDuration: 0.1, animations: { () -> Void in
-      self.view.layoutIfNeeded()
-    })
-  }
+      cell.name?.text = applicant.name
+      cell.score?.text = "\(applicant.scores)"
+      cell.index?.text = "\(indexPath.row)"
+        
+
+    
+      return cell
+    }
+  
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("select on \(indexPath.row)", applicants[indexPath.row])
+    }
+
+  
 }
 
-extension ApplicantsTableViewController: UITableViewDataSource {
-  func tableView(_ tableView: UITableView,
-                 numberOfRowsInSection section: Int) -> Int {
-    if isFiltering {
-      return filteredApplicants.count
-    }
-    return applicants.count
-  }
-  
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-//        as! ApplicantCell
-    
-    let applicant: ApplicantMock
-    if isFiltering {
-      applicant = filteredApplicants[indexPath.row]
-    } else {
-      applicant = applicants[indexPath.row]
-    }
-//    cell.index.text = "test"
-    print("applicant \(indexPath)", applicant.name)
-    cell.textLabel?.text = applicant.name
-    cell.detailTextLabel?.text = applicant.category.rawValue
-    
-  
-    return cell
-  }
-}
 
-extension ApplicantsTableViewController: UISearchResultsUpdating {
-  func updateSearchResults(for searchController: UISearchController) {
-    let searchBar = searchController.searchBar
-    let category = ApplicantMock.Category(rawValue:
-      searchBar.scopeButtonTitles![searchBar.selectedScopeButtonIndex])
-    filterContentForSearchText(searchBar.text!, category: category)
-  }
-}
 
-extension ApplicantsTableViewController: UISearchBarDelegate {
-  func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
-    let category = ApplicantMock.Category(rawValue:
-      searchBar.scopeButtonTitles![selectedScope])
-    filterContentForSearchText(searchBar.text!, category: category)
-  }
+extension UITableView {
+
+    func isLast(for indexPath: IndexPath) -> Bool {
+
+        let indexOfLastSection = numberOfSections > 0 ? numberOfSections - 1 : 0
+        let indexOfLastRowInLastSection = numberOfRows(inSection: indexOfLastSection) - 1
+
+        return indexPath.section == indexOfLastSection && indexPath.row == indexOfLastRowInLastSection
+    }
+    func isLastVisibleCell(at indexPath: IndexPath) -> Bool {
+        guard let lastIndexPath = indexPathsForVisibleRows?.last else {
+            return false
+        }
+        return lastIndexPath == indexPath
+    }
 }

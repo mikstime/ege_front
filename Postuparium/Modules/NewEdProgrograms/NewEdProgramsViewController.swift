@@ -8,36 +8,14 @@
 import Foundation
 import UIKit
 
-extension UIView {
-     func dropShadow(radius: CGFloat, offsetX: CGFloat, offsetY: CGFloat, color: UIColor) {
-        layer.masksToBounds = false
-        layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: layer.cornerRadius).cgPath
-        layer.shadowRadius = radius
-        layer.shadowOffset = CGSize(width: offsetX, height: offsetY)
-        layer.shadowOpacity = 1 // setting this property to 1 makes full relation on color's opacity
-        layer.shadowColor = color.cgColor
-    }
-}
-
-extension UIView {
-
-    func addShadow(offset: CGSize, color: UIColor, radius: CGFloat, opacity: Float) {
-        layer.masksToBounds = false
-        layer.shadowOffset = offset
-        layer.shadowColor = color.cgColor
-        layer.shadowRadius = radius
-        layer.shadowOpacity = opacity
-
-        let backgroundCGColor = backgroundColor?.cgColor
-        backgroundColor = nil
-        layer.backgroundColor =  backgroundCGColor
-    }
-}
-
-
 class NewEdProgramsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, NewEdProgramsViewControllerProtocol {
     var id: Int = 0
-    var heightConstraint: NSLayoutConstraint!
+    var defaultHeight: CGFloat = 0
+    var heightConstraint: NSLayoutConstraint! {
+        didSet {
+            defaultHeight = heightConstraint.constant
+        }
+    }
     var presenter: NewEdProgramsPresenterProtocol!
     
 
@@ -46,9 +24,15 @@ class NewEdProgramsViewController: UIViewController, UICollectionViewDelegate, U
     var edPrograms: [EdProgram] = [] {
         didSet {
             self.collection.reloadData()
+            heightConstraint?.constant = CGFloat((edPrograms.count + 1 + (edPrograms.count + 1) % 2)) / 2.0 * (219.0) + 30
         }
     }
- 
+    
+    var university: University! {
+        didSet {
+            presenter.loadPrograms()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,29 +50,22 @@ class NewEdProgramsViewController: UIViewController, UICollectionViewDelegate, U
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        //collection.reloadData()
+//        collection.reloadData()
     }
-
-
-
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StudyTileMediumCell", for: indexPath)
             as! StudyTileMediumCell
-        
-        if(indexPath.row < edPrograms.count ){
-        let edProgram = edPrograms[indexPath.row]
-            cell.codeLabel.text = edProgram.code
-            cell.nameLabel.text = edProgram.name
-//            cell.codeNameLabel.text = edProgram.codeName
-//            cell.typeLabel.text = edProgram.edProgram
-        } else{
+        print("programs.count: ", edPrograms.count)
+        if(indexPath.row < edPrograms.count ) {
+            let edProgram = edPrograms[indexPath.row]
+            cell.program = edProgram
+        } else {
             cell.codeLabel.text = ""
             cell.nameLabel.text = "Отсутствует направление?"
             cell.codeNameLabel.text = ""
             cell.typeLabel.text = "Напишите нам"
-            cell.typeContainer.setGradientBackgroundColor(colorOne: .blue, colorTow: .systemBlue)
-            
+//            cell.typeContainer.setGradientBackgroundColor(colorOne: .blue, colorTow: .systemBlue)
         }
 //        cell.shadowDecorate()
     
@@ -144,5 +121,40 @@ extension UICollectionViewCell {
         layer.masksToBounds = false
         layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: radius).cgPath
         layer.cornerRadius = radius
+    }
+}
+
+
+
+
+
+
+
+
+
+
+extension UIView {
+     func dropShadow(radius: CGFloat, offsetX: CGFloat, offsetY: CGFloat, color: UIColor) {
+        layer.masksToBounds = false
+        layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: layer.cornerRadius).cgPath
+        layer.shadowRadius = radius
+        layer.shadowOffset = CGSize(width: offsetX, height: offsetY)
+        layer.shadowOpacity = 1 // setting this property to 1 makes full relation on color's opacity
+        layer.shadowColor = color.cgColor
+    }
+}
+
+extension UIView {
+
+    func addShadow(offset: CGSize, color: UIColor, radius: CGFloat, opacity: Float) {
+        layer.masksToBounds = false
+        layer.shadowOffset = offset
+        layer.shadowColor = color.cgColor
+        layer.shadowRadius = radius
+        layer.shadowOpacity = opacity
+
+        let backgroundCGColor = backgroundColor?.cgColor
+        backgroundColor = nil
+        layer.backgroundColor =  backgroundCGColor
     }
 }

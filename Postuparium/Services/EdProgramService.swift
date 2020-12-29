@@ -49,8 +49,8 @@ class EdProgramService: EdProgramServiceProtocol {
         
         request.responseString{ response in
             print("Status code: \(response.response?.statusCode)")
+            done()
         }
-        done()
     }
     
     func searchPrograms(searchString: String, university: University! = nil, since: EdProgram?, didFind:@escaping ([EdProgram]?) -> Void) {
@@ -151,7 +151,9 @@ extension EdProgramService {
                         } else {
                             let jsonDecoder = JSONDecoder()
                             let edPrograms = try! jsonDecoder.decode([EdProgram].self, from: json)
-                            didLoad(edPrograms)
+                            didLoad(edPrograms.filter({program in
+                                return program.universityId == university.id
+                            }))
                         }
                     }
                 case .failure(_):

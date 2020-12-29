@@ -13,6 +13,8 @@ protocol NewEdProgramsViewControllerProtocol: UIViewController {
     var id: Int {set get}
     var presenter: NewEdProgramsPresenterProtocol! {get set}
     var heightConstraint: NSLayoutConstraint! {get set}
+    var edPrograms: [EdProgram] {get set}
+    var university: University! {get set}
 }
 
 protocol NewEdProgramsPresenterProtocol: class {
@@ -21,7 +23,7 @@ protocol NewEdProgramsPresenterProtocol: class {
     
     func showNextScreen(program: EdProgram)
     func showFeedbackScreen()
-    
+    func loadPrograms()
     func viewDidLoad()
 }
 

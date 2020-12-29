@@ -27,15 +27,15 @@ class UniversitiesService: UniversitiesServiceProtocol{
     
     
     static var shared: UniversitiesServiceProtocol = UniversitiesService()
-    var useMocks = true
-    private var MOCK_UNIVERSITIES = [
-        University(scores: 12, numberOfPrograms: 15, place: 192, rating: 3.2, name: "МГТУ им. Н. Э. Баумана", image: "https://www.interfax.ru/ftproot/textphotos/2020/10/20/700ba.jpg", description: "Ну вообще, как бы, это – лучший технический вуз страны. В нем еще твой дед учился. На электрика. Или кого-то еще.", id: 1, ed_programs: [
-            EdProgram(code: "09.03.01", name: "Прикладная физика", university: "МГТУ им. Н. Э.Баумана", universityId: 1, photo: "http://77.223.97.172:8081/media/1.2.jpg", probability: "10%", probablilityNumber: 0.1, id: 1),
-        ]),
-        University(scores: 270, place: 13, rating: 3.1, name: "МГУ", image:  "https://www.msu.ru/upload/iblock/3f9/20170913_010.jpg", description: "Первый ВУЗ страны после МГТУ", id: 2, ed_programs: [
-            EdProgram(code: "09.03.01", name: "Прикладная математика", university: "МГУ", universityId: 2, photo: "http://77.223.97.172:8081/media/1.3.jpg", probability: "15%", probablilityNumber: 0.15, id: 2)
-        ])
-    ]
+//    var useMocks = true
+//    private var MOCK_UNIVERSITIES = [
+//        University(scores: 12, numberOfPrograms: 15, place: 192, rating: 3.2, name: "МГТУ им. Н. Э. Баумана", image: "https://www.interfax.ru/ftproot/textphotos/2020/10/20/700ba.jpg", description: "Ну вообще, как бы, это – лучший технический вуз страны. В нем еще твой дед учился. На электрика. Или кого-то еще.", id: 1, ed_programs: [
+//            EdProgram(code: "09.03.01", name: "Прикладная физика", university: "МГТУ им. Н. Э.Баумана", universityId: 1, photo: "http://77.223.97.172:8081/media/1.2.jpg", probability: "10%", probablilityNumber: 0.1, id: 1),
+//        ]),
+//        University(scores: 270, place: 13, rating: 3.1, name: "МГУ", image:  "https://www.msu.ru/upload/iblock/3f9/20170913_010.jpg", description: "Первый ВУЗ страны после МГТУ", id: 2, ed_programs: [
+//            EdProgram(code: "09.03.01", name: "Прикладная математика", university: "МГУ", universityId: 2, photo: "http://77.223.97.172:8081/media/1.3.jpg", probability: "15%", probablilityNumber: 0.15, id: 2)
+//        ])
+//    ]
     
 }
 

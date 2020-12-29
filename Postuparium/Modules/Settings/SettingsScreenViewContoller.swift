@@ -11,20 +11,9 @@ class SettingsScreenViewController: UIViewController, CardViewControllerProtocol
     var handleArea: UIView!
     
     var presenter: SettingsScreenPresenterProtocol!
-    @IBAction func showNextScreen() {
-        presenter?.showNextScreen()
-    }
-    
-    @IBAction func showMapScreen() {
-        presenter?.showMapScreen()
-    }
-    
-    @IBAction func showUniversitiesListScreen() {
-        presenter?.showUniversitiesListScreen()
-    }
-    
-    @IBAction func showPhotosScreen() {
-        presenter?.showPhotosScreen()
+    @IBAction func showFeedback() {
+        let vc = FeedbackModuleConfigurator.configureModule()
+        navigationController?.show(vc, sender: self)
     }
     
     override func viewWillAppear(_ animated: Bool) {

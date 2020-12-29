@@ -13,12 +13,12 @@ class HomePrograms: UIView {
     var interactor = HomeProgramsInteractor()
     var university: University! {
         didSet {
-            if let heightConstraint = heightConstraint {
-                if heightConstraint.constant > 0 {
-                    defaultHeight = heightConstraint.constant
-                }
-                heightConstraint.constant = 0
-            }
+//            if let heightConstraint = heightConstraint {
+//                if heightConstraint.constant > 0 {
+//                    defaultHeight = heightConstraint.constant
+//                }
+//                heightConstraint.constant = 0
+//            }
             interactor.loadPrograms()
         }
     }
@@ -36,7 +36,7 @@ class HomePrograms: UIView {
         super.init(frame: frame)
         _init()
     }
-    private var defaultHeight: CGFloat = 0
+//    private var defaultHeight: CGFloat = 0
     func _init() {
         interactor.view = self
         fromNib()
@@ -44,7 +44,7 @@ class HomePrograms: UIView {
     }
     
     func programsAreLoaded(programs: [EdProgram]) {
-        heightConstraint?.constant = defaultHeight
+//        heightConstraint?.constant = defaultHeight
         programs.forEach { program in
             let programView = HomeProgramView()
             programView.program = program

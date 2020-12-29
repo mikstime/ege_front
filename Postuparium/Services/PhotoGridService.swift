@@ -40,8 +40,8 @@ class PhotoGridService: PhotoGridServiceProtocol{
             guard let imageData = try? Data(contentsOf: imageURL) else { return }
 
             if let image = UIImage(data: imageData){
-                self.photos.append(image)
-                completion(image)
+            self.photos.append(image)
+            completion(image)
         }
     }
     

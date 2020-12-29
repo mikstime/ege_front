@@ -6,3 +6,21 @@
 //
 
 import Foundation
+import UIKit
+
+class NoProgramCell: UICollectionViewCell {
+
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        guard UIApplication.shared.applicationState == .inactive else {
+            return
+        }
+    }
+
+}
+
+

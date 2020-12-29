@@ -16,8 +16,11 @@ class NewEdProgramsPresenter: NewEdProgramsPresenterProtocol {
     var interactor: NewEdProgramsInteractorProtocol!
     var router: NewEdProgramsRouterProtocol!
     
+    func loadPrograms() {
+        interactor.loadPrograms()
+    }
     func viewDidLoad() {
-        let programs = interactor.loadPrograms()
+        interactor.loadPrograms()
     }
     
     func showNextScreen(program: EdProgram) {

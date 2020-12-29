@@ -10,7 +10,6 @@ import UIKit
 
 import MapKit
 
-
 class UniversityMapViewController: SSwipeableViewController,
                                    UniversityMapViewControllerProtocol, MKMapViewDelegate, CLLocationManagerDelegate {
     var idUn: Int = 0
@@ -148,7 +147,6 @@ class UniversityMapViewController: SSwipeableViewController,
         mapView.setCenter(view.annotation!.coordinate, animated: true)
         setMapFocus(centerCoordinate: view.annotation!.coordinate, radiusInKm: 0.5)
         print("Ебать нажалось", id! , Int(id!) ?? 0 )
-
         showUCard()
         
         self.mapView.deselectAnnotation(view.annotation, animated: false)

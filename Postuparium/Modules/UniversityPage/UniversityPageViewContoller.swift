@@ -14,7 +14,8 @@ class UniversityPageViewController: UIViewController, UniversityPageViewControll
             universityHead.university = university
             universityDescription.university = university
             univerityPhotos.university = university
-            
+            universityPrograms.university = university
+            chosenPrograms.university = university
         }
     }
     var handleArea: UIView!
@@ -73,6 +74,7 @@ class UniversityPageViewController: UIViewController, UniversityPageViewControll
     }
     
     func initPhotos() {
+        univerityPhotos.university = university
         containerView.addArrangedSubview(univerityPhotos)
         univerityPhotos.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.init(item: univerityPhotos, attribute: .leading, relatedBy: .equal, toItem: containerView, attribute: .leading, multiplier: 1, constant: 0).isActive = true
@@ -87,12 +89,14 @@ class UniversityPageViewController: UIViewController, UniversityPageViewControll
     
     func initPrograms() {
         addChild(universityPrograms)
+        universityPrograms.university = university
         containerView.addArrangedSubview(universityPrograms.view)
         universityPrograms.view.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.init(item: universityPrograms.view, attribute: .leading, relatedBy: .equal, toItem: containerView, attribute: .leading, multiplier: 1, constant: 0).isActive = true
         NSLayoutConstraint.init(item: universityPrograms.view, attribute: .trailing, relatedBy: .equal, toItem: containerView, attribute: .trailing, multiplier: 1, constant: 0).isActive = true
         NSLayoutConstraint.init(item: universityPrograms.view, attribute: .top, relatedBy: .equal, toItem: univerityPhotos, attribute: .bottom, multiplier: 1, constant: 0).isActive = true
         let heightConstraint = NSLayoutConstraint.init(item: universityPrograms.view, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 1235)
+        heightConstraint.isActive = true
         universityPrograms.heightConstraint = heightConstraint
         containerView.layoutIfNeeded()
         containerView.sizeToFit()

@@ -41,6 +41,7 @@ class UniversitiesService: UniversitiesServiceProtocol{
 
 extension UniversitiesService {
     private func getAllUniversities(didLoad: @escaping  ([University]) -> Void) {
+        print("get all universities")
         let requestURL = UniversitiesService.universityURL
         let request = AF.request(requestURL, method: .get)
         
@@ -49,15 +50,14 @@ extension UniversitiesService {
                 case .success:
                     print("response::: ", response.result)
                     if let json = response.data {
-                        if self.useMocks {
-                            didLoad(self.MOCK_UNIVERSITIES)
-                        } else {
-                            let jsonDecoder = JSONDecoder()
-                            let universities = try! jsonDecoder.decode([University].self, from: json)
-                            didLoad(universities)
-                        }
+                        let jsonDecoder = JSONDecoder()
+                        print("json::: ", json)
+                        let universities = try! jsonDecoder.decode([University].self, from: json)
+                        print(universities)
+                        didLoad(universities)
                     }
                 case .failure(_):
+                    print("FAIL:: ", response.result)
                     didLoad([])
                 }
         }

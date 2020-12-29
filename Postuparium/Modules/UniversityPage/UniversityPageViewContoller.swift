@@ -78,7 +78,9 @@ class UniversityPageViewController: UIViewController, UniversityPageViewControll
         NSLayoutConstraint.init(item: univerityPhotos, attribute: .leading, relatedBy: .equal, toItem: containerView, attribute: .leading, multiplier: 1, constant: 0).isActive = true
         NSLayoutConstraint.init(item: univerityPhotos, attribute: .trailing, relatedBy: .equal, toItem: containerView, attribute: .trailing, multiplier: 1, constant: 0).isActive = true
         NSLayoutConstraint.init(item: univerityPhotos, attribute: .top, relatedBy: .equal, toItem: chosenPrograms, attribute: .bottom, multiplier: 1, constant: 0).isActive = true
-        NSLayoutConstraint.init(item: univerityPhotos, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 273).isActive = true
+        let heightConstraint = NSLayoutConstraint.init(item: univerityPhotos, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 273)
+        heightConstraint.isActive = true
+        univerityPhotos.heightConstraint = heightConstraint
         containerView.sizeToFit()
         containerView.layoutIfNeeded()
     }
@@ -90,7 +92,8 @@ class UniversityPageViewController: UIViewController, UniversityPageViewControll
         NSLayoutConstraint.init(item: universityPrograms.view, attribute: .leading, relatedBy: .equal, toItem: containerView, attribute: .leading, multiplier: 1, constant: 0).isActive = true
         NSLayoutConstraint.init(item: universityPrograms.view, attribute: .trailing, relatedBy: .equal, toItem: containerView, attribute: .trailing, multiplier: 1, constant: 0).isActive = true
         NSLayoutConstraint.init(item: universityPrograms.view, attribute: .top, relatedBy: .equal, toItem: univerityPhotos, attribute: .bottom, multiplier: 1, constant: 0).isActive = true
-        NSLayoutConstraint.init(item: universityPrograms.view, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 1235).isActive = true
+        let heightConstraint = NSLayoutConstraint.init(item: universityPrograms.view, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 1235)
+        universityPrograms.heightConstraint = heightConstraint
         containerView.layoutIfNeeded()
         containerView.sizeToFit()
     }

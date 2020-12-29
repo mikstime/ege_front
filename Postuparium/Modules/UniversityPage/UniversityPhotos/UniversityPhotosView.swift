@@ -18,6 +18,11 @@ class UniversityPhotos: UIView {
             interactor.initView()
         }
     }
+    var heightConstraint: NSLayoutConstraint! {
+        didSet {
+            defaultHeight = heightConstraint.constant
+        }
+    }
     weak var dispatcher: UniversityPhotoDispatcher! {
         didSet {
             initPhotos()
@@ -48,96 +53,140 @@ class UniversityPhotos: UIView {
         interactor.initView()
         layoutIfNeeded()
     }
-    
+    var firstPhoto: OnePhoto!
+    var secondPhoto: TwoPhotos!
+    var thirdPhoto: OnePhoto!
+    var forthPhoto: TwoPhotos!
+    var fifthPhoto: OnePhoto!
+    var morePhotos: MorePhotos!
+    private var defaultHeight: CGFloat = 273;
     func initPhotos() {
-        container.subviews.forEach { $0.removeFromSuperview() }
+//        container.subviews.forEach { $0.removeFromSuperview() }
         containerWidth.constant = 0
-        let firstPhoto: OnePhoto!
-        let secondPhoto: TwoPhotos!
-        let thirdPhoto: OnePhoto!
-        let forthPhoto: TwoPhotos!
-        let fifthPhoto: OnePhoto!
+
         if photos.count == 0 {
-            
+            heightConstraint?.constant = 0
+            container.layer.masksToBounds = true
+        } else {
+            container.layer.masksToBounds = false
+            heightConstraint?.constant = defaultHeight
+        }
+        if photos.count < 8 && morePhotos != nil {
+            morePhotos.removeFromSuperview()
+            morePhotos = nil
+        }
+        if photos.count < 7 && fifthPhoto != nil {
+            fifthPhoto.removeFromSuperview()
+            fifthPhoto = nil
+        }
+        if photos.count < 6 && forthPhoto != nil {
+            forthPhoto.sImage.image = nil
+            forthPhoto.sPhotoContainer.alpha = 0
+        }
+        if photos.count < 5 && forthPhoto != nil {
+            forthPhoto.removeFromSuperview()
+            forthPhoto = nil
+        }
+        if photos.count < 4 && thirdPhoto != nil {
+            thirdPhoto.removeFromSuperview()
+            thirdPhoto = nil
+        }
+        if photos.count < 3 && secondPhoto != nil {
+            secondPhoto.sImage.image = nil
+            secondPhoto.sPhotoContainer.alpha = 0
+        }
+        if photos.count < 2 && secondPhoto != nil {
+            secondPhoto.removeFromSuperview()
+            secondPhoto = nil
+        }
+        if photos.count < 2 && firstPhoto != nil {
+            firstPhoto.removeFromSuperview()
+            firstPhoto = nil
         }
         if photos.count >= 1 {
-            let photo = OnePhoto()
-            photo.dispatcher = dispatcher
-            photo.setImage(from: photos[0])
-            container.addSubview(photo)
-            NSLayoutConstraint.init(item: photo, attribute: .leading, relatedBy: .equal, toItem: container, attribute: .leading, multiplier: 1, constant: 0).isActive = true
-            NSLayoutConstraint.init(item: photo, attribute: .top, relatedBy: .equal, toItem: container, attribute: .top, multiplier: 1, constant: 0).isActive = true
-            NSLayoutConstraint.init(item: photo, attribute: .bottom, relatedBy: .equal, toItem: container, attribute: .bottom, multiplier: 1, constant: 0).isActive = true
-            firstPhoto = photo
-            
+            if firstPhoto == nil  {
+                let photo = OnePhoto()
+                photo.dispatcher = dispatcher
+                container.addSubview(photo)
+                NSLayoutConstraint.init(item: photo, attribute: .leading, relatedBy: .equal, toItem: container, attribute: .leading, multiplier: 1, constant: 0).isActive = true
+                NSLayoutConstraint.init(item: photo, attribute: .top, relatedBy: .equal, toItem: container, attribute: .top, multiplier: 1, constant: 0).isActive = true
+                NSLayoutConstraint.init(item: photo, attribute: .bottom, relatedBy: .equal, toItem: container, attribute: .bottom, multiplier: 1, constant: 0).isActive = true
+                firstPhoto = photo
+            }
+            firstPhoto.setImage(from: photos[0])
             containerWidth.constant += 134
             
             if photos.count >= 2 {
-                let photo = TwoPhotos()
-                photo.dispatcher = dispatcher
-                photo.setFirstImage(from: photos[1])
-                container.addSubview(photo)
-                NSLayoutConstraint.init(item: photo, attribute: .leading, relatedBy: .equal, toItem: firstPhoto, attribute: .trailing, multiplier: 1, constant: 17).isActive = true
-                NSLayoutConstraint.init(item: photo, attribute: .top, relatedBy: .equal, toItem: container, attribute: .top, multiplier: 1, constant: 0).isActive = true
-                NSLayoutConstraint.init(item: photo, attribute: .bottom, relatedBy: .equal, toItem: container, attribute: .bottom, multiplier: 1, constant: 0).isActive = true
-                
-                if photos.count >= 3 {
-                    photo.setSecondImage(from: photos[2])
+                if secondPhoto == nil {
+                    let photo = TwoPhotos()
+                    photo.dispatcher = dispatcher
+                    container.addSubview(photo)
+                    NSLayoutConstraint.init(item: photo, attribute: .leading, relatedBy: .equal, toItem: firstPhoto, attribute: .trailing, multiplier: 1, constant: 17).isActive = true
+                    NSLayoutConstraint.init(item: photo, attribute: .top, relatedBy: .equal, toItem: container, attribute: .top, multiplier: 1, constant: 0).isActive = true
+                    NSLayoutConstraint.init(item: photo, attribute: .bottom, relatedBy: .equal, toItem: container, attribute: .bottom, multiplier: 1, constant: 0).isActive = true
+                    secondPhoto = photo
                 }
-                secondPhoto = photo
-                
+                secondPhoto.setFirstImage(from: photos[1])
+                if photos.count >= 3 {
+                    secondPhoto.setSecondImage(from: photos[2])
+                }
                 containerWidth.constant += 110 + 17
                 
                 if photos.count >= 4 {
-                    let photo = OnePhoto()
-                    photo.dispatcher = dispatcher
-                    photo.setImage(from: photos[3])
-                    container.addSubview(photo)
-                    NSLayoutConstraint.init(item: photo, attribute: .leading, relatedBy: .equal, toItem: secondPhoto, attribute: .trailing, multiplier: 1, constant: 17).isActive = true
-                    NSLayoutConstraint.init(item: photo, attribute: .top, relatedBy: .equal, toItem: container, attribute: .top, multiplier: 1, constant: 0).isActive = true
-                    NSLayoutConstraint.init(item: photo, attribute: .bottom, relatedBy: .equal, toItem: secondPhoto, attribute: .bottom, multiplier: 1, constant: 0).isActive = true
-                    thirdPhoto = photo
-                    
+                    if thirdPhoto == nil {
+                        let photo = OnePhoto()
+                        photo.dispatcher = dispatcher
+                        container.addSubview(photo)
+                        NSLayoutConstraint.init(item: photo, attribute: .leading, relatedBy: .equal, toItem: secondPhoto, attribute: .trailing, multiplier: 1, constant: 17).isActive = true
+                        NSLayoutConstraint.init(item: photo, attribute: .top, relatedBy: .equal, toItem: container, attribute: .top, multiplier: 1, constant: 0).isActive = true
+                        NSLayoutConstraint.init(item: photo, attribute: .bottom, relatedBy: .equal, toItem: secondPhoto, attribute: .bottom, multiplier: 1, constant: 0).isActive = true
+                        thirdPhoto = photo
+                    }
+                    thirdPhoto.setImage(from: photos[3])
                     containerWidth.constant += 134 + 17
                     
                     if photos.count >= 5 {
-                        let photo = TwoPhotos()
-                        photo.dispatcher = dispatcher
-                        photo.setFirstImage(from: photos[4])
-                        container.addSubview(photo)
-                        NSLayoutConstraint.init(item: photo, attribute: .leading, relatedBy: .equal, toItem: thirdPhoto, attribute: .trailing, multiplier: 1, constant: 17).isActive = true
-                        NSLayoutConstraint.init(item: photo, attribute: .top, relatedBy: .equal, toItem: container, attribute: .top, multiplier: 1, constant: 0).isActive = true
-                        NSLayoutConstraint.init(item: photo, attribute: .bottom, relatedBy: .equal, toItem: container, attribute: .bottom, multiplier: 1, constant: 0).isActive = true
-                        
+                        if forthPhoto == nil {
+                            let photo = TwoPhotos()
+                            photo.dispatcher = dispatcher
+                            container.addSubview(photo)
+                            NSLayoutConstraint.init(item: photo, attribute: .leading, relatedBy: .equal, toItem: thirdPhoto, attribute: .trailing, multiplier: 1, constant: 17).isActive = true
+                            NSLayoutConstraint.init(item: photo, attribute: .top, relatedBy: .equal, toItem: container, attribute: .top, multiplier: 1, constant: 0).isActive = true
+                            NSLayoutConstraint.init(item: photo, attribute: .bottom, relatedBy: .equal, toItem: container, attribute: .bottom, multiplier: 1, constant: 0).isActive = true
+                            forthPhoto = photo
+                        }
+                        forthPhoto.setFirstImage(from: photos[4])
                         if photos.count >= 6 {
-                            photo.setSecondImage(from: photos[5])
+                            forthPhoto.setSecondImage(from: photos[5])
                         }
                         
-                        forthPhoto = photo
                         
                         containerWidth.constant += 110 + 17
                         
                         if photos.count >= 7 {
-                            let photo = OnePhoto()
-                            photo.dispatcher = dispatcher
-                            photo.setImage(from: photos[6])
-                            container.addSubview(photo)
-                            NSLayoutConstraint.init(item: photo, attribute: .leading, relatedBy: .equal, toItem: forthPhoto, attribute: .trailing, multiplier: 1, constant: 17).isActive = true
-                            NSLayoutConstraint.init(item: photo, attribute: .top, relatedBy: .equal, toItem: container, attribute: .top, multiplier: 1, constant: 0).isActive = true
-                            NSLayoutConstraint.init(item: photo, attribute: .bottom, relatedBy: .equal, toItem: secondPhoto, attribute: .bottom, multiplier: 1, constant: 0).isActive = true
-                            fifthPhoto = photo
-                            
+                            if fifthPhoto == nil {
+                                let photo = OnePhoto()
+                                photo.dispatcher = dispatcher
+                                container.addSubview(photo)
+                                NSLayoutConstraint.init(item: photo, attribute: .leading, relatedBy: .equal, toItem: forthPhoto, attribute: .trailing, multiplier: 1, constant: 17).isActive = true
+                                NSLayoutConstraint.init(item: photo, attribute: .top, relatedBy: .equal, toItem: container, attribute: .top, multiplier: 1, constant: 0).isActive = true
+                                NSLayoutConstraint.init(item: photo, attribute: .bottom, relatedBy: .equal, toItem: secondPhoto, attribute: .bottom, multiplier: 1, constant: 0).isActive = true
+                                fifthPhoto = photo
+                            }
+                            fifthPhoto.setImage(from: photos[6])
                             containerWidth.constant += 134 + 17
                             
                             if photos.count >= 8 {
-                                let photo = MorePhotos()
-                                photo.dispatcher = dispatcher
-                                photo.setImage(from: photos[7])
-                                container.addSubview(photo)
-                                NSLayoutConstraint.init(item: photo, attribute: .leading, relatedBy: .equal, toItem: fifthPhoto, attribute: .trailing, multiplier: 1, constant: 17).isActive = true
-                                NSLayoutConstraint.init(item: photo, attribute: .top, relatedBy: .equal, toItem: container, attribute: .top, multiplier: 1, constant: 0).isActive = true
-                                NSLayoutConstraint.init(item: photo, attribute: .bottom, relatedBy: .equal, toItem: secondPhoto, attribute: .bottom, multiplier: 1, constant: 0).isActive = true
-                                
+                                if morePhotos == nil {
+                                    let photo = MorePhotos()
+                                    photo.dispatcher = dispatcher
+                                    container.addSubview(photo)
+                                    NSLayoutConstraint.init(item: photo, attribute: .leading, relatedBy: .equal, toItem: fifthPhoto, attribute: .trailing, multiplier: 1, constant: 17).isActive = true
+                                    NSLayoutConstraint.init(item: photo, attribute: .top, relatedBy: .equal, toItem: container, attribute: .top, multiplier: 1, constant: 0).isActive = true
+                                    NSLayoutConstraint.init(item: photo, attribute: .bottom, relatedBy: .equal, toItem: secondPhoto, attribute: .bottom, multiplier: 1, constant: 0).isActive = true
+                                    morePhotos = photo
+                                }
+                                morePhotos.setImage(from: photos[7])
                                 containerWidth.constant += 108 + 17
                             }
                         }

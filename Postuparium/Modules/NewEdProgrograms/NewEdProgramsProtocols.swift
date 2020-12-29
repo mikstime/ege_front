@@ -12,6 +12,7 @@ import UIKit
 protocol NewEdProgramsViewControllerProtocol: UIViewController {
     var id: Int {set get}
     var presenter: NewEdProgramsPresenterProtocol! {get set}
+    var heightConstraint: NSLayoutConstraint! {get set}
 }
 
 protocol NewEdProgramsPresenterProtocol: class {

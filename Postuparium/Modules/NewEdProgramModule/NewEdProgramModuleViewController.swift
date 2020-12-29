@@ -18,10 +18,16 @@ class NewEdProgramModuleViewController: UIViewController, NewEdProgramModuleView
     @IBOutlet weak var topCellTypeLabel: UILabel!
     
     @IBOutlet weak var topCellCodeNameLabel: UILabel!
-    
+    @IBOutlet weak var probLabel: UILabel!
     var program: EdProgram! {// СОДЕРЖИТ ИНФОРМАЦИЮ О НАПРАВЛЕНИИ. ВЫСТАВЛЯЕТСЯ КОНФИГУРАТОРОМ
         didSet {
-            
+            if program.code.count > 1 {
+                topCellCodeLabel?.text = String(program.name.first ?? "Э") + String(program.code[1] )
+            }
+            probLabel?.text = program.probability
+            topCellLabel?.text = program.name
+            topCellCodeNameLabel?.text = program.code
+            topCellTypeLabel?.text = program.university
         }
     }
     var edProgramId: String!
@@ -72,20 +78,17 @@ class NewEdProgramModuleViewController: UIViewController, NewEdProgramModuleView
     
     func setupTopCellView() {
         //todo брать из бека
-        let edPrograms = EdProgramMock.edProgramsList()
-        let edProgram = edPrograms[0]
-        
-    
         topCellVIew.layer.cornerRadius = 15.0
         topCellVIew.layer.borderWidth = 0
         topCellVIew.layer.shadowColor = UIColor(named: "Shadow")?.cgColor ?? UIColor.gray.cgColor
         topCellVIew.layer.shadowOffset = .zero
         topCellVIew.layer.shadowRadius = 6.0
         topCellVIew.layer.shadowOpacity = 0.16
-//        topCellVIew.layer.masksToBounds = false //<- Если эту хуйню поменять на false, то будет норм тень но сука блять будет овервфлоу нахуй у нижней панельки какого хуя сука
 //
-        
-        topCellCodeLabel.text = program.probability
+        if program.code.count > 1 {
+            topCellCodeLabel.text = String(program.name.first ?? "Э") + String(program.code[1] )
+        }
+        probLabel.text = program.probability
         topCellLabel.text = program.name
         topCellCodeNameLabel.text = program.code
         topCellTypeLabel.text = program.university

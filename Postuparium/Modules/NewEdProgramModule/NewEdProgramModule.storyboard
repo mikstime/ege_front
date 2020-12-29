@@ -35,9 +35,8 @@
                                     <view alpha="0.75" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JxC-4o-qec">
                                         <rect key="frame" x="0.0" y="92" width="335" height="40"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Специалист" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faT-f9-ykV">
-                                                <rect key="frame" x="7" y="20" width="158" height="13"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Специалист" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faT-f9-ykV">
+                                                <rect key="frame" x="14" y="14" width="66" height="13"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                 <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
                                                 <nil key="highlightedColor"/>
@@ -54,7 +53,9 @@
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="6Fh-Ts-ZM9"/>
+                                            <constraint firstItem="faT-f9-ykV" firstAttribute="leading" secondItem="JxC-4o-qec" secondAttribute="leading" constant="14" id="Hqu-0Y-P29"/>
                                             <constraint firstAttribute="width" constant="335" id="c8C-Zo-UDP"/>
+                                            <constraint firstItem="faT-f9-ykV" firstAttribute="centerY" secondItem="JxC-4o-qec" secondAttribute="centerY" id="fKs-jV-xPd"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">

@@ -19,15 +19,14 @@
                             <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uxF-32-Bv0">
                                 <rect key="frame" x="20" y="107" width="374" height="132"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" semanticContentAttribute="forceLeftToRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Ракетные двигатели" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4Qt-Wk-hmB">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" semanticContentAttribute="forceLeftToRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ракетные двигатели" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4Qt-Wk-hmB">
                                         <rect key="frame" x="8" y="58" width="128.5" height="16"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Э4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ve-0t-iDv">
-                                        <rect key="frame" x="8" y="4" width="74" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Э4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ve-0t-iDv">
+                                        <rect key="frame" x="8" y="4" width="23" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -59,9 +58,8 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="12.34.56 78.91.01.23/45.67.89" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cvG-Zv-g57">
-                                        <rect key="frame" x="261" y="4" width="105" height="9"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12.34.56 78.91.01.23/45.67.89" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cvG-Zv-g57">
+                                        <rect key="frame" x="260.5" y="4" width="105.5" height="8.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="7"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -70,7 +68,12 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="4Qt-Wk-hmB" secondAttribute="bottom" constant="58" id="1gc-EQ-iUy"/>
+                                    <constraint firstItem="4Qt-Wk-hmB" firstAttribute="leading" secondItem="uxF-32-Bv0" secondAttribute="leading" constant="8" id="2EZ-FX-hK4"/>
+                                    <constraint firstItem="1ve-0t-iDv" firstAttribute="top" secondItem="uxF-32-Bv0" secondAttribute="top" constant="4" id="DWe-dY-AVU"/>
                                     <constraint firstItem="4Qt-Wk-hmB" firstAttribute="top" secondItem="uxF-32-Bv0" secondAttribute="top" constant="58" id="Of0-oY-6Gd"/>
+                                    <constraint firstItem="1ve-0t-iDv" firstAttribute="leading" secondItem="uxF-32-Bv0" secondAttribute="leading" constant="8" id="kF9-Ec-sVt"/>
+                                    <constraint firstAttribute="trailing" secondItem="cvG-Zv-g57" secondAttribute="trailing" constant="8" id="oIJ-Cr-nF4"/>
+                                    <constraint firstItem="cvG-Zv-g57" firstAttribute="top" secondItem="uxF-32-Bv0" secondAttribute="top" constant="4" id="y6M-5d-cLH"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">

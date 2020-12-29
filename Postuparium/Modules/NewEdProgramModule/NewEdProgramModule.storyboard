@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uxF-32-Bv0">
-                                <rect key="frame" x="20" y="107" width="374" height="132"/>
+                                <rect key="frame" x="20" y="48" width="374" height="132"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" semanticContentAttribute="forceLeftToRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ракетные двигатели" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4Qt-Wk-hmB">
                                         <rect key="frame" x="8" y="58" width="128.5" height="16"/>
@@ -32,11 +33,11 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view alpha="0.75" contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JxC-4o-qec">
-                                        <rect key="frame" x="0.0" y="108" width="374" height="26"/>
+                                        <rect key="frame" x="0.0" y="94" width="374" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Специалист" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faT-f9-ykV">
-                                                <rect key="frame" x="8" y="6" width="177" height="14"/>
+                                                <rect key="frame" x="8" y="20" width="177" height="13"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                 <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
@@ -87,18 +88,49 @@
                                     <segue destination="6EY-VK-XoQ" kind="embed" id="dM9-mo-4vu"/>
                                 </connections>
                             </containerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Информация о направлении" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPq-fo-NVC">
+                                <rect key="frame" x="20" y="188" width="228" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="GrayGradientBottom"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Баллы" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSD-sW-Fm0">
+                                <rect key="frame" x="352" y="297" width="51" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="GrayGradientBottom"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ewK-iX-Afd">
+                                <rect key="frame" x="20" y="217" width="374" height="72"/>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Текущая конкурсная ситуация" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ik-3H-c0b">
+                                <rect key="frame" x="20" y="297" width="243" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="GrayGradientBottom"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="AzX-Y8-OJO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="QPq-fo-NVC" firstAttribute="top" secondItem="uxF-32-Bv0" secondAttribute="bottom" constant="8" symbolic="YES" id="0Zy-As-nGB"/>
                             <constraint firstItem="AzX-Y8-OJO" firstAttribute="trailing" secondItem="uxF-32-Bv0" secondAttribute="trailing" constant="20" id="1Sf-F6-ttd"/>
                             <constraint firstItem="hJc-HA-MPP" firstAttribute="leading" secondItem="3Gz-Kx-4ft" secondAttribute="leading" id="2GU-jO-voU"/>
-                            <constraint firstItem="uxF-32-Bv0" firstAttribute="top" secondItem="AzX-Y8-OJO" secondAttribute="top" constant="63" id="4Lr-Rd-uwP"/>
+                            <constraint firstItem="uxF-32-Bv0" firstAttribute="top" secondItem="AzX-Y8-OJO" secondAttribute="top" constant="4" id="4Lr-Rd-uwP"/>
                             <constraint firstItem="uxF-32-Bv0" firstAttribute="leading" secondItem="AzX-Y8-OJO" secondAttribute="leading" constant="20" id="6cw-1S-9rb"/>
+                            <constraint firstItem="ewK-iX-Afd" firstAttribute="top" secondItem="QPq-fo-NVC" secondAttribute="bottom" constant="8" symbolic="YES" id="CaR-Hg-7aO"/>
+                            <constraint firstItem="AzX-Y8-OJO" firstAttribute="trailing" secondItem="pSD-sW-Fm0" secondAttribute="trailing" constant="11" id="DH8-GR-41Y"/>
                             <constraint firstItem="hJc-HA-MPP" firstAttribute="leading" secondItem="AzX-Y8-OJO" secondAttribute="leading" id="HIf-jt-GSA"/>
+                            <constraint firstItem="7ik-3H-c0b" firstAttribute="top" secondItem="ewK-iX-Afd" secondAttribute="bottom" constant="8" symbolic="YES" id="I09-uh-U8q"/>
+                            <constraint firstItem="ewK-iX-Afd" firstAttribute="leading" secondItem="AzX-Y8-OJO" secondAttribute="leading" constant="20" id="JAI-8A-03c"/>
+                            <constraint firstItem="hJc-HA-MPP" firstAttribute="top" secondItem="pSD-sW-Fm0" secondAttribute="bottom" constant="8" symbolic="YES" id="Ozd-cT-D8H"/>
+                            <constraint firstItem="7ik-3H-c0b" firstAttribute="leading" secondItem="AzX-Y8-OJO" secondAttribute="leading" constant="20" id="PfE-qo-KtE"/>
+                            <constraint firstItem="QPq-fo-NVC" firstAttribute="leading" secondItem="AzX-Y8-OJO" secondAttribute="leading" constant="20" id="UWE-yp-Sn8"/>
                             <constraint firstItem="hJc-HA-MPP" firstAttribute="top" secondItem="3Gz-Kx-4ft" secondAttribute="top" constant="326" id="Zbm-F1-n2D"/>
                             <constraint firstAttribute="bottom" secondItem="hJc-HA-MPP" secondAttribute="bottom" id="fhg-0H-Dki"/>
                             <constraint firstAttribute="bottom" secondItem="hJc-HA-MPP" secondAttribute="bottom" id="jNE-Kj-vud"/>
+                            <constraint firstItem="hJc-HA-MPP" firstAttribute="top" secondItem="7ik-3H-c0b" secondAttribute="bottom" constant="8" symbolic="YES" id="ljL-Uz-LAj"/>
+                            <constraint firstItem="AzX-Y8-OJO" firstAttribute="trailing" secondItem="ewK-iX-Afd" secondAttribute="trailing" constant="20" id="nVk-w7-B7G"/>
                             <constraint firstItem="hJc-HA-MPP" firstAttribute="trailing" secondItem="AzX-Y8-OJO" secondAttribute="trailing" id="woS-WS-xpY"/>
                         </constraints>
                     </view>
@@ -134,6 +166,9 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="GrayGradientBottom">
+            <color red="0.3880000114440918" green="0.3880000114440918" blue="0.40000000596046448" alpha="0.54000002145767212" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

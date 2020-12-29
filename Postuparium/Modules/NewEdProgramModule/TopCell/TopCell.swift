@@ -1,103 +1,57 @@
 //
-//  NewEdProgramModuleViewController.swift
+//  File.swift
 //  Postuparium
 //
-//  Created by Сергей Петренко on 27.12.2020.
+//  Created by Сергей Петренко on 29.12.2020.
 //
 
 import Foundation
+
 import UIKit
 
-class NewEdProgramModuleViewController: UIViewController, NewEdProgramModuleViewControllerProtocol{
+class TopCell: UIView {
     
-    
-    @IBOutlet weak var topCellVIew: UIView!
-    @IBOutlet weak var topCellLabel: UILabel!
-    @IBOutlet weak var topCellCodeLabel: UILabel!
-    @IBOutlet weak var topCellTypeContainer: UIView!
-    @IBOutlet weak var topCellTypeLabel: UILabel!
-    
-    @IBOutlet weak var topCellCodeNameLabel: UILabel!
-    
-    var program: EdProgram! {// СОДЕРЖИТ ИНФОРМАЦИЮ О НАПРАВЛЕНИИ. ВЫСТАВЛЯЕТСЯ КОНФИГУРАТОРОМ
-        didSet {
-            
-        }
-    }
-    var edProgramId: String!
-    var presenter: NewEdProgramModulePresenterProtocol!
-    
-    
-    func updateSearchResults(for searchController: UISearchController) {
 
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var codeNameLabel: UILabel!
+    @IBOutlet weak var codeLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var typeLabel: UILabel!
+    @IBOutlet weak var typeContainer: UIView!
+    
+    class func instanceFromNib() -> UIView {
+        return UINib(nibName: "StudyTileBigCell", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! UIView
     }
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
     
-
-    
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         
+        self.codeNameLabel.text = "?"
+        
+        self.codeLabel.text = "00.00.00"
+        
+        self.nameLabel.text = "Название направления"
+        
+//        self.nameLabel.fitTextToBounds()
+        
+        self.typeLabel.text = "Специальность"
+        
+        self.typeContainer.roundCorners([.topRight, .bottomRight, .bottomLeft], radius: 10)
+        self.roundCorners([.topRight, .topLeft, .bottomRight, .bottomLeft], radius: 10)
+        
+    
+        self.layer.cornerRadius = 20
+        self.layer.masksToBounds = true
+
+        self.layer.shadowColor = UIColor.darkGray.cgColor
+        self.layer.shadowOffset = CGSize(width: 2.0, height: 2.0)
+        self.layer.shadowOpacity = 0.4
+        self.layer.shadowRadius = 5.0
+        
+        setGradientBackgroundColor()
     }
-
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-    }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        presenter?.viewDidLoad()
-        setupTopCellView()
-        
-
-        
-        if ((edProgramId) != nil) {
-            print("did load edProgram with id", edProgramId!)
-        } else{
-            print("did load edProgram no id")
-        }
-      
-        
-        
-    
-    }
-    
-    
-  
-    
-
-
- 
-    
-    func setupTopCellView() {
-        //todo брать из бека
-        let edPrograms = EdProgramMock.edProgramsList()
-        let edProgram = edPrograms[0]
-        
-    
-        topCellVIew.layer.cornerRadius = 15.0
-        topCellVIew.layer.borderWidth = 0
-        topCellVIew.layer.shadowColor = UIColor(named: "Shadow")?.cgColor ?? UIColor.gray.cgColor
-        topCellVIew.layer.shadowOffset = .zero
-        topCellVIew.layer.shadowRadius = 6.0
-        topCellVIew.layer.shadowOpacity = 0.16
-        topCellVIew.layer.masksToBounds = false //<-
-        
-        
-        topCellCodeLabel.text = edProgram.code
-        topCellLabel.text = edProgram.name
-        topCellCodeNameLabel.text = edProgram.codeName
-        topCellTypeLabel.text = edProgram.edProgram
-        let colors = cellRandomBackgroundColors()
-        topCellTypeContainer.setGradientBackgroundColor(colorOne: colors[0], colorTow: colors[1])
-        
-    
-        
-    }
-    
-
-
     
     func cellRandomBackgroundColors() -> [UIColor] {
         //Colors
@@ -119,4 +73,10 @@ class NewEdProgramModuleViewController: UIViewController, NewEdProgramModuleView
         let randomColors = colorsTable.values.randomElement()
         return randomColors!
     }
+    func setGradientBackgroundColor() {
+        let colors = cellRandomBackgroundColors()
+        self.typeContainer.setGradientBackgroundColor(colorOne: colors[0], colorTow: colors[1])
+    }
+
+
 }

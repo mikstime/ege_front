@@ -221,6 +221,9 @@
 		85ABD61D2569E0CF0094BC7E /* applicants.json in Resources */ = {isa = PBXBuildFile; fileRef = 85ABD61C2569E0CF0094BC7E /* applicants.json */; };
 		85ABD6222569E0F80094BC7E /* ApplicantMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ABD6212569E0F80094BC7E /* ApplicantMock.swift */; };
 		85ABD62B2569E62A0094BC7E /* SimilarModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ABD62A2569E62A0094BC7E /* SimilarModuleViewController.swift */; };
+		85B91C20259A971100152FDC /* Applicant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B91C1F259A971100152FDC /* Applicant.swift */; };
+		85B91C25259A979A00152FDC /* ApplicantsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B91C24259A979A00152FDC /* ApplicantsService.swift */; };
+		85B91C2B259AB43300152FDC /* TopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B91C2A259AB43300152FDC /* TopCell.swift */; };
 		85C12DE7258E7C5B00C3CD71 /* AppNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C12DE6258E7C5B00C3CD71 /* AppNavController.swift */; };
 		85C12DEE258E7CB200C3CD71 /* HalfModalPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C12DED258E7CB200C3CD71 /* HalfModalPresentationController.swift */; };
 		85C12DF6258E7CE200C3CD71 /* HalfModalTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C12DF5258E7CE200C3CD71 /* HalfModalTransitioningDelegate.swift */; };
@@ -511,6 +514,9 @@
 		85ABD61C2569E0CF0094BC7E /* applicants.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = applicants.json; sourceTree = "<group>"; };
 		85ABD6212569E0F80094BC7E /* ApplicantMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicantMock.swift; sourceTree = "<group>"; };
 		85ABD62A2569E62A0094BC7E /* SimilarModuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimilarModuleViewController.swift; sourceTree = "<group>"; };
+		85B91C1F259A971100152FDC /* Applicant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Applicant.swift; sourceTree = "<group>"; };
+		85B91C24259A979A00152FDC /* ApplicantsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicantsService.swift; sourceTree = "<group>"; };
+		85B91C2A259AB43300152FDC /* TopCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopCell.swift; sourceTree = "<group>"; };
 		85C12DE6258E7C5B00C3CD71 /* AppNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavController.swift; sourceTree = "<group>"; };
 		85C12DED258E7CB200C3CD71 /* HalfModalPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfModalPresentationController.swift; sourceTree = "<group>"; };
 		85C12DF5258E7CE200C3CD71 /* HalfModalTransitioningDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfModalTransitioningDelegate.swift; sourceTree = "<group>"; };
@@ -1012,6 +1018,7 @@
 				8528F58D2534B71B004FDE50 /* University.swift */,
 				8528F5922534B733004FDE50 /* Photo.swift */,
 				8528F5972534B741004FDE50 /* Feedback.swift */,
+				85B91C1F259A971100152FDC /* Applicant.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -1298,6 +1305,7 @@
 				2ED12024256A147C005D39DA /* EnrolleeService.swift */,
 				2EF252FA256A36C300D7FE1C /* EdProgramService.swift */,
 				2EA2F6AD2596A50400773066 /* FeedBackService.swift */,
+				85B91C24259A979A00152FDC /* ApplicantsService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -1335,6 +1343,14 @@
 				85ABD62A2569E62A0094BC7E /* SimilarModuleViewController.swift */,
 			);
 			path = Similar;
+			sourceTree = "<group>";
+		};
+		85B91C29259AB42200152FDC /* TopCell */ = {
+			isa = PBXGroup;
+			children = (
+				85B91C2A259AB43300152FDC /* TopCell.swift */,
+			);
+			path = TopCell;
 			sourceTree = "<group>";
 		};
 		85C12DEB258E7C7E00C3CD71 /* Presentation */ = {
@@ -1392,6 +1408,7 @@
 		85C9AF482598EC7100AE2DBA /* NewEdProgramModule */ = {
 			isa = PBXGroup;
 			children = (
+				85B91C29259AB42200152FDC /* TopCell */,
 				85C9AF6F2599049D00AE2DBA /* ApplicantsTableView */,
 				85C9AF492598EC9D00AE2DBA /* NewEdProgramModuleViewController.swift */,
 				85C9AF512598ECB900AE2DBA /* NewEdProgramModuleProtocols.swift */,
@@ -1672,10 +1689,12 @@
 				85C12E40258FB69400C3CD71 /* ModalConfigurator.swift in Sources */,
 				2E9CF7A725982E4400490939 /* UniversityPageInteractor.swift in Sources */,
 				2EAD67BE2593EDE400A0EF05 /* UniversitiesTableViewInteractor.swift in Sources */,
+				85B91C2B259AB43300152FDC /* TopCell.swift in Sources */,
 				2E6A931A25997121005B294E /* UniversityDescriptionView.swift in Sources */,
 				85ABD596256963920094BC7E /* EdProgramsGridController.swift in Sources */,
 				853315CA256BFA68003A89EA /* FeedbackModulePresenter.swift in Sources */,
 				CEEE7BC62567D9C70094B1DA /* PhotoTableViewConfigurator.swift in Sources */,
+				85B91C25259A979A00152FDC /* ApplicantsService.swift in Sources */,
 				85C12E53258FB7B100C3CD71 /* ModalInteractor.swift in Sources */,
 				CEEE7BC12567D9A20094B1DA /* PhotoTableViewInteractor.swift in Sources */,
 				2EDE68532567601B0064D28B /* ProgramsSelectionMenuPresenter.swift in Sources */,
@@ -1763,6 +1782,7 @@
 				85ABD6042569BC7A0094BC7E /* EdProgramModuleConfigurator.swift in Sources */,
 				2EAD8B72256215A100C4EEA3 /* AchievementsSelectionViewContoller.swift in Sources */,
 				85C12E1C258EA94E00C3CD71 /* UniversityViews.swift in Sources */,
+				85B91C20259A971100152FDC /* Applicant.swift in Sources */,
 				2E00063E25620748000693B5 /* StartScreenViewContoller.swift in Sources */,
 				2E00064425620748000693B5 /* StartScreenRouter.swift in Sources */,
 				85C12DE7258E7C5B00C3CD71 /* AppNavController.swift in Sources */,

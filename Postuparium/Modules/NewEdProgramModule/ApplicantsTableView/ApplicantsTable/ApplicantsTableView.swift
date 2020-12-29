@@ -71,7 +71,7 @@ class ApplicantsTableViewController: UITableViewController {
             cell.index?.font = UIFont.systemFont(ofSize: 16)
         }
         cell.score?.text = "\(applicant.scores)"
-        cell.index?.text = "\(indexPath.row)"
+        cell.index?.text = "\(indexPath.row + 1)"
         
 
     

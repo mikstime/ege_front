@@ -17,6 +17,26 @@ class UniversityMapViewController: SSwipeableViewController,
     var umenu = UniversityPageConfigurator.configureModule()
     var smenu = SettingsScreenConfigurator.configureModule()
 
+//    var universities: [University] = [] {
+//        didSet {
+//            universitiesToShow = universities
+//
+//
+//
+//            updateAnnotations()
+//        }
+//    }
+    
+    func loadUnivers(universities:[University])->Void{
+        
+        universitiesToShow = universities
+        print("load univers", universities)
+        updateAnnotations()
+    }
+    
+    var universitiesToShow: [University] = []
+    
+    
 
     let locationManager = CLLocationManager()
     var location: CLLocation!
@@ -95,6 +115,8 @@ class UniversityMapViewController: SSwipeableViewController,
         menu.dispatcher = self
         super.viewDidLoad()
         
+        UniversitiesService.shared.searchForUniversities(query:"", didFind: loadUnivers)
+        
         
         
         
@@ -110,16 +132,19 @@ class UniversityMapViewController: SSwipeableViewController,
         mapView.showsUserLocation = true
         
     
+            
         
     
-       
+    }
+    
+    func updateAnnotations() {
         var annotations: [MKPointAnnotation] = []
         
-        for univer in universitites {
+        for univer in universitiesToShow {
             print("univer " ,univer)
             let annotation = MKPointAnnotation()
-            annotation.coordinate.latitude = (univer.lat as NSString).doubleValue
-            annotation.coordinate.longitude = (univer.lon as NSString).doubleValue
+            annotation.coordinate.latitude = univer.lat
+            annotation.coordinate.longitude = univer.lon
             annotation.title = univer.name
             annotation.subtitle = "\(univer.id)"
     
@@ -127,10 +152,6 @@ class UniversityMapViewController: SSwipeableViewController,
         }
         print(annotations)
         mapView.addAnnotations(annotations)
-    
-       
-        
-    
     }
     
 
@@ -147,10 +168,13 @@ class UniversityMapViewController: SSwipeableViewController,
         mapView.setCenter(view.annotation!.coordinate, animated: true)
         setMapFocus(centerCoordinate: view.annotation!.coordinate, radiusInKm: 0.5)
         print("Ебать нажалось", id! , Int(id!) ?? 0 )
-        showUCard()
-        
+
+        let unikId = universitiesToShow.firstIndex { (un: University) -> Bool in
+            un.id == Int(id!)
+        }!
+        showUniversity(university: universitiesToShow[unikId] )
         self.mapView.deselectAnnotation(view.annotation, animated: false)
-//        self.presenter.showModal(id: Int(id!) ?? 0 )
+
     }
     
     func mapView(_ mapView: MKMapView,
